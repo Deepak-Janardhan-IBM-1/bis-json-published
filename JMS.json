@@ -17,7 +17,7 @@
         "Use this service to acknowledge a message retrieved from the JMS provider if:",
         "A message is not considered to be successfully consumed until it is acknowledged."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_acknowledge__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_acknowledge__title__1"
     },
     {
       "name": "pub.jms:batchTriggerSpec",
@@ -34,7 +34,7 @@
         "Use this specification as the signature for JMS trigger services that will retrieve and process a batch of messages.",
         "If you want to use a JMS trigger to retrieve and process one message at a time, use pub.jms:triggerSpec to declare the signature of the JMS trigger service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_batchTriggerSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_batchTriggerSpec__title__1"
     },
     {
       "name": "pub.jms:createConsumer",
@@ -95,7 +95,7 @@
         "If the message consumer created by this service will be used to receive large message streams from the IBM webMethods Broker, make sure to specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. If the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE, the message consumer cannot be used to receive large message streams.",
         "If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the connectionAliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination when the service executes. The ability to create administered objects on demand applies only when Universal Messaging is the JMS provider. For more information about creating administered objects on demand, see Creating Administered Objects ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_createConsumer__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_createConsumer__title__1"
     },
     {
       "name": "pub.jms:documentResolverSpec",
@@ -133,7 +133,7 @@
         "The pub.jms:documentResolverSpec must be used as the signature for a document resolver service used to determine the processing status of a JMS message received by a JMS trigger. For information about building a document resolver service and enabling exactly once processing for a JMS message, see Using IBM webMethods Integration Server to Build a Client for JMS .",
         "Use pub.publish:documentResolverSpec as the signature for a document resolver service used to determine the status of document received IBM webMethods messaging trigger."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#A96064__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#A96064__title__1"
     },
     {
       "name": "pub.jms:JMSMessage",
@@ -141,7 +141,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage__title__1"
     },
     {
       "name": "pub.jms:receive",
@@ -283,7 +283,7 @@
         "After you receive a message, you need to invoke a service that processes the message.",
         "If the acknowledgment mode of the consumer is set to CLIENT_ACKNOWLEDGE, use the pub.jms:acknowledge service to acknowledge the message to the JMS provider."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_receive__title__1"
     },
     {
       "name": "pub.jms:reply",
@@ -487,11 +487,11 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:reply service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:replyservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:replyservice take precedence.",
-        "IBM recommends that you use a pub.jms:reply service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Use a pub.jms:reply service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging.",
         "Message priority is not supported when Universal Messaging is the JMS provider. Any value specified in the priority field will be ignored."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_reply__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_reply__title__1"
     },
     {
       "name": "pub.jms:send",
@@ -731,7 +731,7 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendservice take precedence.",
-        "IBM recommends that you use a pub.jms:send service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Use a pub.jms:send service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using IBM webMethods Integration Server to Build a Client for JMS .",
@@ -739,7 +739,7 @@
         "When executing the pub.jms:send service with a valid value for the JMSMessage/header/replyTo parameter, Integration Server creates the javax.jms.Destination and maps it to the JMSReplyTo field within the message header. Integration Server sends the message and returns immediately. The service does not wait for the response message. If JMSMessage/header/replyTo is empty, then Integration Server does not set the JMSReplyTo header for the JMS message. If JMSMessage/header/replyTo is invalid, then Integration Server throws a ServiceException.",
         "When the body of the message is supplied as an IData in the JMSMessage/body/data input parameter, the pub.jms:send service sends a message that is twice the size of the original IData. This occurs because Integration Server encodes the IData as a byte array using IDataBinCoder which encodes data as two-byte instead of single-byte when sending the message. This causes a dramatic increase in message size. When Universal Messaging is the JMS provider, this can result in the default 20 MB max buffer size being exceeded when the IData for the message body is just 10 MB. To resolve this issue, Integration Server includes a custom property to indicate that the message should be encoded as XML and decoded from XML instead of as a byte array. When creating a service that invokes the pub.jms:send add the following custom property of type String and value to the JMSMessage/properties document in the pipeline: $coderType = idata_xml_bytes. The presence of the custom property $coderType and the value idata_xml_bytes instructs the sending Integration Server to encode the IData message as XML using IDataXMLCoder. The same property and value also instructs the receiving Integration Server to decode the JMS message as XML to IData."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_send__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_send__title__1"
     },
     {
       "name": "pub.jms:sendAndWait",
@@ -1136,14 +1136,14 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendAndWaitservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendAndWaitservice take precedence.",
-        "IBM recommends that you use a pub.jms:sendAndWait service to create and send the JMS message. This method may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Use a pub.jms:sendAndWait service to create and send the JMS message. This method may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
         "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using IBM webMethods Integration Server to Build a Client for JMS .",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging.",
         "You can use the pub.jms:send service to specify a destination for response messages when you do not need to wait for the response. The act of waiting for a response message comes with extra overhead for Integration Server which is unnecessary if you merely want to specify a JMSReplyTo destination but do not want the sending service to wait for a reply. For more information, see the JMSMessage/header/replyTo input parameter description and Usage Notes in pub.jms:JMSMessage."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_sendAndWait__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_sendAndWait__title__1"
     },
     {
       "name": "pub.jms:sendBatch",
@@ -1364,12 +1364,12 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendservice take precedence.",
-        "IBM recommends that you use a pub.jms:sendBatch service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Use a pub.jms:sendBatch service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#idff622fdb-4b11-4e93-b5a7-142af276ab16__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#idff622fdb-4b11-4e93-b5a7-142af276ab16__title__1"
     },
     {
       "name": "pub.jms:triggerSpec",
@@ -1385,7 +1385,7 @@
       "usage_notes": [
         "If you want to use a JMS trigger to retrieve and process multiple messages in one batch, use pub.jms:batchTriggerSpec to declare the inputs and outputs of the JMS trigger service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_triggerSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_triggerSpec__title__1"
     },
     {
       "name": "pub.jms:waitForReply",
@@ -1526,7 +1526,7 @@
         "The pub.jms:waitForReply service cannot be used to retrieve response to requests that were routed through the client side queue. To retrieve the response, create a JMS trigger that subscribes to the reply queue.",
         "If the pub.jms:sendAndWait service executes and the message is sent directly to the JMS provider (i.e., it is not sent to the client side queue), the JMSMessage\\header\\JMSMessageID contains a unique identifier assigned by the JMS provider. If the JMSMessageID field is null after the service executes, the JMS provider was not available at the time the service executed. Integration Server wrote the message to the client side queue."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_waitForReply__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_waitForReply__title__1"
     },
     {
       "name": "pub.jms.wmjms:receiveStream",
@@ -1564,7 +1564,7 @@
         "The consumer used to receive large message streams from the IBM webMethods Broker can specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. IBM webMethods Broker does not permit the use of the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE for the webMethods message streaming feature.",
         "You might want to use the scheduler capabilities within Integration Server to schedule a service that receives and then process large messages from IBM webMethods Broker For more information about scheduling services, see Scheduling a User Task ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_wmjms_receiveStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_wmjms_receiveStream__title__1"
     },
     {
       "name": "pub.jms.wmjms:sendStream",
@@ -1598,7 +1598,7 @@
         "Large message streams cannot be sent or received as part of a transaction. If connectionAliasName specifies a JMS connection alias with a transaction type of LOCAL_TRANSACTION or XA_TRANSACTION, Integration Server throws the exception com.wm.app.b2b.server.jms.JMSSubsystemException when it executes the pub.jms.wmjms:sendStream service.",
         "If the connection between Integration Server and the IBM webMethods Broker fails before the pub.jms.wmjms:sendStream sends the entire message stream, you need to re-send the entire stream when the connection is re-established."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_wmjms_sendStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_wmjms_sendStream__title__1"
     }
   ]
 }

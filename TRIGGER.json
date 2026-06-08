@@ -208,7 +208,7 @@
         "For more information about creating JMS triggers, see IBM webMethods Service Development Help .",
         "If the Docker image for a Microservices Runtime excludes web services functionality, attempts to execute pub.trigger:createJMSTrigger where jmsTriggerType = SOAPJMS end with a ServiceException."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_createJMSTrigger__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_createJMSTrigger__title__1"
     },
     {
       "name": "pub.trigger:createTrigger",
@@ -377,7 +377,7 @@
         "If IBM webMethods messaging trigger subscribes to publishable document types associated with a Broker connection alias, you can specify a single filter that can be used by Broker and/or Integration Server. Use the conditions/messageTypeFilterPairs/filter to specify the filter. Create the filter using the conditional expression syntax described in IBM webMethods Service Development Help .",
         "For more information about creating IBM webMethods messaging triggers, see IBM webMethods Service Development Help ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A58263__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A58263__title__1"
     },
     {
       "name": "pub.trigger:deleteJMSTrigger",
@@ -391,7 +391,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_deleteJMSTrigger__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_deleteJMSTrigger__title__1"
     },
     {
       "name": "pub.trigger:deleteTrigger",
@@ -409,7 +409,7 @@
         "When you delete IBM webMethods messaging trigger that uses a Broker connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding client queue on the Broker. When the client prefix is shared, the client queue might be used by other Integration Servers. The publishable document type to which IBM webMethods messaging trigger subscribes determines the connection alias used by the trigger.",
         "When you delete IBM webMethods messaging trigger that uses a Universal Messaging connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding NamedObject. When the client prefix is shared, the NamedObject might be used by other Integration Servers. The publishable document type to which IBM webMethods messaging trigger subscribes determines the connection alias used by the trigger."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A18151__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A18151__title__1"
     },
     {
       "name": "pub.trigger:disableEventTriggers",
@@ -428,7 +428,7 @@
         "When you disable a suspended event trigger for which all event processing has completed, Integration Server stops the listener that the trigger uses to retrieve events. This disconnects the event trigger from the streaming provider .",
         "The time Integration Server waits between the request to disable the event trigger and forcing the trigger to stop is specified by the watt.server.streaming.trigger.stopRequestTimeout server configuration parameter."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_adl_2cn_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_adl_2cn_gcc__title__1"
     },
     {
       "name": "pub.trigger:disableJMSTriggers",
@@ -459,7 +459,7 @@
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_disableJMSTriggers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_disableJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:enableEventTriggers",
@@ -476,7 +476,7 @@
         "When an event trigger is enabled, the event trigger is running and connected to the streaming provider. Integration Server retrieves and processes messages for the event trigger.",
         "You can also use the Streaming > Event triggers pages in Integration Server Administrator to disable, enable, and suspend event triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_smr_mtw_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_smr_mtw_gcc__title__1"
     },
     {
       "name": "pub.trigger:enableJMSTriggers",
@@ -503,7 +503,7 @@
         "The Integration Server Administrator also displays the following message:",
         "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_enableJMSTriggers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_enableJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:resourceMonitoringSpec",
@@ -519,7 +519,7 @@
       "usage_notes": [
         "The pub.trigger:resourceMonitoringSpec must be used as the service signature for any service used as a resource monitoring service. A resource monitoring service determines whether the resources associated with a trigger (IBM webMethods messaging trigger, JMS, MQTT, or event) are available for exactly-once processing, document pre-processing, or message/document/event processing. Integration Server executes a resource monitoring service after retry failure occurs for the trigger, the document resolver service fails because of a run-time exception, or the transform or target service encounters a run-time exception (event trigger only)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resourceMonitoringSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resourceMonitoringSpec__title__1"
     },
     {
       "name": "pub.trigger:resumeProcessing",
@@ -554,7 +554,7 @@
         "In a Java service, you can resume document processing using com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
         "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resumerProcessing__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resumerProcessing__title__1"
     },
     {
       "name": "pub.trigger:resumeRetrieval",
@@ -589,7 +589,7 @@
         "In a Java service, you can resume document retrieval by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setRetrievalSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
         "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resumeRetrieval__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resumeRetrieval__title__1"
     },
     {
       "name": "pub.trigger:suspendEventTriggers",
@@ -606,7 +606,7 @@
         "When an event trigger is suspended, the event trigger is running and connected to the streaming provider. Integration Server has stopped event retrieval, but continues processing any events it has already retrieved. Integration Server enables the event trigger automatically upon server restart or when the package containing the event trigger reloads.",
         "You can also use the Streaming > Event triggers pages in Integration Server Administrator to disable, enable, and suspend event triggers."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_jtz_q5w_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_jtz_q5w_gcc__title__1"
     },
     {
       "name": "pub.trigger:suspendJMSTriggers",
@@ -635,7 +635,7 @@
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_suspendJMSTriggers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_suspendJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:suspendProcessing",
@@ -671,7 +671,7 @@
         "In a Java service, you can suspend document processing by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
         "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A69499__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A69499__title__1"
     },
     {
       "name": "pub.trigger:suspendRetrieval",
@@ -708,7 +708,7 @@
         "In a Java service, you can suspend document retrieval by calling setRetrievalSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
         "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A47913__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A47913__title__1"
     }
   ]
 }

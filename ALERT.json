@@ -148,7 +148,7 @@
         "If you specify the intervalInSeconds parameter while creating a notifier, Integration Server creates a simple interval task that runs in the background and does the tasks specified in the notifier such as invoking a service or sending a mail, and so on.",
         "Prior to Integration Server version 10.15, the pub.alert.notifier:create service included the smtpSender/secure/useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.alert.notifier:create, the smtpSender/secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the smtpSender/secure/useJSSE parameter, proceeding as if useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#reference_68C44CCBA0974B9BB217270D3CE1F913__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#reference_68C44CCBA0974B9BB217270D3CE1F913__title__1"
     },
     {
       "name": "pub.alert.notifier:delete",
@@ -171,7 +171,7 @@
         "The simple interval task scheduled for a notifier executes once, even after the notifier is deleted or disabled.",
         "Each notifier maintains a separate record of read and unread alerts. These records are cleared when the notifier is deleted. However, the alerts themselves are not deleted."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_notifier_delete__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_notifier_delete__title__1"
     },
     {
       "name": "pub.alert.notifier:disable",
@@ -193,7 +193,7 @@
       "usage_notes": [
         "The simple interval task scheduled for a notifier executes once, even after the notifier is deleted or disabled."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_notifier_disable__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_notifier_disable__title__1"
     },
     {
       "name": "pub.alert.notifier:enable",
@@ -213,7 +213,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_notifier_enable__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_notifier_enable__title__1"
     },
     {
       "name": "pub.alert.notifier:list",
@@ -354,7 +354,7 @@
       "usage_notes": [
         "Prior to Integration Server version 10.15, the pub.alert.notifier:list service included the smtpSender/secure/useJSSE output parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.alert.notifier:list, the smtpSender/secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the smtpSender/secure/useJSSE parameter, proceeding as if smtpSender/secure/useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_notifier_list__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_notifier_list__title__1"
     },
     {
       "name": "pub.alert.notifier:update",
@@ -502,7 +502,7 @@
         "When a notifier is enabled, if consumptionMode is changed from earliest to latest, all alerts generated until then are marked as read.",
         "Prior to Integration Server version 10.15, the pub.alert.notifier:update service included the smtpSender/secure/useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.alert.notifier:update, the smtpSender/secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the smtpSender/secure/useJSSE parameter, proceeding as if useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_notifier_update__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_notifier_update__title__1"
     },
     {
       "name": "pub.alert:channels",
@@ -544,7 +544,7 @@
         "Package subscription (Delivery)",
         "Package subscription (Release)"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_channels__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_channels__title__1"
     },
     {
       "name": "pub.alert:countAll",
@@ -596,7 +596,7 @@
       "usage_notes": [
         "To get the count of all alerts in the system, read and unread, do not specify the filter criteria as inputs."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_countAll__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_countAll__title__1"
     },
     {
       "name": "pub.alert:countUnread",
@@ -655,7 +655,7 @@
         "When notifierName is specified in the pub.alert:countUnread service, the severities and channelIds parameters under filter are evaluated in the following manner:",
         "Consider a notifier with the following settings and the notifierName is passed to the pub.alert:countUnread service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_countUnread__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_countUnread__title__1"
     },
     {
       "name": "pub.alert:deregisterChannel",
@@ -678,7 +678,7 @@
         "Channel IDs for custom channels are generated by the system and cannot be modified. The first custom channel gets 1001 as the channel ID and subsequent custom channels have consecutive numbers. Once a custom channel is deregistered, the channel ID is no longer available for a new custom channel until Integration Server is restarted.",
         "Deregistering a channel also deletes all the alerts for that channel."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#reference_w1h_qf4_npb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#reference_w1h_qf4_npb__title__1"
     },
     {
       "name": "pub.alert:emit",
@@ -718,7 +718,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_emit__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_emit__title__1"
     },
     {
       "name": "pub.alert:fetchAll",
@@ -851,7 +851,7 @@
         "To fetch all read and unread alerts in the system, do not specify the filter criteria as inputs.",
         "The number of notifications on a page is identified by pageSize and the current page is identified by pageNumber."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_fetchAll__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_fetchAll__title__1"
     },
     {
       "name": "pub.alert:fetchUnread",
@@ -991,7 +991,7 @@
         "Consider a notifier with the following settings and the notifierName is passed to the pub.alert:fetchUnread service.",
         "The number of notifications on a page is identified by pageSize and the current page is identified by pageNumber. If pageSize is 10 and pageNumber is 0, with sortBy and sortOrder having default values, the latest 10 notifications are listed on the first page."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_fetch__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_fetch__title__1"
     },
     {
       "name": "pub.alert:getChannel",
@@ -1026,7 +1026,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#reference_B42A0CC270BF48159A9161D73CDBD9EF__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#reference_B42A0CC270BF48159A9161D73CDBD9EF__title__1"
     },
     {
       "name": "pub.alert:getSettings",
@@ -1060,7 +1060,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_getSettings__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_getSettings__title__1"
     },
     {
       "name": "pub.alert:markAllAsRead",
@@ -1082,7 +1082,7 @@
       "usage_notes": [
         "Invoke pub.alert:markAllAsRead to dismiss all notifications at once."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_markAllAsRead__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_markAllAsRead__title__1"
     },
     {
       "name": "pub.alert:markAsRead",
@@ -1109,7 +1109,7 @@
       "usage_notes": [
         "Integration Server invokes pub.alert:markAsRead to dismiss a specific notification."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_markAsRead__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_markAsRead__title__1"
     },
     {
       "name": "pub.alert:markAsUnread",
@@ -1134,7 +1134,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_markAsUnread__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_markAsUnread__title__1"
     },
     {
       "name": "pub.alert:registerChannel",
@@ -1171,7 +1171,7 @@
       "usage_notes": [
         "For custom channels, channel IDs are generated by the system and cannot be modified. The first custom channel gets 1001 as the channel ID and subsequent custom channels have consecutive numbers. Once a custom channel is deregistered, the channel ID is no longer available for a new custom channel until Integration Server is restarted."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#reference_sdz_rr4_npb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#reference_sdz_rr4_npb__title__1"
     },
     {
       "name": "pub.alert:setSettings",
@@ -1213,7 +1213,7 @@
       "usage_notes": [
         "Based on the value of the retentionPeriodInDays parameter, a purge job clears the alerts stored in the database."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_setSettings__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_setSettings__title__1"
     },
     {
       "name": "pub.alert:severities",
@@ -1237,7 +1237,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#pub_alert_severities__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#pub_alert_severities__title__1"
     },
     {
       "name": "pub.alert:updateChannel",
@@ -1274,7 +1274,7 @@
       "usage_notes": [
         "Invoke the pub.alert:updateChannel service to ignore a notification of a specific type or restore an ignored notification from Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-alert-folder#reference_tqs_lw4_npb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-alert-folder#reference_tqs_lw4_npb__title__1"
     }
   ]
 }

@@ -70,7 +70,7 @@
         "If a time zone is provided as input to the service either in the timezone parameter or by setting useSystemTimeZone to true, the pub.datetime:build service calculates the date/time starting with a \"zoned\" date/time. The resulting values can differ when daylight savings time transitions are in effect. If no time zone is provided as input to the service either by not specifying timezone or by setting useSystemTimeZone to false, then the pub.datetime:build service calculates the date/time starting with an \"unzoned\" date/time.",
         "The pub.datetime:build service is similar to pub.date:dateBuild and pub.date:dateTimeBuild, however, the pub.datetime:build service allows the building of a date/time that does not include a time zone. Furthermore, the pub.datetime:build service assembles a date/time using each of the provided parameters. Consequently the pub.datetime:build service can build a date/time with a value that would be invalid in the current time zone, such as a date/time that would fall into the gap of a daylight saving time transition. This is unlike the pub.date:dateBuild and pub.date:dateTimeBuild services which build a local java.util.Date object that uses the timezone of the machine running Integration Server. The pub.date:dateBuild and pub.date:dateTimeBuild service then applies the offset between the local timezone and the specified timezone."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-datetime-folder#idd1d92852-6681-4ade-a10f-9982074da7ab__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-datetime-folder#idd1d92852-6681-4ade-a10f-9982074da7ab__title__1"
     },
     {
       "name": "pub.datetime:increment",
@@ -169,7 +169,7 @@
         "If startDate does not include a time zone, you do not specify a value for timezone, and useSystemTimeZone is false, the resulting endDate will not include a time zone.",
         "The pub.datetime:increment service is similar to pub.date:incrementDate, however, the pub.datetime:increment service provides more specific handling of time zones. To match the behavior of pub.date:incrementDate, set useSameInstant to true."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-datetime-folder#id07617c13-2fa5-488b-83bc-6b58f5e933bd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-datetime-folder#id07617c13-2fa5-488b-83bc-6b58f5e933bd__title__1"
     }
   ]
 }

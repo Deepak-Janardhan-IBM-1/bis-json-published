@@ -33,7 +33,7 @@
         "If a template is not available in a templates directory of any of the packages on the server, you can use this service by passing in a File object representing the template.",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runFileTemplate service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runFileTemplate__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runFileTemplate__title__1"
     },
     {
       "name": "pub.report:runFileTemplateOnPipe",
@@ -61,7 +61,7 @@
         "If a template is not available in a templates directory of any of the packages on the server, you can use this service to pass a File object representing the template file.",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runFileTemplateOnPipe service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runFileTemplateOnPipe__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runFileTemplateOnPipe__title__1"
     },
     {
       "name": "pub.report:runStringTemplate",
@@ -89,7 +89,7 @@
         "This service is typically invoked from other services that already have a template in a String object and an IData object that will be used to bind against the template.",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runStringTemplate service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runStringTemplate__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runStringTemplate__title__1"
     },
     {
       "name": "pub.report:runStringTemplateOnPipe",
@@ -112,7 +112,7 @@
         "This service is typically invoked from other services that already have a template in a String object and need the template to bind against the pipeline.",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runStringTemplateOnPipe service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runStringTemplateOnPipe__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runStringTemplateOnPipe__title__1"
     },
     {
       "name": "pub.report:runTemplate",
@@ -152,7 +152,7 @@
         "$package: Default",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runTemplate service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runTemplate__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runTemplate__title__1"
     },
     {
       "name": "pub.report:runTemplateOnPipe",
@@ -187,7 +187,7 @@
         "$package: Default",
         "Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runTemplateOnPipe service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runTemplateOnPipe__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-report-folder#Apub_report_runTemplateOnPipe__title__1"
     }
   ]
 }

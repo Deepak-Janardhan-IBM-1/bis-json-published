@@ -65,7 +65,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#reference_dn4_bjc_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#reference_dn4_bjc_gcc__title__1"
     },
     {
       "name": "pub.assets:getAssetsFromDependentPackages",
@@ -135,7 +135,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#reference_wl1_cyc_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#reference_wl1_cyc_gcc__title__1"
     },
     {
       "name": "pub.assets:getChecksums",
@@ -180,7 +180,7 @@
         "If you do not have List access to a particular asset, the service returns only the asset name. The package and checksum values for the particular asset are null.",
         "You can only compare packages and assets from the same version of Integration Server. Comparison of assets across different versions of Integration Server is not supported. Internal changes in assets from one release to another might result in functionally identical assets being reported as different."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#idef8130d4-3634-41f4-85ac-c11f335ebf82__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#idef8130d4-3634-41f4-85ac-c11f335ebf82__title__1"
     },
     {
       "name": "pub.assets:getGlobalVariableWithDependents",
@@ -230,7 +230,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#reference_gdb_wnd_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#reference_gdb_wnd_gcc__title__1"
     },
     {
       "name": "pub.assets:getHostedAPIs",
@@ -275,7 +275,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#reference_4E5B6E006BF64F769B48E3272B63B4B0__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#reference_4E5B6E006BF64F769B48E3272B63B4B0__title__1"
     },
     {
       "name": "pub.assets:getPackageAssets",
@@ -370,7 +370,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-assets-folder#reference_q1q_rrc_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-assets-folder#reference_q1q_rrc_gcc__title__1"
     }
   ]
 }

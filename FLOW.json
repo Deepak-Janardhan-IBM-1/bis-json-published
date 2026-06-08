@@ -1,6 +1,6 @@
 {
   "folder": "FLOW",
-  "total_services": 32,
+  "total_services": 31,
   "services": [
     {
       "name": "pub.flow:clearPipeline",
@@ -14,7 +14,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_clearPipeline__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_clearPipeline__title__1"
     },
     {
       "name": "pub.flow:debugLog",
@@ -41,38 +41,7 @@
         "You can control the logging level for flow messages independent of log messages for other facilities. On the Logs > Logging configuration > Server Logger > Edit Server Logger > Edit server logger details page in Integration Server Administrator, go to 0090 pub Flow Services under Integration Server and specify the level of messages that you want Integration Server to display for services in the pub.flow folder.",
         "Prior to Integration Server 7.1, Integration Server used a number-based system to set the level of debug information written to the server log. Integration Server maintains backward compatibility with this system."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_debugLog__title__1"
-    },
-    {
-      "name": "pub.flow:getCallerIdentity",
-      "description": "WmPublic. Retrieves the user identity and authentication context information for the current session.",
-      "input_parameters": [],
-      "output_parameters": [
-        {
-          "name": "userId",
-          "type": "String",
-          "description": "String The user name or ID of the user account logged into Integration Server."
-        },
-        {
-          "name": "isAdministrator",
-          "type": "Boolean",
-          "description": "Boolean. A value of true indicates that the user is in the \"Administrators\" group and false indicates that the user is not in the \"Administrators\" group."
-        },
-        {
-          "name": "openId",
-          "type": "IData",
-          "description": "IData. Conditional. The OpenID Connect (OIDC) claims that include identifiable details about the user, such as name and email. The value is empty if OIDC authentication is not used for the session."
-        },
-        {
-          "name": "oAuth",
-          "type": "IData",
-          "description": "IData. Conditional. The extracted JWT claims that identify the user if the token is JWT. The value is empty if OAuth authentication is not used for the session or the bearer token is not JWT."
-        }
-      ],
-      "usage_notes": [
-        "Use the pub.flow:getCallerIdentity service to verify the identity of a user account logged into Integration Server and determine if the authenticated user is authorized to access the protected resources requested in the session."
-      ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_h1n_mnz_13c__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_debugLog__title__1"
     },
     {
       "name": "pub.flow:getCallingService",
@@ -93,7 +62,7 @@
       "usage_notes": [
         "If pub.flow:getCallingService is invoked from a service that does not have a parent service (for example, if the service is a top-level service), Integration Server does not return the output parameters."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id883aa36e-8e61-417b-b5b4-a00d270094b9__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#id883aa36e-8e61-417b-b5b4-a00d270094b9__title__1"
     },
     {
       "name": "pub.flow:getLastError",
@@ -115,7 +84,7 @@
         "When you invoke pub.flow:getLastError in a flow service and the input to the flow service has non-serializable objects, the pub.flow:getLastError service returns the object type as strings instead of the object reference. For example, consider the following flow service.",
         "In the example, the \"SEQUENCE (Try)\" step returns a reference to non-serializable objects or object lists of class such as java.io.ByteArraylnputStream. For such non-serializable objects or object lists in the pipeline, when the error occurs, the pub.flow:getlastError service in the \"SEQUENCE (Catch)\" step returns the object type (java.io.ByteArraylnputStream) as strings instead of the object reference. Therefore, you must initialize the objects outside the \"SEQUENCE (Try)\" step to make them available to the \"SEQUENCE (Catch)\" step."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getLastError__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_getLastError__title__1"
     },
     {
       "name": "pub.flow:getLastFailureCaught",
@@ -143,7 +112,7 @@
         "If you want to rethrow a caught failure, use the pub.flow:getLastFailureCaught service to determine which failure the CATCH step caught and then use an EXIT step configured to signal failure to rethrow the failure.",
         "The pub.flow:getLastFailureCaught service does not have to be executed within a CATCH step. Invoking the service any time after a failure has been caught returns the caught failure."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#iddbfe4aad-7bc7-4b79-afd9-0e6988f30a9a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#iddbfe4aad-7bc7-4b79-afd9-0e6988f30a9a__title__1"
     },
     {
       "name": "pub.flow:getRetryCount",
@@ -166,7 +135,7 @@
         "The Integration Server retries a service that is configured to retry if the service uses the pub.flow:throwISRuntimeException service to catch a transient error and re-throw it as an ISRuntimeException. The Integration Server will also retry a service written in Java if the service throws an exception using com.wm.app.b2b.server.ISRuntimeException(). For more information about constructing com.wm.app.b2b.server.ISRuntimeExceptions in Java services, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.ISRuntimeException class.",
         "The maximum number of times the Integration Server retries a service depends on the value of the Max attempts property for the service. If the service is invoked by a trigger, the retry behavior is determined by the trigger retry properties."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A32754__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#A32754__title__1"
     },
     {
       "name": "pub.flow:getSession",
@@ -180,7 +149,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getSession__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_getSession__title__1"
     },
     {
       "name": "pub.flow:getTransportInfo",
@@ -198,7 +167,7 @@
         "The value of the protocol key in transport indicates which protocol was used to invoked the top-level service. For example, if the service was invoked through SMTP, protocol would be set to email. transport will also contain a document (whose key is protocol-dependent) that holds protocol-specific details.",
         "To use this service, first check the value of the transport/protocol parameter to determine which protocol was used. Then, depending on the value of protocol, extract the appropriate protocol information from transport. See pub.flow:transportInfo for the structure of the document that holds the protocol details."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getTransportInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_getTransportInfo__title__1"
     },
     {
       "name": "pub.flow:HTTPRequest",
@@ -206,7 +175,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_EAA26ACDF44A46CD99F8399D3946D6F9__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_EAA26ACDF44A46CD99F8399D3946D6F9__title__1"
     },
     {
       "name": "pub.flow:HTTPResponse",
@@ -219,7 +188,7 @@
         "If multiple documents named $httpResponse exist in a flow service, (multiple nested flow services), Integration Server uses the last $httpResponse value set in the flow service the response header.",
         "If a service adds $httpResponse to the pipeline and also calls the pub.flow:setResponse, pub.flow:setResponse2, pub.flow:setResponseHeader, or pub.flow:setResponseHeaders service, then Integration Server uses the values set in$httpResponse pipeline variable."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_D829A14C508E4CF5BD4B6A4D25F38DFA__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_D829A14C508E4CF5BD4B6A4D25F38DFA__title__1"
     },
     {
       "name": "pub.flow:invokeService",
@@ -245,7 +214,7 @@
       "usage_notes": [
         "If the parameters specified by the service invoked by pub.flow:invokeService are not present or not properly specified, Integration Server issues an exception appropriate for the invoked service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#ided8c927b-c207-4beb-b41e-c59cc50be728__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#ided8c927b-c207-4beb-b41e-c59cc50be728__title__1"
     },
     {
       "name": "pub.flow:iterator",
@@ -308,7 +277,7 @@
         "The output service signature of the service specified by the serviceName input parameter must contain at least one IData array. If there are multiple IData arrays in the output signature and the resultSetKey input parameter is not specified, pub.flow:iterator batches the first IData array in the pipeline. If there are no IData arrays in the pipeline, pub.flow:iterator returns the output all at once instead of in batches.",
         "The pub.flow:iterator service sends the rest of the pipeline to the service specified by the serviceName parameter in the case that multiple calls are required to get all of the data in the result set."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#idb05ee3f5-e081-4260-aebb-607ecdd0cbf5__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#idb05ee3f5-e081-4260-aebb-607ecdd0cbf5__title__1"
     },
     {
       "name": "pub.flow:restorePipeline",
@@ -336,7 +305,7 @@
         "When using MTOM streaming for SOAP attachments, messageContext variables and/or XOPObject fields will not be available in the saved pipeline. A messageContext variable is used by many pub.soap services to hold the SOAP message on which the service acts. XOPObject fields are Objects that use the com.wm.util.XOPObject Java wrapper type. For more information about MTOM Streaming, see the Web Services Developer’s Guide .",
         "This service is helpful in the interactive development or debugging of an application."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_restorePipeline__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_restorePipeline__title__1"
     },
     {
       "name": "pub.flow:restorePipelineFromFile",
@@ -345,7 +314,7 @@
         {
           "name": "fileName",
           "type": "String",
-          "description": "String Relative or absolute path and file name of a file containing a saved pipeline on the Integration Server. If the file is not found at run time, Integration Server throws an exception. For a filename that does not include an absolute path, Integration Server calculates the relative path from the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline When you specify a path for the fileName input parameter and the path is outside of the default pipeline directory, Integration Server verifies whether it is specified in the watt.server.file.canReadPaths server configuration parameter. If the file path is not specified in the watt.server.file.canReadPaths parameter, Integration Server throws an exception. For more information about watt.server.file.canReadPaths server configuration parameter, see Server Configuration Parameters"
+          "description": "String Relative or absolute path and file name of a file containing a saved pipeline on the Integration Server. If the file is not found at run time, an exception is thrown. For a filename that does not include an absolute path, Integration Server calculates the relative path from the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline When you specify a path for the fileName input parameter and the path is outside of the default pipeline directory, Integration Server verifies whether it is specified in the allowedReadPaths parameter of the file access control configuration file (fileAccessControl.cnf). If the file path is not specified in the allowedReadPaths parameter, Integration Server issues an exception."
         },
         {
           "name": "merge",
@@ -358,10 +327,11 @@
         "This service is helpful in the interactive development or debugging of an application. In some cases, however, using the Pipeline debug property for the debugging of an application is more efficient. For more information about the Pipeline debug property, see IBM webMethods Service Development Help .",
         "Be aware that variables that exist in the saved pipeline but are not defined in the flow will not appear on the Pipeline tab and, therefore, will not be available for explicit mapping.",
         "When using MTOM streaming for SOAP attachments, messageContext variables and/or XOPObject fields will not be available in the saved pipeline. A messageContext variable is used by many pub.soap services to hold the SOAP message on which the service acts. XOPObject fields are Objects that use the com.wm.util.XOPObject Java wrapper type. For more information about MTOM Streaming, see the Web Services Developer’s Guide .",
-        "The watt.server.checkPath.restorePipelineFromFile server configuration parameter determines whether Integration Server verifies that the provided filename is in the watt.server.file.canReadPaths. When watt.server.checkPath.restorePipelineFromFile is set to true, the default, Integration Server verifies that the path or directory specified in filename is in the default pipeline directory or is included in the watt.server.file.canReadPaths parameter. If the file is outside of the default pipeline directory and it is not in the watt.server.file.canReadPaths, the service ends with a ServiceException. When the watt.server.checkPath.restorePipelineFromFile parameter is set to false Integration Server does not verify that the specified filename is in the default pipeline directory or the watt.server.file.canReadPaths parameter.",
-        "The pub.flow:restorePipelineFromFile can always read from files in the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline. You do not need to include the default pipeline directory in the watt.server.file.canReadPaths parameter."
+        "The watt.server.checkPath.restorePipelineFromFile server configuration parameter determines whether Integration Server verifies that the provided filename is in the allowedReadPaths parameter of the file access control configuration file (fileAccessControl.cnf). When this parameter is set to true, the default, Integration Server verifies that the path or directory specified in filename is in the default pipeline directory or is included in the allowedReadPaths parameter. If the file is outside of the default pipeline directory and it is not in the allowed list, the service ends with a ServiceException. When the watt.server.checkPath.restorePipelineFromFile parameter is set to false Integration Server does not verify that the specified filename is in the default pipeline directory or the allowedReadPaths parameter.",
+        "The pub.flow:restorePipelineFromFile can always read from files in the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline. You do not need to include the default pipeline directory in the allowedReadPaths parameter.",
+        "The fileAccessControl.cnf file is located in the following directory: Integration Server_directory /instances/instance_name/packages/WmPublic/config"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_restorePipelineFromFile__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_restorePipelineFromFile__title__1"
     },
     {
       "name": "pub.flow:savePipeline",
@@ -379,7 +349,7 @@
         "When using MTOM streaming for SOAP attachments, messageContext variables and/or XOPObject fields will not be available in the saved pipeline. A messageContext variable is used by many pub.soap services to hold the SOAP message on which the service acts. XOPObject fields are Objects that use the com.wm.util.XOPObject Java wrapper type. For more information about MTOM Streaming, see the Web Services Developer’s Guide .",
         "This service is helpful in the interactive development or debugging of an application."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_savePipeline__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_savePipeline__title__1"
     },
     {
       "name": "pub.flow:savePipelineToFile",
@@ -388,19 +358,20 @@
         {
           "name": "fileName",
           "type": "String",
-          "description": "String Relative or absolute path to a file on the server file system in which Integration Server saves the contents of the pipeline. If the file or directory is not found at run time, the service creates it. For a filename that does not include an absolute path, Integration Server calculates the relative path from the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline When you specify a path for the fileName input parameter and the path is outside of the pipeline directory, Integration Server verifies whether it is specified in the watt.server.file.canWritePaths server configuration parameter. If the file path is not specified in the watt.server.file.canWritePaths parameter, Integration Server throws an exception. Otherwise, Integration Server either creates the file if it does not yet exist or overwrites the existing file if one already exists."
+          "description": "String Relative or absolute path to a file on the server file system in which Integration Server saves the contents of the pipeline. If the file or directory is not found at run time, the service creates it. For a filename that does not include an absolute path, Integration Server calculates the relative path from the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline When you specify a path for the fileName input parameter and the path is outside of the pipeline directory, Integration Server verifies whether it is specified in the allowedWritePaths parameter of the file access control configuration file (fileAccessControl.cnf). If the file path is not specified in the allowedWritePaths parameter, Integration Server issues an exception. Otherwise, Integration Server either creates the file if it does not yet exist or overwrites the existing file if one already exists."
         }
       ],
       "output_parameters": [],
       "usage_notes": [
         "This service is helpful in the interactive development or debugging of an application. In some cases, however, using the Pipeline debug property for the debugging of an application is more efficient. For more information about the Pipeline debug property, see IBM webMethods Service Development Help .",
-        "The watt.server.checkPath.savePipelineToFile server configuration parameter determines whether Integration Server verifies that the provided filename is in the default pipeline directory or is in the watt.server.file.canWritePaths server configuration parameter. When watt.server.checkPath.savePipelineToFile is set to true, the default, Integration Server verifies that the path or directory specified in filename is in the default pipeline directory or is specified in the watt.server.file.canWritePaths parameter. If the file is outside of the default pipeline directory and it is not in the watt.server.file.canWritePaths parameter, the service ends with a ServiceException. When the watt.server.checkPath.savePipelineToFile parameter is set to false Integration Server does not verify that the specified filename is in the default pipeline directory or in the watt.server.file.canWritePaths parameter.",
-        "The pub.flow:savePipelineToFile can always write files to the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline. You do not need to include the default pipeline directory in the watt.server.file.canWritePaths parameter.",
+        "The watt.server.checkPath.savePipelineToFile server configuration parameter determines whether Integration Server verifies that the provided filename is in the default pipeline directory or is in the allowedWritePaths parameter of the file access control configuration file (fileAccessControl.cnf). When this parameter is set to true, the default, Integration Server verifies that the path or directory specified in filename is in the default pipeline directory or is specified in the allowedWritePaths parameter. If the file is outside of the default pipeline directory and it is not in the allowed list, the service ends with a ServiceException. When the watt.server.checkPath.savePipelineToFile parameter is set to false Integration Server does not verify that the specified filename is in the default pipeline directory or in the allowedWritePaths parameter.",
+        "The pub.flow:savePipelineToFile can always write files to the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline. You do not need to include the default pipeline directory in the allowedWritePaths parameter.",
+        "The fileAccessControl.cnf file is located in the following directory: Integration Server_directory /instances/instance_name/packages/WmPublic/config",
         "If fileName specifies a filename with an invalid character the pub.flow:savePipelineToFile service appears to work but, in fact, does not persist the file to disk. If a subsequent call to pub.flow:restorePipelineFromFile that specifies the same invalid filename is made within the same server session, the service restores the pipeline successfully. However, if pub.flow:restorePipelineFromFile specifies the invalid filename after Integration Server restarted, the service fails with a FileNotFoundException. To avoid this situation, make sure the fileName value does not include any invalid characters.",
         "When using MTOM streaming for SOAP attachments, messageContext variables and/or XOPObject fields will not be available in the saved pipeline. A messageContext variable is used by many pub.soap services to hold the SOAP message on which the service acts. XOPObject fields are Objects that use the com.wm.util.XOPObject Java wrapper type. For more information about MTOM Streaming, see the Web Services Developer’s Guide .",
         "The following table shows the data types and classes that this service can write to the output file if they are included in the pipeline:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_savePipelineToFile__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_savePipelineToFile__title__1"
     },
     {
       "name": "pub.flow:setActivityLog",
@@ -427,7 +398,7 @@
         "You can invoke the pub.flow:setActivityLog service in a flow service to log messages for debugging or auditing purposes. If pub.flow:setActivityLog fails, the flow service execution is not interrupted.",
         "If you do not specify both fullMessage and briefMessage, the pub.flow:setActivityLog service logs an empty string."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_49992FC40DF64D6EB6DE4EF509F6185E__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_49992FC40DF64D6EB6DE4EF509F6185E__title__1"
     },
     {
       "name": "pub.flow:setAuditLogFields",
@@ -482,7 +453,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_9E45562098E042DE873708617A9DD53A__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_9E45562098E042DE873708617A9DD53A__title__1"
     },
     {
       "name": "pub.flow:setCustomContextID",
@@ -496,7 +467,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id29be98cc-8293-426b-ac3f-028855f1df8a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#id29be98cc-8293-426b-ac3f-028855f1df8a__title__1"
     },
     {
       "name": "pub.flow:setCustomLoggedFields",
@@ -588,7 +559,7 @@
       "usage_notes": [
         "If you want audit data for the custom fields in the service log, you must enable service auditing for the custom service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_72997662E9BC460E9EEDAFC87A1CE278__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_72997662E9BC460E9EEDAFC87A1CE278__title__1"
     },
     {
       "name": "pub.flow:setCustomTransactionId",
@@ -602,7 +573,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_pmm_q4x_j3c__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_ex1_5w2_k3c__title__1"
     },
     {
       "name": "pub.flow:setCustomTransactionIds",
@@ -616,7 +587,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_lgv_bqx_j3c__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#reference_rtx_hy2_k3c__title__1"
     },
     {
       "name": "pub.flow:setHTTPResponse",
@@ -692,7 +663,7 @@
       "usage_notes": [
         "When you invoke pub.flow:setHTTPResponse from Designer and set the responseCode input parameter to 204, the Results view in the Service Development perspective will be empty. This is because an HTTP response code of 204 indicates to the client that there is no content in the response. For Designer, this means there is no output pipeline to display when the service completes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#setHTTPResponse__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#setHTTPResponse__title__1"
     },
     {
       "name": "pub.flow:setResponse",
@@ -745,7 +716,7 @@
         "If the contentType input parameter and the Content-Type header of the request are not set, Integration Server uses the value of the request Accept header to set the Content-Type header of the response. For more information about how Integration Server handles Accept headers to set Content-Types, see the section Accept Header Field in the IBM webMethods Integration Server Administrator’s Guide . Accept Header Field.",
         "Keep in mind that when returning the processed XML document to the client that originally submitted it, you may need to modify the encoding. Java String objects are always stored using a Unicode encoding. If your original XML document used an encoding other than UTF-8 or UTF-16, it will still contain an encoding tag that indicates what this encoding was. However, if you did not modify the encoding during document processing, you need to set the encoding parameter when you invoke the pub.flow:setResponse service. Specifically, do one of the following:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_setResponse__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_setResponse__title__1"
     },
     {
       "name": "pub.flow:setResponse2",
@@ -792,7 +763,7 @@
         "If the contentType input parameter and the Content-Type header of the request are not set, Integration Server uses the value of the request Accept header to set the Content-Type header of the response. For more information about how Integration Server handles Accept headers to set Content-Types, see the section Accept Header Field in the IBM webMethods Integration Server Administrator’s Guide . Accept Header Field.",
         "Keep in mind that when returning the processed XML document to the client that originally submitted it, you may need to modify the encoding. Java String objects are always stored using a Unicode encoding. If your original XML document used an encoding other than UTF-8 or UTF-16, it will still contain an encoding tag that indicates what this encoding was. However, if you did not modify the encoding during document processing, you need to set the encoding parameter when you invoke the pub.flow:setResponse2 service. Specifically, do one of the following:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id20bd0329-51bc-43d0-8fef-f99dcfd0c37a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#id20bd0329-51bc-43d0-8fef-f99dcfd0c37a__title__1"
     },
     {
       "name": "pub.flow:setResponseCode",
@@ -813,7 +784,7 @@
       "usage_notes": [
         "When you invoke pub.flow:setResponseCode from Designer and set the responseCode input variable to 204, the Results view in the Service Development perspective will be empty. This is because an HTTP response code of 204 indicates to the client that there is no content in the response. For Designer, this means there is no output pipeline to display when the service completes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A36823__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#A36823__title__1"
     },
     {
       "name": "pub.flow:setResponseHeader",
@@ -841,7 +812,7 @@
         "If the jms.priority value is not a value between 0 to 9, Integration Server ignores the property and uses the default value of 4.",
         "If the value of JMSXGroupSeq is not an String that contains a number, Integration Server ignores the name/value pair and does not place it in the message header."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#idd8709f2d-9e45-41ee-90e0-5d88424284ba__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#idd8709f2d-9e45-41ee-90e0-5d88424284ba__title__1"
     },
     {
       "name": "pub.flow:setResponseHeaders",
@@ -868,7 +839,7 @@
         "pub.flow:setResponseHeaders sets one or more fields in the response header. If any of the fields specified by fieldName have already been set, they will be overwritten.",
         "See the Usage Notes of pub.flow:setResponseHeader for more information."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id12AGC08M05Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#id12AGC08M05Z__title__1"
     },
     {
       "name": "pub.flow:throwExceptionForRetry",
@@ -894,7 +865,7 @@
         "If the trigger service is written in Java, the service can use ISRuntimeException() to throw an exception and retry the service. For more information about constructing ISRuntimeExceptions in Java services, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.ISRuntimeException class.",
         "For information about configuring retry for services or triggers, see IBM webMethods Service Development Help ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A74127__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#A74127__title__1"
     },
     {
       "name": "pub.flow:tracePipeline",
@@ -910,7 +881,7 @@
       "usage_notes": [
         "Prior to Integration Server 7.1, Integration Server used a number-based system to set the level of debug information written to the server log. Integration Server maintains backward compatibility with this system. For more information about logging levels, see the description of the watt.debug.level parameter in IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_tracePipeline__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_tracePipeline__title__1"
     },
     {
       "name": "pub.flow:transportInfo",
@@ -920,7 +891,7 @@
       "usage_notes": [
         "A document with this structure is produced by the pub.flow:getTransportInfo service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_transportInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-flow-folder#Apub_flow_transportInfo__title__1"
     }
   ]
 }

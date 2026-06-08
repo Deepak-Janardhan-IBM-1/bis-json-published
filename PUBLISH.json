@@ -44,7 +44,7 @@
         "If the pub.publish:deliver services publishes a document to Universal Messaging and use of the client side queue is disabled for the Universal Messaging connection alias, Integration Server throws an ISRuntimeException if the Universal Messaging server is not available when the service executes. Make sure to code your service to handle this situation.",
         "For more information about how the Integration Server, Universal Messaging, and Broker deliver documents and for information about building a service that delivers a document, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_deliver__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_deliver__title__1"
     },
     {
       "name": "pub.publish:deliverAndWait",
@@ -114,7 +114,7 @@
         "If the pub.publish:deliverAndWait services publishes a document to Universal Messaging and use of the client side queue is disabled for the Universal Messaging connection alias, Integration Server throws an ISRuntimeException if the Universal Messaging server is not available when the service executes. Make sure to code your service to handle this situation.",
         "For more information about how to build a services that initiate synchronous or asynchronous request/reply scenarios, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_deliverAndWait__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_deliverAndWait__title__1"
     },
     {
       "name": "pub.publish:documentResolverSpec",
@@ -167,7 +167,7 @@
         "The pub.publish:documentResolverSpec must be used as the signature for any service used to resolve the processing status of a document. For information about building a document resolver service and enabling exactly once processing for IBM webMethods messaging trigger, see the Publish-Subscribe Developer’s Guide .",
         "Use the pub.jms:documentResolverSpec as the signature for a document resolver service used to determine the status of a JMS message received by a JMS trigger."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A78507__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#A78507__title__1"
     },
     {
       "name": "pub.publish:envelope",
@@ -177,7 +177,7 @@
       "usage_notes": [
         "For more information about setting and using a document's envelope parameters, see IBM webMethods Broker Java Client API Reference , IBM webMethods Broker Client C API Programmer’s Guide , and Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_envelope__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_envelope__title__1"
     },
     {
       "name": "pub.publish:getRedeliveryCount",
@@ -195,7 +195,7 @@
         "Integration Server retrieves the redelivery count for the document currently maintained in the invoke state. That is, Integration Server retrieves the redelivery count for the document that caused the trigger service to execute.",
         "When a trigger service satisfied by an All (AND) join condition invokes pub.publish:getRedliveryCount, the pub.publish:getRedeliveryCount service returns the redelivery count for the last document received by the join. For example, suppose that documents A and B satisfied an All (AND) join condition. If the Integration Server receives document A first and document B second, when pub.publish:getRedliveryCount executes, it retrieves the redelivery count for document B."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A97140__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#A97140__title__1"
     },
     {
       "name": "pub.publish:publish",
@@ -240,7 +240,7 @@
         "Integration Server issues a ServiceException when the dispatcher is shut down during the execution of this service. In this situation, Integration Server does not save the data in the outbound document store (client side queue), and the document will not appear in the outbound document store. Make sure to code your service to handle this situation.",
         "For more information about building a service that publishes a document locally or to a messaging provider, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_publish__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_publish__title__1"
     },
     {
       "name": "pub.publish:publishAndWait",
@@ -309,7 +309,7 @@
         "If the publishable document type in documentTypeName is associated with a Universal Messaging connection alias, the Enable Request/Reply Channel and Listener check box must be selected for the alias. When this check box is selected, Integration Server ensures that a request/reply channel exists for the Universal Messaging connection alias on the Universal Messaging server and that Integration Server has a listener that subscribes to the alias-specific request/reply channel. If the check box is cleared, there will be no channel in which Universal Messaging can collect replies and no listener with which Integration Server can retrieve replies. The pub.publish:publishAndWait service will end with a ServiceException if the Enable Request/Reply Channel and Listener check box is not selected for the Universal Messaging connection alias.",
         "For more information about building a service that follows the request/reply model, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_publishAndWait__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_publishAndWait__title__1"
     },
     {
       "name": "pub.publish:reply",
@@ -351,7 +351,7 @@
         "Services that publish or deliver a document and wait for a reply can specify a publishable document type to which reply documents must conform. If the reply document is not of the type specified in the receiveDocumentTypeName parameter of the pub.publish:publishAndWait or pub.publish:deliverAndWait service, the publishing service will wait forever for a reply. Work closely with the developer of the publishing service to make sure that your reply document is an instance of the correct publishable document type.",
         "For more information about building a reply service, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_reply__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_reply__title__1"
     },
     {
       "name": "pub.publish:syncToBroker",
@@ -391,7 +391,7 @@
         "The Connection alias name property for a document type specifies the messaging connection alias assigned to the document type which indicates the provider to which a document type will be pushed.",
         "If the documentTypes parameter contains document types that are not publishable or do not exist, Integration Server lists the errors in the errors parameter."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A94936__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#A94936__title__1"
     },
     {
       "name": "pub.publish:syncToProvider",
@@ -432,7 +432,7 @@
         "The pub.publish:syncToProvider service replaces pub.publish:syncToBroker, which has been deprecated.",
         "For a publishable document type that uses protocol buffers as the encoding type, the pub.publish:syncToProvider synchronizes the existing protocol buffer descriptor with Universal Messaging. If you want Integration Server to create an updated protocol buffer definition for the document type, compile the updated definition into an updated protocol buffer descriptor, and synchronize the updated descriptor with Universal Messaging, use the pub.utils.messaging:syncDocTypesToUM service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#CEHHBAEG__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#CEHHBAEG__title__1"
     },
     {
       "name": "pub.publish:waitForReply",
@@ -456,7 +456,7 @@
         "A single publish and wait request might receive many response documents. The Integration Server that made the publish and wait request uses only the first reply document it receives. Integration Server discards all other replies. First is arbitrarily defined. There is no guarantee provided for the order in which the messaging provider processes incoming replies. If you need a reply document from a specific recipient, use the pub.publish:deliverAndWait service instead.",
         "For more information about building an asynchronous request/reply service, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#A26279__title__1"
     },
     {
       "name": "pub.publish.notification:error",
@@ -467,7 +467,7 @@
         "The client to which Integration Server delivers the error document needs to subscribe to the pub.publish.notification:error document type. If the client does not have a trigger that subscribes to this document type, the client will never receive or process the error document. If the client receiving the error document is an Integration Server, it generates the message [ISS.0098.0024V2] No trigger available for incoming Document pub.publish.notification:error.",
         "The watt.server.messaging.deliverNotificationErrors server configuration parameter specifies whether Integration Server generates and delivers pub.publish.notifcation.error messages. When set to true, Integration Server generates and delivers pub.publish.notification:error messages when an error or exception condition during IBM webMethods messaging triggerprocessing. The generation and delivery of notification error messages may result in the generation of Adapter:Error events. When set to false, Integration Serverdoes not generate or deliver pub.publish.notification:error messages. The notification error messages are suppressed."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_notification_error__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-publish-folder#Apub_publish_notification_error__title__1"
     }
   ]
 }

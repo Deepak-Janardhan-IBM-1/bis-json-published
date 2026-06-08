@@ -105,7 +105,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_addComplexTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_addComplexTask__title__1"
     },
     {
       "name": "pub.scheduler:addOneTimeTask",
@@ -175,7 +175,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#A53562__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A53562__title__1"
     },
     {
       "name": "pub.scheduler:addRepeatingTask",
@@ -265,7 +265,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_addRepeatingTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_addRepeatingTask__title__1"
     },
     {
       "name": "pub.scheduler:cancelTask",
@@ -287,7 +287,7 @@
       "usage_notes": [
         "For information about the tasks on the Scheduler, run the pub.scheduler:getTaskIDs and pub.scheduler:getTaskInfo services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_cancelTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_cancelTask__title__1"
     },
     {
       "name": "pub.scheduler:getTaskIDs",
@@ -307,7 +307,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskIDs__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskIDs__title__1"
     },
     {
       "name": "pub.scheduler:getTaskInfo",
@@ -452,7 +452,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo__title__1"
     },
     {
       "name": "pub.scheduler:getUserTaskList",
@@ -471,7 +471,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#A34465__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A34465__title__1"
     },
     {
       "name": "pub.scheduler:migrateTasksToJDBC",
@@ -500,7 +500,7 @@
         "Before running this service you must install the external IS Internal database component and define a database connection for it. For instructions, refer to Installing IBM webMethods Products .",
         "When you run the service, it looks in the embedded database for scheduled user tasks and writes any tasks it finds to the database identified by the ISInternal functional alias, which is defined on the Settings > JDBC pools page of the Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_migrateTasksToJDBC__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_migrateTasksToJDBC__title__1"
     },
     {
       "name": "pub.scheduler:resumeTask",
@@ -520,7 +520,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#A22039__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A22039__title__1"
     },
     {
       "name": "pub.scheduler:suspendTask",
@@ -542,7 +542,7 @@
       "usage_notes": [
         "If you want to cancel a task or remove a task from the scheduler, use the pub.scheduler:cancelTask service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_suspendTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_suspendTask__title__1"
     },
     {
       "name": "pub.scheduler:updateComplexTask",
@@ -656,7 +656,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateComplexTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateComplexTask__title__1"
     },
     {
       "name": "pub.scheduler:updateOneTimeTask",
@@ -729,7 +729,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateOneTimeTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateOneTimeTask__title__1"
     },
     {
       "name": "pub.scheduler:updateRepeatingTask",
@@ -822,7 +822,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateRepeatingTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateRepeatingTask__title__1"
     }
   ]
 }

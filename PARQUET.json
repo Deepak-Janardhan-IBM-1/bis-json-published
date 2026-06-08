@@ -14,7 +14,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_closeBatchIterator__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_closeBatchIterator__title__1"
     },
     {
       "name": "pub.parquet:documentTypeToSchema",
@@ -34,7 +34,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_documentTypeToSchema__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_documentTypeToSchema__title__1"
     },
     {
       "name": "pub.parquet:getBatchIterator",
@@ -56,7 +56,7 @@
       "usage_notes": [
         "None."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_getBatchIterator__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_getBatchIterator__title__1"
     },
     {
       "name": "pub.parquet:getNextBatch",
@@ -108,7 +108,7 @@
       "usage_notes": [
         "The getNextBatch service may run into a memory limitation when reading a batch with a large number of records. Consider using a smaller batch size or allocating more memory to the Integration Server instance."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_getNextBatch__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_getNextBatch__title__1"
     },
     {
       "name": "pub.parquet:read",
@@ -130,7 +130,7 @@
       "usage_notes": [
         "The following tables list how Parquet data types are converted to Integration Server data types."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_read__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_read__title__1"
     },
     {
       "name": "pub.parquet:write",
@@ -172,7 +172,7 @@
         "The following tables list how Integration Server data types map to Parquet types.",
         "An input file path for the pub.parquet:write service that contains a consecutive backslash and forward slash may cause unexpected results. For example, the path \"packages/replicatePackage/resources\\\\/testService2.parquet\" in Linux creates a directory named \"resources\\\\\" that cannot be traversed. To work around this issue, ensure the paths passed to the service are in the appropriate format for the operating system."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_write__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-parquet-folder#Apub_parquet_write__title__1"
     }
   ]
 }

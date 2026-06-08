@@ -25,7 +25,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-universalname-folder#Apub_universName_find__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-universalname-folder#Apub_universName_find__title__1"
     },
     {
       "name": "pub.universalName:findDocumentType",
@@ -50,7 +50,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-universalname-folder#A46768__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-universalname-folder#A46768__title__1"
     },
     {
       "name": "pub.universalName:list",
@@ -86,7 +86,7 @@
       "usage_notes": [
         "To return the entire contents of the universal-name registry, use the pub.universalName:listAll service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-universalname-folder#Apub_universName_list__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-universalname-folder#Apub_universName_list__title__1"
     },
     {
       "name": "pub.universalName:listAll",
@@ -122,7 +122,7 @@
       "usage_notes": [
         "To return a list of the services in the universal-name registry only, use the pub.universalName:listservice."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-universalname-folder#A42750__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-universalname-folder#A42750__title__1"
     }
   ]
 }

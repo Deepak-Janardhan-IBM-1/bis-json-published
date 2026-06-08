@@ -10,7 +10,7 @@
       "usage_notes": [
         "Integration Server caches your login credentials (username and password) for better performance. The credentials are stored until the cache expires. If a user's credential is updated and a situation demands that the authentication cache be cleared immediately, then use this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#clearAuthenticationCache__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#clearAuthenticationCache__title__1"
     },
     {
       "name": "pub.security:clearKeyAndChain",
@@ -22,7 +22,7 @@
         "Company A has IBM webMethods Integration Server with one certificate chain. Company A wants to start trading with two new companies: Company B and Company C. Due to explicit business decisions, both Company B and Company C require that secure requests to their servers use certificates issued by their company's certificate authority. Company A now has three certificate sets that it must manage: one for connections to B, one for connections to C, and one for all other requests. Below is a high-level process flow of what Company A would do if documents needed to be forwarded to companies B, C, and D (some arbitrary partner without the stringent security).",
         "Assume all network communication is done using HTTPS. Documents are sent to the companies in the following order: Company D, Company B, Company C, Company D. All data transfers make use of the pub.client:http service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_clearKeyAndChain__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_clearKeyAndChain__title__1"
     },
     {
       "name": "pub.security:decrypt",
@@ -134,7 +134,7 @@
       "usage_notes": [
         "For JCE, the service supports a maximum data size that depends on the key size."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_8E99023F3A9D42A0BADCBF986D4B1C76__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_8E99023F3A9D42A0BADCBF986D4B1C76__title__1"
     },
     {
       "name": "pub.security:decryptAndVerify",
@@ -253,7 +253,7 @@
         {
           "name": "signingAlgorithm",
           "type": "String",
-          "description": "String The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3-compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          "description": "String The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. FIPS mode can be enabled or disabled using the watt.security.fips.mode parameter. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
         },
         {
           "name": "cipher",
@@ -291,7 +291,7 @@
       "usage_notes": [
         "Use the pub.security:decryptAndVerify service when an external system connected to Integration Server requires decrypted data with verified signature."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_706D030B7C1E49D58D088A49CD1C5BE3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_706D030B7C1E49D58D088A49CD1C5BE3__title__1"
     },
     {
       "name": "pub.security:encrypt",
@@ -403,7 +403,7 @@
       "usage_notes": [
         "To encrypt the data for multiple users, provide the users' public keys to the service as a list of byte arrays, strings, or a keyring file. If you provide a keyring file, you must also provide the public key aliases."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_AD27FE791FB347589BD352EBD822DBF6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_AD27FE791FB347589BD352EBD822DBF6__title__1"
     },
     {
       "name": "pub.security:generateHashValue",
@@ -440,7 +440,7 @@
       "usage_notes": [
         "Use the pub.security:generateHashValue service to generate a hash value for any input string. For example, you can create a secure hashedValue for a user's password. Additionally, you can run the pub.security:generateSalt service to generate a salt value, which can be passed to the pub.security:generateHashValue service to generate a unique and stronger hashedValue, each time you run the pub.security:generateHashValue service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_nw1_zkj_qpb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_nw1_zkj_qpb__title__1"
     },
     {
       "name": "pub.security:generateSalt",
@@ -461,7 +461,7 @@
       "usage_notes": [
         "Use the saltValue output of this service as input to the pub.security:generateHashValue service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_f1b_s3j_qpb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_f1b_s3j_qpb__title__1"
     },
     {
       "name": "pub.security.ports:hostNamesSpec",
@@ -477,7 +477,7 @@
       "usage_notes": [
         "The service that returns a list of IP addresses or hostnames must use the specification as the service signature. For more information, see IBM webMethods Service Development Help . Alternatively, you can manually replicate the specification in the service signature."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_818645C92DD24F6E9F75635450460DAD__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_818645C92DD24F6E9F75635450460DAD__title__1"
     },
     {
       "name": "pub.security:setKeyAndChain",
@@ -496,7 +496,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_setKeyAndChain__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_setKeyAndChain__title__1"
     },
     {
       "name": "pub.security:setKeyAndChainFromBytes",
@@ -518,7 +518,7 @@
         "To enable this service to work properly if you use the FTPS protocol, you must set the secure parameter to True in the pub.client:http and pub.client.ftp:login services.",
         "You can use pub.security:clearKeyAndChain with pub.security:setKeyAndChainFromBytes. See the Usage Notes for pub.security:clearKeyAndChain for more information about using the pub.security:setKeyAndChainFromBytes service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_setKeyAndChainFromBytes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_setKeyAndChainFromBytes__title__1"
     },
     {
       "name": "pub.security:sign",
@@ -602,7 +602,7 @@
         {
           "name": "signingAlgorithm",
           "type": "String",
-          "description": "String The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          "description": "String The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. FIPS mode can be enabled or disabled using the watt.security.fips.mode parameter. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
         }
       ],
       "output_parameters": [
@@ -630,7 +630,7 @@
       "usage_notes": [
         "For PGP, consider the following points:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_C6832926AD6C4B0ABBE7BF977195C06F__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_C6832926AD6C4B0ABBE7BF977195C06F__title__1"
     },
     {
       "name": "pub.security:signAndEncrypt",
@@ -754,7 +754,7 @@
         {
           "name": "signingAlgorithm",
           "type": "String",
-          "description": "String. The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          "description": "String. The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. FIPS mode can be enabled or disabled using the watt.security.fips.mode parameter. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
         },
         {
           "name": "cipher",
@@ -788,7 +788,7 @@
         "Use the pub.security:signAndEncrypt service when an external system connected to Integration Server requires signed and encrypted data. The service accepts multiple public keys to encrypt the same data for many users.",
         "For JCE, you can sign and encrypt the data for a single user only."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_86B3E60E23E743FFA2919E7F6B30311A__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_86B3E60E23E743FFA2919E7F6B30311A__title__1"
     },
     {
       "name": "pub.security:userInfoSpec",
@@ -868,7 +868,7 @@
         "Integration Server can only reject a request using a UserInfo service if the UserInfo service is invoked synchronously. When registering the UserInfo service with the OpenID Provider, make sure to register the service as synchronous if you want to be able to reject a User Agent request based on the output of th UserInfo service.",
         "Integration Server populates userInfoClaims or error depending on the response from the OpenID Provider’s UserInfo Endpoint."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#id8328ad36-5275-4f81-8cc8-99fc918038b3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#id8328ad36-5275-4f81-8cc8-99fc918038b3__title__1"
     },
     {
       "name": "pub.security:verify",
@@ -947,7 +947,7 @@
         {
           "name": "signingAlgorithm",
           "type": "String",
-          "description": "String. The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          "description": "String. The signing algorithm to use. For PGP, select one of the following: MD5 SHA256 SHA384 SHA512 The default value is SHA256 for PGP. For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. FIPS mode can be enabled or disabled using the watt.security.fips.mode parameter. This is applicable only for PGP. Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
         },
         {
           "name": "actualData",
@@ -1006,7 +1006,7 @@
         "To verify signed data, Integration Server must have access to the signer's public key.",
         "For JCE, you can verify the data for single user only."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_0F15FB6F07D643DAAD5AD97160B08DFD__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#reference_0F15FB6F07D643DAAD5AD97160B08DFD__title__1"
     },
     {
       "name": "pub.security.enterpriseGateway:alertSpec",
@@ -1075,7 +1075,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#id127U908045Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#id127U908045Z__title__1"
     },
     {
       "name": "pub.security.enterpriseGateway:customFilterSpec",
@@ -1100,7 +1100,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#idc91e3d2f-93c5-4e01-82d0-41affd7ee040__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#idc91e3d2f-93c5-4e01-82d0-41affd7ee040__title__1"
     },
     {
       "name": "pub.security.keystore.pkcs7:sign",
@@ -1158,7 +1158,7 @@
         "This service supersedes pub.security.pkcs7:sign, which is deprecated.",
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A91878__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A91878__title__1"
     },
     {
       "name": "pub.security.keystore:getCertificate",
@@ -1185,7 +1185,7 @@
       "usage_notes": [
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A80613__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A80613__title__1"
     },
     {
       "name": "pub.security.keystore:getKeyAndChain",
@@ -1217,7 +1217,7 @@
       "usage_notes": [
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A89774__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A89774__title__1"
     },
     {
       "name": "pub.security.keystore:getTrustedCertificates",
@@ -1239,7 +1239,7 @@
       "usage_notes": [
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A95392__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A95392__title__1"
     },
     {
       "name": "pub.security.keystore:setKeyAndChain",
@@ -1261,7 +1261,7 @@
         "This service replaces pub.security:setKeyAndChain, which is deprecated.",
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A49209__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A49209__title__1"
     },
     {
       "name": "pub.security.outboundPasswords:getPassword",
@@ -1303,7 +1303,7 @@
         "Call pub.security.util:convertSecureString to convert the password to a usable format.",
         "The password can then be passed to the authenticating mechanism of the secure resource."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A38934__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A38934__title__1"
     },
     {
       "name": "pub.security.outboundPasswords:listKeys",
@@ -1328,7 +1328,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A70711__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A70711__title__1"
     },
     {
       "name": "pub.security.outboundPasswords:setPassword",
@@ -1369,7 +1369,7 @@
         "Call pub.security.outboundPasswords:setPassword to save the password in encrypted form in the outbound password store.",
         "The pub.security.outboundPasswords:setPassword service requires a key to be supplied which is basically a key to the password. This key must be saved in some way; any flow service wishing to use the password to access a secure resource will need to supply the key to retrieve the password from the outbound password store."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A17500__title__1"
     },
     {
       "name": "pub.security.outboundPasswords:removePassword",
@@ -1399,7 +1399,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A59441__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A59441__title__1"
     },
     {
       "name": "pub.security.outboundPasswords:updatePassword",
@@ -1434,7 +1434,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A54267__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A54267__title__1"
     },
     {
       "name": "pub.security.pkcs7:sign",
@@ -1486,7 +1486,7 @@
       "usage_notes": [
         "This service is superseded by pub.security.keystore.pkcs7:sign."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_pkcs7_sign__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_pkcs7_sign__title__1"
     },
     {
       "name": "pub.security.pkcs7:verify",
@@ -1561,7 +1561,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_pkcs7_verify__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_pkcs7_verify__title__1"
     },
     {
       "name": "pub.security.util:convertSecureString",
@@ -1596,7 +1596,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A70559__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A70559__title__1"
     },
     {
       "name": "pub.security.util:createMessageDigest",
@@ -1631,7 +1631,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_createmsgDigest__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_util_createmsgDigest__title__1"
     },
     {
       "name": "pub.security.util:createSecureString",
@@ -1668,7 +1668,7 @@
       "usage_notes": [
         "Only one of the input parameters (i.e. string, bytes, or chars) may be specified. If more than one is specified, an exception will be thrown. An exception is also thrown if none of these is specified."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A54051__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A54051__title__1"
     },
     {
       "name": "pub.security.util:destroySecureString",
@@ -1682,7 +1682,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A45883__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A45883__title__1"
     },
     {
       "name": "pub.security.util:getCertificateInfo",
@@ -1752,7 +1752,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_getCertInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_util_getCertInfo__title__1"
     },
     {
       "name": "pub.security.util:loadPKCS7CertChain",
@@ -1772,7 +1772,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_loadCertChain__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#Apub_security_util_loadCertChain__title__1"
     },
     {
       "name": "pub.security.xml:decryptXML",
@@ -1824,7 +1824,7 @@
         "keyAlias and keyStoreAlias should either both be provided or both be absent from the input. If no value is provided for these parameters, Integration Server uses the private key/certificate specified for the Decryption Key. If no value is specified for Decryption Key, Integration Server uses the SSL Key.",
         "For information about configuring the Decryption Key and SSL Key keystore aliases, refer to IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A34643__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A34643__title__1"
     },
     {
       "name": "pub.security.xml:encryptXML",
@@ -1900,7 +1900,7 @@
         "In pub.security.xml:encryptXML, the certificate/public key is specified through one of the following input parameters: the client's name (through recipientID), or the public key of the partner application (through recipientCert).",
         "Because encryption is a processing-intensive activity, it is recommended to only encrypt the XML nodes requiring protection."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A53501__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A53501__title__1"
     },
     {
       "name": "pub.security.xml:signXML",
@@ -2053,7 +2053,7 @@
         "For example, #sampleID",
         "Where sampleID is an ID attribute that functions as a unique identifier for an element in an XML schema definition. In this example, Integration Server will locate the node with the ID attribute \"sampleID\" and then apply the filter specified by nodeSelectors to determine which nodes to sign."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A96837__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A96837__title__1"
     },
     {
       "name": "pub.security.xml:verifyXML",
@@ -2123,7 +2123,7 @@
         "For information on Integration Server certificate mapping, refer to IBM webMethods Integration Server Administrator’s Guide .",
         "The pub.security.xml:verifyXML service works as follows:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A25218__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-security-folder#A25218__title__1"
     }
   ]
 }

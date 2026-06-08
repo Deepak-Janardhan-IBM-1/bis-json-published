@@ -24,7 +24,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_latch_closeLatch__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_latch_closeLatch__title__1"
     },
     {
       "name": "pub.synchronization.latch:isLatchClosed",
@@ -57,7 +57,7 @@
         "Use the latch status to determine whether or not to update the resource.",
         "For more information about using the pub.synchronization.latch services to prevent echo suppression, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_latch_isLatchclosed__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_latch_isLatchclosed__title__1"
     },
     {
       "name": "pub.synchronization.latch:openLatch",
@@ -81,7 +81,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#A10178__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#A10178__title__1"
     },
     {
       "name": "pub.synchronization.xref:createXReference",
@@ -121,7 +121,7 @@
         "On the target side of synchronization, use the pub.synchronization.xref:insertXReference service to insert the cross-reference between a canonical key and the native ID for the record in the target resource.",
         "For more information about using the createXReference service to create synchronizations, see the section Built-In Services for Key Cross-Referencing in the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_createXReferenc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_createXReferenc__title__1"
     },
     {
       "name": "pub.synchronization.xref:deleteByObjectId",
@@ -137,7 +137,7 @@
       "usage_notes": [
         "You can use this service to purge unwanted cross-reference records from the cross-reference table. For example, if you wanted to delete all cross-reference records for the purchaseOrder synchronization, specify \"purchaseOrder\" as the objectId."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_deleteByObjectI__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_deleteByObjectI__title__1"
     },
     {
       "name": "pub.synchronization.xref:deleteXReference",
@@ -161,7 +161,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_deleteXReferenc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_deleteXReferenc__title__1"
     },
     {
       "name": "pub.synchronization.xref:getCanonicalKey",
@@ -194,7 +194,7 @@
         "You can use this service to determine whether you need to insert or update a record in the resource.",
         "For more information about using the getCanonicalKey service in synchronizations, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_getCanonicalKey__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_getCanonicalKey__title__1"
     },
     {
       "name": "pub.synchronization.xref:getNativeId",
@@ -228,7 +228,7 @@
         "After you insert or update the record in the resource, make sure to use pub.synchronization.latch:closeLatch to close the latch for the record to prevent circular updates (echoes).",
         "For more information about using the getNativeId service in synchronizations, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_getNativeId__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_getNativeId__title__1"
     },
     {
       "name": "pub.synchronization.xref:insertXReference",
@@ -262,7 +262,7 @@
         "After you insert the cross-reference between the new native ID and the canonical key, use pub.synchronization.latch:closeLatch to close the latch for the record to prevent circular updates (echoes).",
         "For more information about using the insertXReference service in synchronizations, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_insertXReferenc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-synchronization-folder#Apub_synchronization_xref_insertXReferenc__title__1"
     }
   ]
 }

@@ -20,7 +20,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#A82865__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#A82865__title__1"
     },
     {
       "name": "pub.utils:executeOSCommand",
@@ -67,7 +67,7 @@
       "usage_notes": [
         "To execute the dir command on Windows XP using the pub.utils:executeOSCommand, the command parameter is passed as cmd.exe /c dir and the working directory parameter is passed as c:/temp. The outputMessage parameter will contain the files of c:/temp directory."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#A95027__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#A95027__title__1"
     },
     {
       "name": "pub.utils:generateUUID",
@@ -81,7 +81,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#A96317__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#A96317__title__1"
     },
     {
       "name": "pub.utils:getServerProperty",
@@ -106,7 +106,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#Apub_utils_getServerProperty__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#Apub_utils_getServerProperty__title__1"
     },
     {
       "name": "pub.utils.messaging:getUMDependencies",
@@ -151,7 +151,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#idb9d697f5-c4a7-4605-a3d2-63e9bc67d899__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#idb9d697f5-c4a7-4605-a3d2-63e9bc67d899__title__1"
     },
     {
       "name": "pub.utils.messaging:listOutOfSyncProtobufDocs",
@@ -211,7 +211,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#reference_d4m_q25_whc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#reference_oyp_try_whc__title__1"
     },
     {
       "name": "pub.utils.messaging:migrateDocTypesTriggersToUM",
@@ -225,7 +225,7 @@
         {
           "name": "backupPackages",
           "type": "java.lang.Boolean",
-          "description": "java.lang.Boolean Optional. Indicates whether the service creates a package archive for each package affected by this service prior to making any updates to the publishable document types and IBM webMethods messaging trigger. Set to: true to create an archive for each package that contains a publishable document type or IBM webMethods messaging trigger that will be updated by this service. The archive will be named packageName.zip_timeStamp and placed in the following directory: and will be located in the following directory: Integration Server_directory \\instances\\instance_name\\replicate\\archive. This is the default. false to skip creating an archive of each affected package before making updates. Important: IBM recommends that you set backupPackages to true when reportOnly is set to false if you have not taken other measures to back up the packages containing the publishable document types and triggers to be migrated prior to executing the pub.utils.messaging:migrateDocTypesTriggersToUM service. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service."
+          "description": "java.lang.Boolean Optional. Indicates whether the service creates a package archive for each package affected by this service prior to making any updates to the publishable document types and IBM webMethods messaging trigger. Set to: true to create an archive for each package that contains a publishable document type or IBM webMethods messaging trigger that will be updated by this service. The archive will be named packageName.zip_timeStamp and placed in the following directory: and will be located in the following directory: Integration Server_directory \\instances\\instance_name\\replicate\\archive. This is the default. false to skip creating an archive of each affected package before making updates. Important: Set backupPackages to true when reportOnly is set to false if you have not taken other measures to back up the packages containing the publishable document types and triggers to be migrated prior to executing the pub.utils.messaging:migrateDocTypesTriggersToUM service. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service."
         },
         {
           "name": "packageNames",
@@ -433,9 +433,9 @@
       "usage_notes": [
         "To execute the pub.utils.messaging.migrateDocTypesTriggersToUM, Integration Server must be connected to a Broker. Integration Server must have a Broker connection alias that configures a connection to the Broker that contains the provider definitions for the publishable document types and the trigger subscriptions that you want to updated. The Broker connection alias must be enabled at the time the pub.utils.messaging.migrateDocTypesTriggersToUM executes.",
         "Make sure the publishable document types that use a Broker connection alias are synchronized with the associated Broker document types prior to executing the pub.utils.messaging.migrateDocTypesTriggersToUM service. You can synchronize publishable document types using Designer or by executing the pub.publish:syncToProvider service.",
-        "When using Universal Messaging as the messaging provider, IBM webMethods messaging trigger require more server threads and system threads than needed when using Broker as the messaging provider. Before migrating publishable document types and IBM webMethods messaging triggers to work with Universal Messaging, IBM recommends increasing the size of your server thread pool by at least two additional threads per trigger that will be migrated. For example, if you intend to migrate 100 triggers, increase the server thread pool by 200 threads.",
+        "When using Universal Messaging as the messaging provider, IBM webMethods messaging trigger require more server threads and system threads than needed when using Broker as the messaging provider. Before migrating publishable document types and IBM webMethods messaging triggers to work with Universal Messaging, increase the size of your server thread pool by at least two additional threads per trigger that will be migrated. For example, if you intend to migrate 100 triggers, increase the server thread pool by 200 threads.",
         "As part of updating publishable document types and IBM webMethods messaging triggers to work with Universal Messaging, first run the pub.utils.messaging.migrateDocTypesTriggersToUM service in report only mode, that is with reportOnly set to true. Use the service output to find potential problems in the migration, such as identifying publishable document types and triggers that will not be migrated successfully. When you are confident that all the publishable document types and IBM webMethods messaging triggers that you want to migrate will do so successfully, run the pub.utils.messaging.migrateDocTypesTriggersToUM service is with reportOnly set to false.",
-        "Prior to executing the pub.utils.messaging:migrateDocTypesTriggersToUM service, if you have not taken other measures to back up the packages containing the publishable document types and triggers to be migrated, IBM recommends that you set backupPackages to true when reportOnly is set to false. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service.",
+        "Prior to executing the pub.utils.messaging:migrateDocTypesTriggersToUM service, if you have not taken other measures to back up the packages containing the publishable document types and triggers to be migrated, set backupPackages to true when reportOnly is set to false. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service.",
         "Publishable document types that use a Universal Messaging connection alias cannot be published locally. Do not migrate a publishable document type that is used in local publishing.",
         "When determining which publishable document types to migrate, make sure that you migrate all of the document types subscribed to by a group of IBM webMethods messaging triggers at one time. This ensures that the IBM webMethods messaging triggers will subscribe to document types that use the same messaging connection alias. Integration Server considers a trigger to be invalid if it subscribes to publishable document types that use different messaging connection aliases. The pub.utils.messaging.migrateDocTypesTriggersToUM service will save IBM webMethods messaging trigger that uses mixed connection aliases but will disable the trigger. Additionally, the service will not attempt to convert any of the filters in conditions of the disabled trigger. To resolve this issue, you can modify the publishable document types used by the trigger so that the publishable document types all use the same messaging connection alias. You can then re-execute the pub.utils.messaging.migrateDocTypesTriggersToUM service to migrate the encoding type of the publishable document types as well as the trigger filters. Alternatively, you can restore the publishable document types that the trigger subscribes to by replacing the migrated packages with the archive packages created by the service when backupPackages is set to true. For example, suppose that trigger triggerAB subscribes to documentA and documentB both of which use a Broker connection alias. In documentTypeNames, you specify only documentA. When the service executes it migrates documentA. However, the service does not migrate triggerAB because the trigger subscribes to publishable document types that use different messaging connection aliases. This configuration is invalid. The service saves triggerAB in a disabled state.",
         "If you do not specify a newConnectionAlias, the publishable document type already uses a Universal Messaging connection alias, and the publishable document type has an encoding type of IData, the pub.utils.messaging.migrateDocTypesTriggersToUM service changes the encoding type of the publishable document type to protocol buffers. The service then updates the filters for any IBM webMethods messaging triggers that subscribe to the document types so that the filters are compatible with protocol buffers.",
@@ -451,7 +451,7 @@
         "To generate additional logging information in the Server log when the pub.utils.messaging:migrateDocTypesTriggersToUM service executes, set the logging level for the server log facilities 0153 Dispatcher (Universal Messaging) and 0154 Protocol Buffer Encoding (Universal Messaging) to Debug or Trace. Increased logging can help you to locate problems that occur during service execution.",
         "IBM webMethods Broker is deprecated."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#id440b573a-1d86-4f6b-a651-ce3fecff6d88__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#id440b573a-1d86-4f6b-a651-ce3fecff6d88__title__1"
     },
     {
       "name": "pub.utils.messaging:syncDocTypesToUM",
@@ -465,7 +465,7 @@
         {
           "name": "backupPackages",
           "type": "java.lang.Boolean",
-          "description": "java.lang.Boolean Optional. Indicates whether the service creates a package archive for each package affected by this service prior to creating a new protocol buffer definition for the publishable document types. Set to: true to create an archive for each package that contains a publishable document type that will be updated by this service. The archive will be named packageName.zip_timeStamp and placed in the following directory: Integration Server_directory \\instances\\instance_name\\replicate\\archive. This is the default. false to skip creating an archive of each affected package before making updates. Important: IBM recommends that you set backupPackages to true when reportOnly is set to false if you have not taken other measures to back up the packages containing the publishable document types to be synchronized using the pub.utils.messaging:syncDocTypesToUM service. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service."
+          "description": "java.lang.Boolean Optional. Indicates whether the service creates a package archive for each package affected by this service prior to creating a new protocol buffer definition for the publishable document types. Set to: true to create an archive for each package that contains a publishable document type that will be updated by this service. The archive will be named packageName.zip_timeStamp and placed in the following directory: Integration Server_directory \\instances\\instance_name\\replicate\\archive. This is the default. false to skip creating an archive of each affected package before making updates. Important: Set backupPackages to true when reportOnly is set to false if you have not taken other measures to back up the packages containing the publishable document types to be synchronized using the pub.utils.messaging:syncDocTypesToUM service. After the service executes successfully, restoring from a backup file is the only way to revert a change made by the service."
         },
         {
           "name": "packageNames",
@@ -589,7 +589,7 @@
         "To use the pub.utils.messaging:sycnDocTypesToUM service to update a publishable document type, the user or client invoking the service must have Write access to the publishable document type.",
         "To generate additional logging information in the Server log when the pub.utils.messaging:sycnDocTypesToUM service executes, set the logging level for the server log facility 0154 Protocol Buffer Encoding (Universal Messaging) to Debug or Trace."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#ide2403ca8-23b5-472d-9bb9-fa6d816a4ca6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#ide2403ca8-23b5-472d-9bb9-fa6d816a4ca6__title__1"
     },
     {
       "name": "pub.utils:transcode",
@@ -669,7 +669,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#id10c9738e-3227-4c0f-b3d3-6296628aac70__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#id10c9738e-3227-4c0f-b3d3-6296628aac70__title__1"
     },
     {
       "name": "pub.utils.ws:setCompatibilityModeFalse",
@@ -770,7 +770,7 @@
         "To use the pub.utils.ws:setCompatibilityModeFalse service to change the Pre-8.2 compatibility mode property for a web service descriptor, you or whichever client is invoking the service must have Write access to the web service descriptors.",
         "If the Docker image for a Microservices Runtime excludes the web services functionality, then the Docker image for the Microservices Runtime running in the Docker container cannot execute the pub.utils.ws:setCompatibilityModeFalse service. Attempts to execute the pub.utils.ws:setCompatibilityModeFalse service end with a ServiceException."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-utils-folder#id5250142e-de53-4886-a0ca-15834df354b2__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-utils-folder#id5250142e-de53-4886-a0ca-15834df354b2__title__1"
     }
   ]
 }

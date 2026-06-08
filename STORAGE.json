@@ -35,7 +35,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_add__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_add__title__1"
     },
     {
       "name": "pub.storage:closeStore",
@@ -51,7 +51,7 @@
       "usage_notes": [
         "This service is obsolete. When the repository was removed for Integration Server version 7.1.2, this service became a NOP (no operation)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_closeStore__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_closeStore__title__1"
     },
     {
       "name": "pub.storage:deleteStore",
@@ -80,7 +80,7 @@
         "If this service finds a shared lock from the same thread on the data store, the service will automatically promote the lock to an exclusive lock.",
         "The exclusive lock prevents other threads from acquiring locks on the data store or entries within the data store during the delete operation."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_deleteStore__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_deleteStore__title__1"
     },
     {
       "name": "pub.storage:get",
@@ -119,7 +119,7 @@
         "When this service locks an entry, it also acquires a shared lock on the associated data store to prevent another thread from deleting the data store, and the entries it contains, while your thread has the entry locked.",
         "When storing and retrieving the flow state in the short-term store for checkpoint restart purposes, be sure the value of key is unique to the transaction."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_get__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_get__title__1"
     },
     {
       "name": "pub.storage:keys",
@@ -139,7 +139,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_keys__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_keys__title__1"
     },
     {
       "name": "pub.storage:listLocks",
@@ -164,7 +164,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_listLocks__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_listLocks__title__1"
     },
     {
       "name": "pub.storage:lock",
@@ -183,7 +183,7 @@
         {
           "name": "waitLength",
           "type": "String",
-          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator ."
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
         },
         {
           "name": "lockMode",
@@ -200,7 +200,7 @@
         "If you request a shared lock on an entry or a data store and this service finds an exclusive lock from the same thread, the existing exclusive lock will be reused. The exclusive lock will not be demoted to a shared lock.",
         "If you request an exclusive lock on a data store, and this service finds a shared lock from the same thread on the data store, the service will automatically promote the shared lock on the data store to an exclusive lock."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_lock__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_lock__title__1"
     },
     {
       "name": "pub.storage:put",
@@ -237,7 +237,7 @@
       "usage_notes": [
         "When storing and retrieving the flow state in the short-term store for checkpoint restart purposes, be sure the value of key is unique to the transaction."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_put__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_put__title__1"
     },
     {
       "name": "pub.storage:registerStore",
@@ -251,7 +251,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_registerStore__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_registerStore__title__1"
     },
     {
       "name": "pub.storage:releaseLocks",
@@ -276,7 +276,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_releaseLocks__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_releaseLocks__title__1"
     },
     {
       "name": "pub.storage:remove",
@@ -306,7 +306,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_remove__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_remove__title__1"
     },
     {
       "name": "pub.storage:shutdown",
@@ -314,7 +314,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_shutdown__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_shutdown__title__1"
     },
     {
       "name": "pub.storage:startup",
@@ -322,7 +322,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_startup__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_startup__title__1"
     },
     {
       "name": "pub.storage:unlock",
@@ -341,7 +341,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_unlock__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-storage-folder#Apub_storage_unlock__title__1"
     }
   ]
 }

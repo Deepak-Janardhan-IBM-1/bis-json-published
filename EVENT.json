@@ -85,7 +85,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_addSubscriber__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_addSubscriber__title__1"
     },
     {
       "name": "pub.event:alarm",
@@ -117,7 +117,7 @@
         "Remember to register your handler with the Event Manager.",
         "When you subscribe an event handler to an alarm event, you can create a filter for the msg field to specify the services whose alarm events you want to subscribe to. That is, you can specify which services' alarm events invoke the event handler."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_alarm__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_alarm__title__1"
     },
     {
       "name": "pub.event:alarmInfo",
@@ -125,7 +125,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_alarmInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_alarmInfo__title__1"
     },
     {
       "name": "pub.event:audit",
@@ -174,7 +174,7 @@
         "When writing your own audit handler, be careful to not modify the pipeline variable within your handler.",
         "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_audit__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_audit__title__1"
     },
     {
       "name": "pub.event:auditError",
@@ -187,7 +187,7 @@
         "When you subscribe to an audit error event, you can supply a filter to limit the events that your event handler receives. The filter applies to the concatenated values of the destination and errorCode fields. You can use the asterisk (*) as a wildcard character in the filter. The following table shows how you can use filters to limit the events that your event handler will receive:",
         "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit error events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit error events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit error events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditError__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_auditError__title__1"
     },
     {
       "name": "pub.event:auditErrorInfo",
@@ -197,7 +197,7 @@
       "usage_notes": [
         "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditErrorInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_auditErrorInfo__title__1"
     },
     {
       "name": "pub.event:auditInfo",
@@ -207,7 +207,7 @@
       "usage_notes": [
         "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_auditInfo__title__1"
     },
     {
       "name": "pub.event:callstackItem",
@@ -215,7 +215,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_callStackItem__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_callStackItem__title__1"
     },
     {
       "name": "pub.event:deleteSubscriber",
@@ -240,7 +240,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_deleteSubscriber__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_deleteSubscriber__title__1"
     },
     {
       "name": "pub.event:error",
@@ -268,7 +268,7 @@
         "The watt.server.event.exception.async server parameter indicates whether event handlers for error events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to error events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the error events synchronously. The default is true (asynchronous).",
         "An error event handler can have a filter for the contents of errorMessage. The following filter specifies that any error event with an errorMessage whose value contains the word \"missing\" will invoke the event handler: *missing*"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#id58938465-1dcf-4b62-a88f-0c1e1d5c96ef__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#id58938465-1dcf-4b62-a88f-0c1e1d5c96ef__title__1"
     },
     {
       "name": "pub.event:errorInfo",
@@ -279,7 +279,7 @@
         "The watt.server.event.exception.async server parameter indicates whether event handlers for error events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to error events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the error events synchronously. The default is true (asynchronous).",
         "An error event handler can have a filter for the contents of errorMessage. The following filter specifies that any error event with an errorMessage whose value contains the word \"missing\" will invoke the event handler: *missing*"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#idc8776a94-d1bf-430f-becf-e7e8c7ac37a5__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#idc8776a94-d1bf-430f-becf-e7e8c7ac37a5__title__1"
     },
     {
       "name": "pub.event:exception",
@@ -363,7 +363,7 @@
         "Use the watt.server.event.exception.async server parameter to indicate whether event handlers for exception events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to exception events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the exception events synchronously. The default is true (asynchronous).",
         "When you subscribe an event handler to an exception event, you can create a filter for the service field to specify the services whose exception events you want to subscribe to. That is, you can specify which services' exception events invoke the event handler."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#A_Toc489417438__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#A_Toc489417438__title__1"
     },
     {
       "name": "pub.event:exceptionInfo",
@@ -373,7 +373,7 @@
       "usage_notes": [
         "Use the watt.server.event.exception.async server parameter to indicate whether event handlers for exception events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to exception events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the exception events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_exceptionInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_exceptionInfo__title__1"
     },
     {
       "name": "pub.event:gdEnd",
@@ -400,7 +400,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdEnd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_gdEnd__title__1"
     },
     {
       "name": "pub.event:gdEndInfo",
@@ -410,7 +410,7 @@
       "usage_notes": [
         "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdEndInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_gdEndInfo__title__1"
     },
     {
       "name": "pub.event:gdStart",
@@ -443,7 +443,7 @@
         "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous).",
         "When you subscribe an event handler to a gdStart event, you can create a filter for the svcname field to specify the services in a guaranteed delivery transaction that you want to subscribe to. That is, you can specify the services that when invoked using guaranteed delivery will invoke the event handler."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdStart__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_gdStart__title__1"
     },
     {
       "name": "pub.event:gdStartInfo",
@@ -453,7 +453,7 @@
       "usage_notes": [
         "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdStartInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_gdStartInfo__title__1"
     },
     {
       "name": "pub.event:getEventTypes",
@@ -469,7 +469,7 @@
       "usage_notes": [
         "The pub.event:getEventTypes service returns a list of supported local event types on Integration Server."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_getEventTypes__title__1"
     },
     {
       "name": "pub.event:getSubscribers",
@@ -514,7 +514,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getSubscribers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_getSubscribers__title__1"
     },
     {
       "name": "pub.event:jmsReceiveErrorEvent",
@@ -569,7 +569,7 @@
         "Remember to register your event handler with the Event Manager.",
         "Use the watt.server.event.jmsRetrievalError.async server parameter to indicate whether event handlers for JMS retrieval failure events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to JMS retrieval failure events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the JMS retrieval failure events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_jmsReceiveErrorEvent__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_jmsReceiveErrorEvent__title__1"
     },
     {
       "name": "pub.event:jmsSendErrorEvent",
@@ -598,7 +598,7 @@
         "Remember to register your event handler with the Event Manager.",
         "Use the watt.server.event.jmsDeliveryFailureError.async server parameter to indicate whether event handlers for JMS delivery failure events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to JMS delivery failure events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the JMS delivery failure events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_jmsSendErrorEvent__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_jmsSendErrorEvent__title__1"
     },
     {
       "name": "pub.event:journal",
@@ -639,9 +639,10 @@
       "usage_notes": [
         "Remember to register your even handler using Event Manager orpub.event:addSubscriber.",
         "A journal event handler can have a filter for the major code and minor code of the generated event. The format of the filter is <majorCode>.<minorCode>. For example, the following filter specifies that any journal event with major code of 28 followed by a minor code of 34 will invoke the event handler: *28.34*",
+        "If a journal event is created when synchronously or asynchronously. When this parameter is set to true, Integration Server writes the following log message \"[ISS.0028.0034I] Package WmISExtDC is stopping \" the journal event handler will be passed the following information in addition to the time value:",
         "The watt.server.event.exception.async server parameter indicates whether event handlers for journal events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to journal events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the journal events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_journal__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_journal__title__1"
     },
     {
       "name": "pub.event:journalInfo",
@@ -649,9 +650,10 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [
+        "If a journal event is created when synchronously or asynchronously. When this parameter is set to true, Integration Server writes the following log message \"[ISS.0028.0034I] Package WmISExtDC is stopping \" the journal event handler will be passed the following information in addition to the time value:",
         "The watt.server.event.exception.async server parameter indicates whether event handlers for journal events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to journal events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the journal events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#idfbd4d45d-0c00-4d2f-86a1-cd36c930597e__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#idfbd4d45d-0c00-4d2f-86a1-cd36c930597e__title__1"
     },
     {
       "name": "pub.event:modifySubscriber",
@@ -736,7 +738,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#A32687__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#A32687__title__1"
     },
     {
       "name": "pub.event:portStatus",
@@ -780,7 +782,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_listenerStatus__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_listenerStatus__title__1"
     },
     {
       "name": "pub.event:portStatusInfo",
@@ -788,7 +790,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_portStatusInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_portStatusInfo__title__1"
     },
     {
       "name": "pub.event:reloadEventManagerSettings",
@@ -796,7 +798,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_reloadEventManagerSettings__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_reloadEventManagerSettings__title__1"
     },
     {
       "name": "pub.event:replication",
@@ -828,7 +830,7 @@
         "Remember to register your handler with the Event Manager. When you subscribe an event handler to a replication event, you can create a filter to specify the package that, when replicated, will invoke the event handler.",
         "Use the watt.server.event.replication.async server parameter to indicate whether event handlers for replication events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to replication events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to replication events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_replication__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_replication__title__1"
     },
     {
       "name": "pub.event:replicationInfo",
@@ -838,7 +840,7 @@
       "usage_notes": [
         "Use the watt.server.event.replication.async server parameter to indicate whether event handlers for replication events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to replication events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to replication events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_replicationInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_replicationInfo__title__1"
     },
     {
       "name": "pub.event:saveEventManagerSettings",
@@ -846,7 +848,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_saveEventManagerSettings__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_saveEventManagerSettings__title__1"
     },
     {
       "name": "pub.event:security",
@@ -897,7 +899,7 @@
       "usage_notes": [
         "Use the watt.server.event.security.async server parameter to indicate whether Integration Server invokes event handlers for security events synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to security events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to security events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_security__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_security__title__1"
     },
     {
       "name": "pub.event:securityInfo",
@@ -948,7 +950,7 @@
       "usage_notes": [
         "Use the watt.server.event.security.async server parameter to indicate whether Integration Server invokes event handlers for security events synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to security events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to security events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_securityInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_securityInfo__title__1"
     },
     {
       "name": "pub.event:sessionEnd",
@@ -980,7 +982,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionEnd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_sessionEnd__title__1"
     },
     {
       "name": "pub.event:sessionEndInfo",
@@ -990,7 +992,7 @@
       "usage_notes": [
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionEndInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_SessionEndInfo__title__1"
     },
     {
       "name": "pub.event:sessionExpire",
@@ -1022,7 +1024,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionExpire__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_sessionExpire__title__1"
     },
     {
       "name": "pub.event:sessionExpireInfo",
@@ -1032,7 +1034,7 @@
       "usage_notes": [
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionExpireInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_SessionExpireInfo__title__1"
     },
     {
       "name": "pub.event:sessionStart",
@@ -1064,7 +1066,7 @@
         "Remember to register your handler with the Event Manager. When you subscribe an event handler to a Session Start event, you can create a filter so that only session start events generated by a specific user or by a member of a specific group invoke the event handler.",
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionStart__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_sessionStart__title__1"
     },
     {
       "name": "pub.event:sessionStartInfo",
@@ -1074,7 +1076,7 @@
       "usage_notes": [
         "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionStartInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_SessionStartInfo__title__1"
     },
     {
       "name": "pub.event:stat",
@@ -1201,7 +1203,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.stat.async server parameter to indicate whether Integration Server invokes event handlers for statistics events synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the stat event asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to stat events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_stat__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_stat__title__1"
     },
     {
       "name": "pub.event:statInfo",
@@ -1211,7 +1213,7 @@
       "usage_notes": [
         "Use the watt.server.event.stat.async server parameter to indicate whether Integration Server invokes event handlers for statistics events synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the stat event asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to stat events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_statInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_statInfo__title__1"
     },
     {
       "name": "pub.event:txEnd",
@@ -1238,7 +1240,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txEnd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_txEnd__title__1"
     },
     {
       "name": "pub.event:txEndInfo",
@@ -1248,7 +1250,7 @@
       "usage_notes": [
         "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txEndInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_txEndInfo__title__1"
     },
     {
       "name": "pub.event:txStart",
@@ -1275,7 +1277,7 @@
         "Remember to register your handler with the Event Manager.",
         "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txStart__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_txStart__title__1"
     },
     {
       "name": "pub.event:txStartInfo",
@@ -1285,7 +1287,7 @@
       "usage_notes": [
         "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_rxStartInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-event-folder#Apub_event_rxStartInfo__title__1"
     }
   ]
 }

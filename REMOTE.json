@@ -36,7 +36,7 @@
       "usage_notes": [
         "If pub.remote:invoke does not receive a response within the timeout period specified in the server's watt.net.timeout parameter, it will throw an exception. For information about the watt.net.timeout parameter, see IBM webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_invoke__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_invoke__title__1"
     },
     {
       "name": "pub.remote.gd:end",
@@ -52,7 +52,7 @@
       "usage_notes": [
         "This service is used to eliminate a guaranteed delivery transaction from the jobstore."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_end__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_end__title__1"
     },
     {
       "name": "pub.remote.gd:getStatus",
@@ -74,7 +74,7 @@
       "usage_notes": [
         "Use the pub.remote.gd:restart service to restart a FAILED (expired) guaranteed delivery transaction."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_getStatus__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_getStatus__title__1"
     },
     {
       "name": "pub.remote.gd:invoke",
@@ -107,7 +107,7 @@
         "To use an asynchronous call to the server to invoke a service for a guaranteed delivery transaction, use the pub.remote.gd:submit service.",
         "If the remote server does not respond within the timeout limit specified in this server's watt.net.timeout setting, the Integration Server treats it as a failed attempt and retries the request."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_invoke__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_invoke__title__1"
     },
     {
       "name": "pub.remote.gd:restart",
@@ -123,7 +123,7 @@
       "usage_notes": [
         "If a guaranteed delivery transaction failed because of server or network failure, use this service to restart the transaction without resubmitting it."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_restart__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_restart__title__1"
     },
     {
       "name": "pub.remote.gd:retrieve",
@@ -150,7 +150,7 @@
       "usage_notes": [
         "If block is false, and the results of the transaction are still pending when this service executes, the results are returned as null."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_retrieve__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_retrieve__title__1"
     },
     {
       "name": "pub.remote.gd:send",
@@ -177,7 +177,7 @@
         "The results of the service specified in service cannot be retrieved. However, errors that occur will be logged when the guaranteed delivery transaction ends.",
         "Use the pub.remote.gd:send service to invoke a service remotely only if you want to run a guaranteed delivery transaction and are not concerned about the results of the invoked service. After pub.remote.gd:send completes the call, the service ends the transaction; therefore, you do not need to use the pub.remote.gd:end service to end the transaction."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_send__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_send__title__1"
     },
     {
       "name": "pub.remote.gd:start",
@@ -212,7 +212,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_start__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_start__title__1"
     },
     {
       "name": "pub.remote.gd:submit",
@@ -239,7 +239,7 @@
         "To remove the transaction from the remote IBM webMethods Integration Server, use the pub.remote.gd:end service.",
         "To use a synchronous call to invoke the service, use the pub.remote.gd:invoke service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-remote-folder#Apub_remote_gd_submit__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-remote-folder#Apub_remote_gd_submit__title__1"
     }
   ]
 }

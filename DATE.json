@@ -52,7 +52,7 @@
       "usage_notes": [
         "Each output value represents the same date difference, but in a different scale. Do not add these values together. Make sure your subsequent flow steps use the correct output, depending on the scale required."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A23488__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A23488__title__1"
     },
     {
       "name": "pub.date:compareDates",
@@ -106,7 +106,7 @@
         "That is, if the startDatePattern is yyyyMMdd HH:mm and the startDate is 20151030 11:11 and if the endDatePattern is yyyyMMdd HH:mm:ss.SSSand the endDate is 20151030 11:11:55:111, then the pub.date:compareDates service considers start date to be before the end date and will return the result as -1.",
         "To calculate the difference between two dates, use the pub.date:calculateDateDifference service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#reference_CF32164054094AF0AD20D474818B9F63__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#reference_CF32164054094AF0AD20D474818B9F63__title__1"
     },
     {
       "name": "pub.date:currentNanoTime",
@@ -120,7 +120,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A81481__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A81481__title__1"
     },
     {
       "name": "pub.date:dateBuild",
@@ -167,7 +167,7 @@
       "usage_notes": [
         "The pub.date:dateBuild service creates a date String by using the supplied year, month, and dayofmonth to first create a local java.util.Date object. The local java.util.Date object uses the timezone of the machine running Integration Server. The pub.date:dateBuild service then applies the offset between the local timezone and the specified timezone. Finally, the service uses pattern to convert the java.util.Date object to the String returned in value. Due to the way in which the pub.date:dateBuild service works, if you run the pub.date:dateBuild service with the same set of inputs on two different machines, each located in a different timezone, you will get different results."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A007__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A007__title__1"
     },
     {
       "name": "pub.date:dateTimeBuild",
@@ -234,7 +234,7 @@
       "usage_notes": [
         "The pub.date:dateTimeBuild service creates a date String by using the supplied year, month, dayofmonth, hour, minute, second, and millis to first create a local java.util.Date object. The local java.util.Date object uses the timezone of the machine running Integration Server. The pub.date:dateTimeBuild service then applies the offset between the local timezone and the specified timezone. Finally, the service uses pattern to convert the java.util.Date object to the String returned in value. Due to the way in which the pub.date:dateTimeBuild service works, if you run the pub.date:dateTimeBuild service with the same set of inputs on two different machines, each located in a different timezone, you will get different results."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#APub_date_dateTimeBuild__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#APub_date_dateTimeBuild__title__1"
     },
     {
       "name": "pub.date:dateTimeFormat",
@@ -279,7 +279,7 @@
         "If currentPattern does not contain a time zone, the value is assumed to be in the time zone of the IBM webMethods Integration Server.",
         "If newPattern contains a time zone, the time zone of the IBM webMethods Integration Server is used."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#Apub_date_dateTimeFormat__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#Apub_date_dateTimeFormat__title__1"
     },
     {
       "name": "pub.date:elapsedNanoTime",
@@ -304,7 +304,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A46729__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A46729__title__1"
     },
     {
       "name": "pub.date:formatDate",
@@ -339,7 +339,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#Apub_date_formatDate__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#Apub_date_formatDate__title__1"
     },
     {
       "name": "pub.date:getCurrentDate",
@@ -353,7 +353,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A63550__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A63550__title__1"
     },
     {
       "name": "pub.date:getCurrentDateString",
@@ -383,7 +383,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#Apub_date_getCurrentDateString__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#Apub_date_getCurrentDateString__title__1"
     },
     {
       "name": "pub.date:getWorkingDays",
@@ -420,7 +420,7 @@
       "usage_notes": [
         "The pub.date:getWorkingDays service requires you to configure holidays and weekend days in the holidays.cnf configuration file in Integration Server_directory \\instances\\instance_name\\packages\\WmPublic\\config directory. The pub.date:getWorkingDays service uses this configuration file to find the number of working days between two dates."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#A12925__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#A12925__title__1"
     },
     {
       "name": "pub.date:incrementDate",
@@ -499,7 +499,7 @@
         "If you specify only the startDate, startDatePattern, and endDatePattern input parameters and do not specify any of the optional input parameters to increment the period, the pub.date:incrementDate service just converts the format of startDate from startDatePattern to endDatePattern and returns it as endDate.",
         "Integration Server issues an exception if the format of the date specified in the startDate parameter does not match the format specified in the startDatePattern. Integration Server issues a similar exception if the format of the date specified in the endDate parameter does not match the endDatePatternformat."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#reference_096E40673E70497190B2DCF00453ED46__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#reference_096E40673E70497190B2DCF00453ED46__title__1"
     },
     {
       "name": "pub.date:stringToDate",
@@ -537,7 +537,7 @@
         "When you provide the input date, pattern, and timezone, the service automatically calculates the output date according to the specified timezone. For regions where Daylight Saving Time (DST) is observed, the service automatically adjusts the output date to reflect DST changes.",
         "You must ensure that the date you provide as inString matches the specified pattern."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#reference_qlc_11v_4bc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-date-folder#reference_qlc_11v_4bc__title__1"
     }
   ]
 }

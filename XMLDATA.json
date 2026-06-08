@@ -45,7 +45,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id97dc16b8-e927-486d-895e-38ef6d5c4dca__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id97dc16b8-e927-486d-895e-38ef6d5c4dca__title__1"
     },
     {
       "name": "pub.xmldata:getGroupObjects",
@@ -127,7 +127,7 @@
       "usage_notes": [
         "Together, the ncName, namespace, and particleId identify a particular field in the XmlData group."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id00c895fc-156c-4648-8c9d-63bc4e412572__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id00c895fc-156c-4648-8c9d-63bc4e412572__title__1"
     },
     {
       "name": "pub.xmldata:getInstanceTag",
@@ -174,7 +174,7 @@
       "usage_notes": [
         "Together, the ncName, namespace, particleId, and index identify a particular field in the XMLData document."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#ida5da03bb-9dc4-4ce1-99b9-4d82df2930e7__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#ida5da03bb-9dc4-4ce1-99b9-4d82df2930e7__title__1"
     },
     {
       "name": "pub.xmldata:getNamespaceTags",
@@ -226,7 +226,7 @@
       "usage_notes": [
         "Together, the ncName, namespace, particleId, and index identify a particular field in the XMLData."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#idd60f984a-ef5a-4264-bac1-530b1bda2281__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#idd60f984a-ef5a-4264-bac1-530b1bda2281__title__1"
     },
     {
       "name": "pub.xmldata:queryXMLNode",
@@ -313,7 +313,7 @@
       "usage_notes": [
         "The pub.xmldata:queryXMLNode is different from the pub.xml:queryXMLNode service which returns the results in the legacy infoset format in which fields are qualified with a prefix and a namespace name. Thepub.xmldata:queryXMLNode service uses the NCName, namespace, and particleID to qualify the output format. Use the pub.xmldata.queryXMLNode service when you are working with XMLData-encoded infoset. Use the pub.xml:queryXMLNode service when you are working with the legacy-encoded infoset."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id521f0014-6449-4aa2-ae4f-c07b116bab4c__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id521f0014-6449-4aa2-ae4f-c07b116bab4c__title__1"
     },
     {
       "name": "pub.xmldata:setAttribute",
@@ -342,7 +342,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#idf879b0e7-8581-41d9-8d1d-5eff544d5615__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#idf879b0e7-8581-41d9-8d1d-5eff544d5615__title__1"
     },
     {
       "name": "pub.xmldata:setInstanceTag",
@@ -386,7 +386,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id74e1e6cd-d01b-4ca4-9b10-b4ba37264ee6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id74e1e6cd-d01b-4ca4-9b10-b4ba37264ee6__title__1"
     },
     {
       "name": "pub.xmldata:setNamepaceTag",
@@ -430,7 +430,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id847e5f9c-71d1-4703-be05-5ecdab8a1465__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id847e5f9c-71d1-4703-be05-5ecdab8a1465__title__1"
     },
     {
       "name": "pub.xmldata:xmlDataToXMLString",
@@ -455,7 +455,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id74e03dc9-d4e3-48ac-b1bc-ca7e0cdfdc17__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-xmldata-folder#id74e03dc9-d4e3-48ac-b1bc-ca7e0cdfdc17__title__1"
     }
   ]
 }

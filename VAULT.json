@@ -18,7 +18,7 @@
         "Integration Server caches secrets in memory for the time-to-live period that is configured for the vault connection alias after which Integration Server automatically clears the stale entries.",
         "If you specify a package-level vault connection alias, the service clears the secrets cache only for that package. Otherwise, the service clears the entire secrets cache."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_clearcache__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_clearcache__title__1"
     },
     {
       "name": "pub.vault:decrypt",
@@ -50,7 +50,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_decrypt__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_decrypt__title__1"
     },
     {
       "name": "pub.vault:encrypt",
@@ -82,7 +82,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_encrypt__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_encrypt__title__1"
     },
     {
       "name": "pub.vault:getSecretSubkey",
@@ -119,7 +119,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_getsecretsubkey__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_getsecretsubkey__title__1"
     },
     {
       "name": "pub.vault:refreshCache",
@@ -147,7 +147,7 @@
         "Complete the Prerequisite Tasks before you run this service.",
         "The pub.vault:refreshCache services refreshes cached secretes that were retrieved using the provided alias. Refreshing the secrets prevents the use of stale entries."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_refreshcache__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_refreshcache__title__1"
     },
     {
       "name": "pub.vault:removeSecret",
@@ -174,7 +174,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_removesecret__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_removesecret__title__1"
     },
     {
       "name": "pub.vault:removeSecretSubkey",
@@ -206,7 +206,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_removesecretsubkey__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_removesecretsubkey__title__1"
     },
     {
       "name": "pub.vault:setSecretSubkey",
@@ -243,7 +243,7 @@
       "usage_notes": [
         "Complete the Prerequisite Tasks before you run this service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_setsecretsubkey__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_setsecretsubkey__title__1"
     },
     {
       "name": "pub.vault:upsertSecret",
@@ -286,7 +286,7 @@
         "Complete the Prerequisite Tasks before you run this service.",
         "The pub.vault:upsertSecret service either updates an existing secret in a vault with the provided key-value pairs or creates a new secret by adding the provided key-value pairs to the vault."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-vault-folder#re-pub_security_vaults_upsertsecret__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-vault-folder#re-pub_security_vaults_upsertsecret__title__1"
     }
   ]
 }
