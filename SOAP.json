@@ -62,7 +62,7 @@
       "usage_notes": [
         "If the SOAP message already contains a body block, first use the pub.soap.handler:removeBodyBlock service to remove the existing body block before using this service to add a new one."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A50681__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A50681__title__1"
     },
     {
       "name": "pub.soap.handler:addFaultBlock",
@@ -147,7 +147,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A97530__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A97530__title__1"
     },
     {
       "name": "pub.soap.handler:addHeaderBlock",
@@ -198,7 +198,7 @@
       "usage_notes": [
         "This service replaces pub.soap.handler:addHeaderElement, which is deprecated."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A72180__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A72180__title__1"
     },
     {
       "name": "pub.soap.handler:addHeaderElement",
@@ -242,7 +242,7 @@
         "For more information about the mustUnderstand and actor attributes in SOAP 1.1, see the Simple Object Access Protocol (SOAP) 1.1 - W3C Note 08 May 2000 at http://www.w3.org/TR/SOAP/.",
         "For more information about the mustUnderstand and role attributes in SOAP 1.2, see the Simple Object Access Protocol (SOAP) 1.2 specification at http://www.w3.org/TR/SOAP12/."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A20936__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A20936__title__1"
     },
     {
       "name": "pub.soap.handler:generateDocumentTypesFromWSDL",
@@ -311,7 +311,7 @@
         "If you want execute this service for the same WSDL more than once, make sure to specify a different targetFolderName or delete the contents of targetFolderName before re-executing the service for the WSDL again.",
         "If the service ends in error, it throws any errors or warnings as an exception and does not create any IS document types. However, if the service encounters warnings, it places the warnings in the warnings field and generates any IS document types."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A43862__title__1"
     },
     {
       "name": "pub.soap.handler:getBodyBlock",
@@ -361,7 +361,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A35473__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A35473__title__1"
     },
     {
       "name": "pub.soap.handler:getBodyBlockQNames",
@@ -381,7 +381,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A49061__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A49061__title__1"
     },
     {
       "name": "pub.soap.handler:getFaultBlock",
@@ -461,7 +461,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A72663__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A72663__title__1"
     },
     {
       "name": "pub.soap.handler:getHeaderBlock",
@@ -511,7 +511,7 @@
         "If the QName of the very first field in the IS document type specified for documentType does not match a QName of a header block in the SOAP message, the service returns an empty outputHeaderBlock and does not throw an error.",
         "If the QName of the very first field in the IS document type specified for documentType matches a QName of a header block in the SOAP message but the content of the header block does not match the fields in the IS document type, then the retrieved headerDocument fails validation with the error"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A67569__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A67569__title__1"
     },
     {
       "name": "pub.soap.handler:getHeaderBlockQNames",
@@ -533,7 +533,7 @@
       "usage_notes": [
         "You can use the pub.soap.handler:getHeaderBlockQNames to identify the header block QNames in a SOAP message and then use pub.soap.handler:removeHeaderBlock to remove specific header blocks."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_handler_getHeaderBlockQNames__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_handler_getHeaderBlockQNames__title__1"
     },
     {
       "name": "pub.soap.handler:getHeaderElement",
@@ -566,7 +566,7 @@
         "QName and documentType are mutually exclusive. Even though the parameters are optional, you must specify one or the other. If you do not specify either, Integration Server displays the following error:",
         "If you specify values for QName and documentType, Integration Server uses QName and ignores documentType."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A50046__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A50046__title__1"
     },
     {
       "name": "pub.soap.handler:getInitialSOAPMessage",
@@ -590,7 +590,7 @@
         "You can use the SOAP message retrieved by this service with any existing public service that takes an object of type javax.xml.soap.SOAPMessage as input.",
         "In case of consumer web service descriptors, the pub.soap.handler:getInitialSOAPMessage service returns the initial outbound SOAP request that Integration Server builds just before sending the SOAP request to the web service provider."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id9d6d59b5-f739-4f81-8f2c-253a485ade35__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id9d6d59b5-f739-4f81-8f2c-253a485ade35__title__1"
     },
     {
       "name": "pub.soap.handler:getMessageAddressingProperties",
@@ -655,7 +655,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12AGB90205Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12AGB90205Z__title__1"
     },
     {
       "name": "pub.soap.handler:getProperty",
@@ -682,7 +682,7 @@
       "usage_notes": [
         "To access the contents of the service pipeline, use the pub.soap.handler:getServicePipelineinstead of thepub.soap.handler:getProperty service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A28413__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A28413__title__1"
     },
     {
       "name": "pub.soap.handler:getServicePipeline",
@@ -716,7 +716,7 @@
         "During execution of a handler service for a consumer web service descriptor, you can use the pub.soap.handler:getServicePipeline service to:",
         "Use the pub.soap.handler:getServicePipeline service to access the pipeline instead of using thepub.soap.handler:getProperty service to access the servicePipeline property."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23861__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A23861__title__1"
     },
     {
       "name": "pub.soap.handler:getSOAPMessage",
@@ -738,7 +738,7 @@
       "usage_notes": [
         "You can use the SOAP message retrieved by this service with any existing public service that takes an object of type javax.xml.soap.SOAPMessage as input. For example, you can use the SOAP message as input for the pub.soap.utils:addBodyEntry or pub.soap.utils:addHeaderEntry services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A22512__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A22512__title__1"
     },
     {
       "name": "pub.soap.handler:getWebServiceInvocationProperties",
@@ -808,7 +808,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A97784__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A97784__title__1"
     },
     {
       "name": "pub.soap.handler:handlerSpec",
@@ -824,20 +824,20 @@
         {
           "name": "statusCode",
           "type": "String",
-          "description": "String Specifies the status of the handler service execution which indicates the action Integration Server will take next. The statusCode parameter must be an integer from 0-3. The action Integration Server takes for a particular status code depends on whether the service is registered as a request handler, response handler, or fault handler. For more information, see What Are Handlers and Handler Services? or IBM webMethods Designer Online Help . If statusCode does not contain one of the specified values, Integration Server assumes a value of 0."
+          "description": "String Specifies the status of the handler service execution which indicates the action Integration Server will take next. The statusCode parameter must be an integer from 0-3. The action Integration Server takes for a particular status code depends on whether the service is registered as a request handler, response handler, or fault handler. For more information, see What Are Handlers and Handler Services? or Software AG Designer Online Help . If statusCode does not contain one of the specified values, Integration Server assumes a value of 0."
         },
         {
           "name": "faultMessage",
           "type": "String",
-          "description": "String Conditional. Text to be used in the fault message. Integration Server uses the faultMessage value for any handler service that returns a status of 2 and when a response handler service returns a status of 3. For more information, see What Are Handlers and Handler Services? . or IBM webMethods Designer Online Help ."
+          "description": "String Conditional. Text to be used in the fault message. Integration Server uses the faultMessage value for any handler service that returns a status of 2 and when a response handler service returns a status of 3. For more information, see What Are Handlers and Handler Services? . or Software AG Designer Online Help ."
         }
       ],
       "usage_notes": [
         "Services that act as header handlers do not need to use the pub.handler:handlerSpec specification to define the signature of the service. However, services that act as header handlers must take the input parameters and produce the output parameters identified in this specification.",
         "This specification can be used as the signature for the any handler service (request, response, or fault).",
-        "Integration Server altered handler chain processing in version 8.0 SP1. If you want handler services created in Integration Server version 7.x and 8.0 to use the handler chain processing behavior available in Integration Server 7.x and 8.0, set the watt.server.ws.71xHandlerChainBehavior server configuration parameter to true. For more information about setting server configuration parameters, see IBM webMethods Integration Server Administrator’s Guide ."
+        "Integration Server altered handler chain processing in version 8.0 SP1. If you want created in Integration Server version 7.x of 8.0 to use the handler chain processing behavior available in Integration Server 7.x and 8.0, set the watt.server.ws.71xHandlerChainBehavior server configuration parameter to true. For more information about setting server configuration parameters, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A78040__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A78040__title__1"
     },
     {
       "name": "pub.soap.handler:hasFaultMessage",
@@ -857,7 +857,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A66909__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A66909__title__1"
     },
     {
       "name": "pub.soap.handler:listConsumer",
@@ -916,7 +916,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A46770__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A46770__title__1"
     },
     {
       "name": "pub.soap.handler:listProvider",
@@ -975,7 +975,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A65039__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A65039__title__1"
     },
     {
       "name": "pub.soap.handler:registerConsumer",
@@ -999,7 +999,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A78796__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A78796__title__1"
     },
     {
       "name": "pub.soap.handler:registerProvider",
@@ -1023,7 +1023,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A37790__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A37790__title__1"
     },
     {
       "name": "pub.soap.handler:registerWmConsumer",
@@ -1057,7 +1057,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A74861__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A74861__title__1"
     },
     {
       "name": "pub.soap.handler:registerWmProvider",
@@ -1101,7 +1101,7 @@
         "If you specify a service that does not exist for handleRequest, handleResponse, or handleFaultService, Integration Server throws this error:",
         "If a registered handler with the same descriptiveName already exists, Integration Server throws this error."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A69761__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A69761__title__1"
     },
     {
       "name": "pub.soap.handler:removeBodyBlock",
@@ -1118,7 +1118,7 @@
         "If the service encounters any error when removing the body block, it throws an exception.",
         "If you execute the service against a SOAP message that already contains an empty SOAP body, the service performs no action."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A38848__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A38848__title__1"
     },
     {
       "name": "pub.soap.handler:removeHeaderBlock",
@@ -1166,7 +1166,7 @@
         "This service replaces pub.soap.handler:removeHeaderElement, which is deprecated.",
         "Either QName or documentType must be supplied. If both are provided, Integration Server uses QName and ignores documentType."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_handler_removeHeaderBlock__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_handler_removeHeaderBlock__title__1"
     },
     {
       "name": "pub.soap.handler:removeHeaderElement",
@@ -1191,7 +1191,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A75403__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A75403__title__1"
     },
     {
       "name": "pub.soap.handler:removeProperty",
@@ -1212,7 +1212,7 @@
       "usage_notes": [
         "The SOAP message contains properties reserved for use by Integration Server. Do not use pub.soap.handler:setProperty to set any of these properties or use pub.soap.handler:removeProperty to remove any of these properties as it may result in unpredictable behavior. The reserved properties are:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A13019__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A13019__title__1"
     },
     {
       "name": "pub.soap.handler:setProperty",
@@ -1238,7 +1238,7 @@
       "usage_notes": [
         "The SOAP message contains properties reserved for use by Integration Server. Do not use pub.soap.handler:setProperty to set any of these properties or use pub.soap.handler:removeProperty to remove any of these properties as it may result in unpredictable behavior. The reserved properties are:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A67444__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A67444__title__1"
     },
     {
       "name": "pub.soap.handler:setSOAPMessage",
@@ -1259,7 +1259,7 @@
       "usage_notes": [
         "Use this service with caution, as it overwrites the entire SOAP message, including the SOAP header, body, and fault."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A68108__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A68108__title__1"
     },
     {
       "name": "pub.soap.handler:unregisterConsumer",
@@ -1273,7 +1273,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A31393__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A31393__title__1"
     },
     {
       "name": "pub.soap.handler:unregisterProvider",
@@ -1287,7 +1287,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A27964__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A27964__title__1"
     },
     {
       "name": "pub.soap.handler:updateFaultBlock",
@@ -1370,7 +1370,7 @@
         "You can use this service on a provider response handler or fault handler to update the fault block so that the values for code, subcodes, reasons, node, and role that Integration Server generates can be overridden by the custom values you specify.",
         "If you are using this service to override the information in a fault block in a SOAP 1.1 message, keep the following points in mind:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ida03528f6-b1c2-4921-92d4-681b456fe11a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#ida03528f6-b1c2-4921-92d4-681b456fe11a__title__1"
     },
     {
       "name": "pub.soap.processor:list",
@@ -1406,7 +1406,7 @@
       "usage_notes": [
         "This service is deprecated. There is not a replacement service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23400__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A23400__title__1"
     },
     {
       "name": "pub.soap.processor:processMessage",
@@ -1434,7 +1434,7 @@
         "This service is deprecated. There is not a replacement service.",
         "You invoke processMessage from a wrapper service that you create and register as a SOAP processor on the Integration Server. To impose access control on the processor, you assign an access control list (ACL) to the wrapper service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_processor_procMsg__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_processor_procMsg__title__1"
     },
     {
       "name": "pub.soap.processor:processRPCMessage",
@@ -1462,7 +1462,7 @@
         "This service is deprecated. There is not a replacement service.",
         "You invoke processRPCMessage from a wrapper service that you create and register as a SOAP processor on the Integration Server. To impose access control on the processor, you assign an access control list (ACL) to the wrapper service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_processor_procRPCMsg__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_processor_procRPCMsg__title__1"
     },
     {
       "name": "pub.soap.processor:registerProcessor",
@@ -1498,7 +1498,7 @@
       "usage_notes": [
         "This service is deprecated. There is not a replacement service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc530745733__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A_Toc530745733__title__1"
     },
     {
       "name": "pub.soap.processor:unregisterProcessor",
@@ -1515,7 +1515,7 @@
         "This service is deprecated. There is not a replacement service.",
         "If the directive specified in directive is not registered on the Integration Server, unregisterProcessor throws an exception."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc530745734__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A_Toc530745734__title__1"
     },
     {
       "name": "pub.soap.schema:encoding",
@@ -1523,7 +1523,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_encoding__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_schema_encoding__title__1"
     },
     {
       "name": "pub.soap.schema:encoding_1_2",
@@ -1531,7 +1531,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_encoding_1_2__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_schema_encoding_1_2__title__1"
     },
     {
       "name": "pub.soap.schema:envelope",
@@ -1539,7 +1539,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_envelope__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_schema_envelope__title__1"
     },
     {
       "name": "pub.soap.schema:envelope_1_2",
@@ -1547,7 +1547,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_envelope_1_2__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_schema_envelope_1_2__title__1"
     },
     {
       "name": "pub.soap.utils:addBodyEntry",
@@ -1561,7 +1561,7 @@
         {
           "name": "bodyEntry",
           "type": "com.wm.lang.xml.Node",
-          "description": "com.wm.lang.xml.Node XML node containing the body entry that you want to add to soapData. Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode. Important: This service adds a single body entry to a SOAP object. If you need to add more than one entry, execute pub.soap.utils:addBodyEntry once for each entry. Important: The pub.soap.utils:addBodyEntry service expects the node in bodyEntry to be namespace qualified. If the node is not qualified, the service throws an exception. Versions of IBM webMethods Integration Server prior to 6.0.1 permitted non-qualified entries. If you created solutions based on the earlier behavior of this service, you can disable namespace enforcement by setting the server configuration parameter watt.server.SOAP.EnforceMsgPartNS to false."
+          "description": "com.wm.lang.xml.Node XML node containing the body entry that you want to add to soapData. Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode. Important: This service adds a single body entry to a SOAP object. If you need to add more than one entry, execute pub.soap.utils:addBodyEntry once for each entry. Important: In webMethods Integration Server versions 6.0.1 and later, this service expects the node in bodyEntry to be namespace qualified. If the node is not qualified, the service throws an exception. If you created solutions based on the earlier behavior of this service (which permitted non-qualified entries), you can disable namespace enforcement by setting the server's watt.server.SOAP.EnforceMsgPartNS parameter to false."
         }
       ],
       "output_parameters": [
@@ -1576,7 +1576,7 @@
         "If you are composing a new SOAP message, you must first create an empty SOAP object (called soapData) with the createSoapData service and then add your header entries to with pub.soap.utils:addHeaderEntry.",
         "If you are composing a SOAP response, you use pub.soap.utils:addBodyEntry to populate the soapResponseData object that the SOAP message handler generates and puts in the pipeline."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addBodyEntry__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_addBodyEntry__title__1"
     },
     {
       "name": "pub.soap.utils:addHeaderEntry",
@@ -1590,7 +1590,7 @@
         {
           "name": "headerEntry",
           "type": "com.wm.lang.xml.Node",
-          "description": "com.wm.lang.xml.Node XML node containing the entry that you want to add to soapData. Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode. Important: This service adds a single header entry to a SOAP object. If you need to add more than one entry, execute addHeaderEntry once for each entry. Important: The pub.soap.utils:addHeaderEntry service expects the node in headerEntry to be namespace qualified. If the node is not qualified, the service throws an exception. Prior to IBM webMethods Integration Server 6.0.1, the service permitted non-qualified entries. If you created solutions based on the earlier behavior of this service, you can disable namespace enforcement by setting the server configuration parameter watt.server.SOAP.EnforceMsgPartNS to false."
+          "description": "com.wm.lang.xml.Node XML node containing the entry that you want to add to soapData. Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode. Important: This service adds a single header entry to a SOAP object. If you need to add more than one entry, execute addHeaderEntry once for each entry. Important: In webMethods Integration Server versions 6.0.1 and later, this service expects the node in headerEntry to be namespace qualified. If the node is not qualified, the service throws an exception. If you created solutions based on the earlier behavior of this service (which permitted non-qualified entries), you can disable namespace enforcement by setting the server's watt.server.SOAP.EnforceMsgPartNS parameter to false."
         },
         {
           "name": "mustUnderstand",
@@ -1615,7 +1615,7 @@
         "If you are composing a new SOAP message, you must first create an empty SOAP object (called soapData) with the createSoapData service and then add your header entries to with pub.soap.utils:addHeaderEntry.",
         "If you are composing a SOAP response, you use addHeaderEntry to populate the soapResponseData object that the SOAP message handler generates and puts in the pipeline."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addHeaderEntry__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_addHeaderEntry__title__1"
     },
     {
       "name": "pub.soap.utils:addTrailer",
@@ -1642,7 +1642,7 @@
       "usage_notes": [
         "A SOAP object is an object that represents a SOAP message."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addTrailer__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_addTrailer__title__1"
     },
     {
       "name": "pub.soap.utils:callbackServiceSpec",
@@ -1656,7 +1656,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idf6b5ff16-d5a2-4037-bdbc-274a137c7636__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#idf6b5ff16-d5a2-4037-bdbc-274a137c7636__title__1"
     },
     {
       "name": "pub.soap.utils:convertToVersionSpecificSOAPFault",
@@ -1769,7 +1769,7 @@
         "The following are instances where Integration Server generates a generic SOAP fault structure that you might want to convert to a SOAP version-specific fault structure:",
         "The following lists instances where the service might not be able to convert all data in the generic SOAP fault structure to a corresponding field in the output."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id3af24a54-6151-4b22-b4e5-74502b42cfce__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id3af24a54-6151-4b22-b4e5-74502b42cfce__title__1"
     },
     {
       "name": "pub.soap.utils:createSoapData",
@@ -1801,7 +1801,7 @@
       "usage_notes": [
         "The encoding parameter can support incoming SOAP messages in any encoding. Outgoing messages, however, are always encoded in UTF-8."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_createSoapData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_createSoapData__title__1"
     },
     {
       "name": "pub.soap.utils:createXOPObject",
@@ -1845,7 +1845,7 @@
         "If you specify values for more than one key of the data input parameter, Integration Server uses only one value in the following order or precedence:",
         "For example, if you provide values for base64String, bytes, and stream keys, Integration Server will execute the pub.soap.utils:createXOPObject service with the base64String value and will ignore the values provided for bytes and stream keys."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idad22ae8d-e03c-4334-8bdc-b4f17f53b882__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#idad22ae8d-e03c-4334-8bdc-b4f17f53b882__title__1"
     },
     {
       "name": "pub.soap.utils:exitUnableToUnderstand",
@@ -1861,7 +1861,7 @@
       "usage_notes": [
         "This service throws an exception, which is meant to be caught by the message handler so that the appropriate SOAP fault will be returned to the client. Your processor should not catch this exception."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_exitUnableToUnderStd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_exitUnableToUnderStd__title__1"
     },
     {
       "name": "pub.soap.utils:getActor",
@@ -1881,7 +1881,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getActor__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getActor__title__1"
     },
     {
       "name": "pub.soap.utils:getBody",
@@ -1904,7 +1904,7 @@
         "This service returns the entire Body element in body. To extract data from the Body element, query body with the pub.xml:queryXMLNode service.",
         "If you want to extract the body of the message as an array of nodes, use the pub.soap.utils:getBodyEntries service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getBody__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getBody__title__1"
     },
     {
       "name": "pub.soap.utils:getBodyEntries",
@@ -1927,7 +1927,7 @@
         "This service returns each body entry as a separate node. You can loop over bodyEntries and extract data from each node with the pub.xml:queryXMLNode service.",
         "If you want to extract the body of the message as a single node, use the pub.soap.utils:getBody service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getBodyEntries__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getBodyEntries__title__1"
     },
     {
       "name": "pub.soap.utils:getDocument",
@@ -1947,7 +1947,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc528666370__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#A_Toc528666370__title__1"
     },
     {
       "name": "pub.soap.utils:getEncoding",
@@ -1967,7 +1967,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getEncoding__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getEncoding__title__1"
     },
     {
       "name": "pub.soap.utils:getHeader",
@@ -1989,7 +1989,7 @@
       "usage_notes": [
         "This service returns the entire Header element in header. To extract data from the Header element, query header with the pub.xml:queryXMLNode service. If you want to extract the contents of the header as an array of nodes, use the pub.soap.utils:getHeaderEntries service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeader__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getHeader__title__1"
     },
     {
       "name": "pub.soap.utils:getHeaderEntries",
@@ -2012,7 +2012,7 @@
         "This service returns each header entry as a separate node. You can loop over headerEntries and extract data from each node with the pub.xml:queryXMLNode service or get the entry's QName and/or actor value using the pub.soap.utils:getQName and pub.soap.utils:getActor services.",
         "If you want to extract the message header as a single node, use the pub.soap.utils:getHeader service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries__title__1"
     },
     {
       "name": "pub.soap.utils:getMustUnderstand",
@@ -2034,7 +2034,7 @@
       "usage_notes": [
         "For additional information about the mustUnderstand attribute, see the Simple Object Access Protocol (SOAP) 1.1 - W3C Note 08 May 2000 at http://www.w3.org/TR/SOAP/ and for SOAP 1.2, see the SOAP 1.2 W3C Recommendation 27 April 2007 at http://www.w3.org/TR/soap12-part1/."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getMustUnderstd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getMustUnderstd__title__1"
     },
     {
       "name": "pub.soap.utils:getQName",
@@ -2066,7 +2066,7 @@
       "usage_notes": [
         "Generally, you use this service in conjunction with the pub.soap.utils:getHeaderEntries or pub.soap.utils:getBodyEntries service to loop over the message's header or body entries and identify entries with a particular qualified name."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getQName__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getQName__title__1"
     },
     {
       "name": "pub.soap.utils:getTrailers",
@@ -2086,7 +2086,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getTrailers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_getTrailers__title__1"
     },
     {
       "name": "pub.soap.utils:getXOPObjectContent",
@@ -2135,7 +2135,7 @@
         "The content of the XOPObject can only be read one time. After you use the pub.soap.utils:getXOPObjectContent service to read the XOPObject content one time, subsequent attempts to re-read the XOPObject content will fail. It is recommended that after the XOPObject content is read that you drop it from the pipeline to make it clear to programming logic downstream that it is no longer available to be read.",
         "When you set the getAs input parameter to stream so that the service returns the contents of the com.wm.util.XOPObject instance as a stream, the pub.soap.utils:getXOPObjectContent service does not automatically close the stream object. You can close the stream using the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idfd3b091e-87a3-4220-8642-ccad276c4f86__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#idfd3b091e-87a3-4220-8642-ccad276c4f86__title__1"
     },
     {
       "name": "pub.soap.utils:QName",
@@ -2143,7 +2143,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_QName__title__1"
     },
     {
       "name": "pub.soap.utils:removeBodyEntry",
@@ -2170,7 +2170,7 @@
         "When you use the bodyEntry parameter, be sure that it specifies the correct node. This service deletes whatever node is specified in bodyEntry, even if the node is not a body entry. For example, if bodyEntry contains the whole Body element, removeBodyEntry will delete the body of the message.",
         "Be aware that if you use the index parameter to delete an entry, you will change the index numbers (positions) of all entries following the one you deleted. For example, if your message contains four body entries (0, 1, 2, 3) and you delete entry 1, then the entries originally at positions 2 and 3 will subsequently occupy positions 1 and 2."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeBodyEntry__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_removeBodyEntry__title__1"
     },
     {
       "name": "pub.soap.utils:removeHeaderEntry",
@@ -2196,7 +2196,7 @@
       "usage_notes": [
         "When you use the headerEntry parameter, be sure that it specifies the correct node. This service deletes whatever node is specified in headerEntry, even if the node is not a header entry. For example, if headerEntry contains the whole Header element, removeHeaderEntry will delete the entire header from the message."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeHeaderEntry__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_removeHeaderEntry__title__1"
     },
     {
       "name": "pub.soap.utils:removeTrailer",
@@ -2222,7 +2222,7 @@
       "usage_notes": [
         "When you use the trailer parameter, be sure that it specifies the correct node. This service deletes whatever node is specified in trailer, even if the node is not a trailer. For example, if trailer contains the Body element, removeTrailer will delete the entire body of the message."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeTrailer__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_removeTrailer__title__1"
     },
     {
       "name": "pub.soap.utils:requestResponseSpec",
@@ -2247,7 +2247,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_reqRespSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_reqRespSpec__title__1"
     },
     {
       "name": "pub.soap.utils:resetWSDEffectivePolicy",
@@ -2270,7 +2270,7 @@
         "You can also use Designer to reset the effective policy. In Designer, open the web service descriptor, select the handler on the Handlers view, and modify the value of Effective policy name property assigned to the handler.",
         "The pub.soap.utils.resetWSDEffectivePolicy service throws an exception if the provided inputs are invalid."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_resetWSDEffectivePolicy__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_resetWSDEffectivePolicy__title__1"
     },
     {
       "name": "pub.soap.utils:soapDataToBytes",
@@ -2290,7 +2290,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToBytes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToBytes__title__1"
     },
     {
       "name": "pub.soap.utils:soapDataToString",
@@ -2310,7 +2310,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToString__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToString__title__1"
     },
     {
       "name": "pub.soap.utils:soapFault",
@@ -2318,7 +2318,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6__title__1"
     },
     {
       "name": "pub.soap.utils:streamToSoapData",
@@ -2345,7 +2345,7 @@
       "usage_notes": [
         "Be aware that if stream does not contain a valid SOAP message, this service does not throw an exception. Instead, it produces a soapData that contains a representation of whatever it received in stream (which might not even be an XML document). This will cause problems later when you attempt to use the soapData with other SOAP utilities or pass it to the message handler. To determine whether soapData represents a valid SOAP message, we recommend that you always execute the pub.soap.utils:validateSoapData service immediately after using streamToSoapData."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_streamToSoapData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_streamToSoapData__title__1"
     },
     {
       "name": "pub.soap.utils:stringToSoapData",
@@ -2364,7 +2364,7 @@
         {
           "name": "addEmptyHeader",
           "type": "String",
-          "description": "String Optional. Specifies whether to create an empty header entry along with the SOAP envelope and body entries in the SOAP message. Set to: True to create an empty header entry in the SOAP message. False to create only the SOAP envelope and body entries. This setting overrides the global watt.server.SOAP.addEmptyHeader setting of Integration Server. Important: There is no default value. If you do not specify a value for the addEmptyHeader parameter, the service uses the value specified in the watt.server.SOAP.addEmptyHeader server configuration parameter. For more information about watt.server.SOAP.addEmptyHeader, see IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Optional. Specifies whether to create an empty header entry along with the SOAP envelope and body entries in the SOAP message. Set to: True to create an empty header entry in the SOAP message. False to create only the SOAP envelope and body entries. This setting overrides the global watt.server.SOAP.addEmptyHeader setting of Integration Server. Important: There is no default value. If you do not specify a value for the addEmptyHeader parameter, the service uses the value specified in the watt.server.SOAP.addEmptyHeader server configuration parameter. For more information about watt.server.SOAP.addEmptyHeader, see webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -2375,7 +2375,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_stringToSoapData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_stringToSoapData__title__1"
     },
     {
       "name": "pub.soap.utils:validateSoapData",
@@ -2390,9 +2390,9 @@
       "output_parameters": [],
       "usage_notes": [
         "If you create SOAP objects using the standard message-composition services (for example, pub.soap.utils:createSoapData, pub.soap.utils:addBodyEntry, pub.soap.utils:addHeaderEntry) there is no need to use this service. This service is only necessary when you generate a SOAP object directly from an InputStream or a String.",
-        "When validating SOAP, Integration Server uses the W3C recommendation XML Schema Part 2: Datatypes. If you want to validate the input of this service for illegal values in the SOAP envelope and header, set the watt.core.validation.w3cConformant configuration parameter to true. For information about setting this configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When validating SOAP, Integration Server uses the W3C recommendation XML Schema Part 2: Datatypes. If you want to validate the input of this service for illegal values in the SOAP envelope and header, set the watt.core.validation.w3cConformant configuration parameter to true. For information about setting this configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_validateSoapData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_soap_utils_validateSoapData__title__1"
     },
     {
       "name": "pub.soap.wsa:action",
@@ -2403,7 +2403,7 @@
         "To add, retrieve, or remove the wsa:Action header of a SOAP message, use pub.soap.wsa:action as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see the About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id5aec5755-0969-4c87-89ee-ae2aef5268a6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id5aec5755-0969-4c87-89ee-ae2aef5268a6__title__1"
     },
     {
       "name": "pub.soap.wsa:faultTo",
@@ -2414,7 +2414,7 @@
         "To add, retrieve, or remove the wsa:FaultTo header of a SOAP message, use pub.soap.wsa:faultTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see the About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6G0130UI__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B6G0130UI__title__1"
     },
     {
       "name": "pub.soap.wsa:from",
@@ -2425,7 +2425,7 @@
         "To add, retrieve, or remove the wsa:From header of a SOAP message, use pub.soap.wsa:from as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see the About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6H10N0YK__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B6H10N0YK__title__1"
     },
     {
       "name": "pub.soap.wsa:messageID",
@@ -2436,7 +2436,7 @@
         "To add, retrieve, or remove thewsa:MessageID header of a SOAP message, use pub.soap.wsa:messageID as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id879d5059-75ee-4559-8881-be23ba9d2626__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id879d5059-75ee-4559-8881-be23ba9d2626__title__1"
     },
     {
       "name": "pub.soap.wsa:problemAction",
@@ -2447,7 +2447,7 @@
         "To add, retrieve, or remove the wsa:ProblemAction header of a SOAP message, use pub.soap.wsa:problemAction as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6J0E60HT__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B6J0E60HT__title__1"
     },
     {
       "name": "pub.soap.wsa:problemHeaderQName",
@@ -2458,7 +2458,7 @@
         "To add, retrieve, or remove the wsa:ProblemHeaderQName header of a SOAP message, use pub.soap.wsa:problemHeaderQName as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B790EE05Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B790EE05Z__title__1"
     },
     {
       "name": "pub.soap.wsa:problemIRI",
@@ -2469,7 +2469,7 @@
         "To add, retrieve, or remove the wsa:ProblemIRI header of a SOAP message, use pub.soap.wsa:problemIRI as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7A0FF0Y4__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7A0FF0Y4__title__1"
     },
     {
       "name": "pub.soap.wsa:relatesTo",
@@ -2480,7 +2480,7 @@
         "To add, retrieve, or remove the wsa:RelatesTo header of a SOAP message, use pub.soap.wsa:relatesTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idd1627012-582c-4993-8b32-e9702fe3f7b5__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#idd1627012-582c-4993-8b32-e9702fe3f7b5__title__1"
     },
     {
       "name": "pub.soap.wsa:replyTo",
@@ -2491,7 +2491,7 @@
         "To add, retrieve, or remove the wsa:ReplyTo header of a SOAP message, use pub.soap.wsa:replyTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7A0P0DHS__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7A0P0DHS__title__1"
     },
     {
       "name": "pub.soap.wsa:retryAfter",
@@ -2502,7 +2502,7 @@
         "To add, retrieve, or remove the wsa:RetryAfter header of a SOAP message, use pub.soap.wsa:retryAfter as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12CCD0A0C5Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12CCD0A0C5Z__title__1"
     },
     {
       "name": "pub.soap.wsa:to",
@@ -2513,7 +2513,7 @@
         "To add, retrieve, or remove the wsa:To header of a SOAP message, use pub.soap.wsa:to as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idb151496c-524c-4902-99ee-2bb2964fe07f__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#idb151496c-524c-4902-99ee-2bb2964fe07f__title__1"
     },
     {
       "name": "pub.soap.wsa:schema_wsa",
@@ -2521,7 +2521,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_schema_w3c_datatypes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#Apub_schema_w3c_datatypes__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:action",
@@ -2533,7 +2533,7 @@
         "The pub.soap.wsa.submission:action document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0EM0PF__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7B0EM0PF__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:faultTo",
@@ -2545,7 +2545,7 @@
         "The pub.soap.wsa.submission:faultTo document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0EC0HT__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7B0EC0HT__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:from",
@@ -2557,7 +2557,7 @@
         "The pub.soap.wsa.submission:from document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0X0YPN__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7B0X0YPN__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:messageID",
@@ -2569,7 +2569,7 @@
         "The pub.soap.wsa.submission:messageID document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B800A7Q__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7B800A7Q__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:relatesTo",
@@ -2581,7 +2581,7 @@
         "The pub.soap.wsa.submission:relatesTo document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BA00O30__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7BA00O30__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:replyTo",
@@ -2593,7 +2593,7 @@
         "The pub.soap.wsa.submission:replyTo document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BD0F0RO__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7BD0F0RO__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:retryAfter",
@@ -2605,7 +2605,7 @@
         "The pub.soap.wsa.submission:retryAfter document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12CCD90D0Y4__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12CCD90D0Y4__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:to",
@@ -2617,7 +2617,7 @@
         "The pub.soap.wsa.submission:to document type relates to the W3C WS-Addressing Submission version of WS-Addressing specification.",
         "For more details about how Integration Server implements WS-Addressing, see About WS-Addressing in Integration Server ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BI0014Y__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7BI0014Y__title__1"
     },
     {
       "name": "pub.soap.wsa.submission:schema_wsa_submission",
@@ -2625,7 +2625,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7C0D0QXW__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id12B7C0D0QXW__title__1"
     },
     {
       "name": "pub.soap.wsrm:closeSequence",
@@ -2670,7 +2670,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133DB0P0A5Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id133DB0P0A5Z__title__1"
     },
     {
       "name": "pub.soap.wsrm:createSequence",
@@ -2739,7 +2739,7 @@
         {
           "name": "timeout",
           "type": "String",
-          "description": "String Optional. Time (in milliseconds) to wait for a response from the reliable messaging server before timing out and terminating the request. If timeout is not specified, or a value less than 0 is specified, Integration Server uses the value of the watt.server.SOAP.request.timeout server property. For more information about server configuration properties, see IBM webMethods Integration Server Administrator’s Guide . A timeout value of 0 means Integration Server waits for a response indefinitely. If the connection to the reliable messaging server ends before Integration Server receives a response, the service ends with an exception and a status code of 408."
+          "description": "String Optional. Time (in milliseconds) to wait for a response from the reliable messaging server before timing out and terminating the request. If timeout is not specified, or a value less than 0 is specified, Integration Server uses the value of the watt.server.SOAP.request.timeout server property. For more information about server configuration properties, see webMethods Integration Server Administrator’s Guide . A timeout value of 0 means Integration Server waits for a response indefinitely. If the connection to the reliable messaging server ends before Integration Server receives a response, the service ends with an exception and a status code of 408."
         },
         {
           "name": "_url",
@@ -2790,7 +2790,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133DD100GY4__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id133DD100GY4__title__1"
     },
     {
       "name": "pub.soap.wsrm:sendAcknowledgementRequest",
@@ -2835,7 +2835,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133F909M05Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id133F909M05Z__title__1"
     },
     {
       "name": "pub.soap.wsrm:terminateSequence",
@@ -2880,7 +2880,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133F9H00VY4__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id133F9H00VY4__title__1"
     },
     {
       "name": "pub.soap.wsrm:waitUntilSequenceCompleted",
@@ -2930,7 +2930,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133FA0U0YHS__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-soap-folder#id133FA0U0YHS__title__1"
     }
   ]
 }

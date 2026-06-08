@@ -1,0 +1,1153 @@
+{
+  "folder": "DB",
+  "total_services": 17,
+  "services": [
+    {
+      "name": "pub.db:call",
+      "description": "WmDB. Invokes a stored procedure on a target database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Alias of the database on which you want to execute the stored procedure."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user specified in $dbUser."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to invoke a stored procedure from a database other than the one to which you are connected. If you are not using a distributed database system, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the stored procedure's location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the stored procedure belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value of HR% would represent any schema beginning with characters HR. If you are running against DB2, you use this parameter to specify the stored procedure's AuthID."
+        },
+        {
+          "name": "$dbProc",
+          "type": "String",
+          "description": "String The name of the stored procedure you want to invoke."
+        },
+        {
+          "name": "$dbProcSig",
+          "type": "Document List",
+          "description": "Document List Optional. Set of parameters containing information about the stored procedure you want to invoke."
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "description": "String Parameter name defined in the stored procedure."
+        },
+        {
+          "name": "sqlType",
+          "type": "String",
+          "description": "String Type of procedure parameter for name as defined in the database. Set to one of the following values: BIT TINYINT SMALLINT INTEGER BiGINT FLOAT REAL DOUBLE NUMBERIC DECIMAL CHAR VARCHAR LONGVARCHAR DATE TIME TIMESTAMP BINARY VARBINARY LONGVARBINARY NULL"
+        },
+        {
+          "name": "direction",
+          "type": "String",
+          "description": "String Way in which the parameter is used by the stored procedure. Set to one of the following values: in out inout return value"
+        },
+        {
+          "name": "$dbParamsByOrder",
+          "type": "String",
+          "description": "String Optional. Indicates whether the contents of $data should be sent to the database in order. Set to: true to send the contents of $data to the database in the order they are listed in $data. false to send the contents of $data to the database in no particular order. This is the default."
+        },
+        {
+          "name": "$data",
+          "type": "Document",
+          "description": "Document Parameter values for the stored procedure. Whether the $data parameter is mandatory or not depends on the watt.server.jdbc.sp.mandateParams property. If this property is set to false, the $data input parameter is optional. If this property is true, you must provide values for the $data parameter. The default value for the watt.server.jdbc.sp.mandateParams property is true."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "The output will also contain output parameters and procedure return values (the return value is called RETURN_VALUE)."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_call__title__1"
+    },
+    {
+      "name": "pub.db:clearTransaction",
+      "description": "WmDB. Clears the transactional state within a database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Alias of the database connection on which you want to clear the transactional state. The alias is passed automatically if the database is connected."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String A message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "On some databases, exceptional conditions within transactions will automatically abort the entire transaction. When this happens, the standard commit/rollback operations are meaningless because there is no current transaction. If this occurs, use the clearTransaction service to clear the transactional state and prepare for a new transaction. You should only use this service if you have begun a transaction and cannot end it with a standard commit or rollback.",
+        "The clearTransaction service does not involve a database operation; it is entirely internal to the webMethods Integration Server."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_clearTransaction__title__1"
+    },
+    {
+      "name": "pub.db:close",
+      "description": "WmDB. Closes a specified database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$closeDbConnection",
+          "type": "String",
+          "description": "String Optional. Indicates whether to remove the database connection from the pool or return it to the pool for future use. Set to: true to close the connection and remove it from the pool. false to close the connection and return it to the pool for future use. This is the default."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_close__title__1"
+    },
+    {
+      "name": "pub.db:closeAll",
+      "description": "WmDB. Closes all database connections that the session has opened. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900934__title__1"
+    },
+    {
+      "name": "pub.db:commit",
+      "description": "WmDB. Commits changes to a database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Alias of the database on which you want to commit changes. The alias is passed automatically if the database is connected."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "This service returns an exception if an error occurs when committing changes to the database. The most common reason for this error is that no transaction has been started (see pub.db:startTransaction)."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_commit__title__1"
+    },
+    {
+      "name": "pub.db:connect",
+      "description": "WmDB. Creates a connection to the database using the supplied JDBC URL, user name, and password. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbURL, $dbDriver, $dbProperties"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbProperties",
+          "type": "Document",
+          "description": "Document Optional. Set of connection parameters that are to be used to make the database connection. Within $dbProperties, key names represent the names of the connection parameters that are to be used to establish the connection, and the value of a key specifies the value of that particular parameter. In most cases, you will include the keys user and password in $dbProperties to specify the user name and password parameters that are to be used to connect to the database. You may include additional parameters as needed. The following example shows how $dbProperties would look if you wanted to set the weblogic.codeset parameter to GBK in order to extract Unicode data out of the database:"
+        },
+        {
+          "name": "user",
+          "type": "",
+          "description": "dbu"
+        },
+        {
+          "name": "password",
+          "type": "",
+          "description": "dbu"
+        },
+        {
+          "name": "weblogic.codeset",
+          "type": "",
+          "description": "GBK"
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Connection object."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "Database connections opened by pub.db:connect are associated with the current session.",
+        "Multiple attempts to connect to the same database by the same client will result in the same connection being reused. This means that if client A and client B request connections to the same database, they each get their own new connection. If client A makes another call to pub.db:connect, the previous connection is reused. Associating the database connection with the client session prevents remote clients from having to reconnect repeatedly to a target database.",
+        "Connections are not pooled or shared across sessions. Unless explicitly closed (by calling pub.db:close or pub.db:closeAll), connections associated with a session are closed when the session is flushed from memory. This happens at a regular interval, which can be configured using the Integration Server Administrator. For more information about setting the session time-out limit, see Setting the Session Timeout Limit."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900933__title__1"
+    },
+    {
+      "name": "pub.db:delete",
+      "description": "WmDB. Removes all rows in the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to delete rows from a table that is not in the database to which you are connected. If you are not using a distributed database system or if you want to delete rows from the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTable",
+          "type": "String",
+          "description": "String Name of the table to remove rows from."
+        },
+        {
+          "name": "$data",
+          "type": "Document",
+          "description": "Document Optional. Criteria that the rows to delete must meet. Important: If no criteria are provided, all rows are deleted from the table."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$updateCount",
+          "type": "String",
+          "description": "String Number of rows deleted."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_delete__title__1"
+    },
+    {
+      "name": "pub.db:execSQL",
+      "description": "WmDB. Executes the specified SQL statement. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to retrieve information from a database to which you are not currently connected. If you are not using a distributed database system, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbSQL",
+          "type": "String",
+          "description": "String SQL statement to execute."
+        },
+        {
+          "name": "$dbProcessEsc",
+          "type": "String",
+          "description": "String Optional. Flag that indicates whether JDBC SQL escapes will be processed. These escapes allow database-independent access to database-dependent functionality. For example, different dialects of SQL have different syntax for date literals. Using a JDBC escape, you can encode a date literal in a SQL string that should work on any database. Documentation on JDBC SQL escapes is widely available. Set to: true to process JDBC SQL escapes. This is the default. false to skip processing JDBC SQL escapes."
+        },
+        {
+          "name": "$dbProcessReporterTokens",
+          "type": "String",
+          "description": "String Optional. Flag that indicates whether reporter tags (for example, %value xxx%) will be processed in the SQL. Including these tokens in your SQL allows dynamic construction of complex SQL statements, at the possible expense of some execution speed. Set to: true to process tags. false to ignore tags. This is the default."
+        },
+        {
+          "name": "$dbParamValues",
+          "type": "Object List",
+          "description": "Object List Optional. If the \"?\" parameters in the SQL statement are not supplied indirectly (with the $dbParamNames parameter), they can be supplied directly via this parameter. See Usage Notes below. Objects in $dbParamValues can be of any type."
+        },
+        {
+          "name": "$dbParamNames",
+          "type": "String List",
+          "description": "String List Optional. Names of any \"?\" parameters in the SQL. See Usage Notes below."
+        },
+        {
+          "name": "$dbParamTypes",
+          "type": "String List",
+          "description": "String List Optional. SQL type names for each parameter. Use type names from the JDBC 1.2 specification (\"INTEGER\", \"VARCHAR\", etc.)."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "sql",
+          "type": "String",
+          "description": "String Conditional. SQL as it was actually passed to the target database. This can be helpful in debugging calls to this service when dynamic SQL is used (that is, you are using either JDBC SQL escapes or webMethods Reporter tokens in your SQL)."
+        },
+        {
+          "name": "paramsAsStrings",
+          "type": "String List",
+          "description": "String List Conditional. Values used for each of the parameters in the SQL statement. This can be helpful in debugging calls to this service when \"?\" parameters are being used."
+        },
+        {
+          "name": "$rowCount",
+          "type": "String",
+          "description": "String Conditional. Number of rows in results."
+        },
+        {
+          "name": "results",
+          "type": "com.wm.util.Table",
+          "description": "com.wm.util.Table Conditional. Results from the SQL statement. The Integration Server recognizes and treats this parameter as a Document List at run time."
+        },
+        {
+          "name": "$updateCount",
+          "type": "String",
+          "description": "String Conditional. Number of rows updated."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "This service does not support updates from a web browser or HTML form.",
+        "You may specify the connection parameters in one of the following ways:",
+        "SQL supports host variables (\"?\") in statements to be executed. Because the pipeline is based on named values and individual host variables are not named, $dbParamNames and $dbParamTypes are used to supply an index-to-name mapping for each SQL statement executed. For example, consider the following SQL query:",
+        "To execute this SQL query, you could supply the following values to the pub.db:execSQL service:",
+        "Example: Consider the following SQL query, which contains an INSERT with three host variables:",
+        "To execute this SQL query, you could supply the following values to the pub.db:execSQL service:"
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_execSQL__title__1"
+    },
+    {
+      "name": "pub.db:getProcInfo",
+      "description": "WmDB. Retrieves information about one or more stored procedures. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to retrieve information about a stored procedure that is not in the database to which you are currently connected. If you are not using a distributed database system, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the stored procedure's location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the stored procedure's AuthID."
+        },
+        {
+          "name": "$dbProc",
+          "type": "String",
+          "description": "String Name of the procedure about which you want information."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_getProcInfo__title__1"
+    },
+    {
+      "name": "pub.db:getProcs",
+      "description": "WmDB. Retrieves the names of stored procedures for the specified database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to retrieve a list of stored procedures from a database other than the one to which you are connected. If you are not using a distributed database system, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the stored procedures belong. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the database's AuthID."
+        },
+        {
+          "name": "$dbProcNamePattern",
+          "type": "String",
+          "description": "String Optional. Pattern-matching string that specifies the procedures that you want included in the returned list, where _ represents a single character and % represents any string of characters. For example, the value DATE% would represent any procedure beginning with the characters DATE."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_getProcs__title__1"
+    },
+    {
+      "name": "pub.db:getTableInfo",
+      "description": "WmDB. Retrieves information about columns in the specified table. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want information about a table that is not in the database to which you are connected. If you are not using a distributed database system or you want information about a table in the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify a pattern-matching string for the schema name, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTable",
+          "type": "String",
+          "description": "String Name of table whose column names you want to retrieve."
+        },
+        {
+          "name": "$dbColumnNamePattern",
+          "type": "String",
+          "description": "String Optional. Pattern-matching string that specifies the column names that you want to retrieve, where _ represents a single character and % represents any string of characters. For example, the value ADDR% would represent any column name beginning with the characters ADDR."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [
+        "This service accepts input from a web browser or HTML form."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900940__title__1"
+    },
+    {
+      "name": "pub.db:getTables",
+      "description": "WmDB. Retrieves the names of tables in the specified database and schema. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want information from a database that is not the one to which you are connected. If you are not using a distributed database system or you want information about the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema for which you want the names of tables. If your database supports pattern-matching on schemas, you may specify a pattern-matching string for the schema name, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you want the table names from all schemas, set $dbSchemaPattern to null. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTableNamePattern",
+          "type": "String",
+          "description": "String Optional. Pattern string describing the tables whose names you want to retrieve. If your database supports pattern-matching on schemas, you may specify a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any table name beginning with the characters HR. If you want all table names, set $dbTableNamePattern to null."
+        },
+        {
+          "name": "$dbTableTypeList",
+          "type": "String List",
+          "description": "String List Optional. Set of parameters specifying the types of tables whose names you want to retrieve. Common JDBC table types include: TABLE, VIEW, SYSTEM TABLE, ALIAS, and SYNONYM. Check your driver documentation for others."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [
+        "This service accepts input from a web browser or HTML form."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc462908017__title__1"
+    },
+    {
+      "name": "pub.db:insert",
+      "description": "WmDB. Inserts one or more rows into the specified table. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to insert rows into a table that is not in the database to which you are connected. If you are not using a distributed database system or if you want to insert rows into the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTable",
+          "type": "String",
+          "description": "String Name of table in which you want to insert rows."
+        },
+        {
+          "name": "$dbRollbackOnFail",
+          "type": "String",
+          "description": "String Optional. Flag that determine whether changes are committed if a failure occurs while processing multiple inserts. Set to: true to undo changes on failure. false to commit changes on failure. This is the default."
+        },
+        {
+          "name": "$data",
+          "type": "Document",
+          "description": "Document or Document List Optional. Data to insert."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$updateCount",
+          "type": "String",
+          "description": "String Number of rows the service inserted."
+        },
+        {
+          "name": "$failCount",
+          "type": "String",
+          "description": "String Number of rows the service failed to insert."
+        },
+        {
+          "name": "$errors",
+          "type": "Document",
+          "description": "Document Conditional. Error messages generated during service execution."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "This service accepts input from a web browser or HTML form."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900935__title__1"
+    },
+    {
+      "name": "pub.db:query",
+      "description": "WmDB. Retrieves all rows from the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to query a table that is not in the database to which you are connected. If you are not using a distributed database system or if you want to query a table in the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTable",
+          "type": "String",
+          "description": "String Name of table to query."
+        },
+        {
+          "name": "$data",
+          "type": "Document",
+          "description": "Document Optional. Criteria that the rows to retrieve must meet."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "results",
+          "type": "com.wm.util.Table",
+          "description": "com.wm.util.Table Conditional. Results of the query. The Integration Server recognizes and treats this parameter as a Document List at run time."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the success or failure of an operation."
+        },
+        {
+          "name": "$rowCount",
+          "type": "String",
+          "description": "String Conditional. Number of rows for the table that meet the criteria specified in $data."
+        }
+      ],
+      "usage_notes": [
+        "This service accepts input from a web browser or HTML form."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900939__title__1"
+    },
+    {
+      "name": "pub.db:rollback",
+      "description": "WmDB. Discards changes to a database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Alias of the database for which you want to discard changes. This information is passed automatically."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "This service throws an exception if an error occurs when discarding changes to the database. The most common reason for this error is that no transaction has been started (see pub.db:startTransaction)."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_rollback__title__1"
+    },
+    {
+      "name": "pub.db:startTransaction",
+      "description": "WmDB. Begins a transaction on a database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Alias of the database for which you want to start the transaction. This information is passed automatically."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Message indicating the success or failure of the operation."
+        }
+      ],
+      "usage_notes": [
+        "By default, all database connections are opened in \"auto commit\" mode, meaning the results of a operation are automatically committed to the database when that operation succeeds. To use a connection in a transactional context, you must first call pub.db:startTransaction to take that connection out of \"auto commit\" mode.",
+        "This service returns an exception if an error occurs when starting the new transaction. Common reasons for an error when starting a new transaction are:",
+        "After a transaction has been started, it must be terminated with a call to either pub.db:commit (to save all changes to the database) or pub.db:rollback (to discard changes)."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_startTransaction__title__1"
+    },
+    {
+      "name": "pub.db:update",
+      "description": "WmDB. Updates all rows in a table that meet the given criteria. Rows are updated with the supplied new data. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
+      "input_parameters": [
+        {
+          "name": "$dbAlias",
+          "type": "",
+          "description": "You may specify the connection parameters in one of the following ways: $dbAlias $dbURL, $dbUser, $dbPass, $dbDriver $dbConnection"
+        },
+        {
+          "name": "$dbAlias",
+          "type": "String",
+          "description": "String Optional. Database alias."
+        },
+        {
+          "name": "$dbURL",
+          "type": "String",
+          "description": "String Optional. JDBC URL that identifies the database resource."
+        },
+        {
+          "name": "$dbUser",
+          "type": "String",
+          "description": "String Optional. User name to use to log into the database."
+        },
+        {
+          "name": "$dbPass",
+          "type": "String",
+          "description": "String Optional. Password for the user."
+        },
+        {
+          "name": "$dbDriver",
+          "type": "String",
+          "description": "String Optional. Name of the JDBC driver to use."
+        },
+        {
+          "name": "$dbConnection",
+          "type": "com.wm.app.b2b.server.DBConnection",
+          "description": "com.wm.app.b2b.server.DBConnection Optional. Connection object returned by pub.db:connect."
+        },
+        {
+          "name": "$dbCatalog",
+          "type": "String",
+          "description": "String Optional. Name of the database's system catalog. Include this parameter if your DBMS supports distributed databases and you want to update rows in a table that is not in the database to which you are connected. If you are not using a distributed database system or if you want to update rows in the database to which you are connected, you do not need to specify this parameter. If you are running against DB2, you use this parameter to specify the database location."
+        },
+        {
+          "name": "$dbSchemaPattern",
+          "type": "String",
+          "description": "String Optional. Name of the schema to which the table belongs. If your database supports pattern-matching on schemas, you may specify the schema name with a pattern-matching string, where _ represents a single character and % represents any string of characters. For example, the value HR% would represent any schema beginning with the characters HR. If you are running against DB2, you use this parameter to specify the table's AuthID."
+        },
+        {
+          "name": "$dbTable",
+          "type": "String",
+          "description": "String Name of table to update."
+        },
+        {
+          "name": "$criteria",
+          "type": "Document",
+          "description": "Document Criteria that the rows to update must meet. Important: If no criteria are provided, all rows are updated."
+        },
+        {
+          "name": "$set",
+          "type": "Document",
+          "description": "Document New data with which to update rows."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$updateCount",
+          "type": "String",
+          "description": "String Number of rows updated."
+        },
+        {
+          "name": "$dbMessage",
+          "type": "String",
+          "description": "String Conditional. Message indicating the operation failed."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_update__title__1"
+    }
+  ]
+}

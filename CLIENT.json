@@ -1,6 +1,6 @@
 {
   "folder": "CLIENT",
-  "total_services": 53,
+  "total_services": 54,
   "services": [
     {
       "name": "pub.client:ftp",
@@ -165,7 +165,7 @@
         "The FTP services will always connect to a secure FTP server using a non-secure (SSL) socket. After getting a valid reply from the AUTH command, the FTP services will convert the connected socket to an SSL socket and initiate SSL handshaking.",
         "Prior to Integration Server version 10.15, the pub.client:ftp service included the secure/useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.client:ftp, the secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the secure/useJSSE input parameter, proceeding as if secure/useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#Apub_client_ftp__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#Apub_client_ftp__title__1"
     },
     {
       "name": "pub.client.ftp:append",
@@ -174,17 +174,12 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "transfermode",
           "type": "String",
-          "description": "String. Optional. FTP file transfer mode (ascii or binary). The default is ascii."
+          "description": "String FTP file transfer mode (ascii or binary). The default is ascii."
         },
         {
           "name": "content",
@@ -220,7 +215,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A74271__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A74271__title__1"
     },
     {
       "name": "pub.client.ftp:cd",
@@ -229,12 +224,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "dirpath",
@@ -260,7 +250,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#idb00c4090-38b1-4248-af36-8ac0810cb608__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#idb00c4090-38b1-4248-af36-8ac0810cb608__title__1"
     },
     {
       "name": "pub.client.ftp:cdls",
@@ -269,12 +259,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "dirpath",
@@ -315,7 +300,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A84739__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A84739__title__1"
     },
     {
       "name": "pub.client.ftp:delete",
@@ -324,12 +309,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "remotefile",
@@ -355,7 +335,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A39457__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A39457__title__1"
     },
     {
       "name": "pub.client.ftp:dir",
@@ -364,12 +344,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "filenamepattern",
@@ -400,7 +375,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A76088__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A76088__title__1"
     },
     {
       "name": "pub.client.ftp:get",
@@ -409,17 +384,12 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "transfermode",
           "type": "String",
-          "description": "String. Optional. FTP file transfer mode (ascii or binary). The default is ascii."
+          "description": "String FTP file transfer mode (ascii or binary). The default is ascii."
         },
         {
           "name": "localfile",
@@ -497,7 +467,7 @@
       "usage_notes": [
         "The largefilethreshold parameter improves the ability of pub.client.ftp:get to retrieve larger files. If a retrieved file is larger than the size specified in the largefilethreshold parameter, and the localfile parameter is empty (which means the retrieved file is retrieved to memory, not to a file on disk), the Integration Server streams the large file to a temporary file. While this will improve the scalability of pub.client.ftp:get, it will also reduce the throughput of the operation because the retrieved file will be written to a temporary file."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A16442__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A16442__title__1"
     },
     {
       "name": "pub.client.ftp:getCompletedNotification",
@@ -505,9 +475,9 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [
-        "Integration Server publishes an instance document of pub.client.ftp:getCompletedNotification when an FTP client has completed an FTP get command on Integration Server through an FTP/S port. Because the retrieved file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:getCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:getCompletedNotification, only subscribers located on the same Integration Server receive the document. IBM does not recommend changing the assigned messaging connection alias."
+        "Integration Server publishes an instance document of pub.client.ftp:getCompletedNotification when an FTP client has completed an FTP get command on Integration Server through an FTP/S port. Because the retrieved file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:getCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:getCompletedNotification, only subscribers located on the same Integration Server receive the document. Software AG does not recommend changing the assigned messaging connection alias."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A56701__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A56701__title__1"
     },
     {
       "name": "pub.client.ftp:login",
@@ -566,27 +536,22 @@
         {
           "name": "secure",
           "type": "Document",
-          "description": "Document Indicates whether the FTP session is with a secure FTP server. Note: Integration Server does not support FTPS (FTP over SSL) requests through FTP proxy."
+          "description": "Document Indicates whether the FTP session is with a secure FTP server. Note: Integration Server does not support FTPS (FTP over SSL) requests through FTP proxy. Note: Integration Server does not support implicit FTPS, which is also deprecated."
         },
         {
           "name": "auth",
           "type": "String",
-          "description": "String The kind of authentication mechanism to use: None, SSL, TLS, or TLS-P. None specifies that the FTP session is with a non-secure FTP server. This is the default. If the value of auth is None, the jsseDisabledProtocols and securedata variables are ignored. TLS-Pis a shortcut that is equivalent to the sequence AUTH TLS, PBSZ 0, and PROT P. If the value of auth is TLS-P, the securedata variable is ignored."
-        },
-        {
-          "name": "jsseDisabledProtocols",
-          "type": "String",
-          "description": "String Optional. Specifies a comma-separated list of the disabled SSL and TLS protocol versions for outbound requests during the FTPS session. The value of jsseDisabledProtocols overrides the value of watt.net.jsse.client.disabledProtocols."
+          "description": "String The kind of authentication mechanism to use: None, SSL, TLS, or TLS-P. None specifies that the FTP session is with a non-secure FTP server. This is the default. If the value of auth is None, the securedata variable is ignored. TLS-P is a shortcut that is equivalent to the sequence AUTH TLS, PBSZ 0, and PROT P. If the value of auth is TLS-P, the securedata variable is ignored."
         },
         {
           "name": "securedata",
           "type": "String",
-          "description": "String Optional. Use the value false for a client sending PROT C (Data Channel Protection Level Clear). Use the value true for a client sending PROT P (Data Channel Protection Level Private). Note: If you do not set a value, the default is false."
+          "description": "String Use the value false for a client sending PROT C (Data Channel Protection Level Clear). Use the value true for a client sending PROT P (Data Channel Protection Level Private). Note: If you do not set a value, the default is false."
         },
         {
           "name": "newSession",
           "type": "String",
-          "description": "String Optional. Flag indicating whether a new FTP session will be created for this FTP operation. Set to: yes to create a new session for this FTP operation. no to use the current session, if one is available, for this FTP operation. This is the default."
+          "description": "String Optional. Flag indicating whether a a new FTP session will be created for this FTP operation. Set to: yes to create a new session for this FTP operation. no to use the current session, if one is available, for this FTP operation. This is the default."
         },
         {
           "name": "clientTimeout",
@@ -596,7 +561,7 @@
         {
           "name": "proxyAlias",
           "type": "String",
-          "description": "String Optional. Name of the proxy alias for the proxy server through which Integration Server routes the FTP request. If you do not specify a proxyAlias, Integration Server routes the FTP request through the proxy server specified in the default FTP proxy alias. If there is no default FTP proxy alias, the action taken by Integration Server depends on the value specified for the watt.net.proxy.useNonDefaultProxies parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to true, Integration Server routes the FTP request through the proxy server in any configured FTP proxy alias. If the Integration Server does not have any defined FTP proxy aliases, Integration Server sends the FTP request directly to the FTP server or throws an exception depending on the settings specified for the watt.net.proxy.fallbackToDirectConnection parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to false, Integration Server sends the request to the remote server using a direct connection. For more information about proxy server usage, refer to IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Optional. Name of the proxy alias for the proxy server through which Integration Server routes the FTP request. If you do not specify a proxyAlias, Integration Server routes the FTP request through the proxy server specified in the default FTP proxy alias. If there is no default FTP proxy alias, the action taken by Integration Server depends on the value specified for the watt.net.proxy.useNonDefaultProxies parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to true, Integration Server routes the FTP request through the proxy server in any configured FTP proxy alias. If the Integration Server does not have any defined FTP proxy aliases, Integration Server sends the FTP request directly to the FTP server or throws an exception depending on the settings specified for the watt.net.proxy.fallbackToDirectConnection parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to false, Integration Server sends the request to the remote server using a direct connection. For more information about proxy server usage, refer to webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -622,13 +587,13 @@
         }
       ],
       "usage_notes": [
-        "If you set the secure/auth variable to SSL, TLS, or TLS-P, pub.client.ftp:login automatically sends the following sequence of FTP commands prior to sending the USER command:",
+        "If you set the auth variable in the secure parameter to SSL, TLS, or TLS-P, pub.client.ftp:login automatically sends the following sequence of FTP commands prior to sending the USER command:",
         "The client FTP services will not negotiate for less security than you have specified with the auth parameter. However, if you set the auth variable to None, the client FTP services can operate (in a non-secure mode) with any FTP server.",
         "The FTP services will always connect to a secure FTP server using a non-secure (SSL) socket. After getting a valid reply from the AUTH command, the FTP services will convert the connected socket to an SSL socket and initiate SSL handshaking.",
         "If the watt.client.ftp.session.logoutOnServiceCompletion parameter is set to true, the FTP session created by the pub.client.ftp:login service closes automatically when the invoking service completes execution. If the value is set to false, then the pub.client.ftp:logout service must be invoked to close the FTP(S) session.",
-        "Prior to Integration Server version 10.15, the pub.client.ftp:login service included the secure/useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Server version 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.client.ftp:login, the secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the secure/useJSSE input parameter, proceeding as if secure/useJSSE were set to yes."
+        "Prior to Integration Server version 10.15, the pub.client.ftp:login service included the secure/useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.client.ftp:login, the secure/useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the secure/useJSSE input parameter, proceeding as if secure/useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A26574__title__1"
     },
     {
       "name": "pub.client.ftp:logout",
@@ -658,7 +623,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A53081__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A53081__title__1"
     },
     {
       "name": "pub.client.ftp:ls",
@@ -667,12 +632,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "filenamepattern",
@@ -715,7 +675,7 @@
       "usage_notes": [
         "During an FTP session, this service uses the character set specified in the encoding parameter of the pub.client.ftp:login service. If the file list this service retrieves includes characters from other languages, set the encoding parameter appropriately. For example, set encoding to SJIS for file names containing Japanese characters. If you do not set encoding in pub.client.ftp:login, the default JVM encoding is used."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A82423__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A82423__title__1"
     },
     {
       "name": "pub.client.ftp:mdelete",
@@ -724,12 +684,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "filenamepattern",
@@ -755,7 +710,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A54768__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A54768__title__1"
     },
     {
       "name": "pub.client.ftp:mget",
@@ -764,17 +719,12 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "transfermode",
           "type": "String",
-          "description": "String. Optional. FTP file transfer mode (ascii or binary). The default is ascii."
+          "description": "String FTP file transfer mode (ascii or binary). The default is ascii."
         },
         {
           "name": "localdir",
@@ -815,7 +765,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A24582__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A24582__title__1"
     },
     {
       "name": "pub.client.ftp:mput",
@@ -824,17 +774,12 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "transfermode",
           "type": "String",
-          "description": "String. Optional. FTP file transfer mode (ascii or binary). The default is ascii."
+          "description": "String FTP file transfer mode (ascii or binary). The default is ascii."
         },
         {
           "name": "localdir",
@@ -877,7 +822,7 @@
       "usage_notes": [
         "Some FTP servers, such as the Integration Server FTP Listener, do not support \"putting\" a unique file. When using the pub.client.ftp:put or pub.client.ftp:mput service to put a unique file to an FTP server that does not support putting a unique file, you will encounter an error like this one:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A98655__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A98655__title__1"
     },
     {
       "name": "pub.client.ftp:put",
@@ -886,17 +831,12 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "transfermode",
           "type": "String",
-          "description": "String. Optional. FTP file transfer mode (ascii or binary). The default is ascii."
+          "description": "String FTP file transfer mode (ascii or binary). The default is ascii."
         },
         {
           "name": "content",
@@ -941,7 +881,7 @@
         "When a client invokes this service to transport a file, the FTP listener determines the content handler to use based on the file's extension. The content handler converts the file content to the input values for the service to invoke. The Integration Server_directory \\instances\\instance_name\\lib\\mime.types file contains the mappings of file extension to content type.",
         "By default, if this service encounters a file that has no file extension, the default content handler is used. To override this, you can configure any content handler to handle files that have no file extension. To do this, add a line in the Integration Server_directory \\instances\\instance_name\\lib\\mime.types file that specifies the content type of the files with no extension, and the ftp_no_extension key. For example, to allow a content handler to accept text/xml files that have no extension, add this line to your mime.types file:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A59447__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A59447__title__1"
     },
     {
       "name": "pub.client.ftp:putCompletedNotification",
@@ -949,9 +889,9 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [
-        "Integration Server publishes an instance document of pub.client.ftp:putCompletedNotification when an FTP client has completed an FTP put command on Integration Server through an FTP/S port. Because the put file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:putCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:putCompletedNotification, only subscribers located on the same Integration Server receive the document. IBM does not recommend changing the assigned messaging connection alias."
+        "Integration Server publishes an instance document of pub.client.ftp:putCompletedNotification when an FTP client has completed an FTP put command on Integration Server through an FTP/S port. Because the put file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:putCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:putCompletedNotification, only subscribers located on the same Integration Server receive the document. Software AG does not recommend changing the assigned messaging connection alias."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A52288__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A52288__title__1"
     },
     {
       "name": "pub.client.ftp:quote",
@@ -960,12 +900,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "string",
@@ -991,7 +926,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A40662__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A40662__title__1"
     },
     {
       "name": "pub.client.ftp:rename",
@@ -1000,12 +935,7 @@
         {
           "name": "sessionkey",
           "type": "String",
-          "description": "String. Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
-        },
-        {
-          "name": "connectionAlias",
-          "type": "String",
-          "description": "String. Optional. The alias of the FTP connection specified for a deploy anywhere flow service that you created in webMethods Hybrid Integration. Set the connectionAlias if you want to deploy the service on an Edge runtime using Designer."
+          "description": "String Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
         },
         {
           "name": "oldname",
@@ -1036,7 +966,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A59590__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A59590__title__1"
     },
     {
       "name": "pub.client.ftp:sessioninfo",
@@ -1099,7 +1029,7 @@
         "When you start an FTP session with pub.client.ftp:login, you can set the optional dataport parameter to specify the port number for data transfers. During the FTP session, pub.client.ftp:sessionInfo returns the dataport parameter with the port number used for data transfers.",
         "If you do not set the dataport parameter in pub.client.ftp:login, the server uses a random port number. During the FTP session, pub.client.ftp:sessionInfo will return a 0 for the dataport parameter to indicate that the port number used for data transfers is random."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A10249__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A10249__title__1"
     },
     {
       "name": "pub.client:http",
@@ -1108,12 +1038,7 @@
         {
           "name": "url",
           "type": "String",
-          "description": "String. Conditional. URL of the resource that you want to access. For example: http://www.rubicon.com/orders/orders.html Important: This string must begin with http:// or https://. url is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an HTTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments.Note: This parameter is not applicable to HTTP connections in webMethods Integration Server (on-premises)."
+          "description": "String URL of the resource that you want to access. For example: http://www.rubicon.com/orders/orders.html Important: This string must begin with http:// or https://."
         },
         {
           "name": "method",
@@ -1128,7 +1053,7 @@
         {
           "name": "data",
           "type": "Document",
-          "description": "Document. Conditional. Data that you want the pub.client:http service to submit with the HTTP request. Specify data using one or more of the following keys. Important: When you use more than one key, args is appended first, table is appended second, and string is appended last.data is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          "description": "Document Data that you want the pub.client:http service to submit with the HTTP request. Specify data using one or more of the following keys. Important: When you use more than one key, args is appended first, table is appended second, and string is appended last."
         },
         {
           "name": "args",
@@ -1238,7 +1163,7 @@
         {
           "name": "timeout",
           "type": "String",
-          "description": "String Optional. Time, measured in milliseconds, that Integration Server waits for a response from the remote server before timing out and terminating the request. If you do not specify a value, Integration Server uses the value of the watt.net.timeout server configuration parameter. For information about the watt.net.timeout server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Optional. Time, measured in milliseconds, that Integration Server waits for a response from the remote server before timing out and terminating the request. If you do not specify a value, Integration Server uses the value of the watt.net.timeout server configuration parameter. For information about the watt.net.timeout server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
         },
         {
           "name": "maxKeepAlive Connections",
@@ -1253,7 +1178,7 @@
         {
           "name": "newSession",
           "type": "String",
-          "description": "String Optional. Flag indicating whether a new session will be created for this HTTP request. This parameter overrides the watt.server.new.http.session.context server configuration parameter. For information about the watt.server.new.http.session.context server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide . Set to: no to use the current session, if one is available, for this HTTP request. If one is not available, Integration Server creates one with the name “(httpclient)”. This is the default. yes to create a new session for this HTTP request. Integration Server creates one with the name “(httpclient)”."
+          "description": "String Optional. Flag indicating whether a new session will be created for this HTTP request. This parameter overrides the watt.server.new.http.session.context server configuration parameter. For information about the watt.server.new.http.session.context server configuration parameter, see webMethods Integration Server Administrator’s Guide . Set to: no to use the current session, if one is available, for this HTTP request. If one is not available, Integration Server creates one with the name “(httpclient)”. This is the default. yes to create a new session for this HTTP request. Integration Server creates one with the name “(httpclient)”."
         },
         {
           "name": "trustStore",
@@ -1261,71 +1186,31 @@
           "description": "String Optional. Alias for the truststore that contains the list of certificates that Integration Server uses to validate the trust relationship. If you do not specify a truststore alias, the default truststore alias will be used."
         },
         {
-          "name": "keyStoreAlias",
-          "type": "String",
-          "description": "String Optional. Alias for the keystore that contains Integration Server private keys and the associated SSL certificates.If you specify keyStoreAlias and not the keyAlias, Integration Server uses the key alias defined for the keystore in Integration Server Administrator > Security > Keystore."
-        },
-        {
-          "name": "keyAlias",
-          "type": "String",
-          "description": "String Optional. Alias for a private key stored in the specified keystore.If you specify keyAlias, you must specify keyStoreAlias. If you do not specify either keyStoreAlias or keyAlias, Integration Server uses the default keystore and key alias configured in Integration Server Administrator > Security > Keystore."
-        },
-        {
-          "name": "hostNameVerification",
-          "type": "String",
-          "description": "String Optional. Specifies whether Integration Server, when working as a client, verifies the hostname in the url against the DNS Name in the Certificate Subject Alternative Name field of the certificate presented by the server to which the request is being sent. If the hostname verification succeeds, the HTTP request is successful. Set to: <null> to enable or disable hostname verification in the pub.client:http service based on the value of the watt.net.ssl.client.hostnameverification parameter. This is the default. true to enable hostname verification in the pub.client:http service regardless of the value of the watt.net.ssl.client.hostnameverification parameter. false to disable hostname verification in the pub.client:http service regardless of the value of the watt.net.ssl.client.hostnameverification parameter. For information about the parameter, see webMethods Integration Server Administrator’s Guide."
-        },
-        {
-          "name": "cipherSuites",
-          "type": "String",
-          "description": "String Optional. One or more comma-separated cipher suites that Integration Server supports for outbound HTTP requests. If one or more cipher suites are provided, Integration Server uses only the supported cipher suites from the list. If the parameter is empty, Integration Server uses the value of the watt.net.jsse.client.enabledCipherSuiteList parameter. For information about the parameter, see webMethods Integration Server Administrator’s Guide."
-        },
-        {
-          "name": "checkCRL",
-          "type": "String",
-          "description": "String Optional. Specifies whether Integration Server, when acting as a client, verifies the certificate presented by the HTTP server to which the request is being sent against the Certificate Revocation List (CRL). The CRL is a list of certificates revoked by the Certificate Authority (CA). Integration Server downloads the CRL from the CA's CRL distribution point. If Integration Server finds the certificate in the CRL, the HTTP request does not succeed. Set to: <null> or false, if the pub.client:http service does not check the CRL. <null> is the default. true if the pub.client:http service checks the CRL. If checkCRL is true, Integration Server downloads the CRL from the CA's CRL distribution point and caches the CRL for 30 minutes, by default. After 30 minutes, the cache is refreshed (CRL is downloaded and cached again). However, you can control the CRL cache refresh time by using the watt.net.client.crlCache.refreshTime server configuration parameter. For more information about the parameter, see webMethods Integration Server Administrator’s Guide."
-        },
-        {
           "name": "proxyAlias",
           "type": "String",
-          "description": "String Optional. Name of the proxy alias for the proxy server to which Integration Server routes the HTTP request. If you do not specify a proxyAlias, Integration Server routes the HTTP request through the proxy server specified in the default HTTP proxy alias. If there is no default HTTP proxy alias, the action taken by Integration Server depends on the value specified for the watt.net.proxy.useNonDefaultProxies parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to true, Integration Server routes the HTTP request through the proxy server in any configured HTTP proxy alias. If the Integration Server does not have any defined HTTP proxy aliases, Integration Server sends the HTTP request directly to the HTTP server or throws an exception depending on the settings specified for the watt.net.proxy.fallbackToDirectConnection parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to false, Integration Server sends the request to the remote server using a direct connection. For more information about proxy server usage, refer to IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Optional. Name of the proxy alias for the proxy server to which Integration Server routes the HTTP request. If you do not specify a proxyAlias, Integration Server routes the HTTP request through the proxy server specified in the default HTTP proxy alias. If there is no default HTTP proxy alias, the action taken by Integration Server depends on the value specified for the watt.net.proxy.useNonDefaultProxies parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to true, Integration Server routes the HTTP request through the proxy server in any configured HTTP proxy alias. If the Integration Server does not have any defined HTTP proxy aliases, Integration Server sends the HTTP request directly to the HTTP server or throws an exception depending on the settings specified for the watt.net.proxy.fallbackToDirectConnection parameter. If the watt.net.proxy.useNonDefaultProxies parameter is set to false, Integration Server sends the request to the remote server using a direct connection. For more information about proxy server usage, refer to webMethods Integration Server Administrator’s Guide ."
         },
         {
           "name": "connectTimeout",
           "type": "String",
-          "description": "String Optional. Time, measured in milliseconds, that Integration Server waits to connect to the remote server before timing out and terminating the request. If you do not specify a value for connectTimeout, Integration Server uses the value specified for the watt.net.timeout server configuration parameter. If no value is specified for the watt.net.timeout server configuration parameter, Integration Server waits for the timeout value defined by the operating system before terminating the connection request. For more information about the watt.net.timeout server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Optional. Time, measured in milliseconds, that Integration Server waits to connect to the remote server before timing out and terminating the request. If you do not specify a value for connectTimeout, Integration Server uses the value specified for the watt.net.timeout server configuration parameter. If no value is specified for the watt.net.timeout server configuration parameter, Integration Server waits for the timeout value defined by the operating system before terminating the connection request. For more information about the watt.net.timeout server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
         },
         {
           "name": "followRedirect",
           "type": "String",
           "description": "String Optional. Whether the outbound request follows a redirect when receiving a response code between 300 and 400. Set to one of the following: yes if the request follows the redirect. no if the request does not follow the redirect and instead returns the response code and all the response headers from the original outbound request. <null> if the value of the watt.net.http.followRedirect parameter determines whether or not the request follows a redirect. Note: A value of yes or no overrides the value of the watt.net.http.followRedirect parameter."
-        },
-        {
-          "name": "compressionEnabled",
-          "type": "",
-          "description": "Boolean. Optional. Controls whether the service automatically compresses the request and decompresses the response payloads based on the Content-Encoding header. Set to: true to automatically compress the request body when the Content-Encoding header is set to gzip or deflate, and automatically decompress the response body when the response includes the same header. false to disable automatic compression and decompression. This is the default. If the Content-Encoding header is missing or contains a value other than gzip or deflate, the service does not compress or decompress payloads."
-        },
-        {
-          "name": "throwExceptionOnHttp401",
-          "type": "",
-          "description": "String. Optional. Specifies whether the service throws a ServiceException or returns the HTTP response header and body upon receiving a 401 Unauthorized error. Set to: null to control the service exception behavior based on the value of the watt.net.http401.throwException parameter. This is the default. true to throw a ServiceException when the service receives a 401 response, regardless of the value of the watt.net.http401.throwException parameter. false to suppress the ServiceException and return the HTTP response header and body when the service receives a 401 response, regardless of the value of the watt.net.http401.throwException parameter."
-        },
-        {
-          "name": "throwExceptionOnHttp501-599",
-          "type": "",
-          "description": "String. Optional. Specifies whether the service throws a ServiceException or returns the HTTP response header and body upon receiving a 501 to 599 error. Set to: null to control the service exception behavior based on the value of the watt.net.http501-599.throwException parameter. This is the default. true to throw a ServiceException when the service receives a 501 to 599 response, regardless of the value of the watt.net.http501-599.throwException parameter. false to suppress the ServiceException and return the HTTP response header and body when the service receives a 501 to 599 response, regardless of the value of the watt.net.http501-599.throwException parameter."
         }
       ],
       "output_parameters": [
         {
           "name": "encodedURL",
           "type": "String",
-          "description": "String. The URL that was submitted by pub.client:http. This will contain any argument set in args, table, or string. If the remote server redirected pub.client:http to a different location, encodedURL will contain the URL that pub.client:http submitted to the server to which it was redirected."
+          "description": "String The URL that was submitted by pub.client:http. This will contain any argument set in args, table, or string. If the remote server redirected pub.client:http to a different location, encodedURL will contain the URL that pub.client:http submitted to the server to which it was redirected."
         },
         {
           "name": "header",
           "type": "Document",
-          "description": "Document. Conditional. HTTP response headers."
+          "description": "Document Conditional. HTTP response headers."
         },
         {
           "name": "lines",
@@ -1345,7 +1230,7 @@
         {
           "name": "body",
           "type": "Document",
-          "description": "Document. Conditional. Body of the HTTP response."
+          "description": "Document Body of the HTTP response."
         },
         {
           "name": "bytes",
@@ -1363,7 +1248,7 @@
         "The pub.client:http service sends the data/string input in the query of the URL when using the GET or HEAD methods, but sends the input as the body of the request when using the POST, PUT or PATCH methods.",
         "If url begins with https:, you can use pub.security:setKeyAndChain to specify the certificate chain. If you do not specify a certificate chain, pub.client:http uses the default outbound SSL certificate settings to authenticate the resources.",
         "When using pub.client:http to create an outbound HTTPS connection, before initiating the SSL handshake with the remote server, Integration Server sets the SSL socket timeout to the value of the watt.net.ssl.server.clientHandshakeTimeout value.",
-        "If pub.client:http does not receive a response within the time-out period specified in the server's watt.net.timeout server configuration parameter, it will throw an exception. For information about the watt.net.timeout server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide .",
+        "If pub.client:http does not receive a response within the time-out period specified in the server's watt.net.timeout server configuration parameter, it will throw an exception. For information about the watt.net.timeout server configuration parameter, see webMethods Integration Server Administrator’s Guide .",
         "For the HTTP request, the pub.client:http service uses a client connection from a client connection pool. When you set the loadAs input parameter to stream so that the service returns the response body as a stream, the connection remains in use and is not returned to the connection pool until you close the stream. To close the stream and return the connection to the pool, you can use the pub.io:close service or the close() method on the returned stream object.",
         "When the HTTP response contains the HTTP 302 redirection status code and the pub.client:http service is configured to redirect, the service redirects the request to the URL provided by the remote server. If the remote server redirected pub.client:http to a different location, the output parameter encodedURL will contain the URL that pub.client:http submitted to the server to which the service was redirected.",
         "You can use the watt.net.http.redirect.performSSRFcheck server configuration parameter to have Integration Server perform an IP address and protocol check to prevent Server-Side Request Forgery (SSRF) when following a redirection request.",
@@ -1379,10 +1264,10 @@
         "By default, for outbound requests that require Kerberos authentication, Integration Server generates a Java Kerberos ticket using the JGSS Kerberos OID. If you need Integration Server to generate a SPNEGO-based Kerberos ticket for outbound requests that use Kerberos authentication, set the watt.security.kerberos.client.useSPNEGO server configuration parameter to true. This instructs Integration Server to generate a SPNEGO token using SPNEGO OID (Object Identifier) for all outbound requests that require Kerberos authentication.",
         "When Integration Server acts as a client (original requester) and requires a forwardable ticket granting ticket, ensure that you set the requestDelegatableToken parameter to true.",
         "When Integration Server acts as an intermediary, ensure that you set the delegation parameter to kerberos to use Kerberos delegation.",
-        "The compressionEnabled input parameter in the pub.client:http service enables automatic payload compression and decompression. It removes the need to call pub.compress:compressData and pub.compress:decompressData separately in your business flows. If your existing flow uses these services, they continue to work as expected. For more information about the existing services, see Compress Folder.",
+        "If you have a large set of data and want to compress the data before sending it via pub.client:http, then you can use pub.compress:compressData service to compress the data and then send it. For more information on pub.compress:compressData, see pub.compress:compressData .",
         "Prior to Integration Server version 10.15, the pub.client:http service included the useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.client:http, the useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the useJSSE parameter , proceeding as if useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#Apub_client_http__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#Apub_client_http__title__1"
     },
     {
       "name": "pub.client.ldap:add",
@@ -1443,9 +1328,9 @@
       ],
       "usage_notes": [
         "Specify only one of attrs or attrsData. If you specify both, the service uses attrs and ignores attrsData.",
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A10444__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A10444__title__1"
     },
     {
       "name": "pub.client.ldap:bind",
@@ -1490,9 +1375,9 @@
         }
       ],
       "usage_notes": [
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A89516__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A89516__title__1"
     },
     {
       "name": "pub.client.ldap:cancelNotification",
@@ -1552,9 +1437,9 @@
         }
       ],
       "usage_notes": [
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A41156__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A41156__title__1"
     },
     {
       "name": "pub.client.ldap:compare",
@@ -1624,9 +1509,9 @@
         }
       ],
       "usage_notes": [
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A10851__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A10851__title__1"
     },
     {
       "name": "pub.client.ldap:delete",
@@ -1670,26 +1555,26 @@
         {
           "name": "failIfNotFound",
           "type": "",
-          "description": "String. Optional. Specifies whether the service returns an error when the requested DN does not exist in the LDAP directory. Set to: yes for the service to fail and return an error when the DN is not found. no for the service to complete even when the DN is not found. The default is value is no."
+          "description": "String. Optional. Specifies whether the service returns an error when the requested DN does not exist in the LDAP directory. Set to: yes for the service to fail and return an error when the DN is not found. no for the service to complete even when the DN is not found. The default value is no."
         },
         {
           "name": "connectionHandle",
           "type": "Object",
-          "description": "Object Optional. Connection object returned by a previously invoked LDAP service."
+          "description": "Object. Optional. Connection object returned by a previously invoked LDAP service."
         }
       ],
       "output_parameters": [
         {
           "name": "connectionHandle",
           "type": "Object",
-          "description": "Object Optional. The returned connection object. Returned only if the close parameter is set to \"no\"."
+          "description": "Object. Optional. The returned connection object. Returned only if the close parameter is set to \"no\"."
         }
       ],
       "usage_notes": [
         "This service does not flag an error if the entry is not deleted. One way to check is to use pub.client.ldap:search to search for the entry. If the entry is not found, you know it has been deleted.",
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A73749__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A73749__title__1"
     },
     {
       "name": "pub.client.ldap:modify",
@@ -1749,9 +1634,9 @@
         }
       ],
       "usage_notes": [
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A67218__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A67218__title__1"
     },
     {
       "name": "pub.client.ldap:registerNotification",
@@ -1824,9 +1709,9 @@
         "When the pub.client.ldap:registerNotification service creates a notification, Integration Server listens for four different types of events: objectAdded, objectRemoved, objectRenamed, and objectChanged. If any one of these events is triggered, pub.client.ldap: registerNotification calls the specified target service and passes these inputs to it:",
         "If an error occurs, pub.client.ldap:registerNotification places an input called \"exception\" in the pipeline. This input includes details on the exception that occurred.",
         "Some LDAP servers do not support persistent searches and therefore do not support notifications.",
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A57598__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A57598__title__1"
     },
     {
       "name": "pub.client.ldap:rename",
@@ -1881,9 +1766,9 @@
         }
       ],
       "usage_notes": [
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A84564__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A84564__title__1"
     },
     {
       "name": "pub.client.ldap:search",
@@ -2004,9 +1889,100 @@
       ],
       "usage_notes": [
         "To see if no match was found, check for either:",
-        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+        "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A36037__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A36037__title__1"
+    },
+    {
+      "name": "pub.client.oauth:executeRequest",
+      "description": "WmPublic. Allows Integration Server to access protected resources on a resource server using an existing Open Authentication (OAuth) access token.",
+      "input_parameters": [
+        {
+          "name": "provider",
+          "type": "",
+          "description": "String Name of the service provider to which the client will connect. Integration Server uses this parameter to determine which OAuth client implementation in the Scribe library to use when issuing requests. Possible values are IntegrationServer and Other (case insensitive). Note: If set to Other, you must specify a value for providerClass."
+        },
+        {
+          "name": "providerClass",
+          "type": "",
+          "description": "String Name of a class that implements the org.scribe.builder.api.Api interface. This parameter is required only when the provider parameter is set to Other. Note: The org.scribe.builder.api.Api interface is part of the Scribe API. It facilitates the use of the pub.client.oauth:executeRequest service to connect to providers other than IntegrationServer. For more information about org.scribe.builder.api.Api see the Usage Notes."
+        },
+        {
+          "name": "clientID",
+          "type": "",
+          "description": "String The client identifier assigned to the client by the provider. The clientID is used to authenticate the client to the provider. The value is assigned by the provider at registration time."
+        },
+        {
+          "name": "clientSecret",
+          "type": "",
+          "description": "String The secret assigned to the client when it registered with the provider. Use this parameter to specify either the client secret or the key to the client secret in the outbound password store. For information about using the outbound password store, see the Usage Notes."
+        },
+        {
+          "name": "accessToken",
+          "type": "",
+          "description": "String The access token assigned to the client application when it registered with the provider. Note: The process for obtaining the accessToken varies depending on the provider. For information about obtaining the accessToken, refer to your provider's documentation. Use this parameter to specify either the access token or the key to the access token in the outbound password store. For information about using the outbound password store, see the Usage Notes."
+        },
+        {
+          "name": "acccessTokenSecret",
+          "type": "",
+          "description": "String Optional. The access token secret assigned to the client application when it registered with the provider. Note: The process for obtaining the accessTokenSecret varies depending on the provider. For information about obtaining the accessTokenSecret, refer to your provider's documentation. Use this parameter to specify either the access token secret or the key to the access token secret in the outbound password store. For information about using the outbound password store, see the Usage Notes. Note: Not all providers use an access token secret. If the provider issued a secret with the token, you must specify it with the accessTokenSecret parameter."
+        },
+        {
+          "name": "resourceUri",
+          "type": "",
+          "description": "String The URI given to the client application when it registered with the provider. The client application uses this URI when issuing requests to the provider. It points to the resource that the client application wants to access on the provider."
+        },
+        {
+          "name": "method",
+          "type": "",
+          "description": "String The HTTP method Integration Server will use to issue the request to the provider. Possible values are get, post, put, and delete."
+        },
+        {
+          "name": "headers",
+          "type": "",
+          "description": "Document List Optional. One or more name/value pairs to add to the header of the request sent to the provider. If the provider requires a request header, you must provide a value."
+        },
+        {
+          "name": "queryString Parameters",
+          "type": "",
+          "description": "Document List Optional. One or more name/value pairs to add to the URL of the get request sent to the provider."
+        },
+        {
+          "name": "bodyParameters",
+          "type": "",
+          "description": "Document List Optional. One or more name/value pairs to add to the body of the request sent to the provider."
+        },
+        {
+          "name": "requestDataType",
+          "type": "",
+          "description": "String Optional. If supplying data with the request to the provider, indicates the data type of the requestData parameter. If set to: bytes, requestData must be a byte[]. This is the default. string, requestData must be a java.lang.String."
+        },
+        {
+          "name": "requestData",
+          "type": "",
+          "description": "Object Optional. Data to include in the body of the request sent to the provider. The value can be a string or a byte[]. Note: The data type of requestData must match what is specified by the requestDataType parameter. requestData is ignored if bodyParameters is specified."
+        },
+        {
+          "name": "responseDataType",
+          "type": "",
+          "description": "String Optional. Indicates the data type of the responseData output parameter. Set to: stream to return the responseData as a java.io.InputStream. This is the default. bytes to return the responseData as a byte[]. string to return the responseData as a java.lang.String, constructed using the default platform encoding (indicated by the file.encoding Java system property, or UTF-8 if file.encoding is not set)."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "responseData",
+          "type": "",
+          "description": "Object The response from the provider. If the responseDataType is set to: stream, responseData is a java.io.InputStream. bytes, responseData is a byte[]. string, responseData is a java.lang.String, constructed using the default platform encoding (indicated by the file.encoding Java system property, or UTF-8 if file.encoding is not set)."
+        }
+      ],
+      "usage_notes": [
+        "Since the values for the clientSecret, accessToken, and accessTokenSecret parameters contain sensitive data, you might want to consider storing their values in the Integration Server outbound password store. For information about services you can use to store these values in the outbound password store, see the pub.security.outboundPasswords in the About the Security Elements folder.",
+        "If you decide to use the outbound password store, the value for each parameter (clientSecret, accessToken, and accessTokenSecret) must match the key you supplied in the pub.security.outboundPasswords services. Integration Server uses that key to retrieve the values from the store, then uses the values to send the request to the provider.",
+        "If you decide not to use the outbound password store, Integration Server sends the request to the provider using the values you supply with the clientSecret, accessToken, and accessTokenSecret parameters.",
+        "javadoc -sourcepath your_scribe_install_dir/src/main/java -d your_destination_dir org.scribe.builder.api",
+        "If your solution uses the pub.client.oauth:executeRequest service, after applying a fix that includes PIE-98917 (IS_10.15_Core_Fix226) you must take one of the following actions:"
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#id1258960N05Z__title__1"
     },
     {
       "name": "pub.client.oauth:​getExternalAccessToken",
@@ -2081,7 +2057,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#getExternalAccessToken__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#getExternalAccessToken__title__1"
     },
     {
       "name": "pub.client:restClient",
@@ -2231,7 +2207,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#reference_5B01DB0E389A4B949F106B0F1B5FC176__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#reference_5B01DB0E389A4B949F106B0F1B5FC176__title__1"
     },
     {
       "name": "pub.client.sftp:cd",
@@ -2240,12 +2216,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "path",
@@ -2268,7 +2239,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDGBEJE__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDGBEJE__title__1"
     },
     {
       "name": "pub.client.sftp:chgrp",
@@ -2277,12 +2248,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "groupId",
@@ -2310,7 +2276,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDICFIG__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDICFIG__title__1"
     },
     {
       "name": "pub.client.sftp:chmod",
@@ -2318,13 +2284,8 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
           "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "mode",
@@ -2352,7 +2313,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDDGIIE__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDDGIIE__title__1"
     },
     {
       "name": "pub.client.sftp:chown",
@@ -2360,13 +2321,8 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
           "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "uid",
@@ -2394,7 +2350,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#id95c18c5f-405f-4f7d-a1a7-eed5b60f4036__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#id95c18c5f-405f-4f7d-a1a7-eed5b60f4036__title__1"
     },
     {
       "name": "pub.client.sftp:get",
@@ -2403,12 +2359,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "remoteFile",
@@ -2446,7 +2397,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDCECDH__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDCECDH__title__1"
     },
     {
       "name": "pub.client.sftp:login",
@@ -2604,7 +2555,7 @@
         "You cannot execute SFTP commands in parallel using the same session key.",
         "If the watt.client.sftp.session.logoutOnServiceCompletion parameter is set to true, the FTP session created by the pub.client.sftp:login service closes automatically when the invoking service completes execution. If the value is set to false, then the pub.client.sftp:logout service must be invoked to close the FTP(S) session."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDBHEFF__title__1"
     },
     {
       "name": "pub.client.sftp.admin:getDefaultAlgorithms",
@@ -2644,7 +2595,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#reference_A58FDE9252A24C86A9135FA860C91EDD__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#reference_A58FDE9252A24C86A9135FA860C91EDD__title__1"
     },
     {
       "name": "pub.client.sftp.admin:getHostKey",
@@ -2719,7 +2670,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#reference_8D2FEF1EAFBA47908A32AA7BFD797F3F__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#reference_8D2FEF1EAFBA47908A32AA7BFD797F3F__title__1"
     },
     {
       "name": "pub.client.sftp:logout",
@@ -2746,7 +2697,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDDEEBB__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDDEEBB__title__1"
     },
     {
       "name": "pub.client.sftp:ls",
@@ -2754,18 +2705,13 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey parameter is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
           "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey parameter is returned by the pub.client.sftp:login service."
         },
         {
           "name": "path",
           "type": "String",
-          "description": "String Optional. Absolute or relative path of the remote directory. If no path is specified, the pub.client.sftp:ls service retrieves the directory listing of the current remote directory. You can use the wildcard characters asterisk (*) and question mark (?) after the last slash mark (/) to view all remote directories that match the specified path. Note: SFTP client version 2 supports only the asterisk (*) wildcard for filtering files. For example, *.xml , *.txt , and so on. However, Java regular expressions are not supported."
+          "description": "String Optional. Absolute or relative path of the remote directory. If no path is specified, the pub.client.sftp:ls service retrieves the directory listing of the current remote directory. You can use the wildcard characters asterisk (*) and question mark (?) after the last slash mark (/) to view all remote directories or files that match the specified path. Note: SFTP client version 2 supports only the asterisk (*) wildcard for filtering files. For example, *.xml , *.txt , and so on. However, Java regular expressions are not supported."
         }
       ],
       "output_parameters": [
@@ -2829,7 +2775,7 @@
         "You cannot execute SFTP commands in parallel using the same session key.",
         "The date format for SFTP client services is determined by the watt.server.sftp.dateStampFmt property."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDGHEHB__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDGHEHB__title__1"
     },
     {
       "name": "pub.client.sftp:mkdir",
@@ -2838,12 +2784,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey parameter is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey parameter is returned by the pub.client.sftp:login service."
         },
         {
           "name": "path",
@@ -2866,7 +2807,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDHACCA__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDHACCA__title__1"
     },
     {
       "name": "pub.client.sftp:put",
@@ -2875,12 +2816,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "contentStream",
@@ -2901,16 +2837,6 @@
           "name": "mode",
           "type": "String",
           "description": "String Optional. Specifies how the local file is to be transferred to the remote SFTP server. Set to: overwrite to overwrite the contents of the remote file with the contents of the local file. This is the default. append to append the entire contents of the local file to the remote file. resume to resume writing the contents of the local file to the remote file from the point the writing was stopped during previous SFTP sessions."
-        },
-        {
-          "name": "remoteFileNameEncoding",
-          "type": "String",
-          "description": "String Optional. Character set in which the remote file is encoded. The default is UTF-8."
-        },
-        {
-          "name": "localFileNameEncoding",
-          "type": "String",
-          "description": "String Optional. Character set in which the local file is encoded. The default is UTF-8."
         }
       ],
       "output_parameters": [
@@ -2930,7 +2856,7 @@
         "If you specify localFile, then remoteFile and contentStream are optional. In this case, the remote file will be given the same name as the local file.",
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBIGAI__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDBIGAI__title__1"
     },
     {
       "name": "pub.client.sftp:pwd",
@@ -2939,12 +2865,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         }
       ],
       "output_parameters": [
@@ -2967,7 +2888,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#idf5a5f931-9696-4d0b-8b36-944cf5962a95__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#idf5a5f931-9696-4d0b-8b36-944cf5962a95__title__1"
     },
     {
       "name": "pub.client.sftp:rename",
@@ -2976,12 +2897,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "oldPath",
@@ -3009,7 +2925,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDJACIG__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDJACIG__title__1"
     },
     {
       "name": "pub.client.sftp:rm",
@@ -3018,12 +2934,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "path",
@@ -3046,7 +2957,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#id51269a75-66f9-4e78-8e84-3bc4e6058c59__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#id51269a75-66f9-4e78-8e84-3bc4e6058c59__title__1"
     },
     {
       "name": "pub.client.sftp:rmdir",
@@ -3055,12 +2966,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "path",
@@ -3084,7 +2990,7 @@
         "The remote directories that you want to delete must be empty.",
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDEBDEB__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#CJDEBDEB__title__1"
     },
     {
       "name": "pub.client.sftp:symlink",
@@ -3093,12 +2999,7 @@
         {
           "name": "sessionKey",
           "type": "String",
-          "description": "String. Conditional. Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service. Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SFTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments. Note: This parameter is not applicable to SFTP connections in webMethods Integration Server (on-premises)."
+          "description": "String Unique key for the current SFTP session. The sessionKey is returned by the pub.client.sftp:login service."
         },
         {
           "name": "oldPath",
@@ -3126,7 +3027,7 @@
       "usage_notes": [
         "You cannot execute SFTP commands in parallel using the same session key."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#idd1eacfe1-0f83-415c-89bc-448ca66fb04a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#idd1eacfe1-0f83-415c-89bc-448ca66fb04a__title__1"
     },
     {
       "name": "pub.client:smtp",
@@ -3170,7 +3071,7 @@
         {
           "name": "mailhost",
           "type": "String",
-          "description": "String. Conditional. SMTP host name for outbound messages. For example: smtp.webMethods.com If no value is provided for the mailhost parameter, Integration Server uses the value of the Java system property mail.smtp.host set for Integration Server as the mailhost value. For more information about setting Java system properties for Integration Server, which includes modifying the custom_wrapper.conf file, see Changing Settings in the Configuration File custom_wrapper.conf . If no value is supplied for the mailhost parameter and the mail.smtp.host Java system property is not set, the pub.client:smtp service ends with an exception. Important: mailhost is required for connections in Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          "description": "String SMTP host name for outbound messages. For example: smtp.webMethods.com If no value is provided for the mailhost parameter, Integration Server uses the value of the Java system property mail.smtp.host set for Integration Server as the mailhost value. For more information about setting Java system properties for Integration Server, which includes modifying the custom_wrapper.conf file, see Changing Settings in the Configuration File custom_wrapper.conf . If no value is supplied for the mailhost parameter and the mail.smtp.host Java system property is not set, the pub.client:smtp service ends with an exception."
         },
         {
           "name": "mailhostPort",
@@ -3226,11 +3127,6 @@
           "name": "mimeStream",
           "type": "java.io.InputStream",
           "description": "java.io.InputStream Optional. MIME or S/MIME message that you want to send in the e-mail. A mimeStream is created by the pub.mime:getEnvelopeStream, pub.smime:createEncryptedData, pub.smime:createSignedData, or pub.smime.keystore:createSignedData services. It contains both headers and content. If the mimeStream already contains the from, to, and subject headers, you do not need to pass them as individual inputs to this service."
-        },
-        {
-          "name": "$connectionAlias",
-          "type": "String",
-          "description": "String. Optional. Specifies the namespace for an SMTP connection created in webMethods Integration, enabling flow services to reuse preconfigured connections across Edge runtimes and cloud environments.Note: This parameter is not applicable to SMTP connections in webMethods Integration Server (on-premises)."
         },
         {
           "name": "attachments",
@@ -3293,7 +3189,7 @@
         "encoding:base64",
         "Prior to Integration Server version 10.15, the pub.client:smtp service included the useJSSE input parameter which specified whether Integration Server created the outbound connection using the Java Secure Socket Extension (JSSE) library. Beginning with Integration Serverversion 10.15, Integration Server establishes all secure outbound connections with JSSE. If you migrated to Integration Server 10.15 and a migrated service invokes pub.client:smtp, the useJSSE parameter still appears in the pipeline. However, Integration Server ignores the value of the useJSSE parameter , proceeding as if useJSSE were set to yes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#Apub_client_smtp__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#Apub_client_smtp__title__1"
     },
     {
       "name": "pub.client:soapClient",
@@ -3422,7 +3318,7 @@
         {
           "name": "timeout",
           "type": "String",
-          "description": "String Optional. Time (measured in milliseconds) to wait for a response from the server hosting the web service before timing out and terminating the request. A value of 0 means Integration Server waits for a response indefinitely. If the connection to the host or JMS provider ends before Integration Server receives a response, the service ends with an exception and a status code of 408. If this parameter is not specified, or an invalid (non-numeric) value is specified, Integration Server uses one of the following values: For HTTP, Integration Server uses the value of the watt.server.SOAP.request.timeout server configuration parameter as the timeout value For JMS, Integration Server uses the value of the watt.server.soapjms.request.timeout server configuration parameter as the timeout value. For more information about watt.server.SOAP.request.timeout and watt.server.soapjms.request.timeout server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide . Integration Server ignores timeout if the name/value pair jms.async= true is passed in to transportHeaders."
+          "description": "String Optional. Time (measured in milliseconds) to wait for a response from the server hosting the web service before timing out and terminating the request. A value of 0 means Integration Server waits for a response indefinitely. If the connection to the host or JMS provider ends before Integration Server receives a response, the service ends with an exception and a status code of 408. If this parameter is not specified, or an invalid (non-numeric) value is specified, Integration Server uses one of the following values: For HTTP, Integration Server uses the value of the watt.server.SOAP.request.timeout server configuration parameter as the timeout value For JMS, Integration Server uses the value of the watt.server.soapjms.request.timeout server configuration parameter as the timeout value. For more information about watt.server.SOAP.request.timeout and watt.server.soapjms.request.timeout server configuration parameter, see webMethods Integration Server Administrator’s Guide . Integration Server ignores timeout if the name/value pair jms.async= true is passed in to transportHeaders."
         },
         {
           "name": "soapAction",
@@ -3497,7 +3393,7 @@
         "As part of executing pub.client:soapClient, Integration Server executes any service handlers assigned to the consumer web service descriptor specified in wsdName.",
         "When a document type contains a String variable that represents a required attribute (meaning that the variable name starts with the \"@\" symbol and the Required property is set to True in Designer) and the input document does not contain the required attribute, Integration Server adds an empty attribute during document encoding. For example, if the document type contains a required String variable named @myAttribute but @myAttribute is missing from the input document, Integration Server adds myAttribute =\"\" to the XML document."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A99284__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#A99284__title__1"
     },
     {
       "name": "pub.client:soapHTTP",
@@ -3561,7 +3457,7 @@
         {
           "name": "encoding",
           "type": "String",
-          "description": "String Default character set for encoding SOAP message. Specify an IANA-registered character set (for example, ISO-8859-1). The default is UTF-8. The encoding parameter is used to override the encoding determined by the watt.server.netEncoding server configuration parameter. For more information about watt.server.netEncoding, see IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Default character set for encoding SOAP message. Specify an IANA-registered character set (for example, ISO-8859-1). The default is UTF-8. The encoding parameter is used to override the encoding determined by the watt.server.netEncoding server configuration parameter. For more information about watt.server.netEncoding, see webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -3607,7 +3503,7 @@
         "To send a SOAP message with this service, you must first generate an empty SOAP object with the pub.soap.utils:createSoapData service and then populate it using services such as pub.soap.utils:addHeaderEntry and pub.soap.utils:addBodyEntry.",
         "If the Docker image for a Microservices Runtime excludes the web services functionality, then the Docker image for the Microservices Runtime running in the Docker container cannot execute the pub.client:soapHTTPservice. Attempts to execute pub.client:soapHTTP result in a ServiceException."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#Apub_client_soapHTTP__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#Apub_client_soapHTTP__title__1"
     },
     {
       "name": "pub.client:soapRPC",
@@ -3763,11 +3659,11 @@
       ],
       "usage_notes": [
         "The pub.client:soapRPC service is deprecated. There is not a replacement service.",
-        "To disable output validation for pub.client:soapRPC, set the watt.server.soap.validateResponse server configuration parameter to false. For more information about watt.server.soap.validateResponse, see IBM webMethods Integration Server Administrator’s Guide .",
+        "To disable output validation for pub.client:soapRPC, set the watt.server.soap.validateResponse server configuration parameter to false. For more information about watt.server.soap.validateResponse, see webMethods Integration Server Administrator’s Guide .",
         "If address begins with https:, you can use pub.security.keystore:setKeyAndChain to specify the certificate chain. If you do not specify a certificate chain, pub.client:soapRPC uses the default outbound SSL certificate settings to authenticate the resources.",
         "If the Docker image for a Microservices Runtime excludes the web services functionality, then the Docker image for the Microservices Runtime running in the Docker container cannot execute the pub.client:soapRPC. Attempts to execute the pub.client:soapRPC service end with a ServiceException."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#Apub_client_soapRPC__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#Apub_client_soapRPC__title__1"
     },
     {
       "name": "pub.client:websocket",
@@ -3852,7 +3748,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#reference_081E1C3DEBB44FD7983F033B4A74BC17__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-client-folder#reference_081E1C3DEBB44FD7983F033B4A74BC17__title__1"
     }
   ]
 }

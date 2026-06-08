@@ -1,6 +1,6 @@
 {
   "folder": "FILE",
-  "total_services": 11,
+  "total_services": 10,
   "services": [
     {
       "name": "pub.file:bytesToFile",
@@ -30,9 +30,9 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:bytesToFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters"
+        "For security reasons, the pub.file:bytesToFile service checks the input fileName parameter against the list of allowedWritePaths values specified in the fileAcceessControl.cnf file. If the input fileName is not on the allowed list, Integration Server throws an exception. For information about configuring the fileAcceessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A94673__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A94673__title__1"
     },
     {
       "name": "pub.file:checkFileExistence",
@@ -57,9 +57,9 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:checkFileExistence service validates the input fileName against the list of allowed paths defined in the watt.server.file.canReadPaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters"
+        "For security reasons, the pub.file:checkFileExistence service checks the input fileName parameter against the list of allowedReadPaths values specified in the fileAccessControl.cnf file. If the input fileName is not on the allowed list, Integration Server throws an exception. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A65480__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A65480__title__1"
     },
     {
       "name": "pub.file:copyFile",
@@ -89,9 +89,9 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:copyFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canReadPaths parameter and the input targetDirectory against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified file name or directory is not in the respective allowed lists, or if an invalid file path is specified, Integration Server throws an exception. For more information about the server configuration parameters, see Server Configuration Parameters"
+        "For security reasons, the pub.file:copyFile service checks the input fileName against the list of allowedReadPaths and the input targetDirectory against the list of allowedWritePaths specified in the fileAccessControl.cnf file. If the file name or directory is not specified in the respective allowed lists, or if an invalid file path is specified, Integration Server throws an exception. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A46894__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A46894__title__1"
     },
     {
       "name": "pub.file:deleteFile",
@@ -111,9 +111,9 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:deleteFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canDeletePaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters"
+        "For security reasons, the pub.file:deleteFile service checks the input fileName parameter against the list of allowedDeletePaths values specified in the fileAccessControl.cnf file. If the input fileName is not on the allowed list, Integration Server throws an exception. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A48437__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A48437__title__1"
     },
     {
       "name": "pub.file:getFile",
@@ -174,48 +174,10 @@
       ],
       "usage_notes": [
         "The getFile service does not automatically generate an XML node from the contents of the file. To generate an XML node, the output from this service must be passed to the pub.xml:xmlStringToXMLNode service.",
-        "The pub.file:getFile service first checks the value of the watt.security.pub.getFile.checkReadAllowed parameter to determine whether it must validate the requested file path against the paths listed in the watt.server.file.canReadPaths parameter.",
-        "For more information about the watt.server.file.canReadPaths server configuration parameter, see Server Configuration Parameters"
+        "The pub.file:getFile service first checks the value of the watt.security.pub.getFile.checkReadAllowed server configuration parameter to determine if the service must check the allowedReadPaths parameter in the fileAccessControl.cnf to retrieve the specified file.",
+        "For information about configuring the fileAccessControl.cnf, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#Apub_file_getFile__title__1"
-    },
-    {
-      "name": "pub.file:getFileProperties",
-      "description": "WmPublic. Retrieves properties for a specified file, such as creation date, last modified date, file size, and file type.",
-      "input_parameters": [
-        {
-          "name": "filePath",
-          "type": "String",
-          "description": "String. The absolute path of the file for which you want to retrieve properties. For example, c:\\rubicon\\document.xml."
-        }
-      ],
-      "output_parameters": [
-        {
-          "name": "createdDate",
-          "type": "String",
-          "description": "String. The file creation timestamp in the yyyy-MM-dd HH:mm:ss format."
-        },
-        {
-          "name": "modifiedDate",
-          "type": "String",
-          "description": "String. The last modified timestamp in the yyyy-MM-dd HH:mm:ss format."
-        },
-        {
-          "name": "fileSize",
-          "type": "String",
-          "description": "String. The size of the file in bytes."
-        },
-        {
-          "name": "fileType",
-          "type": "String",
-          "description": "String. The type or extension of a file."
-        }
-      ],
-      "usage_notes": [
-        "The pub.file:getFileProperties service first checks the value of the watt.security.pub.getFile.checkReadAllowed parameter to determine whether it must validate the requested file path against the paths listed in the watt.server.file.canReadPaths parameter.",
-        "For more information about the watt.server.file.canReadPaths server configuration parameter, see Server Configuration Parameters"
-      ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#reference_y42_k4k_whc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#Apub_file_getFile__title__1"
     },
     {
       "name": "pub.file:listFiles",
@@ -245,9 +207,9 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:listFiles service validates the value of the directory against the list of allowed paths defined in the watt.server.file.canReadPaths parameter. If the specified directory is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters"
+        "For security reasons, the pub.file:listFiles service checks the value of the directory parameter against the list of allowedReadPaths values specified in the fileAccessControl.cnf file. If the specified directory is not on the allowed list, the service throws an exception. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A70668__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A70668__title__1"
     },
     {
       "name": "pub.file:moveFile",
@@ -282,11 +244,11 @@
         }
       ],
       "usage_notes": [
-        "For security reasons, the pub.file:moveFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canReadPaths parameter and the input targetDirectory against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified file name or directory is not in the respective allowed lists, Integration Server throws an exception. For more information about the server configuration parameters, see Server Configuration Parameters",
+        "For security reasons, the pub.file:moveFile service checks the input fileName parameter against the list of allowedReadPaths and the input targetDirectory against the list of allowedWritePaths specified in the fileAccessControl.cnf file. If the provided file name or directory is not specified in the respective allowed lists, Integration Server throws an exception. For information about configuring the fileAccessControl.cnf file, see File Access Control Configuration for the pub.file Services.",
         "If the service cannot move the file by using the default move operation in Java, the service copies the file from the source directory to the destination directory, and then removes the file from the source directory.",
         "If a file with the same name as the fileName parameter exists in the target directory, the pub.file:moveFile service throws an error."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A44297__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A44297__title__1"
     },
     {
       "name": "pub.file:readerToFile",
@@ -315,10 +277,10 @@
       ],
       "output_parameters": [],
       "usage_notes": [
-        "For security reasons, the pub.file:readerToFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters",
+        "For security reasons, the pub.file:readerToFile service checks the input fileName parameter against the list of allowedWritePaths values specified in the fileAccessControl.cnf file. If the input fileName is not on the allowed list, the service throws an exception. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services.",
         "The readerToFile service does not automatically close the reader object. To close the reader, use the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A14580__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A14580__title__1"
     },
     {
       "name": "pub.file:streamToFile",
@@ -342,10 +304,10 @@
       ],
       "output_parameters": [],
       "usage_notes": [
-        "For security reasons, the pub.file:streamToFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters",
+        "For security reasons, the pub.file:streamToFile service checks the input fileName parameter against the list of allowedWritePaths values specified in the fileAccessControl.cnf file. If the input fileName is not on the allowed list, an exception is thrown. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services.",
         "The streamToFile service does not automatically close the stream object. To close the input stream, use the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A31283__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A31283__title__1"
     },
     {
       "name": "pub.file:stringToFile",
@@ -374,9 +336,9 @@
       ],
       "output_parameters": [],
       "usage_notes": [
-        "For security reasons, the pub.file:stringToFile service validates the input fileName against the list of allowed paths defined in the watt.server.file.canWritePaths parameter. If the specified path is not in the allowed list, Integration Server throws an exception. For more information about the server configuration parameter, see Server Configuration Parameters"
+        "For security reasons, the pub.file:stringToFile service checks the input fileName parameter against the list of allowedWritePaths values specified in the fileAccessControl.cnf file. If the input fileName is not on the allowed list, an exception is thrown. For information about configuring the fileAccessControl.cnf file, refer to File Access Control Configuration for the pub.file Services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-file-folder#A71537__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-file-folder#A71537__title__1"
     }
   ]
 }

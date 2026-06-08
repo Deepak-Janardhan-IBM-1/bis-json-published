@@ -60,7 +60,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-compress-folder#Apub_client_http__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-compress-folder#Apub_client_http__title__1"
     },
     {
       "name": "pub.compress:decompressData",
@@ -110,7 +110,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-compress-folder#reference_62637E63EEDE44CBBD3E3AEAC99F057D__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-compress-folder#reference_62637E63EEDE44CBBD3E3AEAC99F057D__title__1"
     }
   ]
 }

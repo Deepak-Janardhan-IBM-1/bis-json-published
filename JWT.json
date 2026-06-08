@@ -36,7 +36,7 @@
         {
           "name": "claimsDetails",
           "type": "",
-          "description": "Document. The service returns an array or a list of name and value pairs for each claim."
+          "description": "Document List. The service returns an array or a list of name and value pairs for each claim."
         }
       ],
       "usage_notes": [
@@ -46,7 +46,7 @@
         "When the service parses a JWT that contains a number, the output of this service can be any of the subtypes of a number that best fits the value. For example: If the number fits an integer, then integer is returned.",
         "If the token has numbers with values greater than 1e308, then the results are unpredictable."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jwt-folder#reference_491E8D0002D84E28BDDD0A7FA7298DE3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jwt-folder#reference_491E8D0002D84E28BDDD0A7FA7298DE3__title__1"
     },
     {
       "name": "pub:jwt:generateSignedJWT",
@@ -143,7 +143,7 @@
         "If you specify a custom claim with empty or a null value, then such claims will be absent in the generated JWT.",
         "You can provide one or more inputs to the \"value\" field in customClaims. The output is displayed as an array. For example, custom claim \"Address\" can have multiple values, then the output for this claim is displayed as an array. For example:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jwt-folder#reference_59AF7D0B816948B1B388B1B35B3D98B5__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jwt-folder#reference_59AF7D0B816948B1B388B1B35B3D98B5__title__1"
     },
     {
       "name": "pub:jwt:verifyJWT",
@@ -182,7 +182,7 @@
         "If you do not specify the truststoreAlias and certAlias input parameters, and a JWKS endpoint is configured for the issuer, Integration Server retrieves the public key from that endpoint for verification. If the Key ID (kid) is missing from the JWT header or if signature verification performed with the JWKS endpoint fails, Integration Server uses the issuer-certificate mapping to verify JWT.",
         "If you do not specify the truststoreAlias and certAlias input parameters, and do not configure a JWKS endpoint or an issuer-certificate mapping in Integration Server Administrator, then the service returns an exception."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jwt-folder#reference_84CA79BD42E54574B476CAC18B6FD29C__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jwt-folder#reference_84CA79BD42E54574B476CAC18B6FD29C__title__1"
     }
   ]
 }

@@ -64,7 +64,7 @@
         {
           "name": "prettyPrint",
           "type": "String",
-          "description": "String Optional. Flag indicating whether the service performs pretty print formatting for the XML String returned in the xmldata output. Pretty print uses new lines and indentation to make the XML String more readable in a text editor. Set to: true to perform pretty print formatting. false to not use pretty print formatting. <none> to use the value specified by the watt.server.xml.prettyPrint server configuration parameter to determine if pretty print formatting is performed."
+          "description": "String Optional. Flag indicating whether the service performs pretty print formatting for the XML String returned in the xmldata output. Pretty print uses new lines and indentation to make the XML String more readable in a text editor. Set to: true to perform pretty print formatting. false to not use pretty print formatting. <none> to use the value specified by the watt.server.xml.prettyPrint server configuration parameter to determine if pretty print formatting is performed. Note: The prettyPrint parameter is available after applying a fix that includes PIE-92339(IS_10.15_Core_Fix16)."
         },
         {
           "name": "dtdHeaderInfo",
@@ -113,7 +113,7 @@
         "If a document field is nillable and is null at run time, the resulting XML String does not contain any child elements for the element that corresponds to the document.",
         "By default, the pub.xml:documentToXMLString service uses the prefix \"xsi\" for the nil attribute, where xsi refers to the namespace http://www.w3.org/2001/XMLSchema-instance. If nsDecls declares a different prefix for this namespaces, the service uses that prefix instead of xsi."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_docToXMLString__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_docToXMLString__title__1"
     },
     {
       "name": "pub.xml:freeXMLNode",
@@ -127,7 +127,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_freeXMLNode__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_freeXMLNode__title__1"
     },
     {
       "name": "pub.xml:getNextXMLNode",
@@ -159,7 +159,7 @@
       "usage_notes": [
         "A NodeIterator is acquired via the service pub.xml:getXMLNodeIterator. The output of that service is a document (IData object) containing the element type name of the node and the node itself. The instance of this document is only valid until the next getNextXMLNode call on the same NodeIterator, because getNextXMLNode uses the same document object for each call."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_getNextXMLNode__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_getNextXMLNode__title__1"
     },
     {
       "name": "pub.xml:getXMLNodeIterator",
@@ -194,7 +194,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#A21764__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#A21764__title__1"
     },
     {
       "name": "pub.xml:getXMLNodeType",
@@ -234,7 +234,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_getXMLNodeType__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_getXMLNodeType__title__1"
     },
     {
       "name": "pub.xml:loadEnhancedXMLNode",
@@ -308,7 +308,7 @@
         {
           "name": "headers",
           "type": "Document",
-          "description": "Document Optional. Fields that you want to explicitly override in the HTTP request header issued by pub.xml:loadEnhancedXMLNode. Specify one element for each header field that you want to set, where the element's name represents the name of the header field, and the element's value represents the value of that header field. If headers is not set, pub.xml:loadEnhancedXMLNode will use its default header values. Note: You do not need to type a colon after the field name because pub.xml:loadEnhancedXMLNode will automatically insert the colon when it inserts this field into the request header. If you want to assign specific values to header fields used by pub.xml:loadEnhancedXMLNode, keep the following points in mind: When you specify the value of a header field, you override whatever default value IBM webMethods Integration Server is configured to use for HTTP requests. For example, if you set the User-Agent header field to B2B/3.0, the server uses that value instead of the default value specified by the watt.net.userAgent parameter. The pub.xml:loadEnhancedXMLNode service automatically determines the value of the Content-Length header field. You cannot specify a value for Content-Length. Be aware that when you submit data using the args or table elements, pub.xml:loadEnhancedXMLNode automatically sets the Content-Type header field to application/x-www-formurlencoded. You cannot override this setting using the headers variable. If you want to explicitly specify a content type in headers, make sure to use the string or bytes element to submit your data, not args or table. Certain header fields are automatically derived from other input parameters assigned to pub.xml:loadEnhancedXMLNode. For example, the Authorization header field is automatically derived from your auth parameter setting. Except for the Content-Length header field and the Content-Type header field (which, as described above, you cannot override when submitting data via args or table), a value that you specify in headers overrides the value that pub.xml:loadEnhancedXMLNode might otherwise derive from other parameter settings."
+          "description": "Document Optional. Fields that you want to explicitly override in the HTTP request header issued by pub.xml:loadEnhancedXMLNode. Specify one element for each header field that you want to set, where the element's name represents the name of the header field, and the element's value represents the value of that header field. If headers is not set, pub.xml:loadEnhancedXMLNode will use its default header values. Note: You do not need to type a colon after the field name because pub.xml:loadEnhancedXMLNode will automatically insert the colon when it inserts this field into the request header. If you want to assign specific values to header fields used by pub.xml:loadEnhancedXMLNode, keep the following points in mind: When you specify the value of a header field, you override whatever default value webMethods Integration Server is configured to use for HTTP requests. For example, if you set the User-Agent header field to B2B/3.0, the server uses that value instead of the default value specified by the watt.net.userAgent parameter. The pub.xml:loadEnhancedXMLNode service automatically determines the value of the Content-Length header field. You cannot specify a value for Content-Length. Be aware that when you submit data using the args or table elements, pub.xml:loadEnhancedXMLNode automatically sets the Content-Type header field to application/x-www-formurlencoded. You cannot override this setting using the headers variable. If you want to explicitly specify a content type in headers, make sure to use the string or bytes element to submit your data, not args or table. Certain header fields are automatically derived from other input parameters assigned to pub.xml:loadEnhancedXMLNode. For example, the Authorization header field is automatically derived from your auth parameter setting. Except for the Content-Length header field and the Content-Type header field (which, as described above, you cannot override when submitting data via args or table), a value that you specify in headers overrides the value that pub.xml:loadEnhancedXMLNode might otherwise derive from other parameter settings."
         },
         {
           "name": "headers",
@@ -384,11 +384,11 @@
         }
       ],
       "usage_notes": [
-        "If pub.xml:loadEnhancedXMLNode does not receive a response within the timeout period specified in the server's watt.net.timeout parameter, it will throw an exception. For information about the watt.net.timeout parameter, see IBM webMethods Integration Server Administrator’s Guide .",
-        "Use the pub.xml:loadXMLNode service to load an XML document and convert it to an XML node using the legacy XML parser. For more information about the legacy XML parser and the enhanced XML parser, see IBM webMethods Integration Server Administrator’s Guide .",
+        "If pub.xml:loadEnhancedXMLNode does not receive a response within the timeout period specified in the server's watt.net.timeout parameter, it will throw an exception. For information about the watt.net.timeout parameter, see webMethods Integration Server Administrator’s Guide .",
+        "Use the pub.xml:loadXMLNode service to load an XML document and convert it to an XML node using the legacy XML parser. For more information about the legacy XML parser and the enhanced XML parser, see webMethods Integration Server Administrator’s Guide .",
         "Keep the following information in mind when specifying a partitionSize"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHBFIHJ__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#CEHBFIHJ__title__1"
     },
     {
       "name": "pub.xml:loadXMLNode",
@@ -462,7 +462,7 @@
         {
           "name": "headers",
           "type": "Document",
-          "description": "Document Optional. Fields that you want to explicitly override in the HTTP request header issued by pub.xml:loadXMLNode. Specify one element for each header field that you want to set, where the element's name represents the name of the header field, and the element's value represents the value of that header field. If headers is not set, pub.xml:loadXMLNode will use its default header values. Note: You do not need to type a colon after the field name because pub.xml:loadXMLNode will automatically insert the colon when it inserts this field into the request header. If you want to assign specific values to header fields used by pub.xml:loadXMLNode, keep the following points in mind: When you specify the value of a header field, you override whatever default value IBM webMethods Integration Server is configured to use for HTTP requests. For example, if you set the User-Agent header field to B2B/3.0, the server uses that value instead of the default value specified by the watt.net.userAgent parameter. The pub.xml:loadXMLNode service automatically determines the value of the Content-Length header field. You cannot specify a value for Content-Length. Be aware that when you submit data using the args or table elements, pub.xml:loadXMLNode automatically sets the Content-Type header field to application/x-www-formurlencoded. You cannot override this setting using the headers variable. If you want to explicitly specify a content type in headers, make sure to use the string or bytes element to submit your data, not args or table. Certain header fields are automatically derived from other input parameters assigned to pub.xml:loadXMLNode. For example, the Authorization header field is automatically derived from your auth parameter setting. Except for the Content-Length header field and the Content-Type header field (which, as described above, you cannot override when submitting data via args or table), a value that you specify in headers overrides the value that pub.xml:loadXMLNode might otherwise derive from other parameter settings."
+          "description": "Document Optional. Fields that you want to explicitly override in the HTTP request header issued by pub.xml:loadXMLNode. Specify one element for each header field that you want to set, where the element's name represents the name of the header field, and the element's value represents the value of that header field. If headers is not set, pub.xml:loadXMLNode will use its default header values. Note: You do not need to type a colon after the field name because pub.xml:loadXMLNode will automatically insert the colon when it inserts this field into the request header. If you want to assign specific values to header fields used by pub.xml:loadXMLNode, keep the following points in mind: When you specify the value of a header field, you override whatever default value webMethods Integration Server is configured to use for HTTP requests. For example, if you set the User-Agent header field to B2B/3.0, the server uses that value instead of the default value specified by the watt.net.userAgent parameter. The pub.xml:loadXMLNode service automatically determines the value of the Content-Length header field. You cannot specify a value for Content-Length. Be aware that when you submit data using the args or table elements, pub.xml:loadXMLNode automatically sets the Content-Type header field to application/x-www-formurlencoded. You cannot override this setting using the headers variable. If you want to explicitly specify a content type in headers, make sure to use the string or bytes element to submit your data, not args or table. Certain header fields are automatically derived from other input parameters assigned to pub.xml:loadXMLNode. For example, the Authorization header field is automatically derived from your auth parameter setting. Except for the Content-Length header field and the Content-Type header field (which, as described above, you cannot override when submitting data via args or table), a value that you specify in headers overrides the value that pub.xml:loadXMLNode might otherwise derive from other parameter settings."
         },
         {
           "name": "headers",
@@ -482,7 +482,7 @@
         {
           "name": "isXML",
           "type": "String",
-          "description": "String Optional. Flag indicating whether the returned document is XML or HTML. pub.xml:loadXMLNode must know this in order to parse a document correctly. Set to: autoDetect to parse the document based on its type. When you use this option, pub.xml:loadXMLNode senses the document's type based on its <!DOCTYPE...\\> or <?XML...\\> tag. If it cannot determine a document's type, it parses it as HTML. This is the default. true to parse the document as XML. false to parse the document as HTML. Note: If you know what type of document pub.xml:loadXMLNode will receive, IBM recommends that you explicitly set isXML instead of using autoDetect. It will cut processing time, because the server will not have to examine the document to determine its type. The default value is autoDetect."
+          "description": "String Optional. Flag indicating whether the returned document is XML or HTML. pub.xml:loadXMLNode must know this in order to parse a document correctly. Set to: autoDetect to parse the document based on its type. When you use this option, pub.xml:loadXMLNode senses the document's type based on its <!DOCTYPE...\\> or <?XML...\\> tag. If it cannot determine a document's type, it parses it as HTML. This is the default. true to parse the document as XML. false to parse the document as HTML. Note: If you know what type of document pub.xml:loadXMLNode will receive, Software AG recommends that you explicitly set isXML instead of using autoDetect. It will cut processing time, because the server will not have to examine the document to determine its type. The default value is autoDetect."
         },
         {
           "name": "loadAs",
@@ -508,10 +508,10 @@
         }
       ],
       "usage_notes": [
-        "If pub.xml:loadXMLNode does not receive a response within the timeout period specified in the server's watt.net.timeout parameter, it will throw an exception. For information about the watt.net.timeout parameter, see IBM webMethods Integration Server Administrator’s Guide .",
+        "If pub.xml:loadXMLNode does not receive a response within the timeout period specified in the server's watt.net.timeout parameter, it will throw an exception. For information about the watt.net.timeout parameter, see webMethods Integration Server Administrator’s Guide .",
         "If expandGeneralEntities is not specified, Integration Server uses the value in watt.core.xml.expandGeneralEntities. If watt.core.xml.expandGeneralEntities is not set, the references to general entities are always expanded."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_loadXMLNode__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_loadXMLNode__title__1"
     },
     {
       "name": "pub.xml:queryXMLNode",
@@ -550,7 +550,7 @@
         {
           "name": "queryType",
           "type": "String",
-          "description": "String Query language in which query is expressed. Valid values are WQL and XQL. If the content of node is an enhanced XML node, you must set queryType to XQL. For information about WQL syntax, see the IBM webMethods Integration Server Built-In Services Reference ."
+          "description": "String Query language in which query is expressed. Valid values are WQL and XQL. If the content of node is an enhanced XML node, you must set queryType to XQL. For information about WQL syntax, see the webMethods Integration Server Built-In Services Reference ."
         },
         {
           "name": "onnull",
@@ -571,7 +571,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_queryXMLNode__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_queryXMLNode__title__1"
     },
     {
       "name": "pub.xml:xmlNodeToDocument",
@@ -668,10 +668,9 @@
       "usage_notes": [
         "If the IS document type in documentTypeName accurately represents the content model for the complex type from which it was created (the Model type property value is not “Unordered”), when Integration Server converts an XML node to a document (IData), Integration Server matches up the contents of an element in the XML node with the content model of the IS document type. If a mismatch occurs and Integration Server is unable to map the XML node contents to the IS document type, Integration Server appends the remaining data to the resulting document (IData). Integration Server stops attempting to map the XML node content to a field in the IS document type. This mismatch does not result in an error at the time the document is created. However, the document would fail validation by the pub.schema:validate service.",
         "The watt.server.soap.decodeElementWithPrefix server configuration parameter determines whether or not the pub.xml.xmlNodeToDocument service considers namespace and/or prefix declarations when decoding namespace qualified elements to corresponding fields in an IS document type.",
-        "The xsi:nil attribute in an element does not convert properly when generating an IS document from an XML document. If an XML document has an element containing only xsi:nil as an attribute and an IS document is generated from that XML document using the pub.xml.xmlNodeToDocument service, the xsi:nil attribute is generated as an @xsi:nil field for the element in the resulting IS document. This occurs even if the element with the xsi:nil attribute has a simple type string; however, the document type that is created from the XML schema (which is used by the XML document) has a string field for the xsi:nil element instead of the IS document. There is a type difference between the generated document and the document type. To work around this issue, manually edit the generated IS document to remove the @xsi:nil attribute and then convert the IS document to a string field.",
         "Following are examples of XML documents and the documents (IData objects) that xmlNodeToDocument would produce."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_xmlNodeToDoc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_xmlNodeToDoc__title__1"
     },
     {
       "name": "pub.xml:xmlStringToEnhancedXMLNode",
@@ -747,10 +746,10 @@
       ],
       "usage_notes": [
         "The input parameters xmldata, $filedata, and $filestream are mutually exclusive. Specify only one of the preceding parameters. Integration Server checks the parameters in the following order, using the value of the first parameter that has a specified value: $filedata, $filestream, and xmldata.",
-        "Use the pub.xml:xmlStringToXMLNode service to convert an XML document to an XML node using the legacy XML parser. For more information about the legacy XML parser and the enhanced XML parser, see IBM webMethods Integration Server Administrator’s Guide .",
+        "Use the pub.xml:xmlStringToXMLNode service to convert an XML document to an XML node using the legacy XML parser. For more information about the legacy XML parser and the enhanced XML parser, see webMethods Integration Server Administrator’s Guide .",
         "Keep the following information in mind when specifying a partitionSize"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHJAFHA__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#CEHJAFHA__title__1"
     },
     {
       "name": "pub.xml:xmlStringToXMLNode",
@@ -807,9 +806,9 @@
       "usage_notes": [
         "The input parameters xmldata, $filedata, and $filestream are mutually exclusive. Specify only one of the preceding parameters. Integration Server checks the parameters in the following order, using the value of the first parameter with a specified value: $filedata, $filestream, and xmldata.",
         "If expandGeneralEntities is not specified, Integration Server uses the value in watt.core.xml.expandGeneralEntities. If watt.core.xml.expandGeneralEntities is not set, the references to general entities are always expanded.",
-        "Use the pub.xml:xmlStringToEnhancedXMLNode service to convert an XML document to an XML node using the enhanced XML parser. For more information about the legacy XML parser and the enhanced XML parser, see IBM webMethods Integration Server Administrator’s Guide ."
+        "Use the pub.xml:xmlStringToEnhancedXMLNode service to convert an XML document to an XML node using the enhanced XML parser. For more information about the legacy XML parser and the enhanced XML parser, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_xmlStringToXMLNode__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-xml-folder#Apub_xml_xmlStringToXMLNode__title__1"
     }
   ]
 }

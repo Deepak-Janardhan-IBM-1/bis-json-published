@@ -17,7 +17,7 @@
         "If you shut down the guaranteed delivery capabilities of Integration Server to correct a configuration problem or to make an administrative change, use this service to reinitialize guaranteed delivery.",
         "You can also use this service to reinitialize guaranteed delivery if it becomes disabled due to an error (for example, because of a disk full condition or if the job store database becomes inaccessible). Reinitialize guaranteed delivery after you correct the problem."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-tx-folder#Apub_tx_init__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-tx-folder#Apub_tx_init__title__1"
     },
     {
       "name": "pub.tx:shutdown",
@@ -33,7 +33,7 @@
       "usage_notes": [
         "You might want to shut down guaranteed delivery to perform some administration functions, such as correcting configuration errors or starting a new audit-trail log. (To start a new audit-trail log, move or rename the existing log; the server automatically starts a new log if one does not already exist.)"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-tx-folder#Apub_tx_shutdown__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-tx-folder#Apub_tx_shutdown__title__1"
     },
     {
       "name": "pub.tx:resetOutbound",
@@ -49,7 +49,7 @@
       "usage_notes": [
         "If guaranteed delivery capabilities for outbound transactions become disabled due to an error (for example, if the server encounters a disk full condition or if the job store database becomes inaccessible), use this service to reinitialize guaranteed delivery after you correct the problem. If you invoke this service while outbound guaranteed delivery is functioning normally, the service will throw an exception and outbound guaranteed delivery will not be reinitialized."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-tx-folder#Apub_tx_resetOutbound__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-tx-folder#Apub_tx_resetOutbound__title__1"
     }
   ]
 }
