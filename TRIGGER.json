@@ -1,6 +1,6 @@
 {
   "folder": "TRIGGER",
-  "total_services": 15,
+  "total_services": 12,
   "services": [
     {
       "name": "pub.trigger:createJMSTrigger",
@@ -9,7 +9,7 @@
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name for the JMS new trigger. Names use any combination of letters, and/or the underscore character. Make sure to specify the name of the folder and subfolder in which you want to save the JMS trigger. Note: For a list of reserved words and symbols for element names, see IBM webMethods Service Development Help ."
+          "description": "String Fully qualified name for the JMS new trigger. Names use any combination of letters, and/or the underscore character. Make sure to specify the name of the folder and subfolder in which you want to save the JMS trigger. Note: For a list of reserved words and symbols for element names, see webMethods Service Development Help ."
         },
         {
           "name": "package",
@@ -84,7 +84,7 @@
         {
           "name": "maxBatchSize",
           "type": "String",
-          "description": "String Optional. Maximum number of messages that the trigger service can receive at one time. If you do not want the trigger to perform batch processing, leave this property set to 1. The default is 1. A transacted JMS trigger can be used for batch processing if the JMS connection alias used by the trigger connects to a JMS provider that supports the reuse of transacted JMS sessions. If the JMS provider does not support the reuse of transacted JMS sessions, set maxBatchSize to 1. Consult the documentation for your JMS provider to determine whether or not the JMS provider supports the reuse of transacted JMS sessions. Note that IBM webMethods Broker version 8.2 and higher and Universal Messaging version 9.5 support the reuse of transacted JMS sessions. Note: For a SOAP-JMS trigger the maxBatchSize must be set to 1."
+          "description": "String Optional. Maximum number of messages that the trigger service can receive at one time. If you do not want the trigger to perform batch processing, leave this property set to 1. The default is 1. A transacted JMS trigger can be used for batch processing if the JMS connection alias used by the trigger connects to a JMS provider that supports the reuse of transacted JMS sessions. If the JMS provider does not support the reuse of transacted JMS sessions, set maxBatchSize to 1. Consult the documentation for your JMS provider to determine whether or not the JMS provider supports the reuse of transacted JMS sessions. Note that webMethods Broker version 8.2 and higher and Universal Messaging version 9.5 support the reuse of transacted JMS sessions. Note: For a SOAP-JMS trigger the maxBatchSize must be set to 1."
         },
         {
           "name": "dupDetection",
@@ -109,7 +109,7 @@
         {
           "name": "prefetchSize",
           "type": "String",
-          "description": "String Optional. Specifies the maximum number of messages Integration Server attempts to retrieve for this JMS trigger when it requests more messages from the IBM webMethods Broker. The default is 10. Note: This parameter applies only when working with the IBM webMethods Broker or Universal Messaging as a JMS provider."
+          "description": "String Optional. Specifies the maximum number of messages Integration Server attempts to retrieve for this JMS trigger when it requests more messages from the webMethods Broker. The default is 10. Note: This parameter applies only when working with the webMethods Broker or Universal Messaging as a JMS provider."
         },
         {
           "name": "acknowledgeMode",
@@ -124,7 +124,7 @@
         {
           "name": "connectionCount",
           "type": "String",
-          "description": "String Optional. Specifies the number of connections a concurrent JMS trigger can use to retrieve messages from the JMS provider. connectionCount must be less than or equal to maxExecutionThreads. The default is 1. Note: connectionCount applies only when the JMS connection alias specified for aliasName is configured to create a separate connection for each JMS trigger. Note: When using multiple connections to the IBM webMethods Broker acting as the JMS provider, Integration Server uses a different client ID for each JMS trigger that uses the JMS connection alias. However, when Integration Server connects to other JMS providers, it uses the same client ID for each connection. Some JMS providers do not permit multiple connections to use the same client ID to retrieve messages from a Topic with a durable subscriber. Review the JMS provider documentation before configuring the use of multiple connections for a JMS connection alias and any concurrent JMS triggers that use the JMS connection alias."
+          "description": "String Optional. Specifies the number of connections a concurrent JMS trigger can use to retrieve messages from the JMS provider. connectionCount must be less than or equal to maxExecutionThreads. The default is 1. Note: connectionCount applies only when the JMS connection alias specified for aliasName is configured to create a separate connection for each JMS trigger. Note: When using multiple connections to the webMethods Broker acting as the JMS provider, Integration Server uses a different client ID for each JMS trigger that uses the JMS connection alias. However, when Integration Server connects to other JMS providers, it uses the same client ID for each connection. Some JMS providers do not permit multiple connections to use the same client ID to retrieve messages from a Topic with a durable subscriber. Review the JMS provider documentation before configuring the use of multiple connections for a JMS connection alias and any concurrent JMS triggers that use the JMS connection alias."
         },
         {
           "name": "destinations",
@@ -134,7 +134,7 @@
         {
           "name": "destination",
           "type": "String",
-          "description": "String Name or lookup name of the Destination from which you want the JMS trigger to receive messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker."
+          "description": "String Name or lookup name of the Destination from which you want the JMS trigger to receive messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker."
         },
         {
           "name": "destinationType",
@@ -185,9 +185,9 @@
       "output_parameters": [],
       "usage_notes": [
         "You can use pub.trigger:createJMSTriggers to create standard JMS triggers or SOAP-JMS triggers.",
-        "Even though WS endpoint triggers are SOAP-JMS triggers, you can create WS endpoint triggers via Integration Server Administrator only. For more information about WS endpoint triggers, see IBM webMethods Integration Server Administrator’s Guide .",
-        "If you use a JNDI provider to store JMS administered objects, the Connection Factories and Destinations (queues and topics) that you want this JMS trigger to use to consume messages must already exist if the JMS provider is not Universal Messaging. If they do not exist, the JMS trigger will be created but will not start. The JMS trigger will appear disabled in Designer and Integration Server Administrator. However, if the JMS provider is Universal Messaging, administered objects can be created on demand. If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the aliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination the first time that JMS trigger starts. For more information about creating administered objects on demand, see IBM webMethods Integration Server Administrator’s Guide",
-        "If you use the native webMethods API to connect directly to the IBM webMethods Broker, the Destinations from which you want the JMS trigger to receive messages must exist on the Broker. However, if you intend to use a durable subscriber to receive messages, it can be created by Integration Server when the pub.trigger:createJMSTrigger executes successfully. For more information about creating Destinations on the Broker, see Administering IBM webMethods Broker .",
+        "Even though WS endpoint triggers are SOAP-JMS triggers, you can create WS endpoint triggers via Integration Server Administrator only. For more information about WS endpoint triggers, see webMethods Integration Server Administrator’s Guide .",
+        "If you use a JNDI provider to store JMS administered objects, the Connection Factories and Destinations (queues and topics) that you want this JMS trigger to use to consume messages must already exist if the JMS provider is not Universal Messaging. If they do not exist, the JMS trigger will be created but will not start. The JMS trigger will appear disabled in Designer and Integration Server Administrator. However, if the JMS provider is Universal Messaging, administered objects can be created on demand. If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the aliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination the first time that JMS trigger starts. For more information about creating administered objects on demand, see webMethods Integration Server Administrator’s Guide",
+        "If you use the native webMethods API to connect directly to the webMethods Broker, the Destinations from which you want the JMS trigger to receive messages must exist on the Broker. However, if you intend to use a durable subscriber to receive messages, it can be created by Integration Server when the pub.trigger:createJMSTrigger executes successfully. For more information about creating Destinations on the Broker, see Administering webMethods Broker .",
         "The transaction type of the JMS connection alias determines whether or not the JMS trigger is transacted (that is, it receives and processes messages as part of a transaction). Transacted JMS triggers have slightly different properties and operate differently than non-transacted JMS triggers.",
         "For a standard JMS trigger, the trigger service that you want to specify in the routing rule must already exist on the same Integration Server on which you create the JMS trigger.",
         "A standard JMS trigger can contain multiple routing rules. Each routing rule must have a unique name.",
@@ -199,25 +199,25 @@
         "When Integration Server retries a trigger service and the trigger service is configured to generate audit data on error, Integration Server adds an entry to the audit log for each failed retry attempt. Each of these entries will have a status of \"Retried\" and an error message of \"Null\". However, if Integration Server makes the maximum retry attempts and the trigger service still fails, the final audit log entry for the service will have a status of \"Failed\" and will display the actual error message. Integration Server makes the audit log entry regardless of which retry failure option the trigger uses.",
         "Integration Server generates the following journal log message between retry attempts:",
         "If you do not configure service retry for a trigger, set the maxRetryAttempts to 0. Because managing service retries creates extra overhead, setting this property to 0 can improve the performance of services invoked by the trigger.",
-        "You can invoke the pub.flow:getRetryCount service within a trigger service to determine the current number of retry attempts made by Integration Server and the maximum number of retry attempts allowed for the trigger service. For more information about the pub.flow:getRetryCount service, see the IBM webMethods Integration Server Built-In Services Reference .",
+        "You can invoke the pub.flow:getRetryCount service within a trigger service to determine the current number of retry attempts made by Integration Server and the maximum number of retry attempts allowed for the trigger service. For more information about the pub.flow:getRetryCount service, see the webMethods Integration Server Built-In Services Reference .",
         "Before a standard JMS trigger can be enabled, the trigger service must already exist on the same Integration Server.",
         "The signature for a standard JMS trigger service must reference one of the following specifications:",
-        "Prefetch caching, which enables the JMS trigger to retrieve multiple messages from the JMS provider at once can only be used when the JMS provider is IBM webMethods Broker or Universal Messaging. Further, for a JMS trigger that retrieves messages from Universal Messaging, prefetch caching (also called consumer caching) can be used only for a concurrent, non-transacted JMS trigger. Additionally, the prefetchSize value must be greater than 1 for the prefetch caching functionality to be used.",
+        "Prefetch caching, which enables the JMS trigger to retrieve multiple messages from the JMS provider at once can only be used when the JMS provider is webMethods Broker or Universal Messaging. Further, for a JMS trigger that retrieves messages from Universal Messaging, prefetch caching (also called consumer caching) can be used only for a concurrent, non-transacted JMS trigger. Additionally, the prefetchSize value must be greater than 1 for the prefetch caching functionality to be used.",
         "If you create a concurrent JMS trigger that uses multiple connections to receive messages from the JMS provider, (you specified a value greater than 0 for connectionCount), keep the following points in mind:",
         "SOAP-JMS triggers do not use routing rules. For SOAP-JMS triggers, Integration Server processes the SOAP message contained in the JMS message by executing an operation in a web service descriptor.",
-        "For more information about creating JMS triggers, see IBM webMethods Service Development Help .",
+        "For more information about creating JMS triggers, see webMethods Service Development Help .",
         "If the Docker image for a Microservices Runtime excludes web services functionality, attempts to execute pub.trigger:createJMSTrigger where jmsTriggerType = SOAPJMS end with a ServiceException."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_createJMSTrigger__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_createJMSTrigger__title__1"
     },
     {
       "name": "pub.trigger:createTrigger",
-      "description": "WmPublic. Creates IBM webMethods messaging trigger.",
+      "description": "WmPublic. Creates a webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name for the new trigger that uses any combination of letters, and/or the underscore character. Make sure to specify the name of the folder and subfolder in which you want to save the trigger. Note: For a list of reserved words and symbols for element names, see IBM webMethods Service Development Help ."
+          "description": "String Fully qualified name for the new trigger that uses any combination of letters, and/or the underscore character. Make sure to specify the name of the folder and subfolder in which you want to save the trigger. Note: For a list of reserved words and symbols for element names, see webMethods Service Development Help ."
         },
         {
           "name": "package",
@@ -242,7 +242,7 @@
         {
           "name": "queueRefillLevel",
           "type": "String",
-          "description": "String Number of unprocessed documents that must remain in the trigger queue before Integration Server retrieves more documents for the trigger from the Broker. The default is 4. The queueRefillLevel value must be less than or equal to the queueCapacity value. Note: The queueRefillLevel parameter applies to IBM webMethods messaging trigger that receives documents from the Broker only. At run time, Integration Server ignores the queueRefillLevel if the trigger receives documents from Universal Messaging."
+          "description": "String Number of unprocessed documents that must remain in the trigger queue before Integration Server retrieves more documents for the trigger from the Broker. The default is 4. The queueRefillLevel value must be less than or equal to the queueCapacity value. Note: The queueRefillLevel parameter applies to a webMethods messaging trigger that receives documents from the Broker only. At run time, Integration Server ignores the queueRefillLevel if the trigger receives documents from Universal Messaging."
         },
         {
           "name": "ackQueueSize",
@@ -262,7 +262,7 @@
         {
           "name": "onRedeliveryFailure",
           "type": "String",
-          "description": "String Specifies how Integration Server handles retry failure for the trigger. Retry failure occurs when Integration Server reaches the maximum number of retry attempts and the trigger service still fails because of a run-time exception. Specify one of the following values: Throw Exception to indicate that Integration Server throws a ServiceException when the last allowed retry attempt ends because of a run-time exception. This is the default. Suspend and Retry Later to indicate that Integration Server suspends the trigger when the last allowed retry attempt ends because of a run-time exception. Integration Server retries the trigger service at a later time. Note: If you set onRedeliveryFailure to Suspend and Retry later, you must specify a service for the resumeTaskSvcName parameter. If you do not specify a service and the trigger suspends because of retry failure, Integration Server will not resume the trigger automatically. You must resume the trigger manually. Selecting Suspend and Retry Later also instructs Integration Server to suspend the trigger when a transient error occurs during trigger preprocessing. For more information about transient error handling during trigger preprocessing, see IBM webMethods Service Development Help ."
+          "description": "String Specifies how Integration Server handles retry failure for the trigger. Retry failure occurs when Integration Server reaches the maximum number of retry attempts and the trigger service still fails because of a run-time exception. Specify one of the following values: Throw Exception to indicate that Integration Server throws a ServiceException when the last allowed retry attempt ends because of a run-time exception. This is the default. Suspend and Retry Later to indicate that Integration Server suspends the trigger when the last allowed retry attempt ends because of a run-time exception. Integration Server retries the trigger service at a later time. Note: If you set onRedeliveryFailure to Suspend and Retry later, you must specify a service for the resumeTaskSvcName parameter. If you do not specify a service and the trigger suspends because of retry failure, Integration Server will not resume the trigger automatically. You must resume the trigger manually. Selecting Suspend and Retry Later also instructs Integration Server to suspend the trigger when a transient error occurs during trigger preprocessing. For more information about transient error handling during trigger preprocessing, see webMethods Service Development Help ."
         },
         {
           "name": "resumeTaskSvcName",
@@ -272,7 +272,7 @@
         {
           "name": "isPriorityEnabled",
           "type": "Boolean",
-          "description": "Boolean Indicates whether the trigger receives messages in order of priority or in the order in which they are published. Specify one of the following values: true to indicate that documents should reach the trigger in order of priority. The higher the priority the faster the document will be received. false to indicate that documents should reach the trigger in the order in which they are published. This is the default. Note: The isPriorityEnabled parameter applies to IBM webMethods messaging trigger that receives documents from the Broker only. At run time, Integration Server ignores the isPriorityEnabled value if the trigger receives a locally published documents or receives documents from Universal Messaging. All IBM webMethods messaging triggers that receive documents from Universal Messaging receive higher priority documents in an expedited fashion."
+          "description": "Boolean Indicates whether the trigger receives messages in order of priority or in the order in which they are published. Specify one of the following values: true to indicate that documents should reach the trigger in order of priority. The higher the priority the faster the document will be received. false to indicate that documents should reach the trigger in the order in which they are published. This is the default. Note: The isPriorityEnabled parameter applies to a webMethods messaging trigger that receives documents from the Broker only. At run time, Integration Server ignores the isPriorityEnabled value if the trigger receives a locally published documents or receives documents from Universal Messaging. All webMethods messaging triggers that receive documents from Universal Messaging receive higher priority documents in an expedited fashion."
         },
         {
           "name": "isConcurrent",
@@ -312,7 +312,7 @@
         {
           "name": "executeUser",
           "type": "String",
-          "description": "String Optional. Name of the user account whose credentials Integration Server uses to execute a service associated with the trigger. You can specify a locally defined user account or a user account defined in a central or external directory. The default is Administrator. Note: The executeUser parameter applies to IBM webMethods messaging triggers that receive message from Universal Messaging only. At run time, Integration Server ignores the executeUser value if the trigger receives documents from the Broker or locally published documents. To set the execution user for IBM webMethods messaging triggers that receive documents from Broker or locally published documents, use Integration Server Administrator to set the User property on the Settings > Resources > Store Settings > Edit Document Store Settings page."
+          "description": "String Optional. Name of the user account whose credentials Integration Server uses to execute a service associated with the trigger. You can specify a locally defined user account or a user account defined in a central or external directory. The default is Administrator. Note: The executeUser parameter applies to webMethods messaging triggers that receive message from Universal Messaging only. At run time, Integration Server ignores the executeUser value if the trigger receives documents from the Broker or locally published documents. To set the execution user for webMethods messaging triggers that receive documents from Broker or locally published documents, use Integration Server Administrator to set the User property on the Settings > Resources > Store Settings > Edit Document Store Settings page."
         },
         {
           "name": "conditions",
@@ -362,22 +362,22 @@
       ],
       "output_parameters": [],
       "usage_notes": [
-        "The client executing this service must have write access to the folders and packages in which the client wants to save the new IBM webMethods messaging trigger. If the client does not have write access, Integration Server throws a write permissions error. For more information about assigning access permissions to folders and packages, see IBM webMethods Service Development Help .",
+        "The client executing this service must have write access to the folders and packages in which the client wants to save the new webMethods messaging trigger. If the client does not have write access, Integration Server throws a write permissions error. For more information about assigning access permissions to folders and packages, see webMethods Service Development Help .",
         "The messaging connection alias assigned to the publishable document type determines the messaging provider used by any triggers that subscribe to the publishable document type.",
-        "Integration Server validates the IBM webMethods messaging trigger before saving it. If Integration Server determines that the IBM webMethods messaging trigger does not meet the following requirements, Integration Server throws a ServiceException and does not create the trigger.",
-        "A trigger service for IBM webMethods messaging trigger must meet the following requirements:",
-        "For example, suppose that you want IBM webMethods messaging trigger to associate the Customers:customerInfo publishable document type with the Customers:addToCustomerStore service. On the Input/Output tab of the service, the input signature must contain a document reference named Customers:customerInfo.",
-        "If the pub.trigger:createTrigger service executes successfully, Integration Server establishes the subscription locally by creating a trigger queue for the IBM webMethods messaging trigger on the Integration Server.",
+        "Integration Server validates the webMethods messaging trigger before saving it. If Integration Server determines that the webMethods messaging trigger does not meet the following requirements, Integration Server throws a ServiceException and does not create the trigger.",
+        "A trigger service for a webMethods messaging trigger must meet the following requirements:",
+        "For example, suppose that you want a webMethods messaging trigger to associate the Customers:customerInfo publishable document type with the Customers:addToCustomerStore service. On the Input/Output tab of the service, the input signature must contain a document reference named Customers:customerInfo.",
+        "If the pub.trigger:createTrigger service executes successfully, Integration Server establishes the subscription locally by creating a trigger queue for the webMethods messaging trigger on the Integration Server.",
         "If the trigger subscribes to one or more publishable document types that specify a Broker connection alias, one of the following occurs when the pub.trigger:createTrigger service executes:",
         "If the trigger subscribes to a publishable document type that uses Universal Messaging as the messaging provider, one of the following happens upon saving the trigger.",
         "If messageType specifies a publishable document type that does not exist on the Broker (that is, there is no associated Broker document type), Integration Server still creates the trigger and the trigger client on the Broker, but does not create any subscriptions on the Broker. Integration Server creates the subscriptions when you synchronize (push) the publishable document type with the Broker.",
-        "If IBM webMethods messaging trigger subscribes to a publishable document type that is not in the same package as the trigger or uses a triggers service that is not in the same package as the trigger, create package dependencies on the package containing the publishable document type and/or trigger service from the package containing the trigger. This ensures that Integration Server loads the package containing the publishable document type before loading the trigger.",
-        "If IBM webMethods messaging trigger subscribes to publishable document types associated with a Universal Messaging connection alias, you can create the following types of filters:",
-        "When the encoding type for a publishable document type is IData, it is optional to include _properties in the provider filter for IBM webMethods messaging trigger. However, when the encoding type is protocol buffers, you need to include _properties in the provider filter. If you want a provider filter that operates on the contents of _properties to work regardless of the encoding type, always include _properties in the filter expression.",
-        "If IBM webMethods messaging trigger subscribes to publishable document types associated with a Broker connection alias, you can specify a single filter that can be used by Broker and/or Integration Server. Use the conditions/messageTypeFilterPairs/filter to specify the filter. Create the filter using the conditional expression syntax described in IBM webMethods Service Development Help .",
-        "For more information about creating IBM webMethods messaging triggers, see IBM webMethods Service Development Help ."
+        "If a webMethods messaging trigger subscribes to a publishable document type that is not in the same package as the trigger or uses a triggers service that is not in the same package as the trigger, create package dependencies on the package containing the publishable document type and/or trigger service from the package containing the trigger. This ensures that Integration Server loads the package containing the publishable document type before loading the trigger.",
+        "If a webMethods messaging trigger subscribes to publishable document types associated with a Universal Messaging connection alias, you can create the following types of filters:",
+        "When the encoding type for a publishable document type is IData, it is optional to include _properties in the provider filter for a webMethods messaging trigger. However, when the encoding type is protocol buffers, you need to include _properties in the provider filter. If you want a provider filter that operates on the contents of _properties to work regardless of the encoding type, always include _properties in the filter expression.",
+        "If a webMethods messaging trigger subscribes to publishable document types associated with a Broker connection alias, you can specify a single filter that can be used by Broker and/or Integration Server. Use the conditions/messageTypeFilterPairs/filter to specify the filter. Create the filter using the conditional expression syntax described in webMethods Service Development Help .",
+        "For more information about creating webMethods messaging triggers, see webMethods Service Development Help ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A58263__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#A58263__title__1"
     },
     {
       "name": "pub.trigger:deleteJMSTrigger",
@@ -391,44 +391,25 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_deleteJMSTrigger__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_deleteJMSTrigger__title__1"
     },
     {
       "name": "pub.trigger:deleteTrigger",
-      "description": "WmPublic. Deletes IBM webMethods messaging trigger.",
+      "description": "WmPublic. Deletes a webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name of the IBM webMethods messaging trigger that you want to delete."
+          "description": "String Fully qualified name of the webMethods messaging trigger that you want to delete."
         }
       ],
       "output_parameters": [],
       "usage_notes": [
         "The trigger must be unlocked for this service to execute successfully. If the trigger is locked when this service executes, Integration Server throws an error stating \"Trigger is locked, change not permitted.\"",
-        "When you delete IBM webMethods messaging trigger that uses a Broker connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding client queue on the Broker. When the client prefix is shared, the client queue might be used by other Integration Servers. The publishable document type to which IBM webMethods messaging trigger subscribes determines the connection alias used by the trigger.",
-        "When you delete IBM webMethods messaging trigger that uses a Universal Messaging connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding NamedObject. When the client prefix is shared, the NamedObject might be used by other Integration Servers. The publishable document type to which IBM webMethods messaging trigger subscribes determines the connection alias used by the trigger."
+        "When you delete a webMethods messaging trigger that uses a Broker connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding client queue on the Broker. When the client prefix is shared, the client queue might be used by other Integration Servers. The publishable document type to which a webMethods messaging trigger subscribes determines the connection alias used by the trigger.",
+        "When you delete a webMethods messaging trigger that uses a Universal Messaging connection alias that specifies a shared client prefix, deleting the trigger will not delete the corresponding NamedObject. When the client prefix is shared, the NamedObject might be used by other Integration Servers. The publishable document type to which a webMethods messaging trigger subscribes determines the connection alias used by the trigger."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A18151__title__1"
-    },
-    {
-      "name": "pub.trigger:disableEventTriggers",
-      "description": "WmPublic. Disables one or more event triggers.",
-      "input_parameters": [
-        {
-          "name": "triggerNameList",
-          "type": "String List",
-          "description": "String List Specifies the event triggers that you want to disable."
-        }
-      ],
-      "output_parameters": [],
-      "usage_notes": [
-        "When an event trigger is disabled, the event trigger is stopped. Integration Server neither retrieves nor processes messages for the event trigger. The event trigger remains in this state until you enable the trigger.",
-        "You can also use the Streaming > Event triggers page in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
-        "When you disable a suspended event trigger for which all event processing has completed, Integration Server stops the listener that the trigger uses to retrieve events. This disconnects the event trigger from the streaming provider .",
-        "The time Integration Server waits between the request to disable the event trigger and forcing the trigger to stop is specified by the watt.server.streaming.trigger.stopRequestTimeout server configuration parameter."
-      ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_adl_2cn_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#A18151__title__1"
     },
     {
       "name": "pub.trigger:disableJMSTriggers",
@@ -442,7 +423,7 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether the specified JMS triggers should be disabled across all the servers in the cluster. Set to: true to disable the specified JMS triggers on all the nodes in the cluster. Note: To make the state change on all the servers in a cluster, Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to disable the JMS triggers on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether the specified JMS triggers should be disabled across all the servers in the cluster. Set to: true to disable the specified JMS triggers on all the nodes in the cluster. Note: To make the state change on all the servers in a cluster, Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to disable the JMS triggers on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
@@ -455,28 +436,11 @@
         "Because administered objects, like destinations, are configured outside of Integration Server, disabling a JMS trigger has no impact on the subscription.",
         "Use the pub.trigger:enableJMSTriggers service to enable one or more JMS triggers.",
         "Use the pub.trigger:suspendJMSTriggers service to suspend one or more JMS triggers.",
-        "You can also use the Messaging > JMS triggers page in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
+        "You can also use the Messaging > JMS triggers page in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_disableJMSTriggers__title__1"
-    },
-    {
-      "name": "pub.trigger:enableEventTriggers",
-      "description": "WmPublic. Enables one or more event triggers.",
-      "input_parameters": [
-        {
-          "name": "triggerNameList",
-          "type": "String List",
-          "description": "String List Specifies the event triggers that you want to enable."
-        }
-      ],
-      "output_parameters": [],
-      "usage_notes": [
-        "When an event trigger is enabled, the event trigger is running and connected to the streaming provider. Integration Server retrieves and processes messages for the event trigger.",
-        "You can also use the Streaming > Event triggers pages in Integration Server Administrator to disable, enable, and suspend event triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
-      ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_smr_mtw_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_disableJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:enableJMSTriggers",
@@ -490,20 +454,20 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether the specified JMS triggers should be enabled across all the servers in the cluster. Set to: true to enable the specified JMS triggers on all the nodes in the cluster. Note: To make the state change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to enable the JMS triggers on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether the specified JMS triggers should be enabled across all the servers in the cluster. Set to: true to enable the specified JMS triggers on all the nodes in the cluster. Note: To make the state change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to enable the JMS triggers on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
       "usage_notes": [
         "When a JMS trigger is enabled, the JMS trigger is running and connected to the JMS provider. Integration Server retrieves and processes messages for the JMS trigger.",
-        "You can also use the Messaging > JMS triggers pages in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
+        "You can also use the Messaging > JMS triggers pages in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
         "You can use the pub.trigger:disableJMSTriggers service to disable one or more JMS triggers.",
         "Use the pub.trigger:suspendJMSTriggers service to suspend one or more JMS triggers.",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:",
-        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
+        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_enableJMSTriggers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_enableJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:resourceMonitoringSpec",
@@ -513,22 +477,22 @@
         {
           "name": "isAvailable",
           "type": "String",
-          "description": "String Indicates whether the resources needed by the trigger to perform exactly-once processing or to execute the trigger service are available. The value of this field determines whether Integration Server resumes the trigger or re-executes the resource monitoring service. Integration Server continues to execute a resource monitoring service until the value of isAvailable is \"true\" or the maximum retry attempts have been made. The isAvailable field must have one of the following values: true to indicate that the resources associated with the trigger are available. For IBM webMethods messaging trigger, Integration Server resumes document retrieval and document processing for the trigger. For a JMS trigger, MQTT trigger, or event trigger, Integration Server enables the trigger. false to indicate that the resources associated with the trigger are not available. Integration Server will not resume the trigger."
+          "description": "String Indicates whether the resources needed by the trigger (webMethods messaging trigger or JMS) to perform exactly-once processing or to execute the trigger service are available. The value of this field determines whether Integration Server resumes the trigger or re-executes the resource monitoring service. Integration Server continues to execute a resource monitoring service until the value of isAvailable is \"true\" or the maximum retry attempts have been made. The isAvailable field must have one of the following values: true to indicate that the resources associated with the trigger are available. For a webMethods messaging trigger, Integration Server resumes document retrieval and document processing for the trigger. For a JMS trigger, Integration Server enables the trigger. For an MQTT trigger, Integration Server enables the trigger. false to indicate that the resources associated with the trigger are not available. Integration Server will not resume the trigger."
         }
       ],
       "usage_notes": [
-        "The pub.trigger:resourceMonitoringSpec must be used as the service signature for any service used as a resource monitoring service. A resource monitoring service determines whether the resources associated with a trigger (IBM webMethods messaging trigger, JMS, MQTT, or event) are available for exactly-once processing, document pre-processing, or message/document/event processing. Integration Server executes a resource monitoring service after retry failure occurs for the trigger, the document resolver service fails because of a run-time exception, or the transform or target service encounters a run-time exception (event trigger only)."
+        "The pub.trigger:resourceMonitoringSpec must be used as the service signature for any service used as a resource monitoring service. A resource monitoring service determines whether the resources associated with a trigger (webMethods messaging trigger, JMS, or MQTT) are available for exactly-once processing, document pre-processing, or message/document processing. Integration Server executes a resource monitoring service after retry failure occurs for the trigger or when the document resolver service fails because of a run-time exception. For more information about building a resource monitoring service, see the Publish-Subscribe Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resourceMonitoringSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_resourceMonitoringSpec__title__1"
     },
     {
       "name": "pub.trigger:resumeProcessing",
-      "description": "WmPublic. Resumes document processing for the specified IBM webMethods messaging trigger.",
+      "description": "WmPublic. Resumes document processing for the specified webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name of the IBM webMethods messaging trigger for which you want to resume document processing."
+          "description": "String Fully qualified name of the webMethods messaging trigger for which you want to resume document processing."
         },
         {
           "name": "persistChange",
@@ -538,7 +502,7 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether document processing should be resumed for this trigger across all the servers in the cluster. Set to: true to resume document processing for the specified trigger on all the nodes in the cluster. Note: To make the document processing change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to indicate that document processing for this trigger should be resumed on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether document processing should be resumed for this trigger across all the servers in the cluster. Set to: true to resume document processing for the specified trigger on all the nodes in the cluster. Note: To make the document processing change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to indicate that document processing for this trigger should be resumed on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
@@ -547,23 +511,23 @@
         "If you do not persist the change, the trigger reverts to the previously saved document processing state when the Integration Server restarts, the trigger is enabled or disabled, or the package containing the trigger reloads.",
         "After this service executes, the Integration Server resumes document processing for this trigger at the percentage specified in the Execution Threads Throttle field on the Messaging > webMethods triggers page in the Integration Server Administrator.",
         "Integration Server resumes document processing for the specified trigger even if document processing is suspended for all triggers on the Integration Server (that is, the Processing State for all triggers is set to Suspended).",
-        "Integration Server will not resume document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see IBM webMethods Service Development Help .",
+        "Integration Server will not resume document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see webMethods Service Development Help .",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:",
-        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
-        "In a Java service, you can resume document processing using com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
-        "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
+        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
+        "In a Java service, you can resume document processing using com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
+        "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resumerProcessing__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_resumerProcessing__title__1"
     },
     {
       "name": "pub.trigger:resumeRetrieval",
-      "description": "WmPublic. Resumes retrieval of documents from the messaging provider for a specific IBM webMethods messaging trigger.",
+      "description": "WmPublic. Resumes retrieval of documents from the messaging provider for a specific webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name of the IBM webMethods messaging trigger for which you want to resume document retrieval."
+          "description": "String Fully qualified name of the webMethods messaging trigger for which you want to resume document retrieval."
         },
         {
           "name": "persistChange",
@@ -573,7 +537,7 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String.",
-          "description": "String. Optional. Flag indicating whether document retrieval should be resumed for this trigger across all the servers in the cluster. Set to: true to resume document retrieval for the specified trigger on all the servers in the cluster. Note: To make the document retrieval change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to indicate that document retrieval for this trigger should be resumed on the local Integration Server only. This is the default."
+          "description": "String. Optional. Flag indicating whether document retrieval should be resumed for this trigger across all the servers in the cluster. Set to: true to resume document retrieval for the specified trigger on all the servers in the cluster. Note: To make the document retrieval change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to indicate that document retrieval for this trigger should be resumed on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
@@ -582,31 +546,14 @@
         "If you do not persist the change, the trigger reverts to the previously saved document retrieval state when the server restarts, the trigger is enabled or disabled, or the package containing the trigger reloads.",
         "After this service executes, the Integration Server resumes document retrieval for this trigger at the percentage specified in the Queue Capacity Throttle field on the Messaging > webMethods triggers page in the Integration Server Administrator.",
         "The Integration Server resumes document retrieval for the specified trigger even if document retrieval is suspended for all the triggers on the Integration Server (that is, the Retrieval State for all triggers is set to Suspended).",
-        "The Integration Server will not resume document retrieval for the specified trigger if the trigger is locked by a user. For more information about locking elements, see IBM webMethods Service Development Help .",
+        "The Integration Server will not resume document retrieval for the specified trigger if the trigger is locked by a user. For more information about locking elements, see webMethods Service Development Help .",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:",
-        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
-        "In a Java service, you can resume document retrieval by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setRetrievalSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
-        "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
+        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
+        "In a Java service, you can resume document retrieval by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setRetrievalSuspended(). For more information about this method, see the webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
+        "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_resumeRetrieval__title__1"
-    },
-    {
-      "name": "pub.trigger:suspendEventTriggers",
-      "description": "WmPublic. Suspends one or more event triggers.",
-      "input_parameters": [
-        {
-          "name": "triggerNameList",
-          "type": "String List",
-          "description": "String List Specifies the event triggers that you want to suspend."
-        }
-      ],
-      "output_parameters": [],
-      "usage_notes": [
-        "When an event trigger is suspended, the event trigger is running and connected to the streaming provider. Integration Server has stopped event retrieval, but continues processing any events it has already retrieved. Integration Server enables the event trigger automatically upon server restart or when the package containing the event trigger reloads.",
-        "You can also use the Streaming > Event triggers pages in Integration Server Administrator to disable, enable, and suspend event triggers."
-      ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#reference_jtz_q5w_gcc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_resumeRetrieval__title__1"
     },
     {
       "name": "pub.trigger:suspendJMSTriggers",
@@ -620,7 +567,7 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether the specified JMS triggers should be suspended across all the servers in the cluster. Set to: true to suspend the specified JMS triggers on all the nodes in the cluster. Note: To make the status change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to suspend the JMS triggers on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether the specified JMS triggers should be suspended across all the servers in the cluster. Set to: true to suspend the specified JMS triggers on all the nodes in the cluster. Note: To make the status change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to suspend the JMS triggers on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
@@ -631,20 +578,20 @@
         "After a suspending a JMS trigger, Integration Server will not start processing for any additional messages already received by the JMS trigger.",
         "Use the pub.trigger:disableJMSTriggers service to disable one or more JMS triggers.",
         "Use the pub.trigger:enableJMSTriggers service to enable one or more JMS triggers.",
-        "You can also use the Messaging > JMS triggers pages in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
+        "You can also use the Messaging > JMS triggers pages in Integration Server Administrator to disable, enable, and suspend JMS triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#Apub_trigger_suspendJMSTriggers__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#Apub_trigger_suspendJMSTriggers__title__1"
     },
     {
       "name": "pub.trigger:suspendProcessing",
-      "description": "WmPublic. Suspends document processing for the specified IBM webMethods messaging trigger.",
+      "description": "WmPublic. Suspends document processing for the specified webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name of the IBM webMethods messaging trigger for which you want to suspend document processing."
+          "description": "String Fully qualified name of the webMethods messaging trigger for which you want to suspend document processing."
         },
         {
           "name": "persistChange",
@@ -654,7 +601,7 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether document processing should be suspended for this trigger across all the servers in the cluster. Set to: true to suspend document processing for the specified trigger on all the servers in the cluster. Note: To make the document processing change on all the servers in a cluster, the Integration Server must belong to a properly configured cluster and it must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to indicate that document processing for this trigger should be suspended on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether document processing should be suspended for this trigger across all the servers in the cluster. Set to: true to suspend document processing for the specified trigger on all the servers in the cluster. Note: To make the document processing change on all the servers in a cluster, the Integration Server must belong to a properly configured cluster and it must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to indicate that document processing for this trigger should be suspended on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
@@ -663,24 +610,24 @@
         "When you suspend document processing, the Integration Server will not dispatch any more server threads to process documents in the trigger's queue. Any server threads currently processing documents for the trigger will execute to completion. This includes documents that are being retried.",
         "When you suspend document processing, documents that the trigger retrieves will collect in the trigger queue until the trigger resumes document processing. If the server restarts before document processing resumes, volatile documents are discarded.",
         "If you do not persist the change, the trigger reverts to the previously saved document processing state when the server restarts, the trigger is enabled or disabled, or the package containing the trigger reloads.",
-        "The Integration Server will not suspend document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see IBM webMethods Service Development Help .",
+        "The Integration Server will not suspend document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see webMethods Service Development Help .",
         "If you suspend document processing, but do not suspend document retrieval for a trigger, the trigger queue fills to capacity and Integration Server stops retrieving documents for this trigger from the messaging provider.",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:",
-        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
-        "In a Java service, you can suspend document processing by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
-        "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
+        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
+        "In a Java service, you can suspend document processing by calling com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade.setProcessingSuspended(). For more information about this method, see the webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
+        "You can resume and suspend document processing for an individual trigger or all triggers using the Integration Server Administrator. For more information, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A69499__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#A69499__title__1"
     },
     {
       "name": "pub.trigger:suspendRetrieval",
-      "description": "WmPublic. Suspends retrieval of documents from the messaging provider for a specific IBM webMethods messaging trigger.",
+      "description": "WmPublic. Suspends retrieval of documents from the messaging provider for a specific webMethods messaging trigger.",
       "input_parameters": [
         {
           "name": "triggerName",
           "type": "String",
-          "description": "String Fully qualified name of the IBM webMethods messaging trigger for which you want to suspend document retrieval."
+          "description": "String Fully qualified name of the webMethods messaging trigger for which you want to suspend document retrieval."
         },
         {
           "name": "persistChange",
@@ -690,25 +637,25 @@
         {
           "name": "applyChangeAcross Cluster",
           "type": "String",
-          "description": "String Optional. Flag indicating whether document retrieval should be suspended for this trigger across all the servers in the cluster. Set to: true to suspend document retrieval for the specified trigger on all the servers in the cluster. Note: To make the document retrieval change on all the servers in a cluster, the Integration Server be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide . false to indicate that document retrieval for this trigger should be suspended on the local Integration Server only. This is the default."
+          "description": "String Optional. Flag indicating whether document retrieval should be suspended for this trigger across all the servers in the cluster. Set to: true to suspend document retrieval for the specified trigger on all the servers in the cluster. Note: To make the document retrieval change on all the servers in a cluster, the Integration Server be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see webMethods Integration Server Administrator’s Guide . false to indicate that document retrieval for this trigger should be suspended on the local Integration Server only. This is the default."
         }
       ],
       "output_parameters": [],
       "usage_notes": [
         "This service does not affect document retrieval for locally published documents to which the specified trigger subscribes.",
         "When you suspend document retrieval, the specified trigger will continue to receive documents delivered to the default client.",
-        "Integration Server will not suspend document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see IBM webMethods Service Development Help .",
+        "Integration Server will not suspend document processing for the specified trigger if the trigger is locked by a user. For more information about locking elements, see webMethods Service Development Help .",
         "When you suspend document retrieval, Integration Server will not dispatch any server threads to retrieve documents from the messaging provider for the trigger. Any server threads currently retrieving documents for the trigger will execute to completion.",
         "When you suspend document retrieval, documents to which this trigger subscribes will collect on the messaging provider. Documents remain in the trigger's client queue until document retrieval resumes for the trigger or the documents expire.",
         "If you do not resume document retrieval before the server restarts, the trigger package reloads, or the trigger properties are modified, the messaging provider discards any volatile documents for the trigger.",
         "If you do not persist the change, the trigger reverts to the previously saved document retrieval state when the server restarts, the trigger is enabled or disabled, or the package containing the trigger reloads.",
         "If you set applyChangeAcrossCluster to true and the synchronization is not successful, the following occurs:",
         "The Integration Server Administrator also displays the following message:",
-        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see IBM webMethods Integration Server Administrator’s Guide .",
-        "In a Java service, you can suspend document retrieval by calling setRetrievalSuspended(). For more information about this method, see the IBM webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
-        "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see IBM webMethods Integration Server Administrator’s Guide ."
+        "You can use the Integration Server Administrator to view and change cluster synchronization status for triggers. For more information, see webMethods Integration Server Administrator’s Guide .",
+        "In a Java service, you can suspend document retrieval by calling setRetrievalSuspended(). For more information about this method, see the webMethods Integration Server Java API Reference for the com.wm.app.b2b.server.dispatcher.trigger.TriggerFacade class.",
+        "You can resume and suspend document retrieval for an individual trigger or all triggers using the Integration Server Administrator. For more information, see webMethods Integration Server Administrator’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-trigger-folder#A47913__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-trigger-folder#A47913__title__1"
     }
   ]
 }

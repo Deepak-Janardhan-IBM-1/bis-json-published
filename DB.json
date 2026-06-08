@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "pub.db:call",
-      "description": "WmDB. Invokes a stored procedure on a target database. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Invokes a stored procedure on a target database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -97,11 +97,11 @@
       "usage_notes": [
         "The output will also contain output parameters and procedure return values (the return value is called RETURN_VALUE)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_call__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_call__title__1"
     },
     {
       "name": "pub.db:clearTransaction",
-      "description": "WmDB. Clears the transactional state within a database connection. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Clears the transactional state within a database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -148,13 +148,13 @@
       ],
       "usage_notes": [
         "On some databases, exceptional conditions within transactions will automatically abort the entire transaction. When this happens, the standard commit/rollback operations are meaningless because there is no current transaction. If this occurs, use the clearTransaction service to clear the transactional state and prepare for a new transaction. You should only use this service if you have begun a transaction and cannot end it with a standard commit or rollback.",
-        "The clearTransaction service does not involve a database operation; it is entirely internal to the IBM webMethods Integration Server."
+        "The clearTransaction service does not involve a database operation; it is entirely internal to the webMethods Integration Server."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_clearTransaction__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_clearTransaction__title__1"
     },
     {
       "name": "pub.db:close",
-      "description": "WmDB. Closes a specified database connection. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Closes a specified database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -205,11 +205,11 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_close__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_close__title__1"
     },
     {
       "name": "pub.db:closeAll",
-      "description": "WmDB. Closes all database connections that the session has opened. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Closes all database connections that the session has opened. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [],
       "output_parameters": [
         {
@@ -219,11 +219,11 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc460900934__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900934__title__1"
     },
     {
       "name": "pub.db:commit",
-      "description": "WmDB. Commits changes to a database. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Commits changes to a database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -271,11 +271,11 @@
       "usage_notes": [
         "This service returns an exception if an error occurs when committing changes to the database. The most common reason for this error is that no transaction has been started (see pub.db:startTransaction)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_commit__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_commit__title__1"
     },
     {
       "name": "pub.db:connect",
-      "description": "WmDB. Creates a connection to the database using the supplied JDBC URL, user name, and password. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Creates a connection to the database using the supplied JDBC URL, user name, and password. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -345,11 +345,11 @@
         "Multiple attempts to connect to the same database by the same client will result in the same connection being reused. This means that if client A and client B request connections to the same database, they each get their own new connection. If client A makes another call to pub.db:connect, the previous connection is reused. Associating the database connection with the client session prevents remote clients from having to reconnect repeatedly to a target database.",
         "Connections are not pooled or shared across sessions. Unless explicitly closed (by calling pub.db:close or pub.db:closeAll), connections associated with a session are closed when the session is flushed from memory. This happens at a regular interval, which can be configured using the Integration Server Administrator. For more information about setting the session time-out limit, see Setting the Session Timeout Limit."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc460900933__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900933__title__1"
     },
     {
       "name": "pub.db:delete",
-      "description": "WmDB. Removes all rows in the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Removes all rows in the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -420,11 +420,11 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_delete__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_delete__title__1"
     },
     {
       "name": "pub.db:execSQL",
-      "description": "WmDB. Executes the specified SQL statement. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Executes the specified SQL statement. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -537,11 +537,11 @@
         "Example: Consider the following SQL query, which contains an INSERT with three host variables:",
         "To execute this SQL query, you could supply the following values to the pub.db:execSQL service:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_execSQL__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_execSQL__title__1"
     },
     {
       "name": "pub.db:getProcInfo",
-      "description": "WmDB. Retrieves information about one or more stored procedures. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Retrieves information about one or more stored procedures. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -596,11 +596,11 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_getProcInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_getProcInfo__title__1"
     },
     {
       "name": "pub.db:getProcs",
-      "description": "WmDB. Retrieves the names of stored procedures for the specified database. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Retrieves the names of stored procedures for the specified database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -655,11 +655,11 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_getProcs__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_getProcs__title__1"
     },
     {
       "name": "pub.db:getTableInfo",
-      "description": "WmDB. Retrieves information about columns in the specified table. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Retrieves information about columns in the specified table. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -721,11 +721,11 @@
       "usage_notes": [
         "This service accepts input from a web browser or HTML form."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc460900940__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900940__title__1"
     },
     {
       "name": "pub.db:getTables",
-      "description": "WmDB. Retrieves the names of tables in the specified database and schema. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Retrieves the names of tables in the specified database and schema. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -787,11 +787,11 @@
       "usage_notes": [
         "This service accepts input from a web browser or HTML form."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc462908017__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc462908017__title__1"
     },
     {
       "name": "pub.db:insert",
-      "description": "WmDB. Inserts one or more rows into the specified table. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Inserts one or more rows into the specified table. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -879,11 +879,11 @@
       "usage_notes": [
         "This service accepts input from a web browser or HTML form."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc460900935__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900935__title__1"
     },
     {
       "name": "pub.db:query",
-      "description": "WmDB. Retrieves all rows from the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Retrieves all rows from the specified table that meet the given criteria. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -961,11 +961,11 @@
       "usage_notes": [
         "This service accepts input from a web browser or HTML form."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#A_Toc460900939__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#A_Toc460900939__title__1"
     },
     {
       "name": "pub.db:rollback",
-      "description": "WmDB. Discards changes to a database. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Discards changes to a database. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -1013,11 +1013,11 @@
       "usage_notes": [
         "This service throws an exception if an error occurs when discarding changes to the database. The most common reason for this error is that no transaction has been started (see pub.db:startTransaction)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_rollback__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_rollback__title__1"
     },
     {
       "name": "pub.db:startTransaction",
-      "description": "WmDB. Begins a transaction on a database connection. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Begins a transaction on a database connection. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -1067,11 +1067,11 @@
         "This service returns an exception if an error occurs when starting the new transaction. Common reasons for an error when starting a new transaction are:",
         "After a transaction has been started, it must be terminated with a call to either pub.db:commit (to save all changes to the database) or pub.db:rollback (to discard changes)."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_startTransaction__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_startTransaction__title__1"
     },
     {
       "name": "pub.db:update",
-      "description": "WmDB. Updates all rows in a table that meet the given criteria. Rows are updated with the supplied new data. As an alternative to this service, consider using the services provided with the IBM webMethods Adapter for JDBC.",
+      "description": "WmDB. Updates all rows in a table that meet the given criteria. Rows are updated with the supplied new data. As an alternative to this service, consider using the services provided with the webMethods Adapter for JDBC.",
       "input_parameters": [
         {
           "name": "$dbAlias",
@@ -1147,7 +1147,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-db-folder#Apub_db_update__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-db-folder#Apub_db_update__title__1"
     }
   ]
 }

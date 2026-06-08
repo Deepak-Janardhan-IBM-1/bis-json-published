@@ -19,7 +19,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -105,7 +105,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_addComplexTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_addComplexTask__title__1"
     },
     {
       "name": "pub.scheduler:addOneTimeTask",
@@ -124,7 +124,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Server or servers on which the task is to run.(Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Server or servers on which the task is to run.(Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -175,7 +175,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A53562__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#A53562__title__1"
     },
     {
       "name": "pub.scheduler:addRepeatingTask",
@@ -194,7 +194,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -265,7 +265,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_addRepeatingTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_addRepeatingTask__title__1"
     },
     {
       "name": "pub.scheduler:cancelTask",
@@ -274,7 +274,7 @@
         {
           "name": "taskID",
           "type": "String",
-          "description": "String Identification number of the task to remove from the Scheduler. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before canceling a task: If you cancel a parent task, the task will be canceled on all servers in the cluster. If you cancel a child task, the task will be canceled only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Identification number of the task to remove from the Scheduler. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before canceling a task: If you cancel a parent task, the task will be canceled on all servers in the cluster. If you cancel a child task, the task will be canceled only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -287,7 +287,7 @@
       "usage_notes": [
         "For information about the tasks on the Scheduler, run the pub.scheduler:getTaskIDs and pub.scheduler:getTaskInfo services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_cancelTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_cancelTask__title__1"
     },
     {
       "name": "pub.scheduler:getTaskIDs",
@@ -307,7 +307,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskIDs__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskIDs__title__1"
     },
     {
       "name": "pub.scheduler:getTaskInfo",
@@ -333,7 +333,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Server or servers on which the task is to run. (Clustered environments only). A value of: $any indicates that the task will run on any, but only one, server in the cluster. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . $all indicates that the task will run on all servers in a cluster. When you schedule a task to run on all servers in the cluster, the server divides the task into a main or parent task, and a child task for each server in the cluster. You can perform some actions (activate, suspend, delete) individually on the child tasks, but if you want to change the characteristics of a task, you must do so through the parent task. For a parent task, this service returns $all in the Target parameter. For each child task, this service returns the hostname:port on which the task is to run. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . hostname indicates that the task will run on this particular server. This service returns hostname:port if: Your server is running in a cluster, a task was scheduled to run on all servers in the cluster, and this is one of the child tasks. (See the description of $all above.) Your server is running in a cluster and you requested a specific server. Your server is not running in a cluster. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Server or servers on which the task is to run. (Clustered environments only). A value of: $any indicates that the task will run on any, but only one, server in the cluster. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . $all indicates that the task will run on all servers in a cluster. When you schedule a task to run on all servers in the cluster, the server divides the task into a main or parent task, and a child task for each server in the cluster. You can perform some actions (activate, suspend, delete) individually on the child tasks, but if you want to change the characteristics of a task, you must do so through the parent task. For a parent task, this service returns $all in the Target parameter. For each child task, this service returns the hostname:port on which the task is to run. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . hostname indicates that the task will run on this particular server. This service returns hostname:port if: Your server is running in a cluster, a task was scheduled to run on all servers in the cluster, and this is one of the child tasks. (See the description of $all above.) Your server is running in a cluster and you requested a specific server. Your server is not running in a cluster. For more information about scheduled tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide ."
         },
         {
           "name": "description",
@@ -452,7 +452,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo__title__1"
     },
     {
       "name": "pub.scheduler:getUserTaskList",
@@ -471,7 +471,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A34465__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#A34465__title__1"
     },
     {
       "name": "pub.scheduler:migrateTasksToJDBC",
@@ -497,10 +497,10 @@
       ],
       "usage_notes": [
         "This service copies scheduled user tasks only; it does not copy or move information about certificate maps.",
-        "Before running this service you must install the external IS Internal database component and define a database connection for it. For instructions, refer to Installing IBM webMethods Products .",
+        "Before running this service you must install the external IS Internal database component and define a database connection for it. For instructions, refer to Installing Software AG Products .",
         "When you run the service, it looks in the embedded database for scheduled user tasks and writes any tasks it finds to the database identified by the ISInternal functional alias, which is defined on the Settings > JDBC pools page of the Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_migrateTasksToJDBC__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_migrateTasksToJDBC__title__1"
     },
     {
       "name": "pub.scheduler:resumeTask",
@@ -509,7 +509,7 @@
         {
           "name": "taskID",
           "type": "String",
-          "description": "String Identification number of the task to resume. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before resuming a task: If you resume a parent task, the task will be resumed on all servers in the cluster. If you resume a child task, the task will be resumed only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Identification number of the task to resume. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before resuming a task: If you resume a parent task, the task will be resumed on all servers in the cluster. If you resume a child task, the task will be resumed only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -520,7 +520,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#A22039__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#A22039__title__1"
     },
     {
       "name": "pub.scheduler:suspendTask",
@@ -529,7 +529,7 @@
         {
           "name": "taskID",
           "type": "String",
-          "description": "String Identification number of the task to suspend. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before canceling a task: If you suspend a parent task, the task will be suspended on all servers in the cluster. If you suspend a child task, the task will be suspended only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          "description": "String Identification number of the task to suspend. If your server runs as part of a cluster of servers, and you have scheduled a task to run on all servers in the cluster, note the following before canceling a task: If you suspend a parent task, the task will be suspended on all servers in the cluster. If you suspend a child task, the task will be suspended only on the server on which the child task was scheduled to run. For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in webMethods Integration Server Administrator’s Guide ."
         }
       ],
       "output_parameters": [
@@ -542,7 +542,7 @@
       "usage_notes": [
         "If you want to cancel a task or remove a task from the scheduler, use the pub.scheduler:cancelTask service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_suspendTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_suspendTask__title__1"
     },
     {
       "name": "pub.scheduler:updateComplexTask",
@@ -566,7 +566,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Optional. Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For clustered environments only. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Optional. Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For clustered environments only. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -656,7 +656,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateComplexTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_updateComplexTask__title__1"
     },
     {
       "name": "pub.scheduler:updateOneTimeTask",
@@ -680,7 +680,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Optional. Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Optional. Server or servers on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -729,7 +729,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateOneTimeTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_updateOneTimeTask__title__1"
     },
     {
       "name": "pub.scheduler:updateRepeatingTask",
@@ -753,7 +753,7 @@
         {
           "name": "target",
           "type": "String",
-          "description": "String Optional. Server or servers in the cluster on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
+          "description": "String Optional. Server or servers in the cluster on which the task is to run. (Clustered environments only). Set to: any to run the task on any server in the cluster. The task will run on only one of the servers. For example, suppose that all the servers in your cluster share a single database for a parts inventory application, and that a particular function needs to run against that database once a day. Any of the servers can perform this task, therefore you can specify the all option to schedule a task to run on any of the servers. Note: There is no predetermined order in which servers in the cluster are selected to run tasks. Rather, the first server to detect that a task is ready to be executed runs it. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . all to run the task on all servers in the cluster. For example, suppose you run an application on each server in the cluster, and each server maintains its own database for that application. If you need to run a cleanup task against all the databases every day, you can schedule a task to run every day on all the servers in the cluster. For more information about how Integration Server handles the scheduling of tasks in a clustered environment, see the chapter about managing services in webMethods Integration Server Administrator’s Guide . hostname to run the task on a specific server in the cluster."
         },
         {
           "name": "lateness",
@@ -822,7 +822,7 @@
         "This service updates only the fields for which you provide input parameters. If you want to clear the information in an optional field, specify blanks in the parameter for that field.",
         "You can also assign values to input parameters of services using the Assign Inputs option while scheduling a task in Integration Server Administrator."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-scheduler-folder#Apub_scheduler_updateRepeatingTask__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-scheduler-folder#Apub_scheduler_updateRepeatingTask__title__1"
     }
   ]
 }

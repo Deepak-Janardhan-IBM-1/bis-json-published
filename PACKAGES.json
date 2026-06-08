@@ -23,7 +23,7 @@
         "This service will throw an exception if the package specified in package does not exist or cannot otherwise be activated.",
         "When a package is activated, it is loaded into memory in an enabled state (that is, activatePackage automatically activates and enables the package.) You do not need to explicitly enable it with pub.packages:enablePackage."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_activatePackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_activatePackage__title__1"
     },
     {
       "name": "pub.packages:backupPackage",
@@ -42,7 +42,7 @@
         "If a package with the same name as the file produced by this service already exists in the Integration Server_directory \\instances\\instance_name\\replicate\\inbound directory, the service overwrites the existing .zip file with the backup copy that the service creates.",
         "The backed up package is an exact copy of the specified package. Package metadata, such as creation timestamp, will be the same in the backup as in the original package. This is unlike package replication or package archiving in which the creation timestamp reflects the time the package was replicated or archived."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#idefb64e94-4320-4b7f-a8b7-327b1084f167__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#idefb64e94-4320-4b7f-a8b7-327b1084f167__title__1"
     },
     {
       "name": "pub.packages:disablePackage",
@@ -66,7 +66,7 @@
         "Be aware that if you disable a package while services in the package are being executed, those services will most likely fail. disablePackage does not wait for in-progress services to finish before disabling a package.",
         "This service will throw an exception if the package specified in package does not exist or cannot otherwise be disabled."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_disablePackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_disablePackage__title__1"
     },
     {
       "name": "pub.packages:enablePackage",
@@ -89,7 +89,7 @@
         "When you enable a package, the package is reloaded into memory from disk.",
         "This service will throw an exception if the package specified in package does not exist, has not been activated, or cannot otherwise be enabled."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_enablePackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_enablePackage__title__1"
     },
     {
       "name": "pub.packages.hotdeployment:cancel",
@@ -109,7 +109,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#id2bd79764-1d5f-482f-8611-095ff5b9556d__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#id2bd79764-1d5f-482f-8611-095ff5b9556d__title__1"
     },
     {
       "name": "pub.packages:installPackage",
@@ -144,7 +144,7 @@
         "If hot deployment of packages is enabled, Integration Server installs the package using the hot deployment process.",
         "The Integration Server must run in a version of the JVM whose major version is greater than or equal to the JVM version required by the package. For example, if the specified JVM version for a package release is 1.8.0_32, the installing Integration Server must be running in a JVM that is 1.8 or higher. If the major version of the Integration Server JVM is less than the JVM version required by the package, Integration Server installs but does not activate the package."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_installPackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_installPackage__title__1"
     },
     {
       "name": "pub.packages:recoverPackage",
@@ -173,7 +173,7 @@
         "If you recover a package that is currently installed on the server, the package from the salvage directory replaces the version that is currently installed. (Be aware that the server does not retain a copy of the version that it replaces.)",
         "This service will throw an exception if the file named in package does not exist in the server's salvage directory or cannot otherwise be recovered."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_recoverPackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_recoverPackage__title__1"
     },
     {
       "name": "pub.packages:reloadPackage",
@@ -196,7 +196,7 @@
         "Be aware that if you reload a package while services in the package are being executed, those services will most likely fail. reloadPackage does not wait for in-progress services to finish before reloading a package.",
         "This service will throw an exception if the file named in package does not exist or cannot otherwise be reloaded."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_reloadPackage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_reloadPackage__title__1"
     },
     {
       "name": "pub.packages:updateHomePage",
@@ -228,9 +228,9 @@
       "usage_notes": [
         "After creating a custom package, you must run the pub.packages:updateHomePage service with replaceHTML set to true to see the updated package documentation. When the replaceHTML value is true, the service overrides the existing content in the index.html file. If the replaceHTML value is false, the index.html file retains the existing content.",
         "To see the subsequent changes to the package, run the service again from Integration Server Administrator by regenerating the home page. This invokes the pub.packages:updateHomePage service with replaceHTML as false. If you need to update the changes in the index.html file, run the service with replaceHTML set to true.",
-        "You can access the package home page even when Integration Server Administrator session expires. For more information on viewing package information and generating package documentation, see the webMethods Integration Server Administrator’s Guide and IBM webMethods Service Development Help ."
+        "You can access the package home page even when Integration Server Administrator session expires. For more information on viewing package information and generating package documentation, see the webMethods Integration Server Administrator’s Guide and webMethods Service Development Help ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-packages-folder#Apub_packages_updateHomePage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-packages-folder#Apub_packages_updateHomePage__title__1"
     }
   ]
 }

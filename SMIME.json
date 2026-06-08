@@ -22,7 +22,7 @@
       "usage_notes": [
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_CreatCertsOnlyMessage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_CreatCertsOnlyMessage__title__1"
     },
     {
       "name": "pub.smime:createEncryptedData",
@@ -59,7 +59,7 @@
       "usage_notes": [
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_createEncryptedData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_createEncryptedData__title__1"
     },
     {
       "name": "pub.smime:createSignedAndEncryptedData",
@@ -117,7 +117,7 @@
         "This service is superseded by pub.smime.keystore:createSignedAndEncryptedData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_createSignedAndEncryptedData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_createSignedAndEncryptedData__title__1"
     },
     {
       "name": "pub.smime:createSignedData",
@@ -160,7 +160,7 @@
         "This service is superseded by pub.smime.keystore:createSignedData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_createSignedData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_createSignedData__title__1"
     },
     {
       "name": "pub.smime:processCertsOnlyData",
@@ -180,7 +180,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_getContentType__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_getContentType__title__1"
     },
     {
       "name": "pub.smime:processEncryptedData",
@@ -238,7 +238,7 @@
         "This service is superseded by pub.smime.keystore:processEncryptedData.",
         "If the decrypted message is signed or encrypted, mimeData will be empty, and the decrypted message will reside in stream. You can check the state of the signed and encrypted output variables to determine whether the decrypted message requires additional processing, and pass stream to the pub.smime:processSignedData or pub.smime:processEncryptedData service as necessary."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_processEncryptedData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_processEncryptedData__title__1"
     },
     {
       "name": "pub.smime:processSignedData",
@@ -326,7 +326,7 @@
         "If verify is false, the errorCode and errorMessage values will indicate the error that caused the failure. Note that errorCode values 5 through 7 do not represent signature-validation failures and, therefore, do not cause the verify flag to be set to false.",
         "If the extracted entity is signed or encrypted, mimeData will be empty, and the extracted entity will reside in stream. You can check the state of the signed and encrypted output variables to determine whether the extracted entity requires additional processing, and pass stream to the pub.smime:processEncryptedData service as necessary."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#Apub_smime_processSignedData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#Apub_smime_processSignedData__title__1"
     },
     {
       "name": "pub.smime.keystore:createSignedAndEncryptedData",
@@ -385,7 +385,7 @@
         "You must use this service when you want to create a message that is both signed and encrypted.",
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#A11884__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#A11884__title__1"
     },
     {
       "name": "pub.smime.keystore:createSignedData",
@@ -428,7 +428,7 @@
         "This service supersedes pub.smime:createSignedData.",
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#A28332__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#A28332__title__1"
     },
     {
       "name": "pub.smime.keystore:processEncryptedData",
@@ -486,7 +486,7 @@
         "This service supersedes pub.smime:processEncryptedData.",
         "For information about using aliases for keystores, truststores, and private keys, see Creating a Keystore and Truststore."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-smime-folder#A38797__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-smime-folder#A38797__title__1"
     }
   ]
 }

@@ -17,7 +17,7 @@
         "Use this service to acknowledge a message retrieved from the JMS provider if:",
         "A message is not considered to be successfully consumed until it is acknowledged."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_acknowledge__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_acknowledge__title__1"
     },
     {
       "name": "pub.jms:batchTriggerSpec",
@@ -34,7 +34,7 @@
         "Use this specification as the signature for JMS trigger services that will retrieve and process a batch of messages.",
         "If you want to use a JMS trigger to retrieve and process one message at a time, use pub.jms:triggerSpec to declare the signature of the JMS trigger service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_batchTriggerSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_batchTriggerSpec__title__1"
     },
     {
       "name": "pub.jms:createConsumer",
@@ -43,12 +43,12 @@
         {
           "name": "connectionAliasName",
           "type": "String",
-          "description": "String Name of the JMS connection alias that you want the message consumer to receive messages. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the IBM webMethods Broker."
+          "description": "String Name of the JMS connection alias that you want the message consumer to receive messages. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the webMethods Broker."
         },
         {
           "name": "destinationName",
           "type": "String",
-          "description": "String Name or lookup name of the Destination from which you want the message consumer to receive messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker."
+          "description": "String Name or lookup name of the Destination from which you want the message consumer to receive messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker."
         },
         {
           "name": "destinationType",
@@ -92,10 +92,10 @@
         "If a durable subscription already exists for the specified durable subscriber on the JMS provider, this service resumes the subscription.",
         "A non-durable subscription allows subscribers to receive messages on their chosen topic, only if the messages are published while the subscriber is active. A non-durable subscription lasts the lifetime of its message consumer.",
         "If the acknowledgment Mode field is set to CLIENT_ACKNOWLEDGE, you must acknowledge messages received by this consumer to the JMS provider using the pub.jms:acknowledge service.",
-        "If the message consumer created by this service will be used to receive large message streams from the IBM webMethods Broker, make sure to specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. If the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE, the message consumer cannot be used to receive large message streams.",
+        "If the message consumer created by this service will be used to receive large message streams from the webMethods Broker, make sure to specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. If the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE, the message consumer cannot be used to receive large message streams.",
         "If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the connectionAliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination when the service executes. The ability to create administered objects on demand applies only when Universal Messaging is the JMS provider. For more information about creating administered objects on demand, see Creating Administered Objects ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_createConsumer__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_createConsumer__title__1"
     },
     {
       "name": "pub.jms:documentResolverSpec",
@@ -130,10 +130,10 @@
         }
       ],
       "usage_notes": [
-        "The pub.jms:documentResolverSpec must be used as the signature for a document resolver service used to determine the processing status of a JMS message received by a JMS trigger. For information about building a document resolver service and enabling exactly once processing for a JMS message, see Using IBM webMethods Integration Server to Build a Client for JMS .",
-        "Use pub.publish:documentResolverSpec as the signature for a document resolver service used to determine the status of document received IBM webMethods messaging trigger."
+        "The pub.jms:documentResolverSpec must be used as the signature for a document resolver service used to determine the processing status of a JMS message received by a JMS trigger. For information about building a document resolver service and enabling exactly once processing for a JMS message, see Using webMethods Integration Server to Build a Client for JMS .",
+        "Use pub.publish:documentResolverSpec as the signature for a document resolver service used to determine the status of document received a webMethods messaging trigger."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#A96064__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#A96064__title__1"
     },
     {
       "name": "pub.jms:JMSMessage",
@@ -141,7 +141,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_JMSMessage__title__1"
     },
     {
       "name": "pub.jms:receive",
@@ -277,13 +277,13 @@
       ],
       "usage_notes": [
         "Use this service to receive a message from the JMS provider on demand. Receiving a message on demand provides more control over when and how Integration Server receives a message; however, it may not be as efficient or practical as using a JMS trigger to listen for and then receive the message.",
-        "To listen for messages and receive them when they are available, create a JMS trigger that listens to the destination. For more information about creating a JMS trigger, see the IBM webMethods Service Development Help .",
+        "To listen for messages and receive them when they are available, create a JMS trigger that listens to the destination. For more information about creating a JMS trigger, see the webMethods Service Development Help .",
         "If the timeout period elapses before a message is received, the value of JMSMessage is null.",
         "The message consumer that you use to receive the message determines the destination from which this services receives messages and the JMS connection alias used to receive the messages. You can create a message consumer object using the pub.jms:createConsumer service.",
         "After you receive a message, you need to invoke a service that processes the message.",
         "If the acknowledgment mode of the consumer is set to CLIENT_ACKNOWLEDGE, use the pub.jms:acknowledge service to acknowledge the message to the JMS provider."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_receive__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_receive__title__1"
     },
     {
       "name": "pub.jms:reply",
@@ -487,11 +487,11 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:reply service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:replyservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:replyservice take precedence.",
-        "Use a pub.jms:reply service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Software AG recommends that you use a pub.jms:reply service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging.",
         "Message priority is not supported when Universal Messaging is the JMS provider. Any value specified in the priority field will be ignored."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_reply__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_reply__title__1"
     },
     {
       "name": "pub.jms:send",
@@ -500,12 +500,12 @@
         {
           "name": "connectionAlias Name",
           "type": "String",
-          "description": "String Name of the JMS connection alias that you want to use to send the message. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the IBM webMethods Broker."
+          "description": "String Name of the JMS connection alias that you want to use to send the message. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the webMethods Broker."
         },
         {
           "name": "destinationName",
           "type": "String",
-          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker."
+          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker."
         },
         {
           "name": "destinationType",
@@ -535,7 +535,7 @@
         {
           "name": "replyTo",
           "type": "String",
-          "description": "String. Optional. Name or lookup name of the destination to which you want a reply message sent. If the JMS connection alias used by the pub.jms:send service connects to the JMS provider using JNDI, set replyTo to be the lookup name of the destination lookup object name. If the JMS connection alias used by the pub.jms:send service connects to the JMS provider using a native Broker connection, set replyTo to the Broker queue name. That is, if the JMS connection alias specifies the Broker as the JMS provider and uses the native webMethods API to connect directly to the IBM webMethods Broker, specify the name of the queue on the Broker that should receive replies to the message. Note: When using the native webMethods API to connect to the Broker, the replyTo destination must be a queue. Topics are not supported"
+          "description": "String. Optional. Name or lookup name of the destination to which you want a reply message sent. If the JMS connection alias used by the pub.jms:send service connects to the JMS provider using JNDI, set replyTo to be the lookup name of the destination lookup object name. If the JMS connection alias used by the pub.jms:send service connects to the JMS provider using a native Broker connection, set replyTo to the Broker queue name. That is, if the JMS connection alias specifies the Broker as the JMS provider and uses the native webMethods API to connect directly to the webMethods Broker, specify the name of the queue on the Broker that should receive replies to the message. Note: When using the native webMethods API to connect to the Broker, the replyTo destination must be a queue. Topics are not supported"
         },
         {
           "name": "timeToLive",
@@ -560,7 +560,7 @@
         {
           "name": "JMS_WMClusterNodes",
           "type": "",
-          "description": "Important: IBM requires that you specify the value for JMS_WMClusterNodes by mapping the contents of the service output parameter JMS_WMClusterNodes produced by a previous invocation of pub.jms:send or pub.jms:sendAndWait. Use this field to override a Broker cluster policy when all of the following are true: The Broker Server is the JMS provider. The JMS connection alias used to send the message (connectionAliasName) uses a connection from a cluster connection factory. The cluster connection factory permits the applied policy to be overridden. Leave this field blank if the above conditions are not met or if you want the JMS message to be distributed according to the policy applied to the cluster connection factory."
+          "description": "Important: Software AG requires that you specify the value for JMS_WMClusterNodes by mapping the contents of the service output parameter JMS_WMClusterNodes produced by a previous invocation of pub.jms:send or pub.jms:sendAndWait. Use this field to override a Broker cluster policy when all of the following are true: The Broker Server is the JMS provider. The JMS connection alias used to send the message (connectionAliasName) uses a connection from a cluster connection factory. The cluster connection factory permits the applied policy to be overridden. Leave this field blank if the above conditions are not met or if you want the JMS message to be distributed according to the policy applied to the cluster connection factory."
         },
         {
           "name": "activation",
@@ -719,7 +719,7 @@
         "The pub.jms:send service creates a JMS message (javax.jms.Message) based on input provided to the service or takes an existing JMS message and sends it to the JMS provider.",
         "If a transaction has not yet been started, the transaction manager starts a transaction context for an implicit transaction when Integration Server executes a pub.jms:send service that uses a transacted JMS connection alias. A JMS connection alias is considered to be transacted when it has a transaction type of XA TRANSACTION or LOCAL TRANSACTION.",
         "You can add properties to a JMS message when building a flow service that invokes this service. In Designer, use the Pipeline view to add a new variable to JMSMessage/properties document.",
-        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the IBM webMethods Broker should send the message.",
+        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the webMethods Broker should send the message.",
         "If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the connectionAliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination when the service executes. The ability to create administered objects on demand applies only when Universal Messaging is the JMS provider. For more information about creating administered objects on demand, see Creating Administered Objects .",
         "Integration Server creates the output parameter JMSMessage because some of the header fields in a JMS message are populated by the JMS provider after the message is sent. For example, the header field JMSMessageID is not in the JMS message sent by Integration Server, but JMSMessageID is in the header after the JMS provider receives the message.",
         "When sending a JMS message to Universal Messaging, Integration Server sets the JMSMessageID.",
@@ -731,15 +731,15 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendservice take precedence.",
-        "Use a pub.jms:send service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Software AG recommends that you use a pub.jms:send service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
-        "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using IBM webMethods Integration Server to Build a Client for JMS .",
+        "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using webMethods Integration Server to Build a Client for JMS .",
         "You can use the pub.jms:send service to specify a destination for response messages when you do not need to wait for the response. The act of waiting for a response message comes with extra overhead for Integration Server which is unnecessary if you merely want to specify a JMSReplyTo destination but do not want the sending service to wait for a reply.",
         "When executing the pub.jms:send service with a valid value for the JMSMessage/header/replyTo parameter, Integration Server creates the javax.jms.Destination and maps it to the JMSReplyTo field within the message header. Integration Server sends the message and returns immediately. The service does not wait for the response message. If JMSMessage/header/replyTo is empty, then Integration Server does not set the JMSReplyTo header for the JMS message. If JMSMessage/header/replyTo is invalid, then Integration Server throws a ServiceException.",
         "When the body of the message is supplied as an IData in the JMSMessage/body/data input parameter, the pub.jms:send service sends a message that is twice the size of the original IData. This occurs because Integration Server encodes the IData as a byte array using IDataBinCoder which encodes data as two-byte instead of single-byte when sending the message. This causes a dramatic increase in message size. When Universal Messaging is the JMS provider, this can result in the default 20 MB max buffer size being exceeded when the IData for the message body is just 10 MB. To resolve this issue, Integration Server includes a custom property to indicate that the message should be encoded as XML and decoded from XML instead of as a byte array. When creating a service that invokes the pub.jms:send add the following custom property of type String and value to the JMSMessage/properties document in the pipeline: $coderType = idata_xml_bytes. The presence of the custom property $coderType and the value idata_xml_bytes instructs the sending Integration Server to encode the IData message as XML using IDataXMLCoder. The same property and value also instructs the receiving Integration Server to decode the JMS message as XML to IData."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_send__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_send__title__1"
     },
     {
       "name": "pub.jms:sendAndWait",
@@ -748,12 +748,12 @@
         {
           "name": "connectionAliasName",
           "type": "String",
-          "description": "String Name of the JMS connection alias that you want to use to send the message. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the IBM webMethods Broker."
+          "description": "String Name of the JMS connection alias that you want to use to send the message. The JMS connection alias indicates how Integration Server connects to the JMS provider. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the webMethods Broker."
         },
         {
           "name": "destinationName",
           "type": "String",
-          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker."
+          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker."
         },
         {
           "name": "destinationType",
@@ -763,7 +763,7 @@
         {
           "name": "destinationName ReplyTo",
           "type": "String",
-          "description": "String. Optional. Name or lookup name of the Destination to which you want the reply message sent. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker. If you do not specify a destination for reply messages, Integration Server uses a temporaryQueue to receive the reply. A temporaryQueue is a queue object created for the duration of a particular connection. It can only be consumed by the connection from which it was created. If you want to use a dedicated listener (MessageConsumer) to retrieve replies to all requests sent using a particular JMS connection alias, do not specify a value for destinationNameReplyTo. A dedicated MessageConsumer can retrieve replies for a synchronous request/reply only. If you want to use the client side queue with an asynchronous request-reply, you must specify a queue that is not temporary as the destinationNameReplyTo value."
+          "description": "String. Optional. Name or lookup name of the Destination to which you want the reply message sent. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker. If you do not specify a destination for reply messages, Integration Server uses a temporaryQueue to receive the reply. A temporaryQueue is a queue object created for the duration of a particular connection. It can only be consumed by the connection from which it was created. If you want to use a dedicated listener (MessageConsumer) to retrieve replies to all requests sent using a particular JMS connection alias, do not specify a value for destinationNameReplyTo. A dedicated MessageConsumer can retrieve replies for a synchronous request/reply only. If you want to use the client side queue with an asynchronous request-reply, you must specify a queue that is not temporary as the destinationNameReplyTo value."
         },
         {
           "name": "destinationType ReplyTo",
@@ -818,7 +818,7 @@
         {
           "name": "JMS_WMClusterNodes",
           "type": "",
-          "description": "Important: IBM requires that you specify the value for JMS_WMClusterNodes by mapping the contents of the service output parameter JMS_WMClusterNodes produced by a previous invocation of pub.jms:send or pub.jms:sendAndWait. Use this field to override a Broker cluster policy when all of the following are true: The Broker Server is the JMS provider. The JMS connection alias used to send the message (connectionAliasName) uses a connection from a cluster connection factory. The cluster connection factory permits the applied policy to be overridden. Leave this field blank if the above conditions are not met or if you want the JMS message to be distributed according to the policy applied to the cluster connection factory."
+          "description": "Important: Software AG requires that you specify the value for JMS_WMClusterNodes by mapping the contents of the service output parameter JMS_WMClusterNodes produced by a previous invocation of pub.jms:send or pub.jms:sendAndWait. Use this field to override a Broker cluster policy when all of the following are true: The Broker Server is the JMS provider. The JMS connection alias used to send the message (connectionAliasName) uses a connection from a cluster connection factory. The cluster connection factory permits the applied policy to be overridden. Leave this field blank if the above conditions are not met or if you want the JMS message to be distributed according to the policy applied to the cluster connection factory."
         },
         {
           "name": "activation",
@@ -1112,7 +1112,7 @@
         "Thepub.jms:sendAndWait service creates a JMS message (javax.jms.Message) based on input provided to the service or takes an existing JMS message, sends it to the JMS provider and optionally, waits for a reply.",
         "If a transaction has not been started, the transaction manager starts a transaction context for an implicit transaction when Integration Server executes a pub.jms:sendAndWait service that uses a transacted JMS connection alias. A JMS connection alias is considered to be transacted when it has a transaction type of XA TRANSACTION or LOCAL TRANSACTION.",
         "You can add properties to a JMS message when building a flow service that invokes this service. In Designer, use the Pipeline view to add a new variable to JMSMessage/properties document.",
-        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the IBM webMethods Broker should send the message.",
+        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the webMethods Broker should send the message.",
         "If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the connectionAliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination when the service executes. The ability to create administered objects on demand applies only when Universal Messaging is the JMS provider. For more information about creating administered objects on demand, see Creating Administered Objects .",
         "Integration Server creates the output parameter JMSMessage because some of the header fields in a JMS message are populated by the JMS provider after the message is sent. For example, the header field JMSMessageID is not in the JMS message sent by Integration Server, but JMSMessageID is in the header after the JMS provider receives the message.",
         "When sending a JMS message to Universal Messaging, Integration Server sets the JMSMessageID.",
@@ -1136,28 +1136,28 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendAndWaitservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendAndWaitservice take precedence.",
-        "Use a pub.jms:sendAndWait service to create and send the JMS message. This method may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Software AG recommends that you use a pub.jms:sendAndWait service to create and send the JMS message. This method may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:sendAndWait service.",
-        "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using IBM webMethods Integration Server to Build a Client for JMS .",
+        "If you use the input parameter JMS_WMClusterNodes to override the policy applied to the cluster connection factory, make sure to code the invoking service to handle any exception that the Broker Server throws when policy requirements are not or cannot be met. For more information about policy override scenarios that might result in an exception from Broker Server, see Using webMethods Integration Server to Build a Client for JMS .",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging.",
         "You can use the pub.jms:send service to specify a destination for response messages when you do not need to wait for the response. The act of waiting for a response message comes with extra overhead for Integration Server which is unnecessary if you merely want to specify a JMSReplyTo destination but do not want the sending service to wait for a reply. For more information, see the JMSMessage/header/replyTo input parameter description and Usage Notes in pub.jms:JMSMessage."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_sendAndWait__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_sendAndWait__title__1"
     },
     {
       "name": "pub.jms:sendBatch",
-      "description": "WmPublic. Sends a group of JMS messages to the same destination on the IBM webMethods Broker.",
+      "description": "WmPublic. Sends a group of JMS messages to the same destination on the webMethods Broker.",
       "input_parameters": [
         {
           "name": "connectionAliasName",
           "type": "String",
-          "description": "String Name of the JMS connection alias that you want to use to send the messages. The JMS connection alias indicates how Integration Server connects to the IBM webMethods Broker or Universal Messaging. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the IBM webMethods Broker. Note: connectionAliasName must specify a JMS connection alias that uses the IBM webMethods Broker or Universal Messaging as the JMS provider."
+          "description": "String Name of the JMS connection alias that you want to use to send the messages. The JMS connection alias indicates how Integration Server connects to the webMethods Broker or Universal Messaging. A JMS connection alias can specify that Integration Server use a JNDI provider to look up administered objects (connection factories and destinations) and then use the connection factory to create a connection. Alternatively, a JMS connection alias can specify that Integration Server uses the native webMethods API to create the connection directly on the webMethods Broker. Note: connectionAliasName must specify a JMS connection alias that uses the webMethods Broker or Universal Messaging as the JMS provider."
         },
         {
           "name": "destinationName",
           "type": "String",
-          "description": "String Name or lookup name of the Destination to which you want to send the messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker. Note: When using the pub.jms:batchSend service, Integration Server sends all messages to the same destination."
+          "description": "String Name or lookup name of the Destination to which you want to send the messages. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker. Note: When using the pub.jms:batchSend service, Integration Server sends all messages to the same destination."
         },
         {
           "name": "destinationType",
@@ -1348,12 +1348,12 @@
         }
       ],
       "usage_notes": [
-        "The pub.jms:sendBatch service can be used with IBM webMethods Broker or Universal Messaging only. If you set the connectionAliasName parameter to a JMS connection alias that uses a different JMS provider, the pub.jms:sendBatch service ends with an exception.",
+        "The pub.jms:sendBatch service can be used with webMethods Broker or Universal Messaging only. If you set the connectionAliasName parameter to a JMS connection alias that uses a different JMS provider, the pub.jms:sendBatch service ends with an exception.",
         "The pub.jms:sendBatch service creates multiple JMS messages (javax.jms.Message) based on input provided to the service or takes existing JMS messages and sends them to the JMS provider.",
         "Sending a batch of messages using the pub.jms:sendBatch service is an all or nothing operation. If Integration Server or the JMS provider determines that one of the messages is not valid during a pre-processing check, none of the messages will be sent. Make sure to code your service to handle this possibility.",
         "When Integration Server executes a pub.jms:sendBatch service that uses a transacted JMS connection alias, Integration Server sends the messages as part of a transaction. If a transaction has not yet been started, the transaction manager starts a transaction context for an implicit transaction A JMS connection alias is considered to be transacted when it has a transaction type of XA TRANSACTION or LOCAL TRANSACTION.",
         "You can add properties to a JMS message when building a flow service that invokes this service. To add a new property, use the Pipeline to add a new variable to JMSMessages/properties document.",
-        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the IBM webMethods Broker should send the message.",
+        "If the JMS connection alias specified for connectionAliasName uses the native webMethods API, you need to specify destinationName and destinationType to indicate where the webMethods Broker should send the message.",
         "If you specify a destination that does not exist in the JNDI namespace and the JMS connection alias specified for the connectionAliasName input parameter is configured to create administered objects on demand, Integration Server creates the destination when the service executes. The ability to create administered objects on demand applies only when Universal Messaging is the JMS provider. For more information about creating administered objects on demand, see Creating Administered Objects .",
         "Integration Server creates the output parameter JMSMessages because some of the header fields in a JMS message are populated by the JMS provider after the message is sent. For example, the header field JMSMessageID is not in the JMS message sent by Integration Server, but JMSMessageID is in the header after the JMS provider receives the message.",
         "When sending a JMS message to Universal Messaging, Integration Server sets the JMSMessageID.",
@@ -1364,12 +1364,12 @@
         "If you want more control over the actual javax.jms.Message that Integration Server sends to the JMS provider, you can create a Java service that calls the com.wm.app.b2b.server.jms.producer.ProducerFacade class, which will create a javax.jms.Message. See:",
         "The Java service calling this API must return an Object of type javax.jms.Message, which can then be mapped to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When creating the javax.jms.Message with the com.wm.app.b2b.server.jms.producer.ProducerFacade, you can use the javax.jms.Message setter methods to set the values of the message headers and properties directly. You can also set the value of message headers and properties using the input parameters of the pub.jms:sendservice that you use to send the message. If you set the message headers and properties both ways, the values provided to the pub.jms:sendservice take precedence.",
-        "Use a pub.jms:sendBatch service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
+        "Software AG recommends that you use a pub.jms:sendBatch service to create and send the JMS message. This may provide better performance on average. However, if you want to send a StreamMessage or a MapMessage, you need to use the appropriate com.wm.app.b2b.server.jms.producer.ProducerFacade API.",
         "To send a StreamMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createStreamMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "To send a MapMessage, create a Java service that calls com.wm.app.b2b.server.jms.producer.ProducerFacade.createMapMessage(String).The Java service calling this API must return an Object of type javax.jms.Message. Map the javax.jms.Message object to the JMSMessage/body/message input parameter of the pub.jms:send service.",
         "When using Universal Messaging as the JMS provider, the JMS client can use synchronous or asynchronous publishing. To ensure delivery of a persistent JMS message (deliveryMode is set to PERSISTENT), Integration Server always uses synchronous publishing to send a persistent JMS message to Universal Messaging."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#idff622fdb-4b11-4e93-b5a7-142af276ab16__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#idff622fdb-4b11-4e93-b5a7-142af276ab16__title__1"
     },
     {
       "name": "pub.jms:triggerSpec",
@@ -1385,7 +1385,7 @@
       "usage_notes": [
         "If you want to use a JMS trigger to retrieve and process multiple messages in one batch, use pub.jms:batchTriggerSpec to declare the inputs and outputs of the JMS trigger service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_triggerSpec__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_triggerSpec__title__1"
     },
     {
       "name": "pub.jms:waitForReply",
@@ -1399,7 +1399,7 @@
         {
           "name": "timeout",
           "type": "java.lang.Long",
-          "description": "java.lang.Long. Optional. Time to wait (in milliseconds) for the reply to arrive. If timeout is greater than 0 (zero) and a reply is not available at the time the pub.jms:waitForReply service executes, the service continues to wait for the document until the time specified in the timeout parameter elapses. If the service does not receive a reply by the time the timeout interval elapses, the pub.jms:waitForReply service returns a null document. If timeout is set to 0 (zero), the pub.jms:waitForReply service waits indefinitely for a response. IBM does not recommend setting timeout to 0 (zero). If timeout is not set, the pub.jms:waitForReply service does not wait for a reply. The pub.jms:waitForReply service always returns a null document. The service returns a null document even if the reply queue contains a response for the request."
+          "description": "java.lang.Long. Optional. Time to wait (in milliseconds) for the reply to arrive. If timeout is greater than 0 (zero) and a reply is not available at the time the pub.jms:waitForReply service executes, the service continues to wait for the document until the time specified in the timeout parameter elapses. If the service does not receive a reply by the time the timeout interval elapses, the pub.jms:waitForReply service returns a null document. If timeout is set to 0 (zero), the pub.jms:waitForReply service waits indefinitely for a response. Software AG does not recommend setting timeout to 0 (zero). If timeout is not set, the pub.jms:waitForReply service does not wait for a reply. The pub.jms:waitForReply service always returns a null document. The service returns a null document even if the reply queue contains a response for the request."
         }
       ],
       "output_parameters": [
@@ -1526,7 +1526,7 @@
         "The pub.jms:waitForReply service cannot be used to retrieve response to requests that were routed through the client side queue. To retrieve the response, create a JMS trigger that subscribes to the reply queue.",
         "If the pub.jms:sendAndWait service executes and the message is sent directly to the JMS provider (i.e., it is not sent to the client side queue), the JMSMessage\\header\\JMSMessageID contains a unique identifier assigned by the JMS provider. If the JMSMessageID field is null after the service executes, the JMS provider was not available at the time the service executed. Integration Server wrote the message to the client side queue."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_waitForReply__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_waitForReply__title__1"
     },
     {
       "name": "pub.jms.wmjms:receiveStream",
@@ -1551,20 +1551,20 @@
         }
       ],
       "usage_notes": [
-        "IBM webMethods Broker is deprecated, resulting in the deprecation of the pub.jms.wmjms:receiveStream service. There is no replacement service.",
-        "When using IBM webMethods Broker as the JMS provider, the webMethods message streaming feature allows you to stream large amounts of data or a large file from a message producer to a message consumer.",
+        "webMethods Broker is deprecated, resulting in the deprecation of the pub.jms.wmjms:receiveStream service. There is no replacement service.",
+        "When using webMethods Broker as the JMS provider, the webMethods message streaming feature allows you to stream large amounts of data or a large file from a message producer to a message consumer.",
         "Large message streams cannot be sent or received as part of a transaction. If the JMS connection alias used by the consumer has a transaction type of LOCAL_TRANSACTION or XA_TRANSACTION, Integration Server throws an exception, specifically com.wm.app.b2b.server.jms.JMSSubsystemException, when it executes the pub.jms.wmjms:receiveStream service.",
         "The consumer that you use to receive the message determines the destination from which this services receives messages and the JMS connection alias used to receive the messages. You can create a message consumer object using the pub.jms:createConsumer service.",
         "The timeout value specifies how long the message consumer waits for the initial part of the message stream. If a message is not returned when the time out period elapses, the pub.jms.wmjms:receiveStream returns a null value.",
         "The read timeout is the maximum length of time the consumer waits between receiving subsequent pieces of the message stream. After the read timeout elapses, the consumer calls InputStream.read() to read the next byte of the stream. If the next byte of the stream is not available, Integration Server throws a WmReadTimeoutException. The read timeout only applies after the consumer receives the first part of the message stream. The watt.server.jms.wmjms.lms.readTimeout property determines the read timeout value. The default is 30000 milliseconds.",
-        "Make sure to code your service to handle a WmReadTimeoutException. When an WmReadTimeoutException occurs, it suggests that Integration Server did not receive the entire message stream. When this occurs, you need to close the stream, which will acknowledge it to the IBM webMethods Broker. You can close the stream from a Java service by calling Input.Stream.close. You can also close the stream using the pub.io:close service.",
-        "If the connection between the Integration Server and IBM webMethods Broker fails during execution of the pub.jms.wmjms:receiveStream service, Integration Server throws a WmConnectionException. When this occurs, Integration Server rolls the message back to the IBM webMethods Broker automatically. The message can be received when the connection to the IBM webMethods Broker is re-established.",
+        "Make sure to code your service to handle a WmReadTimeoutException. When an WmReadTimeoutException occurs, it suggests that Integration Server did not receive the entire message stream. When this occurs, you need to close the stream, which will acknowledge it to the webMethods Broker. You can close the stream from a Java service by calling Input.Stream.close. You can also close the stream using the pub.io:close service.",
+        "If the connection between the Integration Server and webMethods Broker fails during execution of the pub.jms.wmjms:receiveStream service, Integration Server throws a WmConnectionException. When this occurs, Integration Server rolls the message back to the webMethods Broker automatically. The message can be received when the connection to the webMethods Broker is re-established.",
         "You can code your service to implement recoverability logic. This means that the next time the message stream is received, the service re-processes the message stream from the point at which processing stopped. To resume processing from the correct point, the service needs to keep track of the message ID and byte position. For more details, com.webmethods.jms.impl.WmJMSInputStream.",
         "After the pub.jms.wmjms:receiveStream receives and processes the last part of the message stream, you need to close the stream. InputStream.read() returns \"-1\" when the end of the stream is reached. You can close the stream from a Java service by calling Input.Stream.close. You can also close the stream using the pub.io:close service. Closing the stream explicitly acknowledges the message to the provider.",
-        "The consumer used to receive large message streams from the IBM webMethods Broker can specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. IBM webMethods Broker does not permit the use of the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE for the webMethods message streaming feature.",
-        "You might want to use the scheduler capabilities within Integration Server to schedule a service that receives and then process large messages from IBM webMethods Broker For more information about scheduling services, see Scheduling a User Task ."
+        "The consumer used to receive large message streams from the webMethods Broker can specify an acknowledgmentMode of AUTO_ACKNOWLEDGE or CLIENT_ACKNOWLEDGE. webMethods Broker does not permit the use of the acknowledgmentMode is DUPS_OK_ACKNOWLEDGE for the webMethods message streaming feature.",
+        "You might want to use the scheduler capabilities within Integration Server to schedule a service that receives and then process large messages from webMethods Broker For more information about scheduling services, see Scheduling a User Task ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_wmjms_receiveStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_wmjms_receiveStream__title__1"
     },
     {
       "name": "pub.jms.wmjms:sendStream",
@@ -1578,7 +1578,7 @@
         {
           "name": "destinationName",
           "type": "String",
-          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the IBM webMethods Broker."
+          "description": "String Name or lookup name of the Destination to which you want to send the message. Specify the lookup name of the Destination object when the JMS connection alias uses JNDI to retrieve administered objects. Specify the provider-specific name of the Destination when the JMS connection alias uses the native webMethods API to connect directly to the webMethods Broker."
         },
         {
           "name": "destinationType",
@@ -1588,17 +1588,17 @@
         {
           "name": "stream",
           "type": "Object",
-          "description": "Object A stream for the message you want to send to the IBM webMethods Broker."
+          "description": "Object A stream for the message you want to send to the webMethods Broker."
         }
       ],
       "output_parameters": [],
       "usage_notes": [
-        "IBM webMethods Broker is deprecated, resulting in the deprecation of the pub.jms.wmjms:sendStream service. There is no replacement service.",
-        "When using the IBM webMethods Broker as the JMS provider, the webMethods message streaming feature allows you to stream large amounts of data or a large file from a message producer to a message consumer. You can only send and receive large messages from Integration Server when working with the IBM webMethods Broker. For more information about how the webMethods message streaming feature works on the IBM webMethods Broker, see the IBM webMethods Broker Messaging Programmer’s Guide .",
+        "webMethods Broker is deprecated, resulting in the deprecation of the pub.jms.wmjms:sendStream service. There is no replacement service.",
+        "When using the webMethods Broker as the JMS provider, the webMethods message streaming feature allows you to stream large amounts of data or a large file from a message producer to a message consumer. You can only send and receive large messages from Integration Server when working with the webMethods Broker. For more information about how the webMethods message streaming feature works on the webMethods Broker, see the webMethods Broker Messaging Programmer’s Guide .",
         "Large message streams cannot be sent or received as part of a transaction. If connectionAliasName specifies a JMS connection alias with a transaction type of LOCAL_TRANSACTION or XA_TRANSACTION, Integration Server throws the exception com.wm.app.b2b.server.jms.JMSSubsystemException when it executes the pub.jms.wmjms:sendStream service.",
-        "If the connection between Integration Server and the IBM webMethods Broker fails before the pub.jms.wmjms:sendStream sends the entire message stream, you need to re-send the entire stream when the connection is re-established."
+        "If the connection between Integration Server and the webMethods Broker fails before the pub.jms.wmjms:sendStream sends the entire message stream, you need to re-send the entire stream when the connection is re-established."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-jms-folder#Apub_jms_wmjms_sendStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-jms-folder#Apub_jms_wmjms_sendStream__title__1"
     }
   ]
 }

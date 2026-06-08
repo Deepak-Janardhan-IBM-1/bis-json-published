@@ -64,7 +64,7 @@
         "When using createXSD to create an XML Schema definition, keep the following points in mind:",
         "If you use createXSD to create multiple XML Schema definitions that refer to each other, place the XSD files in the same folder or base path. To ensure that the references resolve correctly, make sure the relative URLs specified in the XSD files reflect the names of the XSD files within this folder or base path."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_createXSD__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_createXSD__title__1"
     },
     {
       "name": "pub.schema:validate",
@@ -133,10 +133,10 @@
         "When validating against an IS document type, if the Allow null property is set to false for a field in the document type and the corresponding element in the instance document carries the attribute xsi:nil, Integration Server throws the following error",
         "When validating against an IS document type, if the Allow null property is set to false for a field in the document type and the corresponding element in the instance document contains content or contains child elements, Integration Server throws the following error:",
         "When validating a com.wm.lang.xml.Document or com.wm.lang.xml.Node object, Integration Server searches the named schema domain for the specified schema. If the schema cannot be found in the specified domain, Integration Server searches the default schema domain. Note that Integration Server searches the schema domain for a schema, not an individual component (element, attribute, complex type, etc) within the schema.",
-        "When validating XML, Integration Server uses the W3C recommendation XML Schema Part 2: Datatypes. If you want to validate XML for illegal values, set ignoreContent to false and the watt.core.validation.w3cConformant configuration parameter to true. For information about setting this configuration parameter, see IBM webMethods Integration Server Administrator’s Guide .",
+        "When validating XML, Integration Server uses the W3C recommendation XML Schema Part 2: Datatypes. If you want to validate XML for illegal values, set ignoreContent to false and the watt.core.validation.w3cConformant configuration parameter to true. For information about setting this configuration parameter, see webMethods Integration Server Administrator’s Guide .",
         "The pub.schema:validate service cannot be used to validate a node produced by the enhanced XML parser."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_validate__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_validate__title__1"
     },
     {
       "name": "pub.schema:validatePipeline",
@@ -191,7 +191,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_validatePipeline__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_validatePipeline__title__1"
     },
     {
       "name": "pub.schema.w3c:datatypes",
@@ -199,7 +199,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_w3c_datatypes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_w3c_datatypes__title__1"
     },
     {
       "name": "pub.schema.w3c:structures",
@@ -207,7 +207,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_w3c_structures__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_w3c_structures__title__1"
     },
     {
       "name": "pub.schema.w3c:xml",
@@ -215,7 +215,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#Apub_schema_w3c_xml__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#Apub_schema_w3c_xml__title__1"
     },
     {
       "name": "pub.schema.w3c:xsi",
@@ -223,7 +223,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-schema-folder#A90476__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-schema-folder#A90476__title__1"
     }
   ]
 }

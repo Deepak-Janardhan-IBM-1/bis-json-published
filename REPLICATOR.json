@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "pub.replicator:addReleaseRegistryEntry",
-      "description": "WmPublic. Adds an entry to the IBM webMethods Integration Server's Package Release Registry.",
+      "description": "WmPublic. Adds an entry to the webMethods Integration Server's Package Release Registry.",
       "input_parameters": [
         {
           "name": "package",
@@ -92,11 +92,11 @@
       "usage_notes": [
         "Before using this service, use pub.replicator:packageCreation to create a package zip file in the server's outbound directory. When you use addReleaseRegistryEntry to add an entry to the Package Release Registry, the package name you specify in package should match the package name you specified in pub.replicator:packageCreation."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#A16086__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#A16086__title__1"
     },
     {
       "name": "pub.replicator:deleteReleaseRegistryEntry",
-      "description": "WmPublic. Deletes an entry from the IBM webMethods Integration Server's Package Release Registry.",
+      "description": "WmPublic. Deletes an entry from the webMethods Integration Server's Package Release Registry.",
       "input_parameters": [
         {
           "name": "packageName",
@@ -152,7 +152,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_delRelRegEntry__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_delRelRegEntry__title__1"
     },
     {
       "name": "pub.replicator:distributeViaFTP",
@@ -191,7 +191,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_distribViaFTP__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_distribViaFTP__title__1"
     },
     {
       "name": "pub.replicator:distributeViaSvcPull",
@@ -210,11 +210,11 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_distribViaSvcPull__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_distribViaSvcPull__title__1"
     },
     {
       "name": "pub.replicator:distributeViaSvcPush",
-      "description": "WmPublic. Pushes a package from your server to a list of subscribers (other IBM webMethods Integration Servers).",
+      "description": "WmPublic. Pushes a package from your server to a list of subscribers (other webMethods Integration Servers).",
       "input_parameters": [
         {
           "name": "packageName",
@@ -229,7 +229,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_distribViaSvcPush__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_distribViaSvcPush__title__1"
     },
     {
       "name": "pub.replicator:generateReplicationEvent",
@@ -248,11 +248,11 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_generateReplicationEvent__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_generateReplicationEvent__title__1"
     },
     {
       "name": "pub.replicator:getLocalReleasedList",
-      "description": "WmPublic. Returns all entries in your IBM webMethods Integration Server's Package Release Registry.",
+      "description": "WmPublic. Returns all entries in your webMethods Integration Server's Package Release Registry.",
       "input_parameters": [],
       "output_parameters": [
         {
@@ -298,11 +298,11 @@
         {
           "name": "source_server_version",
           "type": "String",
-          "description": "String Version number of IBM webMethods Integration Server that released the package."
+          "description": "String Version number of webMethods Integration Server that released the package."
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_getLocalRelList__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_getLocalRelList__title__1"
     },
     {
       "name": "pub.replicator:getRemoteReleasedList",
@@ -358,11 +358,11 @@
         {
           "name": "source_server_version",
           "type": "String",
-          "description": "String Version number of IBM webMethods Integration Server that released the package."
+          "description": "String Version number of webMethods Integration Server that released the package."
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_getRemoteRelList__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_getRemoteRelList__title__1"
     },
     {
       "name": "pub.replicator:notifyPackageRelease",
@@ -376,7 +376,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_notifyPkgRelease__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_notifyPkgRelease__title__1"
     },
     {
       "name": "pub.replicator:packageCreation",
@@ -415,7 +415,7 @@
         {
           "name": "targetServerVersion",
           "type": "String",
-          "description": "String Version number of the IBM webMethods Integration Server that this release requires."
+          "description": "String Version number of the webMethods Integration Server that this release requires."
         },
         {
           "name": "JVMVersion",
@@ -463,7 +463,7 @@
       "usage_notes": [
         "After you use packageCreation to create the package, use pub.replicator:addReleaseRegistryEntry to add an entry to the Package Release Registry. The package name you specify in packageCreation should match the package name you specify in pub.replicator:addReleaseRegistryEntry."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-replicator-folder#Apub_replicator_packageCreation__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-replicator-folder#Apub_replicator_packageCreation__title__1"
     }
   ]
 }

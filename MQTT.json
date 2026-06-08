@@ -51,7 +51,7 @@
       "usage_notes": [
         "Integration Server relies on Paho to determine the max inflight property value. The max inflight property determines the maximum number of messages that can be published to the MQTT server at one time using the same MQTT connection alias. Paho uses a default of 10. However you can use the watt.server.mqtt.producer.maxInflight server configuration parameter to set the max inflight property value."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-mqtt-folder#idb2553113-4b71-4741-b585-d32871defffc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mqtt-folder#idb2553113-4b71-4741-b585-d32871defffc__title__1"
     },
     {
       "name": "pub.mqtt:triggerSpec",
@@ -105,7 +105,7 @@
       ],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-mqtt-folder#id68b2db2b-4eab-491d-b07f-2ba4bfc9a344__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mqtt-folder#id68b2db2b-4eab-491d-b07f-2ba4bfc9a344__title__1"
     }
   ]
 }

@@ -19,7 +19,7 @@
         "The gRPC method flow service generated for a gRPC descriptor already contains the call to the pub.grpc.observer:onCompleted service for unary methods. The generated gRPC method flow service includes preset pipeline mapping into the pub.grpc.observer:onCompleted service. You should not need to edit the auto generated pub.grpc.observer:onCompleted step of the gRPC method flow service.",
         "If you modify the gRPC method flow service to include an INVOKE step for pub.grpc.observer:onErrorto indicate an error in the processing of the gRPC method flow service, ensure that the pub.grpc.observer:onCompleted will not execute after pub.grpc.observer:onError."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-grpc-folder#id087VB070ZHT__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-grpc-folder#id087VB070ZHT__title__1"
     },
     {
       "name": "pub.grpc.observer:onError",
@@ -46,7 +46,7 @@
         "An instance of the streamObserver is present in the pipeline when any gRPC method flow service is invoked by the gRPC server. It is an opaque object to be used only as input to the pub.grpc.observer:onNext, pub.grpc.observer:onCompleted, or pub.grpc.observer:onError services.",
         "For unary methods, the gRPC method flow service automatically generated for a gRPC descriptor contains the calls to the pub.grpc.observer:onNext and pub.grpc.observer:onCompleted services. When implementing the logic for the RPC method in the RPC method flow service, you can modify the gRPC method flow service to include logic to return a gRPC error by adding an INVOKE step for the pub.grpc.observer:onError service. If you modify the gRPC method flow service to return an error or return a response message, make sure the flow logic ensures that either pub.grpc.observer:onError executes or pub.grpc.observer:onNext and pub.grpc.observer:onCompleted execute. This can be accomplished by using a BRANCH step. Further, the flow service logic must terminate immediately after executing pub.grpc.observer:onError."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-grpc-folder#id76abb7d6-b391-46c4-865d-c18a6db0e9f7__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-grpc-folder#id76abb7d6-b391-46c4-865d-c18a6db0e9f7__title__1"
     },
     {
       "name": "pub.grpc.observer:onNext",
@@ -78,7 +78,7 @@
         "An instance of the streamObserver is present in the pipeline when any gRPC method flow service is invoked by the gRPC server. It is an opaque object to be used only as input to the pub.grpc.observer:onNext, pub.grpc.observer:onCompleted, or pub.grpc.observer:onError services.",
         "An instance of the streamType is present in the pipeline when any gRPC method flow service is invoked by the gRPC server. It is an opaque object be used only as input to the pub.grpc.observer:onNext service when returning a gRPC response."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-grpc-folder#id502d20b3-e70c-4746-b343-e8c1d81f03a3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-grpc-folder#id502d20b3-e70c-4746-b343-e8c1d81f03a3__title__1"
     }
   ]
 }

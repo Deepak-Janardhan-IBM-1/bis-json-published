@@ -33,7 +33,7 @@
         "The pub.cache:containsKey service does not verify whether the element is expired. If the element of the specified key is expired, and the element is present in the cache, pub.cache:containsKey returns found with a value of true.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id9b673851-0900-4485-9390-53796a7df769__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id9b673851-0900-4485-9390-53796a7df769__title__1"
     },
     {
       "name": "pub.cache:get",
@@ -72,7 +72,7 @@
         "If useLoader is set to true and pub.cache:get cannot find the specified key in the cache, it uses the configured cache loader to find the key in the system-of-record (SOR). If the SOR contains the key, pub.cache:get returns the value of the element. If the key does not exist in the SOR, pub.cache:get returns a null in the value parameter.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#Apub_bpel_invokeProcess__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#Apub_bpel_invokeProcess__title__1"
     },
     {
       "name": "pub.cache:getAll",
@@ -122,7 +122,7 @@
         "If useLoader is set to true and pub.cache:get cannot find the specified key in the cache, it uses the configured cache loader to find the key in the system-of-record (SOR). If the SOR contains the key, pub.cache:get returns the value of the element. If the key does not exist in the SOR, pub.cache:getAll returns a null in the value parameter.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id46b1f34a-8dd3-4f37-9176-d429279ab9d3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id46b1f34a-8dd3-4f37-9176-d429279ab9d3__title__1"
     },
     {
       "name": "pub.cache:getKeys",
@@ -156,7 +156,7 @@
         "Retrieving all of the keys from a cache is a memory-intensive activity. It is possible for the list of available keys to be larger than the memory available on your system. In such cases, Integration Server might issue an OutOfMemoryError and become unresponsive.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idaccf1852-06fc-4e96-b879-29836037e433__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idaccf1852-06fc-4e96-b879-29836037e433__title__1"
     },
     {
       "name": "pub.cache:put",
@@ -195,7 +195,7 @@
         "If you run pub.cache:put on a disabled cache, the cache discards the call.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id9e44d26e-f8dc-4102-9948-6354a0406e65__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id9e44d26e-f8dc-4102-9948-6354a0406e65__title__1"
     },
     {
       "name": "pub.cache:putAll",
@@ -235,7 +235,7 @@
         "If you run pub.cache:putAll on a disabled cache, the cache discards the call.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id4e22a88a-85c4-4412-8768-12aec355e054__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id4e22a88a-85c4-4412-8768-12aec355e054__title__1"
     },
     {
       "name": "pub.cache:remove",
@@ -273,7 +273,7 @@
         "If the element associated with the specified key does not exist, pub.cache:remove returns false for removed.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idf7393630-573b-44cc-9511-158533892691__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idf7393630-573b-44cc-9511-158533892691__title__1"
     },
     {
       "name": "pub.cache:removeAll",
@@ -299,7 +299,7 @@
       "usage_notes": [
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#ide4ccd868-3533-4d9c-afc4-8d2c649f9321__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#ide4ccd868-3533-4d9c-afc4-8d2c649f9321__title__1"
     },
     {
       "name": "pub.cache:search",
@@ -375,7 +375,7 @@
         {
           "name": "result",
           "type": "Object List",
-          "description": "Object List The returned results of the search. Each object in the result parameter is of type com.wm.app.b2b.client.cache.config.SearchResult. For more information about com.wm.app.b2b.client.cache.config.SearchResult type, see IBM webMethods Integration Server Java API Reference . Each object contains information about the cache element, key, value, search attribute values, and aggregator results, if any."
+          "description": "Object List The returned results of the search. Each object in the result parameter is of type com.wm.app.b2b.client.cache.config.SearchResult. For more information about com.wm.app.b2b.client.cache.config.SearchResult type, see webMethods Integration Server Java API Reference . Each object contains information about the cache element, key, value, search attribute values, and aggregator results, if any."
         }
       ],
       "usage_notes": [
@@ -385,7 +385,7 @@
         "Because the state of the cache can change between search executions, include all of the aggregators to the search query at the same time, so that the returned aggregators are of the same iteration of the cache.",
         "By default a search will return an unlimited number of results. If too many results are returned, Integration Server might issue an OutOfMemoryError and become unresponsive. Limit the size of the results using the maxResults parameter."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id58cea799-a2de-412d-94a3-8519022752bd__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id58cea799-a2de-412d-94a3-8519022752bd__title__1"
     },
     {
       "name": "pub.cache.admin:clearAllCaches",
@@ -420,7 +420,7 @@
         "If you have any existing locks on any of the elements in the cache, the pub.cache.admin:clearAllCaches service waits indefinitely until all locks are released.",
         "Integration Server returns a status of Error in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idc5b201d3-cc5e-410a-9d4b-2c1a2761ee46__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idc5b201d3-cc5e-410a-9d4b-2c1a2761ee46__title__1"
     },
     {
       "name": "pub.cache.admin:clearCache",
@@ -454,7 +454,7 @@
         "If you have any existing locks on any of the elements in the cache, the pub.cache.admin:clearCache service waits indefinitely until all locks are released.",
         "Integration Server returns a status of Error in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idba6222fd-0588-4c42-94b9-bdefee781902__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idba6222fd-0588-4c42-94b9-bdefee781902__title__1"
     },
     {
       "name": "pub.cache.admin:disableCache",
@@ -491,7 +491,7 @@
         "When you disable a cache, Integration Server:",
         "Integration Server returns a status of Error in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id911f331e-d5ba-4881-a632-e03a275786eb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id911f331e-d5ba-4881-a632-e03a275786eb__title__1"
     },
     {
       "name": "pub.cache.admin:enableCache",
@@ -525,7 +525,7 @@
         "When you disable a cache, the cached elements are unavailable but still present in the cache. Use pub.cache.admin:enableCache to make the cached elements available again.",
         "Integration Server returns a status of Error in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idc57fb7ec-4cd9-45f0-8acb-7ac98d6e2f5f__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idc57fb7ec-4cd9-45f0-8acb-7ac98d6e2f5f__title__1"
     },
     {
       "name": "pub.cache.admin:evictExpiredElements",
@@ -558,7 +558,7 @@
         "The pub.cache.admin:evictExpiredElements service can take longer to delete expired elements depending on the number of elements contained in the cache. If the cache contains a large number of elements, pub.cache.admin:evictExpiredElements might take longer to process the request than when the cache contains fewer elements.",
         "Integration Server returns a status of Error in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idfe62af9b-a15c-4565-85dd-1178f0ce12dc__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idfe62af9b-a15c-4565-85dd-1178f0ce12dc__title__1"
     },
     {
       "name": "pub.cache.admin:isCacheDisabled",
@@ -595,7 +595,7 @@
       "usage_notes": [
         "pub.cache.admin:isCacheDisabled returns Error for status and an accompanying message in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id85b649d5-6c4b-4f1f-aa6d-9bd35436d5e3__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id85b649d5-6c4b-4f1f-aa6d-9bd35436d5e3__title__1"
     },
     {
       "name": "pub.cache.atomic:putIfAbsent",
@@ -638,7 +638,7 @@
         "The pub.cache.atomic:putIfAbsent service adds the specified value to the cache only if the specified key does not already exist in the cache. If the specified key already exists in the cache, pub.cache.atomic:putIfAbsent returns true for keyExists and the value of the cached element for oldValue.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id823b64c1-2794-4d19-b4d0-82ef29854aa9__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id823b64c1-2794-4d19-b4d0-82ef29854aa9__title__1"
     },
     {
       "name": "pub.cache.atomic:remove",
@@ -675,7 +675,7 @@
       "usage_notes": [
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idff892c85-5ca7-4c26-a30b-edb5f87bd793__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idff892c85-5ca7-4c26-a30b-edb5f87bd793__title__1"
     },
     {
       "name": "pub.cache.atomic:replace",
@@ -718,7 +718,7 @@
         "The pub.cache.atomic:replace service replaces an element in the cache only if an element with the values of the specified key and oldValue parameters already exist in the cache. If an element exist in the cache with the specified key and oldValue, pub.cache.atomic:replace replaces the cached element with the specified key and newValue.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#ida4b0f284-8aee-4056-bd69-48b9e2acf651__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#ida4b0f284-8aee-4056-bd69-48b9e2acf651__title__1"
     },
     {
       "name": "pub.cache.atomic:replaceIfKeyExists",
@@ -761,7 +761,7 @@
         "The pub.cache.atomic:replaceIfKeyExists service replaces an element in the cache only if the specified key already exists in the cache. If an element with the specified key exists, pub.cache.atomic:replaceIfKeyExists replaces value of the cached element with the one specified in value.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id2a630062-3441-4925-bc7e-eeb4305a27bb__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id2a630062-3441-4925-bc7e-eeb4305a27bb__title__1"
     },
     {
       "name": "pub.cache.bulk:isClusterBulkLoadEnabled",
@@ -789,7 +789,7 @@
         "The pub.cache.bulk:isClusterBulkLoadEnabled service applies only to distributed caches. If you run pub.cache.bulk:isClusterBulkLoadEnabled on a local cache, the service returns false for enabled.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id2fca80e0-ced0-455f-9fd5-c088225c481b__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id2fca80e0-ced0-455f-9fd5-c088225c481b__title__1"
     },
     {
       "name": "pub.cache.bulk:isNodeBulkLoadEnabled",
@@ -817,7 +817,7 @@
         "The pub.cache.bulk:isNodeBulkLoadEnabled service applies only to distributed caches.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id77a61866-82c5-43ec-b2d5-c8a9664941c9__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id77a61866-82c5-43ec-b2d5-c8a9664941c9__title__1"
     },
     {
       "name": "pub.cache.bulk:setNodeBulkLoadEnabled",
@@ -845,7 +845,7 @@
         "The pub.cache.bulk:setNodeBulkLoadEnabled service does nothing if you:",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#idbfab45e7-c223-4926-8a1d-b80e57b8b381__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#idbfab45e7-c223-4926-8a1d-b80e57b8b381__title__1"
     },
     {
       "name": "pub.cache.bulk:waitUntilClusterBulkLoadComplete",
@@ -868,7 +868,7 @@
         "If none of the nodes are bulk-load enabled, Integration Server immediately executes the next step in the flow service without waiting.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id6918a1e7-4c35-4b54-912d-1a34515a4b04__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id6918a1e7-4c35-4b54-912d-1a34515a4b04__title__1"
     },
     {
       "name": "pub.cache.lock:acquireLock",
@@ -917,7 +917,7 @@
         "When using the debug flow service to step through a flow service, depending on your breakpoint settings Designer might use a new thread for each step. You cannot release a lock acquired in a previous step of the same flow if break points are triggered on Designer or if you are stepping through a flow service. To avoid orphaned locks, disable invocations of pub.cache.lock:acquireLock and pub.cache.lock:releaseLock before stepping through the flow service or make sure that pub.cache.lock:acquireLock and pub.cache.lock:releaseLock services are called between the boundaries of two breakpoints.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id2f8ee7e3-27c6-4dcb-8303-c3103056ae24__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id2f8ee7e3-27c6-4dcb-8303-c3103056ae24__title__1"
     },
     {
       "name": "pub.cache.lock:isLockedByCurrentThread",
@@ -964,7 +964,7 @@
       "usage_notes": [
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id777556f5-ff12-4b65-bf5b-3eb143f1537a__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id777556f5-ff12-4b65-bf5b-3eb143f1537a__title__1"
     },
     {
       "name": "pub.cache.lock:releaseLock",
@@ -1006,7 +1006,7 @@
         "You must call pub.cache.lock:releaseLock from the same thread from which you call pub.cache.lock:acquireLock. Failing to do so could cause the key to remain locked indefinitely.",
         "Integration Server issues a ServiceException in the following cases:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id2ca4ee8d-ada2-4a18-b202-2695568fd81e__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id2ca4ee8d-ada2-4a18-b202-2695568fd81e__title__1"
     },
     {
       "name": "pub.cache.serviceResults:addCacheEntry",
@@ -1032,7 +1032,7 @@
       "usage_notes": [
         "If the serviceName service does not exist in Integration Server, or it is not enabled to cache service results, Integration Server throws an exception."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id9cc730c1-9405-4aa8-b7c8-8b139815688b__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id9cc730c1-9405-4aa8-b7c8-8b139815688b__title__1"
     },
     {
       "name": "pub.cache.serviceResults:listServiceCache",
@@ -1072,7 +1072,7 @@
         "For the pub.cache.serviceResults:listServiceCache service to return results, make sure that the service results cache is searchable and that the cache allows automatic indexing for keys. That is, for the service results cache, the Searchable check box must be selected and the Key check box next to Allow Automatic Indexing must be selected.",
         "Exposing the contents of the service results cache via the pub.cache.serviceResults:listServiceCache may represent a security risk."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#ide6dd11a4-5ed1-4a83-977c-d76604354b73__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#ide6dd11a4-5ed1-4a83-977c-d76604354b73__title__1"
     },
     {
       "name": "pub.cache.serviceResults:resetServerCache",
@@ -1086,7 +1086,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id6d6f6fea-f3ea-4436-808a-eb794e403e72__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id6d6f6fea-f3ea-4436-808a-eb794e403e72__title__1"
     },
     {
       "name": "pub.cache.serviceResults:resetServiceCache",
@@ -1111,7 +1111,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/11.1.0?topic=guide-cache-folder#id866798e9-1db6-4bfb-b2ff-23869d2d4e46__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-cache-folder#id866798e9-1db6-4bfb-b2ff-23869d2d4e46__title__1"
     }
   ]
 }
