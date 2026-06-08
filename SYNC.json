@@ -27,7 +27,7 @@
       "usage_notes": [
         "The value of the server property watt.server.sync.timeout determines the maximum length of time that the notification can exist. However, if a service with an exclusive wait is registered for the notification key, the notification ends as soon as the exclusive wait receives the notification."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-sync-folder#Apub_sync_notify__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-sync-folder#Apub_sync_notify__title__1"
     },
     {
       "name": "pub.sync:shutdown",
@@ -35,7 +35,7 @@
       "input_parameters": [],
       "output_parameters": [],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-sync-folder#id68768b2e-b80a-47e1-b830-4b157cbc8684__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-sync-folder#id68768b2e-b80a-47e1-b830-4b157cbc8684__title__1"
     },
     {
       "name": "pub.sync:wait",
@@ -71,7 +71,7 @@
         "If the pub.sync.wait service specifies a key for which an exclusive wait already exits, Integration Server returns a ServiceException: [ISS.0086.9065] already in exclusive wait.",
         "If the pub.sync.wait service specifies an exclusive wait for a key for which regular wait threads already exits, Integration Server throws a ServiceException: [ISS.0086.9066] cannot obtain exclusive wait."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-sync-folder#Apub_sync_wait__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-sync-folder#Apub_sync_wait__title__1"
     }
   ]
 }

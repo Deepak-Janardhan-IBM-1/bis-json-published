@@ -32,7 +32,7 @@
       "usage_notes": [
         "This service constructs stream from the byte array using the constructor ByteArrayInputStream(byte[ ]). This constructor does not make a copy of the byte array, so any changes to bytes will be reflected in the data read from the stream."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#Apub_io_bytesToInputStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#Apub_io_bytesToInputStream__title__1"
     },
     {
       "name": "pub.io:close",
@@ -53,7 +53,7 @@
       "usage_notes": [
         "If the InputStream is already closed, invoking this service has no effect. However, leaving an InputStream open may cause errors that are not recoverable until Integration Server is shut down. Use the pub.io:close service to explicitly close the input stream when a service leaves it open. For example, pub.file:getFile and pub.client.ftp:get leave the input stream open in the pipeline."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A53444__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A53444__title__1"
     },
     {
       "name": "pub.io:createByteArray",
@@ -75,7 +75,7 @@
       "usage_notes": [
         "The pub.io:read service reads data from an InputStream into a byte array. You can use this service to create the byte array. Invoking this service is the equivalent of the Java code new byte[length]."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A39724__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A39724__title__1"
     },
     {
       "name": "pub.io:mark",
@@ -113,7 +113,7 @@
         "If the InputStream does not support the mark operation, invoking this service has no effect.",
         "Either of the optional input parameters, stream or reader, is required."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A28258__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A28258__title__1"
     },
     {
       "name": "pub.io:markSupported",
@@ -150,7 +150,7 @@
       "usage_notes": [
         "Either of the input parameters, stream or reader, is required."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A79879__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A79879__title__1"
     },
     {
       "name": "pub.io:read",
@@ -197,7 +197,7 @@
       "usage_notes": [
         "The pub.io:read service does not close the input stream. To close the input stream, use the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A31265__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A31265__title__1"
     },
     {
       "name": "pub.io:readAsString",
@@ -234,7 +234,7 @@
       "usage_notes": [
         "The readAsString service does not automatically close the reader object. To close the reader, use the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A70511__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A70511__title__1"
     },
     {
       "name": "pub.io:readerToString",
@@ -256,7 +256,7 @@
       "usage_notes": [
         "The readerToString service does not automatically close the reader object. To close the reader, use the pub.io:close service."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A90332__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A90332__title__1"
     },
     {
       "name": "pub.io:reset",
@@ -289,7 +289,7 @@
         "If the InputStream does not support the reset operation, invoking this service has no effect.",
         "Either of the input parameters, stream or reader, is required."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A99501__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A99501__title__1"
     },
     {
       "name": "pub.io:skip",
@@ -338,7 +338,7 @@
         "Either of the optional input parameters, stream or reader, is required.",
         "If both stream and reader input parameters are specified and if an exception occurs during the stream object usage, then the operations are not performed on the reader object also."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A89013__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A89013__title__1"
     },
     {
       "name": "pub.io:streamToBytes",
@@ -360,7 +360,7 @@
       "usage_notes": [
         "The pub.io:streamToBytes service reads all of the bytes in the input stream. Then the service closes the input stream and produces the byte array. The bytes variable remains in the pipeline until it is explicitly dropped."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#Apub_io_streamToBytes__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#Apub_io_streamToBytes__title__1"
     },
     {
       "name": "pub.io:streamToReader",
@@ -385,7 +385,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A57030__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A57030__title__1"
     },
     {
       "name": "pub.io:streamToString",
@@ -412,7 +412,7 @@
       "usage_notes": [
         "The pub.io:streamToString service reads all of the bytes in the input stream but does not close the input stream. You must invoke pub.io:close to close the input stream."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A47949__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A47949__title__1"
     },
     {
       "name": "pub.io:stringToReader",
@@ -432,7 +432,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A16343__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A16343__title__1"
     },
     {
       "name": "pub.io:stringToStream",
@@ -457,7 +457,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-io-folder#A77117__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-io-folder#A77117__title__1"
     }
   ]
 }

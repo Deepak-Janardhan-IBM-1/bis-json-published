@@ -81,7 +81,7 @@
         "For multipart messages:",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_addBodyPart__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_addBodyPart__title__1"
     },
     {
       "name": "pub.mime:addMimeHeader",
@@ -126,7 +126,7 @@
         "Be aware that the contenttype and encoding parameters used by the pub.mime:addBodyPart service will override any Content-Type or Content-Transfer-Encoding settings in mimeData. Moreover, in certain cases, the pub.mime:getEnvelopeStream will override these settings when it generates a multipart message. For information about how the Content-Type or Content-Transfer-Encoding headers are derived at run time, see the Usage Notes under pub.mime:addBodyPart.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_addMimeHeader__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_addMimeHeader__title__1"
     },
     {
       "name": "pub.mime:createMimeData",
@@ -199,7 +199,7 @@
         "All of the other MIME services operate on the mimeData IData object produced by this service. They do not operate directly on MIME message streams.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_createMimeData__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_createMimeData__title__1"
     },
     {
       "name": "pub.mime:getBodyPartContent",
@@ -246,9 +246,10 @@
       "usage_notes": [
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "If you omit index or contentID when retrieving content from a multi-part message, getBodyPartContent returns the payload from the first body part. If you use index or contentID to select a body part that does not exist in mimeData, content will be null.",
+        "When the pub.mime:getBodyPartContent service receives MIME data without the boundary marker in the header, the service does not remove the MIME boundary marker when extracting the body part. As a workaround, use the pub.flow:getTransportInfo service to get the transport headers with the boundary marker information and merge that with the MIME data using the pub.mime:mergeHeaderAndBody service. You can then call the pub.mime:createMimeData service with the output of the pub.mime:mergeHeaderAndBody service, followed by the pub.mime:getBodyPartContent service to get the correct content.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getBodyPartContent__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getBodyPartContent__title__1"
     },
     {
       "name": "pub.mime:getBodyPartHeader",
@@ -302,7 +303,7 @@
         "If you omit index or contentID, getBodyPartHeader returns the message headers from the first body part. If you use index or contentID to select a body part that does not exist in mimeData, content will be null.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getBodyPartHeader__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getBodyPartHeader__title__1"
     },
     {
       "name": "pub.mime:getContentType",
@@ -325,7 +326,7 @@
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getContentType__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getContentType__title__1"
     },
     {
       "name": "pub.mime:getEnvelopeStream",
@@ -359,7 +360,7 @@
         {
           "name": "returnMimeMessage",
           "type": "String",
-          "description": "String Optional. Specifies whether the MIME message is returned as a javax.mail.internet.MimeMessage object when any of the body parts in the message exceed the large data threshold set by the watt.server.mime.largeDataThreshold. Set to: yes to return the MIME message in the mimeMessage output parameter as a MimeMessage when the watt.server.mime.largeDataThreshold is exceeded. This is the default. no to return the MIME message as an InputStream in the envStream output parameter when the watt.server.mime.largeDataThreshold is exceeded. Note: The returnMimeMessage input parameter is available after applying a fix that includes PIE-84972 (IS_10.15_Core_Fix8 and higher),"
+          "description": "String Optional. Specifies whether the MIME message is returned as a javax.mail.internet.MimeMessage object when any of the body parts in the message exceed the large data threshold set by the watt.server.mime.largeDataThreshold. Set to: yes to return the MIME message in the mimeMessage output parameter as a MimeMessage when the watt.server.mime.largeDataThreshold is exceeded. This is the default. no to return the MIME message as an InputStream in the envStream output parameter when the watt.server.mime.largeDataThreshold is exceeded."
         }
       ],
       "output_parameters": [
@@ -378,9 +379,10 @@
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "If you omit index or contentID, getEnvelopeStream generates the MIME message from the entire contents of the mimeData. If you use index or contentID to select a body part that does not exist in mimeData, content will be null.",
         "getEnvelopeStream automatically inserts the MIME-Version and Message-ID message headers into the MIME message it puts into envStream.",
+        "The pub.mime:getEnvelopeStream service could generate an out of memory error when adding a large number of files.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getEnvelopeStream__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getEnvelopeStream__title__1"
     },
     {
       "name": "pub.mime:getMimeHeader",
@@ -403,7 +405,7 @@
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getMimeHeader__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getMimeHeader__title__1"
     },
     {
       "name": "pub.mime:getNumParts",
@@ -426,7 +428,7 @@
         "This service operates on the MIME object (mimeData) produced by createMimeData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getNumParts__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getNumParts__title__1"
     },
     {
       "name": "pub.mime:getPrimaryContentType",
@@ -449,7 +451,7 @@
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getPrimaryContentType__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getPrimaryContentType__title__1"
     },
     {
       "name": "pub.mime:getSubContentType",
@@ -472,7 +474,7 @@
         "This service operates on the MIME object (mimeData) produced by pub.mime:createMimeData.",
         "For general information about MIME messages and using the MIME services, see the MIME-S/MIME Developer’s Guide ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_getSubContentType__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_getSubContentType__title__1"
     },
     {
       "name": "pub.mime:mergeHeaderAndBody",
@@ -509,7 +511,7 @@
       "usage_notes": [
         "Use this service to merge the results produced by pub.client:http to get the original MIME message."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#Apub_mime_mergeHeaderAndBody__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#Apub_mime_mergeHeaderAndBody__title__1"
     },
     {
       "name": "pub.mime:releaseBodyPartReferenceInTSpace",
@@ -541,7 +543,7 @@
       "usage_notes": [
         "Before invoking this service, ensure that the body part has a reference in the Tspace."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-mime-folder#reference_402E22D3342644CA9499C7C544BC8170__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mime-folder#reference_402E22D3342644CA9499C7C544BC8170__title__1"
     }
   ]
 }

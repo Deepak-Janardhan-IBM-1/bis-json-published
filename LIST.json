@@ -1,6 +1,6 @@
 {
   "folder": "LIST",
-  "total_services": 6,
+  "total_services": 8,
   "services": [
     {
       "name": "pub.list:addItemToVector",
@@ -35,9 +35,46 @@
         }
       ],
       "usage_notes": [
-        "Either of the optional input parameters, item or itemList, is required."
+        "The service requires either the item or itemList input parameter."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#A52525__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#A52525__title__1"
+    },
+    {
+      "name": "pub.list:addToList",
+      "description": "WmPublic. Appends an element of any supported type, such as Document, String, or Integer, to a list.",
+      "input_parameters": [
+        {
+          "name": "toList",
+          "type": "java.util.List",
+          "description": "java.util.List. Optional. The list to which you want to append an object or a list of objects. If you do not specify a value for toList, the service creates a new list."
+        },
+        {
+          "name": "fromList",
+          "type": "Object[]",
+          "description": "Object[]. Optional. The list of objects that you want to append to toList."
+        },
+        {
+          "name": "fromItem",
+          "type": "Object",
+          "description": "Object. Optional. The object that you want to append to toList. If you specify both fromList and fromItem, the service adds the items that are specified in fromItem first and then the items in fromList."
+        },
+        {
+          "name": "allowNulls",
+          "type": "String",
+          "description": "String. Optional. Specifies whether the service allows adding null items to the object list. Set to: false to block the addition of null values to the object list. This is the default. true to permit the addition of null values to the object list."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "toList",
+          "type": "java.util.List",
+          "description": "java.util.List. The list with objects from the fromItem and fromList parameters, or an empty list if no input is provided."
+        }
+      ],
+      "usage_notes": [
+        "The service requires either the fromItem or fromList input parameter."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#reference_hxh_v3m_5fc__title__1"
     },
     {
       "name": "pub.list:appendToDocumentList",
@@ -69,7 +106,7 @@
       "usage_notes": [
         "The documents contained in fromList and fromItem are not actually appended as entries to toList. Instead, references to the documents in fromList and fromItem are appended as entries to toList. Consequently, any changes made to the documents in fromList and fromItem also affect the resulting toList."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#Apub_list_appendToDocList__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#Apub_list_appendToDocList__title__1"
     },
     {
       "name": "pub.list:appendToStringList",
@@ -101,7 +138,34 @@
       "usage_notes": [
         "The Strings contained in fromList and fromItem are not actually appended as entries to toList. Instead, references to the Strings in fromList and fromItem are appended as entries to toList. Consequently, any changes made to the Strings in fromList and fromItem also affect the resulting toList."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#A29636__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#A29636__title__1"
+    },
+    {
+      "name": "pub.list:listToArray",
+      "description": "WmPublic. Converts a list of elements, such as Document, String, or Integer into an array.",
+      "input_parameters": [
+        {
+          "name": "toList",
+          "type": "java.util.List",
+          "description": "java.util.List. The list that you want to convert into an array. If you do not specify a value for toList, the service creates a new list."
+        },
+        {
+          "name": "stronglyType",
+          "type": "String",
+          "description": "String. Optional. Specifies whether the service enforces that all elements in the input list are of the same Java type.Set to: false to convert the list into a generic Object[] array without making any type assumptions. The list allows elements of mixed types. This is the default. true to convert the list into an Object[] array. All elements must match the Java type of the first non-null item. If the service detects an item of a different type, Integration Server throws an error."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "array",
+          "type": "Object[ ]",
+          "description": "Object[ ]. The converted object array."
+        }
+      ],
+      "usage_notes": [
+        "Use stronglyType only when all list elements share the same data type to ensure type-safe and consistent array creation. If you need a list that supports mixed types, use pub.list:addToList followed by pub.list:listToArray for a streamlined and type-safe approach. This combination can effectively replace pub.list:appendToDocumentList and pub.list:appendToStringList."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#reference_nyb_pr3_vfc__title__1"
     },
     {
       "name": "pub.list:sizeOfList",
@@ -129,7 +193,7 @@
         "For example, if fromList consists of:",
         "The result would be:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#Apub_list_sizeOfList__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#Apub_list_sizeOfList__title__1"
     },
     {
       "name": "pub.list:stringListToDocumentList",
@@ -158,7 +222,7 @@
         "For example, if fromList consists of:",
         "The result would be:"
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#Apub_list_stringListToDocList__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#Apub_list_stringListToDocList__title__1"
     },
     {
       "name": "pub.list:vectorToArray",
@@ -183,7 +247,7 @@
         }
       ],
       "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-list-folder#A84419__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-list-folder#A84419__title__1"
     }
   ]
 }

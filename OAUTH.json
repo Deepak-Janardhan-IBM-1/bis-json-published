@@ -39,7 +39,7 @@
         {
           "name": "state",
           "type": "",
-          "description": "String. Optional. A unique string used to maintain the state between the request and callback. When the authorization server redirects the user to the redirect_uri, the value for state will be included in the response. Software AG recommends using this parameter to protect against cross-site request forgery (CSRF) attacks."
+          "description": "String. Optional. A unique string used to maintain the state between the request and callback. When the authorization server redirects the user to the redirect_uri, the value for state will be included in the response. IBM recommends using this parameter to protect against cross-site request forgery (CSRF) attacks."
         }
       ],
       "output_parameters": [],
@@ -51,9 +51,9 @@
         "If the client calls the pub.oauth:authorize service with a response_type of password or client_credentials, the service rejects the request with an invalid_request OAuth error.",
         "Authentication code is not persisted in the cache. If Integration Server is restarted after the authorization code is issued but before the access token is requested, Integration Server will reject the request for the access token.",
         "The code_challenge input parameter is required for a public client when the Require PKCE option on the Security > OAuth page is set to yes and the client identifies authorization code grant type as the preferred grant type (i.e., response_type is set to code).",
-        "Integration Server provides the com.softwareag.util.PKCE.createCodeVerifier method for creating a code_verifier value and the com.softwareag.util.PKCE.createCodeChallenge method for transforming a code_verifier value into a base64-encoded, SHA-256 hash to use as the value for code_challenge. For more information, see the webMethods Integration Server Java API Reference ."
+        "Integration Server provides the com.webmethods.is.util.PKCE.createCodeVerifier method for creating a code_verifier value and the com.webmethods.is.util.PKCE.createCodeChallenge method for transforming a code_verifier value into a base64-encoded, SHA-256 hash to use as the value for code_challenge. For more information, see the IBM webMethods Integration Server Java API Reference ."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#id1296C50035Z__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#id1296C50035Z__title__1"
     },
     {
       "name": "pub.oauth:getAccessToken",
@@ -129,7 +129,7 @@
         "The token_type output parameter is always Bearer. The authorization server retains the information about the bearer tokens it issues, including the user information. When the client presents a bearer token to the resource server, the resource server checks with the authorization server to see whether the user is allowed to access the requested folders and services.",
         "The tokens, authorization codes, and client information are stored in the authorization server's caches. By default, these caches maintain up to 1000 elements in memory and 20000 elements on disk. If the cache size is exceeded, OAuth performance can be affected on Integration Server and can lead to errors if the disk runs out of space. If you anticipate that your authorization server's cache will exceed the default size, you should increase the Maximum Elements In Memory, Maximum Elements On Disk, or Maximum Off-Heap settings for Integration Server. For information about changing these settings, see Working with Caches. If the cache is distributed, see the BigMemory Max product documentation for 4.1 at www.terracotta.org/documentation for additional considerations when sizing distributed caches."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#get_access_token__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#get_access_token__title__1"
     },
     {
       "name": "pub.oauth:getToken",
@@ -163,7 +163,12 @@
         {
           "name": "scope",
           "type": "",
-          "description": "String. Optional. Specify the name of one or more scopes required by the client. Use a space to separate multiple scopes. The scope variable is used when grant_type is refresh_token, password, or client_credentials. The service ignores the scope value when grant_type is authorization_code. When using the pub.oauth:getToken service with the refresh_token grant type, the value for scope must match or be a subset of the value you provided for the pub.oauth:authorize and pub.oauth:getAccessToken services. That is, the scope of the refresh token can be smaller than the original request. It cannot contain any scopes that were not approved by the resource owner."
+          "description": "String. Optional. The name of one or more scopes required by the client. Use a space to separate multiple scopes. The scope variable is used when grant_type is refresh_token, password, or client_credentials. The service ignores the scope value when grant_type is authorization_code. When using the pub.oauth:getToken service with the refresh_token grant type, the value for scope must match or be a subset of the value you provided for the pub.oauth:authorize and pub.oauth:getAccessToken services. That is, the scope of the refresh token can be smaller than the original request. It cannot contain any scopes that were not approved by the resource owner."
+        },
+        {
+          "name": "token_label",
+          "type": "",
+          "description": "String. Optional. Label to assign to the token. You might use a label to specify the purpose of the token."
         },
         {
           "name": "username",
@@ -218,7 +223,7 @@
         "The token_type output parameter is always Bearer. The authorization server retains the information about the bearer tokens it issues, including the user information. When the client presents a bearer token to the resource server, the resource server checks with the authorization server to see whether the user is allowed to access the requested folders and services.",
         "The tokens, authorization codes, and client information are stored in the authorization server's caches. By default, these caches maintain up to 1000 elements in memory and 20000 elements on disk. If the cache size is exceeded, OAuth performance can be affected on Integration Server and can lead to errors if the disk runs out of space. If you anticipate that your authorization server's cache will exceed the default size, you should increase the Maximum Elements In Memory, Maximum Elements On Disk, or Maximum Off-Heap settings for Integration Server. For information about changing these settings, see Working with Caches. If the cache is distributed, see the BigMemory Max product documentation for 4.1 at www.terracotta.org/documentation for additional considerations when sizing distributed caches."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#id37435ca6-936f-4295-94e7-2ab6c47d0bc0__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#id37435ca6-936f-4295-94e7-2ab6c47d0bc0__title__1"
     },
     {
       "name": "pub.oauth:introspectToken",
@@ -281,7 +286,7 @@
         "Clients must invoke this service via an HTTP POST request unless the watt.server.oauth.requirePost server configuration parameter is set to false. When this parameter is set to false, clients can invoke this service using HTTP GET.",
         "Integration Server includes a server configuration parameter to control whether or not the OAuth introspection endpoint, the pub.oauth:introspectTokenservice, considers whether a client account is disabled or enabled when determining if an access token is active. When watt.server.oauth.disableClient.disableTokens is set to true, the pub.oauth:introspectToken service considers the token to be inactive if the client account to which the token was issued is disabled. The service returns a value of false for the active output parameter. The OAuth resource server, whether it's an Integration Server or another vendor, will not allow access to the requested resource. When watt.server.oauth.disableClient.disableTokens is set to false, the pub.oauth:introspectToken service does not consider the enabled/disabled state of the client account to which the access token was issued when evaluating an access token. The default value watt.server.oauth.disableClient.disableTokens is true."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#id1b66ea8d-016d-4721-bf68-dc522c818a45__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#id1b66ea8d-016d-4721-bf68-dc522c818a45__title__1"
     },
     {
       "name": "pub.oauth:refreshAccessToken",
@@ -338,7 +343,7 @@
         "Confidential clients must authenticate requests by supplying their credentials in the HTTP Authorization header.",
         "The token_type output parameter is always Bearer. The authorization server retains the information about the bearer tokens it issues, including the user information. When the client presents a bearer token to the resource server, the resource server checks with the authorization server to see whether the user is allowed to access the requested folders and services."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#id128NB0I0RY4__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#id128NB0I0RY4__title__1"
     },
     {
       "name": "pub.oauth:removeExpiredAccessTokens",
@@ -354,14 +359,15 @@
         {
           "name": "removedTokensCount",
           "type": "",
-          "description": "String Number of expired tokens removed by the service. If the service did not remove any expired tokens, the value of removedTokensCount is 0."
+          "description": "String Number of expired tokens removed by the service. If the service did not remove any expired tokens to be removed, the value of removedTokensCount is 0."
         }
       ],
       "usage_notes": [
         "To improve the performance of the pub.oauth:removeExpiredAccessTokens service, create the following two database indexes:",
-        "The pub.oauth:removeExpiredAccessTokens service deletes expired access tokens from the database by performing a series of delete operations in the database. The service deletes the expired tokens in batches. The server configuration property watt.server.oauth.token.removal.batchSize controls the batch size. The size of the batches defaults to 1000."
+        "The pub.oauth:removeExpiredAccessTokens service deletes expired access tokens from the database by performing a series of delete operations in the database. The service deletes the expired tokens in batches. The server configuration property watt.server.oauth.token.removal.batchSize controls the batch size. The size of the batches defaults to 1000.",
+        "Integration Server uses the Remove Expired Tokens system task to check for and remove expired OAuth tokens. This system task executes the pub.oauth:removeExpiredAccessTokens service at a regular interval determined by the watt.server.oauth.token.removal.interval server configuration parameter. The value of the watt.server.oauth.token.removal.maxRows parameter determines the number of tokens the task deletes."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#idf7067e8d-995d-4e4f-a180-f22297b267f6__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#idf7067e8d-995d-4e4f-a180-f22297b267f6__title__1"
     },
     {
       "name": "pub.oauth:revokeToken",
@@ -393,7 +399,7 @@
         "This service must be invoked using HTTPS unless the Require HTTPS setting on the Security > OAuth > Edit OAuth Global Settings page is disabled.",
         "Clients must invoke this service via an HTTP POST request unless the watt.server.oauth.requirePost server configuration parameter is set to false. When this parameter is set to false, clients can invoke this service using HTTP GET."
       ],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/10.15.0?topic=guide-oauth-folder#id19afe026-e432-4155-aaf5-e68bd66f3b50__title__1"
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-oauth-folder#id19afe026-e432-4155-aaf5-e68bd66f3b50__title__1"
     }
   ]
 }
