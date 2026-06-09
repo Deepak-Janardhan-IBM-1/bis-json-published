@@ -1,0 +1,183 @@
+{
+  "folder": "REPORT",
+  "total_services": 6,
+  "services": [
+    {
+      "name": "pub.report:runFileTemplate",
+      "description": "WmPublic. Applies a template file to a document (IData object).",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "java.io.File",
+          "description": "java.io.File Template file."
+        },
+        {
+          "name": "$values",
+          "type": "Document",
+          "description": "Document Document (IData object) to bind against $template."
+        },
+        {
+          "name": "fileEncoding",
+          "type": "String",
+          "description": "String Optional. The encoding of the template file. If fileEncoding is not specified, the default file encoding specified in the watt.server.netEncoding server parameter or the system file encoding will be used. Examples: SJIS, ASCII, ISO8859_1."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Results from applying $template to $values."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes If a template is not available in a templates directory of any of the packages on the server, you can use this service by passing in a File object representing the template. Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runFileTemplate service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runFileTemplate__title__1"
+    },
+    {
+      "name": "pub.report:runFileTemplateOnPipe",
+      "description": "WmPublic. Applies a template to the pipeline.",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "java.io.File",
+          "description": "java.io.File Template file."
+        },
+        {
+          "name": "fileEncoding",
+          "type": "String",
+          "description": "String Optional. The encoding of the template file. If fileEncoding is not specified, the default file encoding specified in the watt.server.netEncoding server parameter or the system file encoding will be used. Examples: SJIS, ASCII, ISO8859_1."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Results from applying $template to the pipeline."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes If a template is not available in a templates directory of any of the packages on the server, you can use this service to pass a File object representing the template file. Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runFileTemplateOnPipe service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runFileTemplateOnPipe__title__1"
+    },
+    {
+      "name": "pub.report:runStringTemplate",
+      "description": "WmPublic. Applies an output template to a specified document (IData object).",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "String",
+          "description": "String Template to apply."
+        },
+        {
+          "name": "$values",
+          "type": "Document",
+          "description": "Document Document (IData object) to bind against $template."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Results from applying $template to $values."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes This service is typically invoked from other services that already have a template in a String object and an IData object that will be used to bind against the template. Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runStringTemplate service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runStringTemplate__title__1"
+    },
+    {
+      "name": "pub.report:runStringTemplateOnPipe",
+      "description": "WmPublic. Applies a template to the pipeline.",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "String",
+          "description": "String Template to apply to pipeline."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Result from applying $template to the pipeline."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes This service is typically invoked from other services that already have a template in a String object and need the template to bind against the pipeline. Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runStringTemplateOnPipe service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runStringTemplateOnPipe__title__1"
+    },
+    {
+      "name": "pub.report:runTemplate",
+      "description": "WmPublic. Applies a template in a file to a specified document (IData object).",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "String",
+          "description": "String Name of the template file (for example, mytemp.html or mytemp.xml)."
+        },
+        {
+          "name": "$package",
+          "type": "String",
+          "description": "String Name of the package where the template resides (for example, Default)."
+        },
+        {
+          "name": "$values",
+          "type": "Document",
+          "description": "Document Document (IData object) to bind against $template."
+        },
+        {
+          "name": "fileEncoding",
+          "type": "String",
+          "description": "String Optional. The encoding of the template file. If fileEncoding is not specified, the default file encoding specified in the watt.server.netEncoding server parameter or the system file encoding will be used. Examples: SJIS, ASCII, ISO8859_1."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Result from applying the template to $values."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes The pub.report:runTemplate service uses template files that reside in the pub and templates directories of the package. The service locates the output template by its file name and the name of the package in which it resides. For example, to apply a template that resides in IntegrationServer_directory\\packages\\Default\\templates\\mytemp.xml, invoke the service with the following values. $template: mytemp.xml $package: Default Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runTemplate service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runTemplate__title__1"
+    },
+    {
+      "name": "pub.report:runTemplateOnPipe",
+      "description": "WmPublic. Applies a template in a file to the pipeline.",
+      "input_parameters": [
+        {
+          "name": "$template",
+          "type": "String",
+          "description": "String Name of template file (for example, mytemp.html ormytemp.xml)."
+        },
+        {
+          "name": "$package",
+          "type": "String",
+          "description": "String Name of the package in which the template resides (for example, Default)."
+        },
+        {
+          "name": "fileEncoding",
+          "type": "String",
+          "description": "String Optional. The encoding of the template file. If fileEncoding is not specified, the default file encoding specified in the watt.server.netEncoding server parameter or the system file encoding will be used. Examples: SJIS, ASCII, ISO8859_1."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "$txt",
+          "type": "String",
+          "description": "String Results from applying the template file to the pipeline."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes The pub.report:runTemplateOnPipe service uses template files that reside in the pub and templates directories of the package. The service locates the output template by its file name and the name of the package in which it resides. For example, to apply a template that resides in IntegrationServer_directory\\packages\\Default\\templates\\mytemp.xml, invoke the service with the following values. $template: mytemp.xml $package: Default Integration Server executes any services in the template file using the credentials of the user who invoked the pub.report:runTemplateOnPipe service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-report-folder#Apub_report_runTemplateOnPipe__title__1"
+    }
+  ]
+}

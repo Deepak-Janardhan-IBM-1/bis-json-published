@@ -1,0 +1,338 @@
+{
+  "folder": "STORAGE",
+  "total_services": 14,
+  "services": [
+    {
+      "name": "pub.storage:add",
+      "description": "WmPublic. Inserts a new entry into a data store.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store in which to insert the entry."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Key under which the entry is to be inserted."
+        },
+        {
+          "name": "value",
+          "type": "Document",
+          "description": "Document Value (IData object) to be inserted."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "result",
+          "type": "String",
+          "description": "String Flag indicating whether the entry was successfully added. A value of: true indicates that the new entry was inserted successfully. false indicates that the entry was not inserted (usually because an entry for key already exists)."
+        },
+        {
+          "name": "error",
+          "type": "",
+          "description": "String Error message generated while inserting the new entry into the data store."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_add__title__1"
+    },
+    {
+      "name": "pub.storage:closeStore",
+      "description": "WmPublic. Obsolete – Closes a data store and unregisters the data store with the server.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store to close and unregister."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [
+        "Usage Notes of pub.storage:closeStore This service is obsolete. When the repository was removed for Integration Server version 7.1.2, this service became a NOP (no operation)."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_closeStore__title__1"
+    },
+    {
+      "name": "pub.storage:deleteStore",
+      "description": "WmPublic. Deletes a data store and all its contents. Any data in the data store is deleted. If the data store does not exist, the service takes no action.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store to delete."
+        },
+        {
+          "name": "waitLength",
+          "type": "String",
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this data store to become available for deletion if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "count",
+          "type": "String",
+          "description": "String Number of data store entries that were deleted. If the store does not exist, this value is 0."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes of pub.storage:deleteStore This service obtains an exclusive lock on the data store, but no locks on the individual entries in the data store. If this service finds a shared lock from the same thread on the data store, the service will automatically promote the lock to an exclusive lock. The exclusive lock prevents other threads from acquiring locks on the data store or entries within the data store during the delete operation."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_deleteStore__title__1"
+    },
+    {
+      "name": "pub.storage:get",
+      "description": "WmPublic. Retrieves a value from a data store and locks the entry and the data store on behalf of the thread that invoked the service.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store from which you want to retrieve the entry."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Key of the entry whose value you want to retrieve."
+        },
+        {
+          "name": "waitLength",
+          "type": "String",
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
+        },
+        {
+          "name": "lockMode",
+          "type": "String",
+          "description": "String Optional. Type of lock you want to place on the entry. Set to: Exclusive to prevent other threads from reading or updating the entry while you are using it. The service also obtains a shared lock on the data store. An exclusive lock on an entry allows you to modify the entry. Read is obsolete. If this value is specified, the service obtains a shared lock. Share to prevent other threads from obtaining an exclusive lock on the entry. The service also obtains a shared lock on the data store. A shared lock on an entry allows you to read, but not modify, the entry. This is the default."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "value",
+          "type": "Document",
+          "description": "Document Retrieved entry (IData object). If the requested entry does not exist, the value of this parameter is null."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes of pub.storage:get If you request an exclusive lock and the service finds a shared lock from the same thread on the entry, the service will automatically promote the shared lock on the entry to an exclusive lock. When this service locks an entry, it also acquires a shared lock on the associated data store to prevent another thread from deleting the data store, and the entries it contains, while your thread has the entry locked. When storing and retrieving the flow state in the short-term store for checkpoint restart purposes, be sure the value of key is unique to the transaction."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_get__title__1"
+    },
+    {
+      "name": "pub.storage:keys",
+      "description": "WmPublic. Obtains a list of all the keys in a data store.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store from which you want to obtain a list of keys."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "keys",
+          "type": "String List",
+          "description": "String List Keys for the data store specified in storeName."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_keys__title__1"
+    },
+    {
+      "name": "pub.storage:listLocks",
+      "description": "WmPublic. Lists all pub.storage locks held by the supplied lock holder or target. If no input is supplied, the service returns a list of all pub.storage locks.",
+      "input_parameters": [
+        {
+          "name": "holder",
+          "type": "String",
+          "description": "String Optional. Identifies the holder whose pub.storage locks are to be listed. The format is \"_DataStore_<sessionId:threadId>\", where: sessionId is a unique, internally generated identifier for the client's session in Integration Server. threadId is a unique, internally generated identifier for the client’s thread in Integration Server."
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "description": "String Optional. Identifies the target whose pub.storage locks are to be listed."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "locks",
+          "type": "Document List",
+          "description": "Document List The list of pub.storage locks. This output variable can be null."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_listLocks__title__1"
+    },
+    {
+      "name": "pub.storage:lock",
+      "description": "WmPublic. Locks an entry and/or data store on behalf of the thread invoking this service.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store containing the entry."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Optional. Key of the entry that you want to lock. If key is not supplied and you request: A shared lock, the service obtains a shared lock on the data store, allowing other threads to read and modify entries, but not to delete them. An exclusive lock, the service obtains an exclusive lock on the data store, preventing other threads from locking the data store and the entries, thereby preventing those threads from reading, modifying, or deleting the entries or the data store. If both storeName and key are specified and you request: A shared lock, the service obtains a shared lock on the data store and the entry. An exclusive lock, the service obtains a shared lock on the data store and an exclusive lock on the entry."
+        },
+        {
+          "name": "waitLength",
+          "type": "String",
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator ."
+        },
+        {
+          "name": "lockMode",
+          "type": "String",
+          "description": "String Optional. Type of lock you want to place on the entry or data store. Set to: Exclusive to prevent other threads from obtaining a lock on the data store or entry. An exclusive lock on an entry allows you to modify the entry, and prevents other threads from reading or modifying the entry. An exclusive lock on a data store also locks the entries in the data store. In addition, an exclusive lock on a data store allows you to delete the data store. Read is obsolete. If this value is specified, the service obtains a shared lock. Share to prevent other threads from obtaining an exclusive lock on an entry or a data store. A shared lock on an entry allows you to read, but not modify, the entry. A shared lock on a data store prevents another thread from deleting the data store. This is the default."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [
+        "Usage Notes of pub.storage:lock If you have not specified a key, and your flow service does not invoke pub.storage:put or pub.storage:unlock, or your service throws an exception before invoking pub.storage:put or pub.storage:unlock, the entire data store remains locked until the amount of time specified on the watt.server.storage.lock.maxDuration parameter has passed. If the key does not exist in the data store at the time your flow service executes, the pub.storage:lock service is a NOP (no operation). Set the watt.server.storage.addKeyToStoreIfNotPresent parameter to true if you want the pub.storage:lock service to add the specified key to the data store if the key does not exist at the time the service executes. When the watt.server.storage.addKeyToStoreIfNotPresent parameter is set to true, the pub.storage:lock service creates the specified key, assigns it a NULL value, and then locks the entry in the data store. If you request an exclusive lock on an entry, the service obtains an exclusive lock on the entry and a shared lock on the data store. If this service finds a shared lock from the same thread on the entry, the service will automatically promote the shared lock on the entry to an exclusive lock. If you request a shared lock on an entry, the service obtains a shared lock on the entry and a shared lock on the data store. If you request a shared lock on an entry or a data store and this service finds an exclusive lock from the same thread, the existing exclusive lock will be reused. The exclusive lock will not be demoted to a shared lock. If you request an exclusive lock on a data store, and this service finds a shared lock from the same thread on the data store, the service will automatically promote the shared lock on the data store to an exclusive lock."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_lock__title__1"
+    },
+    {
+      "name": "pub.storage:put",
+      "description": "WmPublic. Inserts or updates an entry in a data store. If the key does not exist in the data store, the entry is inserted.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store into which you want to insert or update the entry."
+        },
+        {
+          "name": "value",
+          "type": "Document",
+          "description": "Document Value (IData object) to be inserted or updated."
+        },
+        {
+          "name": "waitLength",
+          "type": "String",
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. If the wait length expires before a lock is obtained, the service fails and throws an exception. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator. This parameter is used only when your service did not explicitly lock the entry beforehand."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Key where you want to insert or update the entry."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "error",
+          "type": "",
+          "description": "String Error message generated while inserting the new entry into the data store."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes of pub.storage:put When storing and retrieving the flow state in the short-term store for checkpoint restart purposes, be sure the value of key is unique to the transaction."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_put__title__1"
+    },
+    {
+      "name": "pub.storage:registerStore",
+      "description": "WmPublic. Obsolete – Opens or creates a data store and registers the store with the server.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store to register."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_registerStore__title__1"
+    },
+    {
+      "name": "pub.storage:releaseLocks",
+      "description": "WmPublic. Releases all pub.storage locks held by the identified lock holders and ids. If both holders and ids are specified, the service ignores the holders and uses IDs.",
+      "input_parameters": [
+        {
+          "name": "holders",
+          "type": "String List",
+          "description": "String List Optional. Holders whose pub.storage locks are to be released."
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "description": "String Optional. Ids whose pub.storage locks are to be released."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "count",
+          "type": "String List",
+          "description": "String List Number of locks that were released."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_releaseLocks__title__1"
+    },
+    {
+      "name": "pub.storage:remove",
+      "description": "WmPublic. Removes an entry from a data store. This service obtains an exclusive lock on the entry and a shared lock on the data store.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store from which to remove an entry."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Key of the entry that you want to remove."
+        },
+        {
+          "name": "waitLength",
+          "type": "String",
+          "description": "String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available for deletion if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "result",
+          "type": "String",
+          "description": "String Flag indicating whether the entry was successfully removed. A value of: true indicates that the entry was removed successfully. false indicates that the entry was not removed (usually because an entry for key does not exist)."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_remove__title__1"
+    },
+    {
+      "name": "pub.storage:shutdown",
+      "description": "WmPublic. Releases internal resources used by the pub.storage services. This service is run automatically when the WmPublic package is unloaded and should not be explicitly invoked by a client.",
+      "input_parameters": [],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_shutdown__title__1"
+    },
+    {
+      "name": "pub.storage:startup",
+      "description": "WmPublic. Performs initialization of internal facilities used by the pub.storage services. This service is run automatically when the WmPublic package is loaded and should not be explicitly invoked by a client.",
+      "input_parameters": [],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_startup__title__1"
+    },
+    {
+      "name": "pub.storage:unlock",
+      "description": "WmPublic. Unlocks an entry or a data store.",
+      "input_parameters": [
+        {
+          "name": "storeName",
+          "type": "String",
+          "description": "String Name of the data store in which to unlock an entry."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "String Optional. Key of the entry that you want to unlock. If key is not supplied, the lock will be removed from the data store specified in storeName, but any locks on entries in the data store will remain."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-storage-folder#Apub_storage_unlock__title__1"
+    }
+  ]
+}
