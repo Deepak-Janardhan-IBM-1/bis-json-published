@@ -1,5 +1,14 @@
 {
   "folder": "STREAM PROCESSING",
-  "total_services": 0,
-  "services": []
+  "total_services": 1,
+  "services": [
+    {
+      "name": "pub.streamProcessing:combineCalculations",
+      "description": "",
+      "input_parameters": [],
+      "output_parameters": [],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-stream-processing-folder#pub-eda-combineCalc__title__1"
+    }
+  ]
 }

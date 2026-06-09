@@ -1,7 +1,79 @@
 {
   "folder": "XMLDATA",
-  "total_services": 9,
+  "total_services": 11,
   "services": [
+    {
+      "name": "pub.xmldata.domNodeToXMLData",
+      "description": "WmPublic. Converts a DOM node and its child nodes to a document in the XMLData format and optionally validates each node.",
+      "input_parameters": [
+        {
+          "name": "node",
+          "type": "org.w3c.dom.Node",
+          "description": "org.w3c.dom.Node DOM node that is to be converted to an XMLData (Document). Note that com.wm.lang.xml.Node is a DOM node."
+        },
+        {
+          "name": "conformsTo",
+          "type": "String",
+          "description": "String Optional. Fully-qualified name of the XML document type on Integration Server against which to validate the DOM node. Specify a value for conformsTo only if you want to do the following: Validate the DOM node as part of converting it to XMLData. Integration Server validates a DOM node in the tree as part of converting the tree node to and XMLData-formatted Document. Use the XML document type to direct the conversion of the DOM node. That is, the structure of the XML document type determines the structure of the resulting XMLData. Note: You must specify an XML document type for conformsTo if you intend to modify the generated XMLData using the mapping tools available in the pipeline. Note: One or more XML document types are created from a single XML schema definition. To create an XMLData-formatted Document using the XML document types created from an XML Schema definition, you need specify only one of the XML document types or XML fields created from the schema. Integration Server locates the related XML document types, using the complete collection of XML document types and XML fields created from the schema during conversion and validation. If you do not specify an XML document type for conformsTo, Integration Server does not validate the input nodes as part of the conversion. Additionally, the service formats the resulting XMLData in a generic way instead of in a manner that matches an XML document type."
+        },
+        {
+          "name": "maxErrors",
+          "type": "String",
+          "description": "String Optional. Number of errors to be collected. Default value is 1. When the number of errors found is equal to maxErrors, the validation processor stops validation and returns the result. If maxErrors is set to -1, the validation processor returns all errors. The service uses the maxErrors input parameter only when a conformsTo value is specified."
+        },
+        {
+          "name": "ignoreContent",
+          "type": "String",
+          "description": "String Optional. Flag that specifies whether the validation processor will validate simple content where simple content is content keys of the type String, String List, or String Table. Set to: true to ignore content (that is, do not validate the content of keys of the type String, String List, or String Table). Integration Server validates the structure and key names of the XML document only. false to validate content. This is the default. The service uses the ignoreContent input parameter only when a conformsTo value is specified."
+        },
+        {
+          "name": "failIfInvalid",
+          "type": "String",
+          "description": "String Optional. Flag that indicates whether the service should fail and throw an exception if the object is invalid. Set to: true to indicate that the service should fail if the object is invalid. false to indicate that service should signal success and return errors to the pipeline if object is invalid. This is the default. The service uses the ignoreContent input parameter only when a conformsTo value is specified."
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "isValid",
+          "type": "String",
+          "description": "String Conditional. Flag that indicates whether or not validation of the DOM node was successful. A value of: true indicates that the validation was successful. false indicates that the validation was unsuccessful. The service returns the isValid parameter only if conformsTo specifies an XML document type."
+        },
+        {
+          "name": "errors",
+          "type": "Document List",
+          "description": "Document List Conditional. Errors encountered during validation. Each document will contain the following information:"
+        },
+        {
+          "name": "pathName",
+          "type": "String",
+          "description": "String Location of the error in XQL."
+        },
+        {
+          "name": "errorCode",
+          "type": "String",
+          "description": "String Error code (for example, VV-001)."
+        },
+        {
+          "name": "errorMessage",
+          "type": "String",
+          "description": "String Error message (for example, Missing Object)."
+        },
+        {
+          "name": "errors",
+          "type": "",
+          "description": "The service returns the errors parameter only if conformsTo specifies an XML document type."
+        },
+        {
+          "name": "xmlDataDocument",
+          "type": "Document",
+          "description": "Document An XMLData-formatted document that represents the elements and attributes in the DOM node."
+        }
+      ],
+      "usage_notes": [
+        "Usage Notes If the conformsTo input parameter specifies an XML document type or an XML field, the pub.xmldata:domNodetoXMLData service does the following: Uses the XML document type (and any other XML document types and XML fields created from the same XML schema definition) to direct the structure of the XMLData. Validates each DOM node in the tree before converting it to XMLData. You can use the pub.schema:validate service to validate XMLData. When validating XML, Integration Server uses the Java regular expression compiler. When validating XML, Integration Server uses the W3C recommendation XML Schema Part 2: Datatypes. If you want to validate XML for illegal values, set ignoreContent to false and the watt.core.validation.w3cConformant configuration parameter to true. For information about setting this configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id4a50e478-127c-49d2-a445-3bb7d66f61ca__title__1"
+    },
     {
       "name": "pub.xmldata:getAttributes",
       "description": "WmPublic. Retrieves the attributes from a an XMLData document.",
@@ -128,6 +200,80 @@
         "Usage Notes Together, the ncName, namespace, and particleId identify a particular field in the XmlData group."
       ],
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#id00c895fc-156c-4648-8c9d-63bc4e412572__title__1"
+    },
+    {
+      "name": "pub.xmldata.getGroupValues",
+      "description": "WmPublic. Queries the contents of a group with unknown structure to return information about the values in the group.",
+      "input_parameters": [],
+      "output_parameters": [
+        {
+          "name": "results",
+          "type": "Document List",
+          "description": "Document List IData array containing the results of the query for group values. The array contains one document for each value. Because an object can contain multiple values, the length of the list might be longer than the number of tags contained in the group. All the values from all of the tags are combined into a single list, representing the list of values as they appeared in the input XML. This service simplifies obtaining values for content when the object tags are a mixture of any and substitution tags. The returned array has the corresponding tags for the value as it appeared in the original XML rather than the as it appears in the document type object model."
+        },
+        {
+          "name": "objectIndex",
+          "type": "String",
+          "description": "String The offset of the object in the list group objects in the provided groupValue. This is the tag to which the value belongs. If a tag has more than one value, then more than one item in the results array will have the same objectIndex."
+        },
+        {
+          "name": "ncName",
+          "type": "String",
+          "description": "String NCName portion of the value tag. If the tagType is a substitution or any tag, the value tag will not have the same NCName as the object tag."
+        },
+        {
+          "name": "namespace",
+          "type": "String",
+          "description": "String Namespace portion of the value tag. If the tagType is a substitution or any tag, the value tag will not have the same namespace as the object tag."
+        },
+        {
+          "name": "particleId",
+          "type": "String",
+          "description": "String ParticleID portion of the value tag. If the tagType is a substitution or any tag, the particleId is 1."
+        },
+        {
+          "name": "index",
+          "type": "String",
+          "description": "String The offset into the repeating values for the object that corresponds to objectIndex."
+        },
+        {
+          "name": "tagType",
+          "type": "String",
+          "description": "String Type of tag. The tagType is one of the following: group element"
+        },
+        {
+          "name": "value",
+          "type": "Object",
+          "description": "Object Value associated with the tag at the returned index."
+        },
+        {
+          "name": "valueType",
+          "type": "String",
+          "description": "String The base value type. The valueType is one of the following: simple indicates a String value. group indicates that the value is an IData that does not contain attributes, nor does it contain a repeating top-level group. complex indicates the value contains attributes and/or a repeating top-level group. none indicates an empty model."
+        },
+        {
+          "name": "complexContent",
+          "type": "Object",
+          "description": "Object Conditional. The complexContent for the returned value. The complexContent is returned for complex values only."
+        },
+        {
+          "name": "repeatingComplexContent",
+          "type": "String",
+          "description": "String Conditional. Indicates if the top-level group value is an array (. A value of: true indicates the object is an array. false indicates the object is not an array. The repeatingComplexContent variable is returned only for complex values (that is, when valueType is complex)."
+        },
+        {
+          "name": "complexContentType",
+          "type": "String",
+          "description": "String Conditional. The type of complex content. The complexContentType can be one of the following: simple group none"
+        },
+        {
+          "name": "attributes",
+          "type": "Document",
+          "description": "Document Conditional. An IData containing the attribute and values. The attributes variable is returned only for complex values (that is, when valueType is complex)."
+        }
+      ],
+      "usage_notes": [],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xmldata-folder#idbbf6fd73-1b4a-4aff-b32c-3866436d9164__title__1"
     },
     {
       "name": "pub.xmldata:getInstanceTag",

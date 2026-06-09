@@ -1,6 +1,6 @@
 {
   "folder": "SOAP",
-  "total_services": 100,
+  "total_services": 101,
   "services": [
     {
       "name": "pub.soap.handler:addBodyBlock",
@@ -2222,6 +2222,32 @@
         "Usage Notes The pub.soap.utils.resetWSDEffectivePolicy service is deprecated because the service applies only to web services that run in pre-8.2 compatibility mode. The ability to run in pre-8.2 compatibility mode is deprecated as of Integration Server 10.4 due to the deprecation of the web services implementation that was introduced in Integration Server version 7.1 You can also use Designer to reset the effective policy. In Designer, open the web service descriptor, select the handler on the Handlers view, and modify the value of Effective policy name property assigned to the handler. The pub.soap.utils.resetWSDEffectivePolicy service throws an exception if the provided inputs are invalid."
       ],
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_resetWSDEffectivePolicy__title__1"
+    },
+    {
+      "name": "pub.soap.utils.setWSDEffectivePolicy",
+      "description": "WmPublic. Deprecated - There is no replacement service.",
+      "input_parameters": [
+        {
+          "name": "wsdName",
+          "type": "String",
+          "description": "String The name of the web service descriptor for which you want to set the effective policy. Note: The setWSDEffectivePolicy service applies only to web services that run in pre-8.2 compatibility mode (i.e., the Pre-8.2 compatibility mode property is set to true)."
+        },
+        {
+          "name": "handlerName",
+          "type": "String",
+          "description": "String The name of the handler for which you want to set the effective policy."
+        },
+        {
+          "name": "effectivePolicyID",
+          "type": "String",
+          "description": "String The unique identifier for the policy that you want to use with the handler in the web service descriptor."
+        }
+      ],
+      "output_parameters": [],
+      "usage_notes": [
+        "Usage Notes The pub.soap.utils.setWSDEffectivePolicy service is deprecated because the service applies only to web services that run in pre-8.2 compatibility mode. The ability to run in pre-8.2 compatibility mode is deprecated as of Integration Server 10.4 due to the deprecation of the web services implementation that was introduced in Integration Server version 7.1. The pub.soap.utils.setWSDEffectivePolicy service overrides the policy originally assigned to the handler in the web service descriptor. The pub.soap.utils.setWSDEffectivePolicy service applies to provider web service descriptors as well as consumer web service descriptors. The pub.soap.utils.setWSDEffectivePolicy service throws an exceptions if the provided input is incorrect. The service also verifies that the provided effective policy actually exists. You can also use Designer to set the effective policy. In Designer, open the web service descriptor, select the handler in the Handlers view, and modify the value of Effective policy name property assigned to the handler. You can reset the effective policy using the pub.soap.utils.resetWSDEffectivePolicy service."
+      ],
+      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_setWSDEffectivePolicy__title__1"
     },
     {
       "name": "pub.soap.utils:soapDataToBytes",
