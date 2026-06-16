@@ -1,561 +1,726 @@
 {
   "folder": "WEBSOCKET",
+  "description": [
+    "You can use the services in the WebSocket folder to allow clients to send messages, close, and disconnect the WebSocket session."
+  ],
   "total_services": 19,
   "services": [
     {
       "name": "pub.websocket:close",
-      "description": "WmPublic. Closes the WebSocket connection.",
+      "description": [
+        "WmPublic. Closes the WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "closed",
           "type": "Boolean",
-          "description": "Boolean Flags whether the WebSocket session is closed. A value of : true indicates that the WebSocket session was closed successfully. false indicates that the WebSocket session was not closed successfully."
+          "description": [
+            "- true indicates that the WebSocket session was closed successfully.",
+            "- false indicates that the WebSocket session was not closed successfully."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_36CD2117630540A8BFBBFA0A328640CA__title__1"
+      ]
     },
     {
       "name": "pub.websocket:disconnect",
-      "description": "WmPublic. Closes the WebSocket connection abruptly.",
+      "description": [
+        "WmPublic. Closes the WebSocket connection abruptly."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "disconnected",
           "type": "Boolean",
-          "description": "Boolean Flags whether the WebSocket connection is disconnected. A value of : true indicates that the WebSocket session was disconnected successfully. false indicates that the WebSocket session was not disconnected successfully."
+          "description": [
+            "- true indicates that the WebSocket session was disconnected successfully.",
+            "- false indicates that the WebSocket session was not disconnected successfully."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_4A349F5225D94B14B9FAC121075B59B3__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getCookies",
-      "description": "WmPublic: Retrieves the cookies that are part of the HTTP request to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the cookies that are part of the HTTP request to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the cookies information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the cookies information."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "cookies",
           "type": "Document List-",
-          "description": "Document List- Conditional. List of the cookies that are part of the HTTP request to establish a WebSocket connection. This parameter returns value only if cookies were part of the request."
-        },
-        {
-          "name": "name",
-          "type": "String",
-          "description": "String The name of the cookie."
-        },
-        {
-          "name": "comment",
-          "type": "String",
-          "description": "String Description about the purpose of the cookie. This parameter returns null if the cookie has no comment."
-        },
-        {
-          "name": "commentURL",
-          "type": "String",
-          "description": "String The comment URL which describes the purpose of the cookie. This parameter returns null if the cookie has no comment."
-        },
-        {
-          "name": "discard",
-          "type": "String",
-          "description": "String The value of the discard attribute for the cookie."
-        },
-        {
-          "name": "domain",
-          "type": "String",
-          "description": "String The domain name set for the given cookies."
-        },
-        {
-          "name": "maxAge",
-          "type": "String",
-          "description": "String The maximum age of the cookie specified in seconds."
-        },
-        {
-          "name": "path",
-          "type": "String",
-          "description": "String The path on the server to which the browser returns the cookie."
-        },
-        {
-          "name": "portlist",
-          "type": "String",
-          "description": "String The value of the port list attribute of the cookie."
-        },
-        {
-          "name": "secure",
-          "type": "String",
-          "description": "String Indicates whether sending the cookie is restricted to a secure protocol or any protocol. True Sending the cookie is restricted to a secure protocol. False The cookie can be sent using any protocol."
-        },
-        {
-          "name": "value",
-          "type": "String",
-          "description": "String The value of the cookie."
-        },
-        {
-          "name": "version",
-          "type": "String",
-          "description": "String The version of the protocol with which the cookie complies."
+          "description": [
+            "Conditional. List of the cookies that are part of the HTTP request to establish a WebSocket connection. This parameter returns value only if cookies were part of the request."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the cookie."
+              ]
+            },
+            {
+              "name": "comment",
+              "type": "String",
+              "description": [
+                "Description about the purpose of the cookie. This parameter returns null if the cookie has no comment."
+              ]
+            },
+            {
+              "name": "commentURL",
+              "type": "String",
+              "description": [
+                "The comment URL which describes the purpose of the cookie. This parameter returns null if the cookie has no comment."
+              ]
+            },
+            {
+              "name": "discard",
+              "type": "String",
+              "description": [
+                "The value of the discard attribute for the cookie."
+              ]
+            },
+            {
+              "name": "domain",
+              "type": "String",
+              "description": [
+                "The domain name set for the given cookies."
+              ]
+            },
+            {
+              "name": "maxAge",
+              "type": "String",
+              "description": [
+                "The maximum age of the cookie specified in seconds."
+              ]
+            },
+            {
+              "name": "path",
+              "type": "String",
+              "description": [
+                "The path on the server to which the browser returns the cookie."
+              ]
+            },
+            {
+              "name": "portlist",
+              "type": "String",
+              "description": [
+                "The value of the port list attribute of the cookie."
+              ]
+            },
+            {
+              "name": "secure",
+              "type": "String",
+              "description": [
+                "- True Sending the cookie is restricted to a secure protocol.",
+                "- False The cookie can be sent using any protocol."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String",
+              "description": [
+                "The value of the cookie."
+              ]
+            },
+            {
+              "name": "version",
+              "type": "String",
+              "description": [
+                "The version of the protocol with which the cookie complies."
+              ]
+            }
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B3EDCB9F12F34AEAB7C786BDCCA756D5__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getExtensions",
-      "description": "WmPublic: Retrieves the extensions used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the extensions used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the extension information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the extension information."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "extensions",
           "type": "Document List",
-          "description": "Document List Conditional. The list of extensions for a WebSocket connection."
-        },
-        {
-          "name": "name",
-          "type": "String",
-          "description": "String The name of the header."
-        },
-        {
-          "name": "parameterizedName",
-          "type": "String",
-          "description": "String The parameterized name of the extension."
-        },
-        {
-          "name": "parameterKeys",
-          "type": "String List",
-          "description": "String List The parameterized keys of the extension."
-        },
-        {
-          "name": "parameters",
-          "type": "Document List",
-          "description": "Document List The list of parameters for the given extension."
+          "description": [
+            "Conditional. The list of extensions for a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the header."
+              ]
+            },
+            {
+              "name": "parameterizedName",
+              "type": "String",
+              "description": [
+                "The parameterized name of the extension."
+              ]
+            },
+            {
+              "name": "parameterKeys",
+              "type": "String List",
+              "description": [
+                "The parameterized keys of the extension."
+              ]
+            },
+            {
+              "name": "parameters",
+              "type": "Document List",
+              "description": [
+                "The list of parameters for the given extension."
+              ]
+            }
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_8AD007A130674A3C93D55F25168099FD__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getHeaders",
-      "description": "WmPublic: Retrieves the headers used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the headers used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the header information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the header information."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "headers",
           "type": "String",
-          "description": "String Conditional. The list of the headers included in with the request to establish a WebSocket connection. This parameter returns a value only if headers were part of the request."
-        },
-        {
-          "name": "name",
-          "type": "String",
-          "description": "String The name of the header."
-        },
-        {
-          "name": "value",
-          "type": "String",
-          "description": "String The value of the header."
+          "description": [
+            "Conditional. The list of the headers included in with the request to establish a WebSocket connection. This parameter returns a value only if headers were part of the request."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the header."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String",
+              "description": [
+                "The value of the header."
+              ]
+            }
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B5E2E7570C0B47AB9C03AACAFAFC31B4__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getPathParameters",
-      "description": "WmPublic: Retrieves the path parameters used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the path parameters used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the path parameters information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the path parameters information."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "queryParameters",
           "type": "Document List",
-          "description": "Document List Conditional. The path parameters included in with the request for establishing a WebSocket connection."
-        },
-        {
-          "name": "name",
-          "type": "String",
-          "description": "String The name of the path parameter."
-        },
-        {
-          "name": "value",
-          "type": "String List",
-          "description": "String List The value of the path parameter."
+          "description": [
+            "Conditional. The path parameters included in with the request for establishing a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the path parameter."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String List",
+              "description": [
+                "The value of the path parameter."
+              ]
+            }
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_2665D52B0AAD4E4F8F98A7DF0CFB499C__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getPathParameter",
-      "description": "WmPublic: Retrieves the path parameter used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the path parameter used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the path parameter information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the path parameter information."
+          ]
         },
         {
           "name": "pathParameterName",
           "type": "String",
-          "description": "String The path parameter name of the query parameter for which you want to obtain a value."
+          "description": [
+            "The path parameter name of the query parameter for which you want to obtain a value."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "pathParameterValue",
           "type": "String",
-          "description": "String Conditional. The value for the provided parameter name. This parameter is returned only if a path parameter of the specified value was part of the request."
+          "description": [
+            "Conditional. The value for the provided parameter name. This parameter is returned only if a path parameter of the specified value was part of the request."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_3C5BE0DCC1C74A33B20495A41FBDF275__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getRequest",
-      "description": "WmPublic: Retrieves the HTTP request information used to establish the WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the HTTP request information used to establish the WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve HTTP request information."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve HTTP request information."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "requestURI",
           "type": "String",
-          "description": "String The Uniform Resource Identifier used by the client to identify the request."
+          "description": [
+            "The Uniform Resource Identifier used by the client to identify the request."
+          ]
         },
         {
           "name": "queryString",
           "type": "String",
-          "description": "String One or more name/value pairs included as part of the query strings in request uniform resource locator(URL) which assigns values to specified parameters. For example, ?name=ferret&color=purple."
+          "description": [
+            "One or more name/value pairs included as part of the query strings in request uniform resource locator(URL) which assigns values to specified parameters. For example, ?name=ferret&color=purple."
+          ]
         },
         {
           "name": "host",
           "type": "String",
-          "description": "String Name or IP address of the WebSocket server that received the upgrade request."
+          "description": [
+            "Name or IP address of the WebSocket server that received the upgrade request."
+          ]
         },
         {
           "name": "httpVersion",
           "type": "String",
-          "description": "String The HTTP version used in the request."
+          "description": [
+            "The HTTP version used in the request."
+          ]
         },
         {
           "name": "method",
           "type": "String",
-          "description": "String The HTTP method used for establishing WebSocket connection."
+          "description": [
+            "The HTTP method used for establishing WebSocket connection."
+          ]
         },
         {
           "name": "origin",
           "type": "String",
-          "description": "String The value of the origin request header."
+          "description": [
+            "The value of the origin request header."
+          ]
         },
         {
           "name": "userPrincipal",
           "type": "String",
-          "description": "String The name of the authenticated user used in the request."
+          "description": [
+            "The name of the authenticated user used in the request."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_43A2AFA2946D4A879DD887D1D23C9690__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getQueryParameters",
-      "description": "WmPublic: Retrieves the query parameters used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the query parameters used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to obtain query parameters."
+          "description": [
+            "Session ID for the WebSocket session for which you want to obtain query parameters."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "queryParameters",
           "type": "Document List",
-          "description": "Document List Conditional. The list of query parameters used on the URL that established a WebSocket connection."
-        },
-        {
-          "name": "name",
-          "type": "String",
-          "description": "String The name of the query parameter."
-        },
-        {
-          "name": "value",
-          "type": "String List",
-          "description": "String List The value of the query parameter."
+          "description": [
+            "Conditional. The list of query parameters used on the URL that established a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the query parameter."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String List",
+              "description": [
+                "The value of the query parameter."
+              ]
+            }
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B7E88B41E4B34331A37F77768AC3B9D6__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getQueryParameter",
-      "description": "WmPublic: Session ID for the WebSocket session for which you want to retrieve the value of a specific query parameter information.",
+      "description": [
+        "WmPublic: Session ID for the WebSocket session for which you want to retrieve the value of a specific query parameter information."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to obtain query parameters."
+          "description": [
+            "Session ID for the WebSocket session for which you want to obtain query parameters."
+          ]
         },
         {
           "name": "queryParameterName",
           "type": "String",
-          "description": "String The name of the query parameter for which you want to obtain a value."
+          "description": [
+            "The name of the query parameter for which you want to obtain a value."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "queryParameterValue",
           "type": "String",
-          "description": "String Conditional. The value for the provided parameter name. The parameter is only returned if there is a query parameter of that name in the URL."
+          "description": [
+            "Conditional. The value for the provided parameter name. The parameter is only returned if there is a query parameter of that name in the URL."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_5D002A89F2674F8CA6E4892CBE0F8EC4__title__1"
+      ]
     },
     {
       "name": "pub.websocket:getSubProtocols",
-      "description": "WmPublic: Retrieves the subprotocols used in the request URL to establish a WebSocket connection.",
+      "description": [
+        "WmPublic: Retrieves the subprotocols used in the request URL to establish a WebSocket connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to retrieve the subprotocols of the connection."
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the subprotocols of the connection."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "subProtocols",
           "type": "String List",
-          "description": "String List The WebSocket protocols used as part of establishing a WebSocket connection."
+          "description": [
+            "The WebSocket protocols used as part of establishing a WebSocket connection."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_50CE8576C0E946B39555BDC33A5B5909__title__1"
+      ]
     },
     {
       "name": "pub.websocket:onBinary",
-      "description": "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles binary payload.",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles binary payload."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         },
         {
           "name": "payload",
           "type": "byte[ ]",
-          "description": "byte[ ] Byte array that contains the payload."
+          "description": [
+            "Byte array that contains the payload."
+          ]
         },
         {
           "name": "offset",
           "type": "Integer",
-          "description": "Integer The offset from the byte array till which the data is to be read."
+          "description": [
+            "The offset from the byte array till which the data is to be read."
+          ]
         },
         {
           "name": "length",
           "type": "Integer",
-          "description": "Integer The maximum number of byte array to read from the payload."
+          "description": [
+            "The maximum number of byte array to read from the payload."
+          ]
         }
       ],
-      "output_parameters": [],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_7D027047B46D427DAC8252DA62EF17A2__title__1"
+      "output_parameters": []
     },
     {
       "name": "pub.websocket:onClose",
-      "description": "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is closed or disconnected.",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is closed or disconnected."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         },
         {
           "name": "statusCode",
           "type": "Integer",
-          "description": "Integer Indicates the reason why the underlying WebSocket connection was closed. The pre-defined status codes when closing an established connection are defined in Section https://tools.ietf.org/html/rfc6455#section-7.4."
+          "description": [
+            "The pre-defined status codes when closing an established connection are defined in Section https://tools.ietf.org/html/rfc6455#section-7.4."
+          ]
         },
         {
           "name": "reason",
           "type": "String",
-          "description": "String Text explaining the reason for closure."
+          "description": [
+            "Text explaining the reason for closure."
+          ]
         }
       ],
-      "output_parameters": [],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_5D21DC0866734533BAEC67948D7E3E91__title__1"
+      "output_parameters": []
     },
     {
       "name": "pub.websocket:onConnect",
-      "description": "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is successfully established.",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is successfully established."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         }
       ],
-      "output_parameters": [],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_62153B758E1B4563ABF066A15C4970AC__title__1"
+      "output_parameters": []
     },
     {
       "name": "pub.websocket:onError",
-      "description": "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when an error is encountered resulting in WebSocket session termination.",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when an error is encountered resulting in WebSocket session termination."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         },
         {
           "name": "cause",
           "type": "String",
-          "description": "String Text explaining the cause of the error."
+          "description": [
+            "Text explaining the cause of the error."
+          ]
         }
       ],
-      "output_parameters": [],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_A296EA49E241460A8D5E2CF82592739C__title__1"
+      "output_parameters": []
     },
     {
       "name": "pub.websocket:onText",
-      "description": "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles text payload.",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles text payload."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         },
         {
           "name": "message",
           "type": "String",
-          "description": "String The content of the message."
+          "description": [
+            "The content of the message."
+          ]
         }
       ],
-      "output_parameters": [],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_78D4458AE4E94D53880B309C44F9DF13__title__1"
+      "output_parameters": []
     },
     {
       "name": "pub.websocket:ping",
-      "description": "WmPublic: Sends a ping message containing the given application data to the remote endpoint after establishing the connection.",
+      "description": [
+        "WmPublic: Sends a ping message containing the given application data to the remote endpoint after establishing the connection."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Required. Session ID for the WebSocket session for which you want to send the ping message."
+          "description": [
+            "Required. Session ID for the WebSocket session for which you want to send the ping message."
+          ]
         },
         {
           "name": "applicationData",
           "type": "String",
-          "description": "String Optional. The application data to be sent as part of the ping message. If the parameter value is null an empty buffer will be sent."
+          "description": [
+            "Optional. The application data to be sent as part of the ping message. If the parameter value is null an empty buffer will be sent."
+          ]
         },
         {
           "name": "charset",
           "type": "String",
-          "description": "String Optional. The character encoding. If the parameter value is null, the default character set is used."
+          "description": [
+            "Optional. The character encoding. If the parameter value is null, the default character set is used."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "pinged",
           "type": "String",
-          "description": "String Indicates the success or failure of the ping message. This parameter returns a value of true if the ping message is received successfully. Else the parameter returns the value false."
+          "description": [
+            "Indicates the success or failure of the ping message. This parameter returns a value of true if the ping message is received successfully. Else the parameter returns the value false."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_597A06A0AAB94A4CAF7B85C17AB14CEE__title__1"
+      ]
     },
     {
       "name": "pub.websocket:pong",
-      "description": "WmPublic: Sends back an unsolicited pong message with the exact application data as the ping for the WebSocket session.",
+      "description": [
+        "WmPublic: Sends back an unsolicited pong message with the exact application data as the ping for the WebSocket session."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID for the WebSocket session for which you want to send the pong message."
+          "description": [
+            "Session ID for the WebSocket session for which you want to send the pong message."
+          ]
         },
         {
           "name": "applicationData",
           "type": "String",
-          "description": "String Optional. The application data to be sent as part of the pong message. If the parameter value is null an empty buffer will be sent."
+          "description": [
+            "Optional. The application data to be sent as part of the pong message. If the parameter value is null an empty buffer will be sent."
+          ]
         },
         {
           "name": "charset",
           "type": "String",
-          "description": "String Optional. The character encoding. If the parameter value is null, the default character set is used."
+          "description": [
+            "Optional. The character encoding. If the parameter value is null, the default character set is used."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "ponged",
           "type": "String",
-          "description": "String Conditional. Indicates the success or failure of the pong message. This parameter returns a value of true if the pong message is received successfully. Else the parameter returns the value of false."
+          "description": [
+            "Conditional. Indicates the success or failure of the pong message. This parameter returns a value of true if the pong message is received successfully. Else the parameter returns the value of false."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_21715B0F1AD34CA8888B907616B72CA2__title__1"
+      ]
     },
     {
       "name": "pub.websocket:send",
-      "description": "WmPublic. Sends a message on a connected WebSocket session.",
+      "description": [
+        "WmPublic. Sends a message on a connected WebSocket session."
+      ],
       "input_parameters": [
         {
           "name": "sessionId",
           "type": "String",
-          "description": "String Session ID to identify the WebSocket session."
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
         },
         {
           "name": "message",
           "type": "Object",
-          "description": "Object Sends messages containing the payload to the destination. The message could be a byte array or a text message."
+          "description": [
+            "Sends messages containing the payload to the destination. The message could be a byte array or a text message."
+          ]
         }
       ],
       "output_parameters": [
         {
           "name": "sent",
           "type": "Boolean",
-          "description": "Boolean Flags indicating the result of the send operation. A value of : true indicates that the WebSocket session was sent successfully. false indicates that the WebSocket session was not sent successfully."
+          "description": [
+            "- true indicates that the WebSocket session was sent successfully.",
+            "- false indicates that the WebSocket session was not sent successfully."
+          ]
         }
-      ],
-      "usage_notes": [],
-      "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_8BFC4F4C69D84665BF2B9AA66DA71A97__title__1"
+      ]
     }
   ]
 }
