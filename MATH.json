@@ -46,6 +46,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, adding a number to infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, any operation that uses NaN as input, such as 10.0 + NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "Sum of the numbers in numList. If a sum cannot be produced, value contains one of the following:"
@@ -91,6 +117,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, adding a number to infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, any operation that uses NaN as input, such as 10.0 + NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "Sum of the numbers in num1 and num2. If a sum cannot be produced, value contains one of the following:"
@@ -251,6 +303,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, dividing a number by infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, the result of an illegal operation such as dividing zero by zero or any operation that uses NaN as input, such as 10.0 + NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "The quotient of num1 / num2. If a quotient cannot be produced, value contains one of the following:"
@@ -413,6 +491,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, multiplying a number by infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, the result of an illegal operation such as multiplying zero by zero or any operation that uses NaN as input, such as 10.0 + NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "Product of the numbers in numlist. If a product cannot be produced, value contains one of the following:"
@@ -458,6 +562,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, multiplying a number by infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, the result of an illegal operation such as multiplying zero by zero or any operation that uses NaN as input, such as 10.0 + NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "Product of the numeric values of num1 and num2. If a product cannot be produced, value contains one of the following:"
@@ -674,6 +804,32 @@
       "output_parameters": [
         {
           "name": "value",
+          "children": [
+            {
+              "name": "Infinity",
+              "description": [
+                "The computation produces a positive value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "-Infinity",
+              "description": [
+                "The computation produces a negative value that overflows the representable range of a float type."
+              ]
+            },
+            {
+              "name": "0.0",
+              "description": [
+                "The computation produces a value that underflows the representable range of a float type (for example, subtracting a number from infinity)."
+              ]
+            },
+            {
+              "name": "NaN",
+              "description": [
+                "The computation produces a value that cannot be represented as a number (for example, the result of an illegal operation such as multiplying zero by zero or any operation that uses NaN as input, such as 10.0 - NaN = NaN)."
+              ]
+            }
+          ],
           "type": "String",
           "description": [
             "Difference of num1 - num2. If a difference cannot be produced, value contains one of the following:"

@@ -17,6 +17,12 @@
             "- code for the authorization code grant. When set to code, the response from authorization server must include an OAuth authentication code the client can exchange for an access token.",
             "- token for an implicit grant type. When set to token, the response from authorization server includes an OAuth access token for the client.",
             "For more information about grant types, see Usage Notes."
+          ],
+          "references": [
+            {
+              "title": "Usage Notes",
+              "url": "to-oauth_folder.html#id1296C50035Z__CDCJJFCD"
+            }
           ]
         },
         {
@@ -38,6 +44,12 @@
             "Specify the name of one or more scopes. Use a space to separate the name of the scopes. For example:",
             "scope1 scope2 scope3",
             "The scopes you specify must already exist on the authorization server. For information about creating a scope, see Defining Scopes.."
+          ],
+          "references": [
+            {
+              "title": "Defining Scopes",
+              "url": "../is_administrators_guide/to-configure_oauth.html#id127IA0O0WHT"
+            }
           ]
         },
         {

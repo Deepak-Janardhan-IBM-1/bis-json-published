@@ -68,6 +68,12 @@
             "- encodeMapAsString and watt.server.json.encodeMapAsString",
             "- encodeListsAndSetsAsArrays and watt.server.json.encodeListsAndSetsAsArrays",
             "For more information about the server configuration parameters, see Server Configuration Parameters"
+          ],
+          "references": [
+            {
+              "title": "Server Configuration Parameters",
+              "url": "../is_administrators_guide/z_server_config_parameters/watt_server.html#A_Ref462651821"
+            }
           ]
         },
         {
@@ -78,6 +84,12 @@
             "- When strict is true and jsonDocumentTypeName is not specified, the service returns an exception.",
             "- When strict is false and jsonDocumentTypeName is specified, the transformation from Document (IData) to JSON object is loosely based on the document type. For conversion rules, see Table 2: Conversion of IData to JSON payload.",
             "- When strict is true and jsonDocumentTypeName is specified, the transformation from Document (IData) to JSON object is strictly based on the document type. The validation is performed first before the transformation, and any deviations lead to transformation errors."
+          ],
+          "references": [
+            {
+              "title": "Table 2: Conversion of IData to JSON payload.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-json-folder#reference_538A9D93FABC45E7B34E56E33BDD1845"
+            }
           ]
         },
         {
@@ -96,6 +108,12 @@
             "- true to format the jsonObj output variable for human readability.",
             "- false to leave the jsonObj output parameter in its unformatted state. The service will not add any additional carriage returns or indentation to the JSON content.",
             "- <null> to use the prettyPrint setting already in effect for the HTTP client making the request, as follows: If the HTTP client request includes jsonPrettyPrint=true in the URI, JSON pretty printing is in effect. If the HTTP client request includes jsonPrettyPrint=false in the URI, JSON pretty printing is not in effect. If the HTTP client request does not include the jsonPrettyPrint parameter, the service uses the value of the watt.server.json.prettyPrint server configuration parameter. For more information about the parameter, see Server Configuration Parameters."
+          ],
+          "references": [
+            {
+              "title": "Server Configuration Parameters",
+              "url": "../is_administrators_guide/z_server_config_parameters/watt_server.html#A_Ref462651821__prettyPrint"
+            }
           ]
         },
         {
@@ -112,6 +130,12 @@
             "- RFC_1123_DATE_TIME to encode java.util.Date instances as strings in a standard ISO format. For example, 'Tue, 3 Jun 2008 11:05:30 GMT'. The dates are encoded as JSON strings.",
             "- Custom format in which dates are encoded as strings in the supplied pattern. The pattern must adhere to the date and time patterns as described in the java.text.SimpleDateFormat class in the Oracle Java API documentation. The dates are encoded as JSON strings.",
             "- <null> to use the jsonDateEncoding setting already in effect for the HTTP client making the request, as follows: If the HTTP client request includes jsonDateEncoding=long in the URL, then java.util.Date instances are represented as timestamps, specifically the number of milliseconds since Jan 1, 1970 00:00:00. The dates are JSON numbers. If the HTTP client request includes jsonDateEncoding=ISO8601 in the URL, the java.util.Date instances are encoded as strings in a standard ISO format of: YYYY-MM-DD'T'HH:mm:ss.sssZ. The dates are JSON strings. If the HTTP client request includes jsonDateEncoding= format in the URL, the java.util.Date instances are encoded as strings in the supplied pattern. The pattern must adhere to the date and time patterns as described in the java.text.SimpleDateFormat class in the Oracle Java API documentation. If the HTTP client request does not include the jsonDateEncoding in the URL, the service uses the value of the watt.server.json.encodeDateAs parameter. For more information about the parameter, see Server Configuration Parameters"
+          ],
+          "references": [
+            {
+              "title": "Server Configuration Parameters",
+              "url": "../is_administrators_guide/z_server_config_parameters/watt_server.html#A_Ref462651821__encodeDateAs"
+            }
           ]
         },
         {
@@ -150,6 +174,12 @@
             "- false to encode instances of java.util.List or java.util.Set as a JSON string.",
             "- <null> to use the value of watt.server.json.encodeListsAndSetsAsArrays to determine the encoding. For more information about the parameter, see Server Configuration Parameters.",
             "There is no default value for this parameter."
+          ],
+          "references": [
+            {
+              "title": "Server Configuration Parameters",
+              "url": "../is_administrators_guide/z_server_config_parameters/watt_server.html#A_Ref462651821__ListAndSetsAsArrays"
+            }
           ]
         }
       ],
@@ -205,6 +235,12 @@
             "- When strict is false and jsonDocumentTypeName is specified, the transformation from Document (IData) to JSON string is loosely based on the JSON document type. For conversion rules, see Table 2: Conversion of IData to JSON String.",
             "- When strict is true and jsonDocumentTypeName is not specified, the service returns an exception.",
             "- When strict is true and jsonDocumentTypeName is specified, the transformation from Document (IData) to JSON string is strictly based on the JSON document type. The validation is performed first before the transformation, and any deviations lead to transformation errors. The encodeDateAs parameter and the watt.server.json.encodeDateAs server configuration parameter, if specified, are ignored."
+          ],
+          "references": [
+            {
+              "title": "Table 2: Conversion of IData to JSON String.",
+              "url": "to-json_folder.html#reference_538A9D93FABC45E7B34E56E33BDD1845"
+            }
           ]
         },
         {
@@ -541,6 +577,12 @@
             "- When strict is false and jsonDocumentTypeName is specified, the transformation from JSON stream to Document (IData) is loosely based on the JSON document type. For conversion rules, see Table 1: Conversion of JSON Payload to IData.",
             "- When strict is true and jsonDocumentTypeName is not specified, the service returns an exception.",
             "- When strict is true and jsonDocumentTypeName is specified, the transformation from JSON stream to Document (IData) is strictly based on the JSON document type. The validation is performed first before the transformation, and any deviations lead to transformation errors. The decodeRealAsDouble, decodeIntegerAsLong, and decodeRealAsString parameters and the server configuration parameters, if specified, are ignored."
+          ],
+          "references": [
+            {
+              "title": "Table 1: Conversion of JSON Payload to IData",
+              "url": "to-json_folder.html#reference_75AB6947694E452E942E64F9D5A738FE"
+            }
           ]
         },
         {
@@ -649,6 +691,12 @@
             "- When strict is false and jsonDocumentTypeName is specified, the transformation from JSON string to Document (IData) is loosely based on the JSON document type. For conversion rules, see: Table 1: Conversion of JSON Payload to IData.",
             "- When strict is true and jsonDocumentTypeName is not specified, the service returns an exception.",
             "- When strict is true and jsonDocumentTypeName is specified, the transformation from JSON string to Document (IData) is strictly based on the JSON document type. The validation is performed first before the transformation, and any deviations lead to transformation errors. The decodeRealAsDouble, decodeIntegerAsLong, and decodeRealAsString parameters and the server configuration parameters, if specified, are ignored."
+          ],
+          "references": [
+            {
+              "title": "Table 1: Conversion of JSON Payload to IData",
+              "url": "to-json_folder.html#reference_75AB6947694E452E942E64F9D5A738FE"
+            }
           ]
         },
         {

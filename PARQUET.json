@@ -172,6 +172,16 @@
           "type": "Document List",
           "description": [
             "An array of IData objects containing Parquet records. The tables Mapping of Parquet basic types to Integration Server data types and Mapping of Parquet logical types to Integration Server data types list how Parquet data types map to Integration Server data types."
+          ],
+          "references": [
+            {
+              "title": "Mapping of Parquet basic types to Integration Server data types",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_read__table_0ED8FFD7DBCE48B099C7825C24116C15"
+            },
+            {
+              "title": "Mapping of Parquet logical types to Integration Server data types",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-parquet-folder#Apub_parquet_read__table_5477AF841DC54EE6B53A0B2987BA728E"
+            }
           ]
         }
       ],
@@ -224,6 +234,16 @@
           "description": [
             "The tables Mapping of Integration Serverdata types to Parquet basic types for write operations and Mapping of Integration Server data types to Parquet Logical types list howIntegration Server data types map to Parquet schema types.",
             "Note: Either a schema or a docTypeName must be provided to validate the data before it is written to the Parquet file."
+          ],
+          "references": [
+            {
+              "title": "Mapping of Integration Serverdata types to Parquet basic types for write operations",
+              "url": "to-parquet_folder.html#Apub_parquet_write__table_999C0C0D365E4A73AF047A78DCC8EFA4"
+            },
+            {
+              "title": "Mapping of Integration Server data types to Parquet Logical types",
+              "url": "to-parquet_folder.html#Apub_parquet_write__table_F6D8F935AF50462E985214EED1E08A09"
+            }
           ]
         },
         {

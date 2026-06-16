@@ -203,6 +203,16 @@
             "- stream to return the file as an input stream. Use this option if the contents of the file will be used as input to a service that can process a document incrementally (for example, pub.xml:getXMLNodeIterator).",
             "- string to return the file as a string.",
             "- reader to return the file as a reader."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_queryXMLNode"
+            },
+            {
+              "title": "pub.xml:getXMLNodeIterator",
+              "url": "to-xml_folder.html#A21764"
+            }
           ]
         },
         {

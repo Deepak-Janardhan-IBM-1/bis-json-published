@@ -540,6 +540,12 @@
           "type": "Integer",
           "description": [
             "The pre-defined status codes when closing an established connection are defined in Section https://tools.ietf.org/html/rfc6455#section-7.4."
+          ],
+          "references": [
+            {
+              "title": "https://tools.ietf.org/html/rfc6455#section-7.4",
+              "url": "https://tools.ietf.org/html/rfc6455#section-7.4"
+            }
           ]
         },
         {

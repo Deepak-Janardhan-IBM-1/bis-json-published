@@ -321,6 +321,12 @@
           "type": "String",
           "description": [
             "For more information about the pattern strings that can be specified for the date, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "to-date_folder.html#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         }
       ],

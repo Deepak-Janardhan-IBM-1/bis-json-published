@@ -148,6 +148,12 @@
           "type": "Document",
           "description": [
             "Information about the last error, translated into the language used by the Integration Server. The structure of this document is defined by pub.event:exceptionInfo."
+          ],
+          "references": [
+            {
+              "title": "pub.event:exceptionInfo",
+              "url": "to-event_folder.html#Apub_event_exceptionInfo"
+            }
           ]
         }
       ],
@@ -271,6 +277,12 @@
           "type": "Document",
           "description": [
             "Information about the protocol that invoked the service. The structure of this document is defined by pub.flow:transportInfo."
+          ],
+          "references": [
+            {
+              "title": "pub.flow:transportInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_transportInfo"
+            }
           ]
         }
       ],
@@ -526,6 +538,12 @@
             "For a filename that does not include an absolute path, Integration Server calculates the relative path from the default pipeline directory which is located here: Integration Server_directory /instances/instance_name/pipeline",
             "When you specify a path for the fileName input parameter and the path is outside of the default pipeline directory, Integration Server verifies whether it is specified in the watt.server.file.canReadPaths server configuration parameter. If the file path is not specified in the watt.server.file.canReadPaths parameter, Integration Server throws an exception.",
             "For more information about watt.server.file.canReadPaths server configuration parameter, see Server Configuration Parameters"
+          ],
+          "references": [
+            {
+              "title": "Server Configuration Parameters",
+              "url": "../is_administrators_guide/z_server_config_parameters/watt_server.html#A_Ref462651821"
+            }
           ]
         },
         {
@@ -1126,6 +1144,12 @@
           "type": "String",
           "description": [
             "The response codes and phrases are defined in RFC 2616, Section 10. If you provide a value for responseCode that is not listed in RFC 2616, Section 10, you must also provide a value for reasonPhrase."
+          ],
+          "references": [
+            {
+              "title": "RFC 2616, Section 10",
+              "url": "http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10"
+            }
           ]
         },
         {

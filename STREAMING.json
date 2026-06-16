@@ -23,6 +23,12 @@
           "type": "String",
           "description": [
             "Name of the event specification that defines the structure of the event, identifies the destination to which events are sent, and indicates how to encode and decode event data. The event specification must define both a connection alias and a destination for this deprecated service to function. For information about creating event specifications, see Event Specifications ."
+          ],
+          "references": [
+            {
+              "title": "Event Specifications",
+              "url": "../is_administrators_guide/z_streaming-config/co-event_specification_about.html"
+            }
           ]
         },
         {

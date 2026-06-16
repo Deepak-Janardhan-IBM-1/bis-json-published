@@ -1088,6 +1088,16 @@
               "type": "String",
               "description": [
                 "This value must be mapped from the most recent pub.art.transaction:startTransaction that has not previously been committed or rolled back."
+              ],
+              "references": [
+                {
+                  "title": "pub.art.transaction:startTransaction",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-art-folder#A78958"
+                },
+                {
+                  "title": "pub.art.transaction:startTransaction",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-art-folder#A78958"
+                }
               ]
             }
           ]
@@ -1127,6 +1137,16 @@
               "type": "String",
               "description": [
                 "This value must be mapped from the most recent pub.art.transaction:startTransaction that has not previously been committed or rolled back."
+              ],
+              "references": [
+                {
+                  "title": "pub.art.transaction:startTransaction",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-art-folder#A78958"
+                },
+                {
+                  "title": "pub.art.transaction:startTransaction",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-art-folder#A78958"
+                }
               ]
             }
           ]

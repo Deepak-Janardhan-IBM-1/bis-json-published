@@ -35,6 +35,12 @@
             "- Tx End Event",
             "- Tx Start Event",
             "Tip: To view the current list of event types, you can execute the pub.event:getEventTypes service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getEventTypes",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes"
+            }
           ]
         },
         {
@@ -331,6 +337,12 @@
             "- Tx End Event",
             "- Tx Start Event",
             "Tip: To view the current list of event types, you can execute the pub.event:getEventTypes service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getEventTypes",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes"
+            }
           ]
         },
         {
@@ -338,6 +350,12 @@
           "type": "String",
           "description": [
             "ID of the subscriber that you want to delete. To get a list of subscriber IDs, execute the pub.event:getSubscribers service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getSubscribers",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getSubscribers"
+            }
           ]
         }
       ],
@@ -484,6 +502,12 @@
           "type": "Document List",
           "description": [
             "Optional. The call stack information describing where the exception occurred, including the fully qualified name of a service on the stack and an index that identifies the last executed flow step in that service. Each document represents a service on the call stack. The first document in the list represents the service that threw the exception and the last document in the list represents the top-level service. The structure of this document is defined by pub.event:callstackItem."
+          ],
+          "references": [
+            {
+              "title": "pub.event:callstackItem",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_callStackItem"
+            }
           ]
         },
         {
@@ -526,6 +550,12 @@
           "type": "Document",
           "description": [
             "Optional. Nested errors and exceptions, if any. The structure of this document is defined by pub.event:exceptionInfo."
+          ],
+          "references": [
+            {
+              "title": "pub.event:exceptionInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_exceptionInfo"
+            }
           ]
         }
       ],
@@ -770,6 +800,12 @@
             "- Tx End Event",
             "- Tx Start Event",
             "Tip: To view the current list of event types, you can execute the pub.event:getEventTypes service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getEventTypes",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes"
+            }
           ]
         }
       ],
@@ -796,6 +832,12 @@
                 "- M* would math any string that starts with an uppercase \"M.\"",
                 "- M*X would math any string that starts with an uppercase \"M\" and ends with an uppercase \"X.\"",
                 "For a list of attributes to which the filter is applied, see pub.event:addSubscriber."
+              ],
+              "references": [
+                {
+                  "title": "pub.event:addSubscriber",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_addSubscriber"
+                }
               ]
             },
             {
@@ -892,6 +934,12 @@
               "name": "JMSMessage",
               "description": [
                 "A document reference (IData) to the pub.jms:JMSMessage document type."
+              ],
+              "references": [
+                {
+                  "title": "pub.jms:JMSMessage",
+                  "url": "to-jms_folder.html#Apub_jms_JMSMessage"
+                }
               ]
             }
           ]
@@ -1078,6 +1126,12 @@
             "- Tx End Event",
             "- Tx Start Event",
             "Tip: To view the current list of event types, you can execute the pub.event:getEventTypes service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getEventTypes",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes"
+            }
           ]
         },
         {
@@ -1085,6 +1139,12 @@
           "type": "String",
           "description": [
             "ID of the subscriber that you want to modify. To get the current list of subscriber IDs, execute thepub.event:getSubscribers service."
+          ],
+          "references": [
+            {
+              "title": "pub.event:getSubscribers",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getSubscribers"
+            }
           ]
         },
         {

@@ -192,7 +192,7 @@
       "input_parameters": [
         {
           "name": "query",
-          "type": "Document.",
+          "type": "Document",
           "description": [
             "Document containing the group to query and the query parameters."
           ],
@@ -231,7 +231,7 @@
       "output_parameters": [
         {
           "name": "results",
-          "type": "Document List.",
+          "type": "Document List",
           "description": [
             "Query results. Returns one document for each tag in the input group that meets the query parameters."
           ],
@@ -269,7 +269,7 @@
             },
             {
               "name": "object",
-              "type": "Object.",
+              "type": "Object",
               "description": [
                 "The object associated with the tag."
               ]
@@ -578,6 +578,24 @@
           "description": [
             "- com.wm.lang.xml.Node XML node that you want to query. An XML node can be produced by pub.xml:loadXMLNode, pub.xml:xmlStringToXMLNode, or an XML content handler.",
             "- enhanced XML node The enhanced XML node that you want to query. An enhanced XML node can be produced by pub.xml:loadEnhancedXMLNode, pub.xml:xmlStringToEnhancedXMLNode, or an XML content handler that receives a document with an xmlFormat is set to enhanced. If you supply an enhanced XML node, you must use XQL to query the node."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:loadXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_loadXMLNode"
+            },
+            {
+              "title": "pub.xml:xmlStringToXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_xmlStringToXMLNode"
+            },
+            {
+              "title": "pub.xml:loadEnhancedXMLNode",
+              "url": "to-xml_folder.html#CEHBFIHJ"
+            },
+            {
+              "title": "pub.xml:xmlStringToEnhancedXMLNode",
+              "url": "to-xml_folder.html#CEHJAFHA"
+            }
           ]
         },
         {

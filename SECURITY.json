@@ -436,6 +436,12 @@
             "- For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA",
             "Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3-compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP.",
             "Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          ],
+          "references": [
+            {
+              "title": "Enabling FIPS 140-3 Mode",
+              "url": "../is_administrators_guide/ta-enable_fips_140-3_mode.html"
+            }
           ]
         },
         {
@@ -983,6 +989,12 @@
             "- For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA",
             "Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP.",
             "Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          ],
+          "references": [
+            {
+              "title": "Enabling FIPS 140-3 Mode",
+              "url": "../is_administrators_guide/ta-enable_fips_140-3_mode.html"
+            }
           ]
         }
       ],
@@ -1218,6 +1230,12 @@
             "- For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA",
             "Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP.",
             "Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          ],
+          "references": [
+            {
+              "title": "Enabling FIPS 140-3 Mode",
+              "url": "../is_administrators_guide/ta-enable_fips_140-3_mode.html"
+            }
           ]
         },
         {
@@ -1522,6 +1540,12 @@
             "- For JCE, select one of the following: RSA SHA256withRSA SHA512withRSA SHA3-256withRSA SHA3-384withRSA SHA3-512withRSA",
             "Note: If the FIPS (Federal Information Processing Standards) mode is enabled, this service does not support the MD5 signing algorithm. To enable FIPS 140-3 compliant mode, set the WM_ENABLE_FIPS environment variable to true and restart Integration Server for the changes to take effect. For more information, see Enabling FIPS 140-3 Mode. This is applicable only for PGP.",
             "Note: If the secret key for signing the data is of the DSA (Digital Signature Algorithm) key type, this service does not support the MD5 signing algorithm. This is applicable only for PGP."
+          ],
+          "references": [
+            {
+              "title": "Enabling FIPS 140-3 Mode",
+              "url": "../is_administrators_guide/ta-enable_fips_140-3_mode.html"
+            }
           ]
         },
         {
@@ -2003,6 +2027,12 @@
           "type": "String",
           "description": [
             "\"true\" if this is an internal password; \"false\" if it is public. By default, this is \"false\". If you specify incorrectly whether the password is internal or public, the retrieve operation will fail. (For more information about internal and public passwords, see Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide..)"
+          ],
+          "references": [
+            {
+              "title": "Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__A43167"
+            }
           ]
         }
       ],
@@ -2051,6 +2081,12 @@
           "type": "String",
           "description": [
             "\"true\" if you want keys for internal passwords; \"false\" if you want keys for public passwords. By default this is \"false\". (For more information about internal and public passwords, see Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide..)"
+          ],
+          "references": [
+            {
+              "title": "Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__A43167"
+            }
           ]
         }
       ],
@@ -2096,6 +2132,12 @@
           "type": "String",
           "description": [
             "\"true\" if this should be saved as an internal password; \"false\" if it should be saved as a public password. Default is \"false\". (See Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide. for more information.)"
+          ],
+          "references": [
+            {
+              "title": "Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__A43167"
+            }
           ]
         }
       ],
@@ -2150,6 +2192,12 @@
           "type": "String",
           "description": [
             "\"true\" if this is an internal password; \"false\" if it is public. By default, this is \"false\". If you specify incorrectly whether the password is internal or public, the remove operation will fail. (For more information about internal and public passwords, see Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide..)"
+          ],
+          "references": [
+            {
+              "title": "Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__A43167"
+            }
           ]
         }
       ],
@@ -2195,6 +2243,12 @@
           "type": "String",
           "description": [
             "\"true\" if this is an internal password; \"false\" if it is public. By default, this is \"false\". If you specify incorrectly whether the password is internal or public, the update operation will fail. (For more information about internal and public passwords, see Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide..)"
+          ],
+          "references": [
+            {
+              "title": "Internal and Public Passwords Internal passwords are passwords for use by the Integration Server itself to access secure resources (e.g., remote Integration Servers, JDBC connection pools, LDAP servers, etc.). Internal passwords are managed using the Integration Server Administrator and are stored in the outbound password store. Flow services are also allowed to store passwords in the outbound password store. However, by default, passwords stored by a flow service are considered \"public,\" as opposed to internal. This distinction allows flow services to use the outbound password store as a secure mechanism for storing and retrieving passwords, but protects the Integration Server's internal passwords. When calling any of the pub.security.outboundPasswords services (i.e. setPassword, getPassword, listKeys, removePassword, and updatePassword) the isInternal input parameter indicates whether the service is working with internal or public passwords. Note that even if this parameter is set to \"true\", you cannot access internal passwords if the Integration Server is configured to deny access to internal passwords. Access to internal passwords is controlled by the watt.security.ope.AllowInternalPasswordAccess configuration parameter on the Integration Server; for more information see webMethods Integration Server Administrator’s Guide.",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__A43167"
+            }
           ]
         }
       ],

@@ -283,6 +283,12 @@
             "- key. Key in the pipeline. The value for key can be a path expression. For example, \"Family/Chidren[0]/BirthDate\" retrieves the birthday of the first child from the input Family document list.",
             "- compareStringsAs. Optional. Valid values for compareStringsAs are string, numeric, and datetime. The default value is string.",
             "- pattern. Optional. pattern will be considered only if the compareStringsAs parameter is of type datetime. For information about using patterns, see Time Zones. Note: If key is not found in all the input documents, the documents that do not match the groupCriteria are grouped together as a single group."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "to-date_folder.html#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         }
       ],
@@ -364,6 +370,12 @@
             "- value. Optional. Any search text. If no value is specified, the service searches for null in the document list.",
             "- compareStringsAs. Optional. Allowed values are string, numeric, and datetime. The default value is string.",
             "- pattern. Optional. pattern will be considered only if the compareStringsAs value is of type datetime. For information about using patterns, see Time Zones."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "to-date_folder.html#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -427,6 +439,12 @@
             "- order. Optional. Allowed values are ascending and descending. The default value is ascending.",
             "- compareStringsAs. Optional. Allowed values are string, numeric, and datetime. Default value is string.",
             "- pattern. Optional. The value for pattern will be considered only if the compareStringsAs value is of type datetime. For information about using patterns, see Time Zones. Note: If key is not found in all the input documents, the sorted list of documents appears at the end or start of the list based on the order specified. If the order is ascending, then all the documents that do not match the sort criteria appears at the top of the list, followed by the sorted list. If the order is descending, the sorted list will appear at the top, followed by the documents that do not match the sort criteria."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "to-date_folder.html#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         }
       ],

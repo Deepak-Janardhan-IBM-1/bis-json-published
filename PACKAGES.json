@@ -196,6 +196,12 @@
           "description": [
             "- yes to activate the package after installation and make it immediately available to clients. This is the default.",
             "- no to install the package without activating it afterwards. If you install a package in this mode, it will not be accessible until it is explicitly activated through the Integration Server Administrator or the pub.packages:activatePackage service."
+          ],
+          "references": [
+            {
+              "title": "pub.packages:activatePackage",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-packages-folder#Apub_packages_activatePackage"
+            }
           ]
         },
         {
@@ -253,6 +259,12 @@
           "description": [
             "- yes to activate the package after it is recovered and make it immediately available to clients.",
             "- no to recover the package without activating it afterwards. If you recover a package in this mode, it will not be accessible until it is explicitly activated through the Integration Server Administrator or the pub.packages:activatePackage service."
+          ],
+          "references": [
+            {
+              "title": "pub.packages:activatePackage",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-packages-folder#Apub_packages_activatePackage"
+            }
           ]
         }
       ],

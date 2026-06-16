@@ -174,6 +174,12 @@
             "- If the watt.net.proxy.useNonDefaultProxies parameter is set to true, Integration Server routes the FTP request through the proxy server in any configured FTP proxy alias. If the Integration Server does not have any defined FTP proxy aliases, Integration Server sends the FTP request directly to the FTP server or throws an exception depending on the settings specified for the watt.net.proxy.fallbackToDirectConnection parameter.",
             "- If the watt.net.proxy.useNonDefaultProxies parameter is set to false, Integration Server sends the request to the remote server using a direct connection.",
             "For more information about proxy server usage, refer to How Integration Server Uses Proxy Servers ."
+          ],
+          "references": [
+            {
+              "title": "How Integration Server Uses Proxy Servers",
+              "url": "../is_administrators_guide/to-configure_the_server.html#ide68b0a8e-b4b3-4580-9fb6-0eefedd7d519"
+            }
           ]
         }
       ],
@@ -259,6 +265,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -332,6 +344,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -384,6 +402,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -458,6 +482,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -510,6 +540,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -569,6 +605,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -892,6 +934,12 @@
           "type": "String",
           "description": [
             "Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         }
       ],
@@ -930,6 +978,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1011,6 +1065,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1063,6 +1123,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1143,6 +1209,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1232,6 +1304,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1345,6 +1423,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1397,6 +1481,12 @@
           "type": "String",
           "description": [
             "Optional. Unique key for the current FTP session. The sessionkey is returned by the pub.client.ftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.ftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#A26574"
+            }
           ]
         },
         {
@@ -1575,6 +1665,16 @@
           "description": [
             "- bytes to return the body of the response as a byte[ ]. Use this option if the body will be used as input to a service that operates on whole HTML or XML documents (for example, pub.xml:queryXMLNode). This is the default.",
             "- stream to return the body of the response as a java.io.InputStream. Use this option if the document will be used as input to a service that can process documents incrementally (for example, pub.xml:getXMLNodeIterator)."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_queryXMLNode"
+            },
+            {
+              "title": "pub.xml:getXMLNodeIterator",
+              "url": "to-xml_folder.html#A21764"
+            }
           ]
         },
         {
@@ -1633,6 +1733,24 @@
               "description": [
                 "You can use mimeStream to submit data via the POST, PUT, or PATCH methods only.",
                 "Note: For POST, PUT, and PATCH, you can specify only stream, bytes, or mimeStream. If you specify more than one, the pub.client:http service ends with an exception."
+              ],
+              "references": [
+                {
+                  "title": "pub.mime:getEnvelopeStream",
+                  "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+                },
+                {
+                  "title": "pub.smime:createEncryptedData",
+                  "url": "to-smime_folder.html#Apub_smime_createEncryptedData"
+                },
+                {
+                  "title": "pub.smime:createSignedData",
+                  "url": "to-smime_folder.html#Apub_smime_createSignedData"
+                },
+                {
+                  "title": "pub.smime.keystore:createSignedData",
+                  "url": "to-smime_folder.html#A28332"
+                }
               ]
             },
             {
@@ -3208,6 +3326,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3260,6 +3384,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3316,9 +3446,15 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
+          "type": "String. Conditional",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3375,9 +3511,15 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
+          "type": "String. Conditional",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3437,6 +3579,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3522,6 +3670,12 @@
           "description": [
             "- true, to reuse the session that is already open for the specified user alias. If a session is not open for this user alias, the pub.client.sftp:login service creates a new session and returns the key for this new session.",
             "- false, to create a new session for the specified user alias. This is the default."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -3909,6 +4063,12 @@
           "type": "String",
           "description": [
             "Unique key for the current SFTP session. The sessionKey parameter is returned by the pub.client.sftp:login service."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         }
       ],
@@ -3944,9 +4104,15 @@
       "input_parameters": [
         {
           "name": "sessionKey",
-          "type": "String. Conditional.",
+          "type": "String. Conditional",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4066,6 +4232,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4118,6 +4290,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4209,6 +4387,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4261,6 +4445,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4320,6 +4510,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4372,6 +4568,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4425,6 +4627,12 @@
           "type": "String",
           "description": [
             "Note: sessionKey is required for connections in webMethods Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "pub.client.sftp:login",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-client-folder#CJDBHEFF"
+            }
           ]
         },
         {
@@ -4536,6 +4744,12 @@
             "If no value is provided for the mailhost parameter, Integration Server uses the value of the Java system property mail.smtp.host set for Integration Server as the mailhost value. For more information about setting Java system properties for Integration Server, which includes modifying the custom_wrapper.conf file, see Changing Settings in the Configuration File custom_wrapper.conf .",
             "If no value is supplied for the mailhost parameter and the mail.smtp.host Java system property is not set, the pub.client:smtp service ends with an exception.",
             "Important: mailhost is required for connections in Integration Server (on-premises), but optional for connections created on Edge runtimes and cloud environments."
+          ],
+          "references": [
+            {
+              "title": "Changing Settings in the Configuration File custom_wrapper.conf",
+              "url": "../is_administrators_guide/to-start_stop_server.html#idea1e70c4-3841-4df9-a371-d02ab002c668"
+            }
           ]
         },
         {
@@ -4579,6 +4793,12 @@
               "type": "String",
               "description": [
                 "Conditional. The access token issued by the OAuth server to Integration Server. This parameter is required only when auth is Bearer. To get the access token, see pub.client.oauth:​getExternalAccessToken"
+              ],
+              "references": [
+                {
+                  "title": "pub.client.oauth:​getExternalAccessToken",
+                  "url": "to-client_folder.html#getExternalAccessToken"
+                }
               ]
             }
           ]
@@ -4620,6 +4840,24 @@
           "type": "java.io.InputStream",
           "description": [
             "Optional. MIME or S/MIME message that you want to send in the e-mail. A mimeStream is created by the pub.mime:getEnvelopeStream, pub.smime:createEncryptedData, pub.smime:createSignedData, or pub.smime.keystore:createSignedData services. It contains both headers and content. If the mimeStream already contains the from, to, and subject headers, you do not need to pass them as individual inputs to this service."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            },
+            {
+              "title": "pub.smime:createEncryptedData",
+              "url": "to-smime_folder.html#Apub_smime_createEncryptedData"
+            },
+            {
+              "title": "pub.smime:createSignedData",
+              "url": "to-smime_folder.html#Apub_smime_createSignedData"
+            },
+            {
+              "title": "pub.smime.keystore:createSignedData",
+              "url": "to-smime_folder.html#A28332"
+            }
           ]
         },
         {
@@ -4750,6 +4988,12 @@
           "type": "String",
           "description": [
             "Note: The consumer web service endpoint alias assigned to a binder indicates which proxy server Integration Server uses to send the request. For more information about proxy server usage and web service endpoint aliases, see Creating an Endpoint Alias for a Provider Web Service Descriptor for Use... ."
+          ],
+          "references": [
+            {
+              "title": "Creating an Endpoint Alias for a Provider Web Service Descriptor for Use...",
+              "url": "../is_administrators_guide/to-ws_endpoint_alias.html#A75955"
+            }
           ]
         },
         {
@@ -5104,6 +5348,12 @@
             "- stream to return the body of the response as a java.io.InputStream. Use this option when you will invoke an HTTP web service. This is the default for an HTTP service.",
             "- bytes to return the body of the response as a byte[ ]. Use this option if the body will be used as input to a service that operates on whole HTML or XML documents (for example, pub.xml:queryXMLNode).",
             "- byteArrayStream to have the response stream fully read and converted to java.io.ByteArrayStream. This prevents data loss or a truncated SOAP response if the connection closes prematurely. Use this option when you will invoke an HTTPS web service. This is the default for an HTTPS service."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_queryXMLNode"
+            }
           ]
         },
         {

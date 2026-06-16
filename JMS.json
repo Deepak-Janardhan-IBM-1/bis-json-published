@@ -49,6 +49,12 @@
           "type": "Document List",
           "description": [
             "A document list where each document references the pub.jms:JMSMessage document type."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:JMSMessage",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage"
+            }
           ]
         }
       ],
@@ -103,6 +109,12 @@
             "- AUTO_ACKNOWLEDGE to automatically acknowledge the message when it is received by the message consumer. The message consumer will acknowledge the message before the message processing completes. The JMS provider cannot redeliver the message if Integration Server becomes unavailable before message processing completes. This is the default.",
             "- CLIENT_ACKNOWLEDGE to acknowledge the receipt of a message when the JMS client (Integration Server) invokes pub.jms:acknowledge service.",
             "- DUPS_OK_ACKNOWLEDGE to automatically, lazily acknowledge the receipt of messages, which reduces system overhead but may result in duplicate messages being sent."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:acknowledge",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_acknowledge"
+            }
           ]
         },
         {
@@ -191,6 +203,12 @@
           "type": "Document",
           "description": [
             "The message whose status needs to be resolved. This is a document reference (IData) to the pub.jms:JMSMessage document type, which defines the structure of a JMS message."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:JMSMessage",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage"
+            }
           ]
         }
       ],
@@ -444,6 +462,12 @@
                   "description": [
                     "Note: When the JMS message is received using the pub.jms:receive service this field will always be populated because javax.jms.Message is required for acknowledging the message.",
                     "Note: When receiving a javax.jms:MapMessage or javax.jms:StreamMessage this field will be populated. The data can then be processed using a Java service. A flow service cannot process the message in its current state."
+                  ],
+                  "references": [
+                    {
+                      "title": "pub.jms:receive",
+                      "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive"
+                    }
                   ]
                 }
               ]
@@ -594,6 +618,12 @@
           "type": "Object",
           "description": [
             "You only need to specify a consumer when replying to a message received using pub.jms:receive."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:receive",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive"
+            }
           ]
         },
         {
@@ -601,13 +631,19 @@
           "type": "Object",
           "description": [
             "You only need to specify a message when replying to a message received using pub.jms:receive."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:receive",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive"
+            }
           ]
         }
       ],
       "output_parameters": [
         {
           "name": "JMSReplyMessage",
-          "type": "Document.",
+          "type": "Document",
           "description": [
             "A Document containing the reply message the JMS provider sent to the client. After it sends a message, the JMS provider populates some fields in the JMS reply message."
           ],
@@ -624,6 +660,12 @@
                   "type": "String",
                   "description": [
                     "The replying Integration Server automatically sets this value when it executes the pub.jms:reply service."
+                  ],
+                  "references": [
+                    {
+                      "title": "pub.jms:reply",
+                      "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_reply"
+                    }
                   ]
                 },
                 {
@@ -940,7 +982,7 @@
       "output_parameters": [
         {
           "name": "JMSMessage",
-          "type": "Document.",
+          "type": "Document",
           "description": [
             "A Document containing the message sent to the JMS provider."
           ],
@@ -1316,6 +1358,12 @@
           "description": [
             "- True to indicate that this is an asynchronous request/reply. After sending the message, Integration Server executes the next step in the flow service immediately. The Integration Server does not wait for a reply before continuing service execution. Note: To retrieve the reply to an asynchronous send, invoke the pub.jms:waitForReply service.",
             "- False to indicate that this is a synchronous request/reply. After sending the message, the Integration Server waits for a reply before executing the next step in the flow service. This is the default."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:waitForReply",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_waitForReply"
+            }
           ]
         },
         {
@@ -1331,7 +1379,7 @@
       "output_parameters": [
         {
           "name": "JMSMessage",
-          "type": "Document.",
+          "type": "Document",
           "description": [
             "A Document containing the message sent to the JMS provider."
           ],
@@ -1506,6 +1554,12 @@
                   "type": "String",
                   "description": [
                     "The replying Integration Server automatically sets this value when it executes the pub.jms:reply service."
+                  ],
+                  "references": [
+                    {
+                      "title": "pub.jms:reply",
+                      "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_reply"
+                    }
                   ]
                 },
                 {
@@ -2071,6 +2125,12 @@
           "type": "Document",
           "description": [
             "A document reference (IData) to the pub.jms:JMSMessage document type, which defines the structure of a JMS message."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:JMSMessage",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage"
+            }
           ]
         }
       ],
@@ -2318,6 +2378,12 @@
           "type": "Object",
           "description": [
             "A message consumer object that the service uses to receive the large message stream. Create the message consumer object using the pub.jms:createConsumer service."
+          ],
+          "references": [
+            {
+              "title": "pub.jms:createConsumer",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_createConsumer"
+            }
           ]
         },
         {

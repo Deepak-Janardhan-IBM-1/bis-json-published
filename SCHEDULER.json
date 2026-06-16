@@ -394,6 +394,12 @@
             "- If you cancel a parent task, the task will be canceled on all servers in the cluster.",
             "- If you cancel a child task, the task will be canceled only on the server on which the child task was scheduled to run.",
             "For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          ],
+          "references": [
+            {
+              "title": "pub.scheduler:getTaskInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo"
+            }
           ]
         }
       ],
@@ -728,6 +734,12 @@
             "- If you resume a parent task, the task will be resumed on all servers in the cluster.",
             "- If you resume a child task, the task will be resumed only on the server on which the child task was scheduled to run.",
             "For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          ],
+          "references": [
+            {
+              "title": "pub.scheduler:getTaskInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo"
+            }
           ]
         }
       ],
@@ -755,6 +767,12 @@
             "- If you suspend a parent task, the task will be suspended on all servers in the cluster.",
             "- If you suspend a child task, the task will be suspended only on the server on which the child task was scheduled to run.",
             "For more information about parent and child tasks, see pub.scheduler:getTaskInfo or the chapter about managing services in IBM webMethods Integration Server Administrator’s Guide ."
+          ],
+          "references": [
+            {
+              "title": "pub.scheduler:getTaskInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-scheduler-folder#Apub_scheduler_getTaskInfo"
+            }
           ]
         }
       ],

@@ -125,6 +125,12 @@
           "description": [
             "Optional. Contents of the DOCTYPE header to be inserted into the XML String. (You can retrieve this information from an incoming document using pub.xml:getXMLNodeType.)"
           ],
+          "references": [
+            {
+              "title": "pub.xml:getXMLNodeType",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_getXMLNodeType"
+            }
+          ],
           "children": [
             {
               "name": "systemID",
@@ -288,6 +294,16 @@
           "description": [
             "- com.wm.lang.xml.Node XML node for which you want to produce a NodeIterator. The node can represent either an XML document or an element of an XML document; however, if the NodeIterator will be used in moving-window mode, a whole XML document must be used. This is because moving window mode is only meaningful for managing the loading process of a document, and to operate on a node is to have already loaded the node",
             "- enhanced XML node An enhanced XML node for which you want to produce a NodeIterator. An enhanced XML node can be produced by pub.xml:loadEnhancedXMLNode, pub.xml:xmlStringToEnhancedXMLNode, or a content handler that receives an XML document in a request for which xmlFormat is set to enhanced."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:loadEnhancedXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHBFIHJ"
+            },
+            {
+              "title": "pub.xml:xmlStringToEnhancedXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHJAFHA"
+            }
           ]
         },
         {
@@ -323,6 +339,12 @@
           "type": "com.wm.app.b2b.util.NodeIterator",
           "description": [
             "NodeIterator for use with the service pub.xml:getNextXMLNode."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:getNextXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_getNextXMLNode"
+            }
           ]
         }
       ],
@@ -802,6 +824,16 @@
           "description": [
             "- bytes to make the document available as a byte array. This is the default. Use this option if the document will be used as input to a service that operates on whole documents (for example, pub.xml:queryXMLNode).",
             "- stream to make the document available as an InputStream. Use this option if the document will be used as input to a service that can process a document incrementally (for example, pub.xml:getXMLNodeIterator)."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_queryXMLNode"
+            },
+            {
+              "title": "pub.xml:getXMLNodeIterator",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#A21764"
+            }
           ]
         },
         {
@@ -852,6 +884,24 @@
           "description": [
             "- com.wm.lang.xml.Node XML node that you want to query. An XML node can be produced by pub.xml:loadXMLNode, pub.xml:xmlStringToXMLNode or an XML content handler.",
             "- enhanced XML node The enhanced XML node that you want to query. An enhanced XML node can be produced by pub.xml:loadEnhancedXMLNode, pub.xml:xmlStringToEnhancedXMLNode, or an XML content handler that receives a document with an xmlFormat is set to enhanced. If you supply an enhanced XML node, you must use XQL to query the node."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:loadXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_loadXMLNode"
+            },
+            {
+              "title": "pub.xml:xmlStringToXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#Apub_xml_xmlStringToXMLNode"
+            },
+            {
+              "title": "pub.xml:loadEnhancedXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHBFIHJ"
+            },
+            {
+              "title": "pub.xml:xmlStringToEnhancedXMLNode",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-xml-folder#CEHJAFHA"
+            }
           ]
         },
         {

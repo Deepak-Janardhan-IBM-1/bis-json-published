@@ -910,7 +910,7 @@
         },
         {
           "name": "applyChangeAcross Cluster",
-          "type": "String.",
+          "type": "String",
           "description": [
             "- true to resume document retrieval for the specified trigger on all the servers in the cluster. Note: To make the document retrieval change on all the servers in a cluster, the Integration Server must be configured to synchronize trigger changes across the cluster. For more information about configuring an Integration Server to synchronize trigger management changes across a cluster, see IBM webMethods Integration Server Administrator’s Guide .",
             "- false to indicate that document retrieval for this trigger should be resumed on the local Integration Server only. This is the default."

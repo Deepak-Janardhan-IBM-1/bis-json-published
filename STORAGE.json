@@ -342,6 +342,50 @@
       "output_parameters": [
         {
           "name": "locks",
+          "children": [
+            {
+              "name": "id",
+              "type": "String",
+              "description": [
+                "The internal ID of the lock"
+              ]
+            },
+            {
+              "name": "target",
+              "type": "String",
+              "description": [
+                "Item that is locked, specified as a data store name or the key for an entry"
+              ]
+            },
+            {
+              "name": "holder",
+              "type": "String",
+              "description": [
+                "Holder of the lock. This value is generated internally by the pub.storage services."
+              ]
+            },
+            {
+              "name": "type",
+              "type": "String",
+              "description": [
+                "“EXCLUSIVE” or \"SHARE\""
+              ]
+            },
+            {
+              "name": "count",
+              "type": "String",
+              "description": [
+                "Number of lock holders sharing this lock"
+              ]
+            },
+            {
+              "name": "time",
+              "type": "String",
+              "description": [
+                "The time the lock was created."
+              ]
+            }
+          ],
           "type": "Document List",
           "description": [
             "The list of pub.storage locks. This output variable can be null."

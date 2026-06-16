@@ -24,6 +24,12 @@
           "description": [
             "Specify a document type that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or one that was created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "If you do not specify a document type, the service performs a literal conversion of inputBodyBlock/bodyDocument into the SOAP body; that is, the conversion will not consider style or use."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         },
         {
@@ -39,6 +45,12 @@
               "description": [
                 "The operationQName document references the pub.soap.utils:QName document type.",
                 "Note: The operationQName is only relevant for RPC/Encoded and RPC/Literal services; this service ignores operationQName for Document/Literal services."
+              ],
+              "references": [
+                {
+                  "title": "pub.soap.utils:QName",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+                }
               ],
               "children": [
                 {
@@ -119,6 +131,12 @@
           "description": [
             "Specify a document type that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or one that was created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "If you do not specify a document type, the service performs a literal conversion of soapFault/detail; that is, the conversion will not consider style or use."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         },
         {
@@ -253,6 +271,12 @@
             "Specify a document type that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or one that was created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "The QName of the first element in the IS document type is used as the QName of the header block to add to the SOAP message.",
             "The inputHeaderBlock/headerDocument must be a instance of this document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         },
         {
@@ -326,6 +350,12 @@
           "description": [
             "The QName document references the pub.soap.utils:QName document type.",
             "Note: If you do not specify QName value, you must specify documentType."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         },
         {
@@ -514,6 +544,12 @@
           "description": [
             "Specify a document type that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or one that was created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "If you do not specify a document type, the service performs a literal conversion of body block; that is, the conversion will not consider style or use."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         },
         {
@@ -539,6 +575,12 @@
               "type": "Document",
               "description": [
                 "The operationQName document references the pub.soap.utils:QName document type."
+              ],
+              "references": [
+                {
+                  "title": "pub.soap.utils:QName",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+                }
               ],
               "children": [
                 {
@@ -595,6 +637,12 @@
           "type": "Document List",
           "description": [
             "The bodyBlockQName document references the pub.soap.utils:QName document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         }
       ],
@@ -625,6 +673,12 @@
           "description": [
             "Specify document types that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or ones that were created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "If you do not specify any document type, the service performs a literal conversion of the document; that is, the conversion will not consider style or use."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         },
         {
@@ -750,6 +804,12 @@
           "description": [
             "Specify a document type that Integration Server created while creating the consumer or the WSDL first provider web service descriptor or one that was created using the pub.soap.handler:generateDocumentTypesFromWSDL service.",
             "Integration Server uses the QName of the first field of the document type to determine which header block to retrieve from the SOAP message."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.handler:generateDocumentTypesFromWSDL",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862"
+            }
           ]
         }
       ],
@@ -824,6 +884,12 @@
           "type": "Document List",
           "description": [
             "The headerBlockQName document references the pub.soap.utils:QName document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         }
       ],
@@ -859,6 +925,12 @@
           "type": "Document",
           "description": [
             "The QName document references the pub.soap.utils:QName document type. If you do not specify QName, you must specify documentType."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         },
         {
@@ -1277,6 +1349,12 @@
           "type": "String",
           "description": [
             "If statusCode does not contain one of the specified values, Integration Server assumes a value of 0."
+          ],
+          "references": [
+            {
+              "title": "What Are Handlers and Handler Services?",
+              "url": "../web_services_guide/to-handlers_and_handler_services.html#id08CFF100KHT"
+            }
           ]
         },
         {
@@ -1284,6 +1362,12 @@
           "type": "String",
           "description": [
             "Conditional. Text to be used in the fault message. Integration Server uses the faultMessage value for any handler service that returns a status of 2 and when a response handler service returns a status of 3. For more information, see What Are Handlers and Handler Services? . or IBM webMethods Designer Online Help ."
+          ],
+          "references": [
+            {
+              "title": "What Are Handlers and Handler Services?",
+              "url": "../web_services_guide/to-handlers_and_handler_services.html#id08CFF100KHT"
+            }
           ]
         }
       ],
@@ -1574,6 +1658,12 @@
           "type": "Document List",
           "description": [
             "Optional. Qualified names of the headers on which the handler operates. In the document list, each document references the pub.soap.utils:QName document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         },
         {
@@ -1625,6 +1715,12 @@
           "type": "Document List",
           "description": [
             "Optional. Qualified names of the headers on which the handler operates. In the document list, each document references the pub.soap.utils:QName document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         },
         {
@@ -1724,6 +1820,12 @@
           "type": "Object",
           "description": [
             "Note: Either QName or documentType must be supplied."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         },
         {
@@ -1779,6 +1881,12 @@
           "type": "Object",
           "description": [
             "Qualified name of the header element (block) to remove. The QName document references the pub.soap.utils:QName document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:QName",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName"
+            }
           ]
         }
       ],
@@ -2259,6 +2367,12 @@
           "type": "String",
           "description": [
             "Descriptive comment for this SOAP processor. This comment is shown when you run the utility service pub.soap.processor:list to get a list of the registered SOAP processors."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.processor:list",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23400"
+            }
           ]
         },
         {
@@ -2297,6 +2411,12 @@
           "type": "String",
           "description": [
             "Tip: To obtain a list of the current SOAP processor directives registered on the server, run the pub.soap.processor:list service."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.processor:list",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23400"
+            }
           ]
         }
       ],
@@ -2368,6 +2488,16 @@
             "Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode.",
             "Important: This service adds a single body entry to a SOAP object. If you need to add more than one entry, execute pub.soap.utils:addBodyEntry once for each entry.",
             "Important: The pub.soap.utils:addBodyEntry service expects the node in bodyEntry to be namespace qualified. If the node is not qualified, the service throws an exception. Versions of IBM webMethods Integration Server prior to 6.0.1 permitted non-qualified entries. If you created solutions based on the earlier behavior of this service, you can disable namespace enforcement by setting the server configuration parameter watt.server.SOAP.EnforceMsgPartNS to false."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:xmlStringToXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_xmlStringToXMLNode"
+            },
+            {
+              "title": "pub.soap.utils:addBodyEntry",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addBodyEntry"
+            }
           ]
         }
       ],
@@ -2419,6 +2549,12 @@
             "Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode.",
             "Important: This service adds a single header entry to a SOAP object. If you need to add more than one entry, execute addHeaderEntry once for each entry.",
             "Important: The pub.soap.utils:addHeaderEntry service expects the node in headerEntry to be namespace qualified. If the node is not qualified, the service throws an exception. Prior to IBM webMethods Integration Server 6.0.1, the service permitted non-qualified entries. If you created solutions based on the earlier behavior of this service, you can disable namespace enforcement by setting the server configuration parameter watt.server.SOAP.EnforceMsgPartNS to false."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:xmlStringToXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_xmlStringToXMLNode"
+            }
           ]
         },
         {
@@ -2490,6 +2626,12 @@
             "Note: An XML node is a parsable representation of a node in an XML document. You generate an XML node using services such as pub.xml:xmlStringToXMLNode.",
             "Important: This service adds a single trailer to a SOAP object. If you need to insert more than one trailer in the message, execute addTrailer once for each trailer that needs to be added.",
             "Note: The SOAP specification states that trailers must be namespace qualified, so be sure that the node in trailer specifies a namespace."
+          ],
+          "references": [
+            {
+              "title": "pub.xml:xmlStringToXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_xmlStringToXMLNode"
+            }
           ]
         }
       ],
@@ -2554,6 +2696,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         }
       ],
@@ -2867,6 +3015,20 @@
           "description": [
             "- If you use pub.soap.utils:getHeaderEntries to retrieve header entries, you can loop over the list of header nodes to retrieve the actor value from each entry.",
             "- If you use pub.soap.utils:getHeader to retrieve header entries, you must query the node returned by that service (using the pub.xml:queryXMLNode service) to extract a node for an individual header entry. Then you can run getActor on the resulting node."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:getHeaderEntries",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries"
+            },
+            {
+              "title": "pub.soap.utils:getHeader",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeader"
+            },
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_queryXMLNode"
+            }
           ]
         }
       ],
@@ -3135,6 +3297,24 @@
           "description": [
             "- If you use pub.soap.utils:getHeaderEntries to retrieve header entries, you can loop over the list of header nodes to check the status of each entry.",
             "- If you use pub.soap.utils:getHeader to retrieve header entries, you will need to query the node returned by that service (using the pub.xml:queryXMLNode service) to extract a node for an individual header entry. Then you can run pub.soap.utils:getMustUnderstand on the resulting node."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:getHeaderEntries",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries"
+            },
+            {
+              "title": "pub.soap.utils:getHeader",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeader"
+            },
+            {
+              "title": "pub.xml:queryXMLNode",
+              "url": "to-xml_folder.html#Apub_xml_queryXMLNode"
+            },
+            {
+              "title": "pub.soap.utils:getMustUnderstand",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getMustUnderstd"
+            }
           ]
         }
       ],
@@ -3287,10 +3467,6 @@
         },
         {
           "name": "data",
-          "type": "Document",
-          "description": [
-            "If the xopObject input parameter is null, this parameter has a null value."
-          ],
           "children": [
             {
               "name": "base64String",
@@ -3313,6 +3489,10 @@
                 "Conditional. Returns the contents of the com.wm.util.XOPObject instance as an InputStream if the getAs input parameter is set to stream."
               ]
             }
+          ],
+          "type": "Document",
+          "description": [
+            "If the xopObject input parameter is null, this parameter has a null value."
           ]
         }
       ],
@@ -3360,6 +3540,12 @@
           "type": "com.wm.lang.xml.Node",
           "description": [
             "Note: You can use bodyEntry or index to specify the entry that you want removeBodyEntry to delete."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:getBodyEntries",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getBodyEntries"
+            }
           ]
         },
         {
@@ -3407,6 +3593,12 @@
           "type": "com.wm.lang.xml.Node",
           "description": [
             "Note: You can use headerEntry or index to specify the entry that you want removeHeaderEntry to delete."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:getHeaderEntries",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries"
+            }
           ]
         },
         {
@@ -3454,6 +3646,12 @@
           "type": "com.wm.lang.xml.Node",
           "description": [
             "Note: You can use trailer or index to specify the trailer that you want removeTrailer to delete."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:getTrailers",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getTrailers"
+            }
           ]
         },
         {
@@ -4258,6 +4456,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         },
         {
@@ -4267,6 +4471,12 @@
             "The contents of transportInfo vary depending on the actual transport used by the service.",
             "Note: The transport information returned by this service is similar to the transport information returned by a web service connector. For more information, see About Transport and Fault Information Returned by a Web Service Connector .",
             "The transportInfo parameter contains the following keys:"
+          ],
+          "references": [
+            {
+              "title": "About Transport and Fault Information Returned by a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id5f0b2c4a-1182-4b33-b38b-31698402438d"
+            }
           ],
           "children": [
             {
@@ -4422,6 +4632,12 @@
           "type": "Document",
           "description": [
             "Specify a key in transportHeaders for each header field that you want to set. The key name represents the name of the header field and the key value represents the value of that header field. The names and values supplied to transportHeaders must be of type String. For information about using transportHeaders, including a description of the default Integration Server behavior, see Signature for a Web Service Connector ."
+          ],
+          "references": [
+            {
+              "title": "Signature for a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id480d47eb-ffad-4def-b98d-cd307a826992"
+            }
           ]
         }
       ],
@@ -4438,6 +4654,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         },
         {
@@ -4447,6 +4669,12 @@
             "The contents of transportInfo vary depending on the actual transport used by the service.",
             "Note: The transport information returned by this service is similar to the transport information returned by a web service connector. For more information, see About Transport and Fault Information Returned by a Web Service Connector .",
             "The transportInfo parameter contains the following keys:"
+          ],
+          "references": [
+            {
+              "title": "About Transport and Fault Information Returned by a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id5f0b2c4a-1182-4b33-b38b-31698402438d"
+            }
           ],
           "children": [
             {
@@ -4502,6 +4730,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         },
         {
@@ -4511,6 +4745,12 @@
             "The contents of transportInfo vary depending on the actual transport used by the service.",
             "Note: The transport information returned by this service is similar to the transport information returned by a web service connector. For more information, see About Transport and Fault Information Returned by a Web Service Connector .",
             "The transportInfo parameter contains the following keys:"
+          ],
+          "references": [
+            {
+              "title": "About Transport and Fault Information Returned by a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id5f0b2c4a-1182-4b33-b38b-31698402438d"
+            }
           ],
           "children": [
             {
@@ -4566,6 +4806,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         },
         {
@@ -4575,6 +4821,12 @@
             "The contents of transportInfo vary depending on the actual transport used by the service.",
             "Note: The transport information returned by this service is similar to the transport information returned by a web service connector. For more information, see About Transport and Fault Information Returned by a Web Service Connector .",
             "The transportInfo parameter contains the following keys:"
+          ],
+          "references": [
+            {
+              "title": "About Transport and Fault Information Returned by a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id5f0b2c4a-1182-4b33-b38b-31698402438d"
+            }
           ],
           "children": [
             {
@@ -4637,6 +4889,12 @@
           "type": "Document",
           "description": [
             "The fault document references the pub.soap.utils:soapFault document type."
+          ],
+          "references": [
+            {
+              "title": "pub.soap.utils:soapFault",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6"
+            }
           ]
         },
         {
@@ -4646,6 +4904,12 @@
             "The contents of transportInfo vary depending on the actual transport used by the service.",
             "Note: The transport information returned by this service is similar to the transport information returned by a web service connector. For more information, see About Transport and Fault Information Returned by a Web Service Connector .",
             "The transportInfo parameter contains the following keys:"
+          ],
+          "references": [
+            {
+              "title": "About Transport and Fault Information Returned by a Web Service Connector",
+              "url": "../web_services_guide/to-working_with_ws_connectors.html#id5f0b2c4a-1182-4b33-b38b-31698402438d"
+            }
           ],
           "children": [
             {

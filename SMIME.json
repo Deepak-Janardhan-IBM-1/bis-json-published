@@ -48,6 +48,12 @@
           "type": "java.io.InputStream",
           "description": [
             "MIME message that you want to encrypt (for example, the output produced by pub.mime:getEnvelopeStream)."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            }
           ]
         },
         {
@@ -107,6 +113,12 @@
           "type": "java.io.InputStream",
           "description": [
             "The MIME message that you want to sign and encrypt (for example, the output produced by pub.mime:getEnvelopeStream)."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            }
           ]
         },
         {
@@ -199,6 +211,12 @@
           "type": "java.io.InputStream",
           "description": [
             "MIME message that you want to sign (for example, the output produced by pub.mime:getEnvelopeStream)."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            }
           ]
         },
         {
@@ -291,6 +309,12 @@
           "type": "java.io.InputStream",
           "description": [
             "The encrypted S/MIME entity (for example, the output produced by pub.smime:createEncryptedData)."
+          ],
+          "references": [
+            {
+              "title": "pub.smime:createEncryptedData",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-smime-folder#Apub_smime_createEncryptedData"
+            }
           ]
         },
         {
@@ -382,6 +406,12 @@
           "type": "java.io.InputStream",
           "description": [
             "Signed MIME entity (for example, the output produced by pub.smime:createSignedData)."
+          ],
+          "references": [
+            {
+              "title": "pub.smime:createSignedData",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-smime-folder#Apub_smime_createSignedData"
+            }
           ]
         },
         {
@@ -511,6 +541,12 @@
           "type": "java.io.InputStream",
           "description": [
             "The MIME message that you want to sign and encrypt (for example, the output produced by pub.mime:getEnvelopeStream)."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            }
           ]
         },
         {
@@ -597,6 +633,12 @@
           "type": "java.io.InputStream",
           "description": [
             "MIME message that you want to sign (for example, the output produced by pub.mime:getEnvelopeStream)."
+          ],
+          "references": [
+            {
+              "title": "pub.mime:getEnvelopeStream",
+              "url": "to-mime_folder.html#Apub_mime_getEnvelopeStream"
+            }
           ]
         },
         {

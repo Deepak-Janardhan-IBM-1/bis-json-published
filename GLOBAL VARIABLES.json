@@ -20,7 +20,7 @@
         },
         {
           "name": "defaultValue",
-          "type": "String.",
+          "type": "String",
           "description": [
             "Optional. The default value that Integration Server must return in the absence of a global variable."
           ]
@@ -36,7 +36,7 @@
         },
         {
           "name": "isSecure",
-          "type": "String.",
+          "type": "String",
           "description": [
             "Indicates whether the global variable is a password or not."
           ]

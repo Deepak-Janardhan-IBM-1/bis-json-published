@@ -118,6 +118,12 @@
           "type": "String",
           "description": [
             "The plaintext in the encrypted format. For example, see the sample cipherText."
+          ],
+          "references": [
+            {
+              "title": "cipherText",
+              "url": "https://developer.hashicorp.com/vault/docs/secrets/transit#usage"
+            }
           ]
         }
       ],

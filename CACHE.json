@@ -552,10 +552,6 @@
         },
         {
           "name": "criteria",
-          "type": "Document",
-          "description": [
-            "A document (IData) that specifies the conditions based on which the data in the cache is to be queried."
-          ],
           "children": [
             {
               "name": "OP1",
@@ -578,6 +574,10 @@
                 ", Document, Object, or Object List A string operand, nested document type, object, or object list that can be evaluated by a logical operator."
               ]
             }
+          ],
+          "type": "Document",
+          "description": [
+            "A document (IData) that specifies the conditions based on which the data in the cache is to be queried."
           ]
         },
         {

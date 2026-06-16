@@ -78,6 +78,12 @@
           "type": "String",
           "description": [
             "Format in which the startDate parameter is to be specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -85,6 +91,12 @@
           "type": "String",
           "description": [
             "Format in which the endDate parameter is to be specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         }
       ],
@@ -151,6 +163,12 @@
           "type": "String",
           "description": [
             "Format in which the startDate parameter is specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -158,6 +176,12 @@
           "type": "String",
           "description": [
             "Format in which the endDate parameter is specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         }
       ],
@@ -211,6 +235,12 @@
           "type": "String",
           "description": [
             "Pattern representing the format in which you want the date returned. For pattern-string notation, see Pattern String Symbols. If you do not specify pattern, dateBuild returns null. If pattern contains a time zone and timezone is not specified, the default time zone of IBM webMethods Integration Server is used."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -239,6 +269,12 @@
           "type": "String",
           "description": [
             "If you do not specify timezone, the value of the server's \"user timezone\" property is used. If this property has not been set, GMT is used."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -278,6 +314,12 @@
           "type": "String",
           "description": [
             "Pattern representing the format in which you want the time returned. For pattern-string notation, see Pattern String Symbols. If you do not specify pattern, dateTimeBuild returns null. If pattern contains a time zone and the timezone parameter is not set, the time zone of Integration Server is used."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -334,6 +376,12 @@
           "type": "String",
           "description": [
             "If you do not specify timezone, the value of the server's \"user timezone\" property is used. If this property has not been set, GMT is used."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -372,6 +420,12 @@
           "type": "String",
           "description": [
             "Important: If inString contains a character in the last position, that character is interpreted as 0. This can result in an inaccurate date. For information about invalid dates, see Notes on Invalid Dates."
+          ],
+          "references": [
+            {
+              "title": "Notes on Invalid Dates",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#AAPPX_NoteInvalidDates"
+            }
           ]
         },
         {
@@ -379,6 +433,12 @@
           "type": "String",
           "description": [
             "Pattern string that describes the format of inString. For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -386,6 +446,12 @@
           "type": "String",
           "description": [
             "Pattern string that describes the format in which you want inString returned. For pattern-string syntax, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -474,6 +540,12 @@
           "type": "String",
           "description": [
             "Pattern string that describes the format in which you want the date returned. For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -481,6 +553,12 @@
           "type": "String",
           "description": [
             "If you do not specify timezone, the value of the server's \"user timezone\" property is used. If this property has not been set, GMT is used."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -528,6 +606,12 @@
           "type": "String",
           "description": [
             "Pattern representing the format in which you want the date returned. For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -536,6 +620,16 @@
           "description": [
             "If you do not specify timezone, the value of the server's \"user timezone\" property is used. If this property has not been set, GMT is used. Alternatively, you can also specify the timezone as a full name. For more information, see Time Zones.",
             "For regions where Daylight Saving Time (DST) is observed, use the full name of the timezone for accurate time representation. For example, specifying the EST timezone code yields the current time as Eastern Standard Time without applying DST. To obtain Eastern Standard Time with DST adjustment, use America/New_York."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            },
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -582,6 +676,12 @@
           "type": "String",
           "description": [
             "Format in which the startDate parameter is to be specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -589,6 +689,12 @@
           "type": "String",
           "description": [
             "Format in which the endDate parameter is to be specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         }
       ],
@@ -638,6 +744,12 @@
           "type": "String",
           "description": [
             "Format in which the startDate parameter is specified (for example, yyyyMMdd HH:mm:ss.SSS). For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -645,6 +757,12 @@
           "type": "String",
           "description": [
             "If no endDatePattern is specified, the endDate will be returned in the format specified in the startDatePattern parameter."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -701,6 +819,12 @@
           "type": "String",
           "description": [
             "If you do not specify timezone , the value of the server's \"user timezone\" property is used. If this property has not been set, GMT is used."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {
@@ -748,6 +872,12 @@
           "type": "String",
           "description": [
             "Pattern string that describes the format of inString. For pattern-string notation, see Pattern String Symbols."
+          ],
+          "references": [
+            {
+              "title": "Pattern String Symbols",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#idf51b03a6-f862-431f-bd3b-abccb250e546"
+            }
           ]
         },
         {
@@ -755,6 +885,12 @@
           "type": "String",
           "description": [
             "If you do not specify timezone, the value of the server's \"user timezone\" property is used. If this property is not set, GMT is used."
+          ],
+          "references": [
+            {
+              "title": "Time Zones",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-date-folder#id8ee9d256-1d69-46b9-aefa-19812f2ae648"
+            }
           ]
         },
         {

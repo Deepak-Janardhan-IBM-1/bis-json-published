@@ -112,6 +112,12 @@
           "description": [
             "- true to indicate that this is an asynchronous request/reply. After publishing the document, the Integration Server executes the next step in the flow service immediately. Integration Server does not wait for a reply before continuing service execution. Note: To retrieve the reply to an asynchronous request, invoke the pub.publish:waitForReply service.",
             "- false to indicate that this is a synchronous request/reply. After publishing the document, Integration Server waits for a reply before executing the next step in the flow service. This is the default."
+          ],
+          "references": [
+            {
+              "title": "pub.publish:waitForReply",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279"
+            }
           ]
         }
       ],
@@ -129,6 +135,12 @@
           "description": [
             "The service produces a tag output value only when the async field is set to true. The tag value is required input when using the pub.publish:waitForReply service to retrieve the reply.",
             "Note: The tag output value is the same value that the Integration Server places in the tag field of the request document's envelope."
+          ],
+          "references": [
+            {
+              "title": "pub.publish:waitForReply",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279"
+            }
           ]
         }
       ],
@@ -465,6 +477,12 @@
           "description": [
             "- true to indicate that this is an asynchronous request/reply. After publishing the document, the Integration Server executes the next step in the flow service immediately. The Integration Server does not wait for a reply before continuing service execution. Note: To retrieve the reply to an asynchronous publish, invoke the pub.publish:waitForReply service.",
             "- false to indicate that this is a synchronous request/reply. After publishing the document, the Integration Server waits for a reply before executing the next step in the flow service. This is the default."
+          ],
+          "references": [
+            {
+              "title": "pub.publish:waitForReply",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279"
+            }
           ]
         }
       ],
@@ -482,6 +500,12 @@
           "description": [
             "The service produces a tag output value only when the async field is set to true. The tag value is required input when using the pub.publish:waitForReply service to retrieve the reply.",
             "Note: The tag output value is the same value that Integration Server places in the tag field of the request document's envelope."
+          ],
+          "references": [
+            {
+              "title": "pub.publish:waitForReply",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279"
+            }
           ]
         },
         {
