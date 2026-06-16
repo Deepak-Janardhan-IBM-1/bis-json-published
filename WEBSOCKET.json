@@ -1,0 +1,732 @@
+{
+  "folder": "WEBSOCKET",
+  "description": [
+    "You can use the services in the WebSocket folder to allow clients to send messages, close, and disconnect the WebSocket session."
+  ],
+  "total_services": 19,
+  "services": [
+    {
+      "name": "pub.websocket:close",
+      "description": [
+        "WmPublic. Closes the WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "closed",
+          "type": "Boolean",
+          "description": [
+            "- true indicates that the WebSocket session was closed successfully.",
+            "- false indicates that the WebSocket session was not closed successfully."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:disconnect",
+      "description": [
+        "WmPublic. Closes the WebSocket connection abruptly."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "disconnected",
+          "type": "Boolean",
+          "description": [
+            "- true indicates that the WebSocket session was disconnected successfully.",
+            "- false indicates that the WebSocket session was not disconnected successfully."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getCookies",
+      "description": [
+        "WmPublic: Retrieves the cookies that are part of the HTTP request to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the cookies information."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "cookies",
+          "type": "Document List-",
+          "description": [
+            "Conditional. List of the cookies that are part of the HTTP request to establish a WebSocket connection. This parameter returns value only if cookies were part of the request."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the cookie."
+              ]
+            },
+            {
+              "name": "comment",
+              "type": "String",
+              "description": [
+                "Description about the purpose of the cookie. This parameter returns null if the cookie has no comment."
+              ]
+            },
+            {
+              "name": "commentURL",
+              "type": "String",
+              "description": [
+                "The comment URL which describes the purpose of the cookie. This parameter returns null if the cookie has no comment."
+              ]
+            },
+            {
+              "name": "discard",
+              "type": "String",
+              "description": [
+                "The value of the discard attribute for the cookie."
+              ]
+            },
+            {
+              "name": "domain",
+              "type": "String",
+              "description": [
+                "The domain name set for the given cookies."
+              ]
+            },
+            {
+              "name": "maxAge",
+              "type": "String",
+              "description": [
+                "The maximum age of the cookie specified in seconds."
+              ]
+            },
+            {
+              "name": "path",
+              "type": "String",
+              "description": [
+                "The path on the server to which the browser returns the cookie."
+              ]
+            },
+            {
+              "name": "portlist",
+              "type": "String",
+              "description": [
+                "The value of the port list attribute of the cookie."
+              ]
+            },
+            {
+              "name": "secure",
+              "type": "String",
+              "description": [
+                "- True Sending the cookie is restricted to a secure protocol.",
+                "- False The cookie can be sent using any protocol."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String",
+              "description": [
+                "The value of the cookie."
+              ]
+            },
+            {
+              "name": "version",
+              "type": "String",
+              "description": [
+                "The version of the protocol with which the cookie complies."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getExtensions",
+      "description": [
+        "WmPublic: Retrieves the extensions used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the extension information."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "extensions",
+          "type": "Document List",
+          "description": [
+            "Conditional. The list of extensions for a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the header."
+              ]
+            },
+            {
+              "name": "parameterizedName",
+              "type": "String",
+              "description": [
+                "The parameterized name of the extension."
+              ]
+            },
+            {
+              "name": "parameterKeys",
+              "type": "String List",
+              "description": [
+                "The parameterized keys of the extension."
+              ]
+            },
+            {
+              "name": "parameters",
+              "type": "Document List",
+              "description": [
+                "The list of parameters for the given extension."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getHeaders",
+      "description": [
+        "WmPublic: Retrieves the headers used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the header information."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "headers",
+          "type": "String",
+          "description": [
+            "Conditional. The list of the headers included in with the request to establish a WebSocket connection. This parameter returns a value only if headers were part of the request."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the header."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String",
+              "description": [
+                "The value of the header."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getPathParameters",
+      "description": [
+        "WmPublic: Retrieves the path parameters used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the path parameters information."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "queryParameters",
+          "type": "Document List",
+          "description": [
+            "Conditional. The path parameters included in with the request for establishing a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the path parameter."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String List",
+              "description": [
+                "The value of the path parameter."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getPathParameter",
+      "description": [
+        "WmPublic: Retrieves the path parameter used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the path parameter information."
+          ]
+        },
+        {
+          "name": "pathParameterName",
+          "type": "String",
+          "description": [
+            "The path parameter name of the query parameter for which you want to obtain a value."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "pathParameterValue",
+          "type": "String",
+          "description": [
+            "Conditional. The value for the provided parameter name. This parameter is returned only if a path parameter of the specified value was part of the request."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getRequest",
+      "description": [
+        "WmPublic: Retrieves the HTTP request information used to establish the WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve HTTP request information."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "requestURI",
+          "type": "String",
+          "description": [
+            "The Uniform Resource Identifier used by the client to identify the request."
+          ]
+        },
+        {
+          "name": "queryString",
+          "type": "String",
+          "description": [
+            "One or more name/value pairs included as part of the query strings in request uniform resource locator(URL) which assigns values to specified parameters. For example, ?name=ferret&color=purple."
+          ]
+        },
+        {
+          "name": "host",
+          "type": "String",
+          "description": [
+            "Name or IP address of the WebSocket server that received the upgrade request."
+          ]
+        },
+        {
+          "name": "httpVersion",
+          "type": "String",
+          "description": [
+            "The HTTP version used in the request."
+          ]
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "description": [
+            "The HTTP method used for establishing WebSocket connection."
+          ]
+        },
+        {
+          "name": "origin",
+          "type": "String",
+          "description": [
+            "The value of the origin request header."
+          ]
+        },
+        {
+          "name": "userPrincipal",
+          "type": "String",
+          "description": [
+            "The name of the authenticated user used in the request."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getQueryParameters",
+      "description": [
+        "WmPublic: Retrieves the query parameters used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to obtain query parameters."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "queryParameters",
+          "type": "Document List",
+          "description": [
+            "Conditional. The list of query parameters used on the URL that established a WebSocket connection."
+          ],
+          "children": [
+            {
+              "name": "name",
+              "type": "String",
+              "description": [
+                "The name of the query parameter."
+              ]
+            },
+            {
+              "name": "value",
+              "type": "String List",
+              "description": [
+                "The value of the query parameter."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getQueryParameter",
+      "description": [
+        "WmPublic: Session ID for the WebSocket session for which you want to retrieve the value of a specific query parameter information."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to obtain query parameters."
+          ]
+        },
+        {
+          "name": "queryParameterName",
+          "type": "String",
+          "description": [
+            "The name of the query parameter for which you want to obtain a value."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "queryParameterValue",
+          "type": "String",
+          "description": [
+            "Conditional. The value for the provided parameter name. The parameter is only returned if there is a query parameter of that name in the URL."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:getSubProtocols",
+      "description": [
+        "WmPublic: Retrieves the subprotocols used in the request URL to establish a WebSocket connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to retrieve the subprotocols of the connection."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "subProtocols",
+          "type": "String List",
+          "description": [
+            "The WebSocket protocols used as part of establishing a WebSocket connection."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:onBinary",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles binary payload."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        },
+        {
+          "name": "payload",
+          "type": "byte[ ]",
+          "description": [
+            "Byte array that contains the payload."
+          ]
+        },
+        {
+          "name": "offset",
+          "type": "Integer",
+          "description": [
+            "The offset from the byte array till which the data is to be read."
+          ]
+        },
+        {
+          "name": "length",
+          "type": "Integer",
+          "description": [
+            "The maximum number of byte array to read from the payload."
+          ]
+        }
+      ],
+      "output_parameters": []
+    },
+    {
+      "name": "pub.websocket:onClose",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is closed or disconnected."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        },
+        {
+          "name": "statusCode",
+          "type": "Integer",
+          "description": [
+            "The pre-defined status codes when closing an established connection are defined in Section https://tools.ietf.org/html/rfc6455#section-7.4."
+          ],
+          "references": [
+            {
+              "title": "https://tools.ietf.org/html/rfc6455#section-7.4",
+              "url": "https://tools.ietf.org/html/rfc6455#section-7.4"
+            }
+          ]
+        },
+        {
+          "name": "reason",
+          "type": "String",
+          "description": [
+            "Text explaining the reason for closure."
+          ]
+        }
+      ],
+      "output_parameters": []
+    },
+    {
+      "name": "pub.websocket:onConnect",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is successfully established."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        }
+      ],
+      "output_parameters": []
+    },
+    {
+      "name": "pub.websocket:onError",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when an error is encountered resulting in WebSocket session termination."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        },
+        {
+          "name": "cause",
+          "type": "String",
+          "description": [
+            "Text explaining the cause of the error."
+          ]
+        }
+      ],
+      "output_parameters": []
+    },
+    {
+      "name": "pub.websocket:onText",
+      "description": [
+        "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles text payload."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "description": [
+            "The content of the message."
+          ]
+        }
+      ],
+      "output_parameters": []
+    },
+    {
+      "name": "pub.websocket:ping",
+      "description": [
+        "WmPublic: Sends a ping message containing the given application data to the remote endpoint after establishing the connection."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Required. Session ID for the WebSocket session for which you want to send the ping message."
+          ]
+        },
+        {
+          "name": "applicationData",
+          "type": "String",
+          "description": [
+            "Optional. The application data to be sent as part of the ping message. If the parameter value is null an empty buffer will be sent."
+          ]
+        },
+        {
+          "name": "charset",
+          "type": "String",
+          "description": [
+            "Optional. The character encoding. If the parameter value is null, the default character set is used."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "pinged",
+          "type": "String",
+          "description": [
+            "Indicates the success or failure of the ping message. This parameter returns a value of true if the ping message is received successfully. Else the parameter returns the value false."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:pong",
+      "description": [
+        "WmPublic: Sends back an unsolicited pong message with the exact application data as the ping for the WebSocket session."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID for the WebSocket session for which you want to send the pong message."
+          ]
+        },
+        {
+          "name": "applicationData",
+          "type": "String",
+          "description": [
+            "Optional. The application data to be sent as part of the pong message. If the parameter value is null an empty buffer will be sent."
+          ]
+        },
+        {
+          "name": "charset",
+          "type": "String",
+          "description": [
+            "Optional. The character encoding. If the parameter value is null, the default character set is used."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "ponged",
+          "type": "String",
+          "description": [
+            "Conditional. Indicates the success or failure of the pong message. This parameter returns a value of true if the pong message is received successfully. Else the parameter returns the value of false."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pub.websocket:send",
+      "description": [
+        "WmPublic. Sends a message on a connected WebSocket session."
+      ],
+      "input_parameters": [
+        {
+          "name": "sessionId",
+          "type": "String",
+          "description": [
+            "Session ID to identify the WebSocket session."
+          ]
+        },
+        {
+          "name": "message",
+          "type": "Object",
+          "description": [
+            "Sends messages containing the payload to the destination. The message could be a byte array or a text message."
+          ]
+        }
+      ],
+      "output_parameters": [
+        {
+          "name": "sent",
+          "type": "Boolean",
+          "description": [
+            "- true indicates that the WebSocket session was sent successfully.",
+            "- false indicates that the WebSocket session was not sent successfully."
+          ]
+        }
+      ]
+    }
+  ]
+}
