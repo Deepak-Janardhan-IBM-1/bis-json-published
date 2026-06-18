@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the publish folder to publish messages to IBM webMethods Universal Messaging or IBM webMethods Broker. Other Integration Servers subscribe to and receive these messages using IBM webMethods messaging triggers."
   ],
-  "total_services": 12,
-  "services": [
+  "total_elements": 12,
+  "elements": [
     {
       "name": "pub.publish:deliver",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_deliver__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Delivers a document to a specific destination."
       ],
@@ -74,6 +75,7 @@
     {
       "name": "pub.publish:deliverAndWait",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_deliverAndWait__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Requests a reply document from a specific client. The service waits for the reply or indicates that the pub.publish:waitForReply service should retrieve the reply later."
       ],
@@ -182,6 +184,7 @@
     {
       "name": "pub.publish:documentResolverSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A78507__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of a service that determines whether a document's status is New, Duplicate, or In Doubt."
       ],
@@ -264,59 +267,188 @@
     {
       "name": "pub.publish:envelope",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_envelope__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the content and structure of the envelope that accompanies a published document.",
         "The envelope records information such as the sender's address, the time the document was sent, password and certificate information, and other useful information for routing and control. Every publishable document type contains a document reference to this document type."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
+      "fields": [
+        {
+          "name": "activation",
+          "type": "String",
+          "description": [
+            "If you are using a trigger to join documents published by different services, you must explicitly set the activation ID of the documents. The services that publish the documents must assign the same activation ID to the documents."
+          ]
+        },
+        {
+          "name": "appLastSeqn",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "appPassword",
+          "type": "String",
+          "description": [
+            "Optional. The password of the user specified in appUserName. If the resource that processes the document requires authentication before it begins processing, specify the password in this field."
+          ]
+        },
+        {
+          "name": "appSeqn",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "appUserName",
+          "type": "String",
+          "description": [
+            "Optional. The user name for logging into the application that processes the document. Use the appPassword field to specify the password for this user name."
+          ]
+        },
+        {
+          "name": "businessContext",
+          "type": "String",
+          "description": [
+            "Important: The businessContext field is reserved for internal use by the Integration Server. Do not set or overwrite the value of the businessContext field."
+          ]
+        },
+        {
+          "name": "controlLabel",
+          "type": "java.lang.Short[ ]",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "errorsTo",
+          "type": "String",
+          "description": [
+            "Optional. The client ID to which the Integration Server sends an error notification document if errors occur during document processing by subscribers. If this parameter is not set, error notifications will be sent to the document publisher. The errors document is an instance of pub.publish.notification:error."
+          ],
+          "references": [
+            {
+              "title": "pub.publish.notification:error",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_notification_error"
+            }
+          ]
+        },
+        {
+          "name": "errorRequestsTo",
+          "type": "String",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "locale",
+          "type": "String",
+          "description": [
+            "Optional. Locale of the publishing client expressed as a URN (Uniform Resource Name). Trigger services examine the locale value to determine the locale to use when processing the document. If the locale field is empty, the locale of the current Integration Server is used instead."
+          ]
+        },
+        {
+          "name": "maxResults",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "priority",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. Indicates how quickly the document should be published and processed. A value of 0 is the lowest processing priority; a value of 9 indicates expedited processing. Set a message priority in the document envelope when publishing the document. The default priority is 4."
+          ]
+        },
+        {
+          "name": "replyTo",
+          "type": "String",
+          "description": [
+            "Optional. The client ID to which the replies to the published document should be sent. If this parameter is not set, replies will be sent to the document publisher as specified in pubId."
+          ]
+        },
+        {
+          "name": "runLevel",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "signature",
+          "type": "byte[ ]",
+          "description": [
+            "Optional. A byte sequence that holds a digital signature. Specify a digital signature if clients receiving this document requires one."
+          ]
+        },
+        {
+          "name": "signatureType",
+          "type": "String",
+          "description": [
+            "Optional. The type of digital signature being used."
+          ]
+        },
+        {
+          "name": "startResult",
+          "type": "java.lang.Integer",
+          "description": [
+            "Optional. This field is provided for backward compatibility."
+          ]
+        },
+        {
+          "name": "tag",
+          "type": "java.lang.Integer",
+          "description": [
+            "Important: The tag field is reserved for internal use by the Integration Server. Do not set or overwrite the value of the tag field in the envelope."
+          ],
+          "references": [
+            {
+              "title": "pub.publish:publishAndWait",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_publishAndWait"
+            },
+            {
+              "title": "pub.publish:deliverAndWait",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_deliverAndWait"
+            }
+          ]
+        },
+        {
+          "name": "trackId",
+          "type": "String",
+          "description": [
+            "Optional. A unique identifier assigned to a published document by the publishing client application. If no value is specified, Integration Server populates this field with the value of the uuid field."
+          ]
+        },
+        {
+          "name": "transactionId",
+          "type": "String",
+          "description": [
+            "Optional. This field is provided for backwards compatibility."
+          ]
+        },
+        {
+          "name": "transformState",
+          "type": "String",
+          "description": [
+            "Optional. An indication of a document's current state, set by a publishing client application that transforms data. For example, a client could publish a document with a transformState value of \"USEnglish\" and a receiving client could translate the document into French and publish it with a transformState value of \"French.\""
+          ]
+        },
+        {
+          "name": "uuid",
+          "type": "String",
+          "description": [
+            "If a service uses the pub.publish:publish service to publish a document toUniversal Messaging, you can specify a value for uuid. The uuid value that you assign must meet the following criteria:",
+            "- Must be a minimum of 1 character in length.",
+            "- Must be a maximum of 96 characters in length.",
+            "- Must begin with the sequence \"wm:\" in any case combination. The \"wm:\" prefix is reserved for UUIDs generated by Integration Server.",
+            "Integration Server accepts a user-defined UUID only for invocations of pub.publish:publish that publish a document to Universal Messaging. That is, the document being published must be an instance of a publishable document type to which a Universal Messaging connection alias is assigned. For any other publishing service in pub.publish or invocations of pub.publish:publish that publish a document locally or to IBM webMethods Broker, Integration Server ignores any assigned uuid value."
+          ]
+        }
+      ],
       "additional_information": [
-        {
-          "read_write_parameters": [
-            "You can set the following parameters within your service. Broker supports all of the read/write parameters. However, IBM webMethods Universal Messaging supports only activation, businessContext, priority, replyTo, tag, and uuid. Universal Messaging ignores the values of any other read/write parameters set in the document envelope and passes them through to subscribers.",
-            "activation: String Optional. A unique identifier that any messaging client (including the Integration Server) assigns to all documents published as a result of the one-time execution of the integration solution. If a document does not have an activation ID, the Integration Server assigns one when the document is published. If you are using a trigger to join documents published by different services, you must explicitly set the activation ID of the documents. The services that publish the documents must assign the same activation ID to the documents.",
-            "appLastSeqn: java.lang.Integer Optional. This field is provided for backward compatibility.",
-            "appPassword: String Optional. The password of the user specified in appUserName. If the resource that processes the document requires authentication before it begins processing, specify the password in this field.",
-            "appSeqn: java.lang.Integer Optional. This field is provided for backward compatibility.",
-            "appUserName: String Optional. The user name for logging into the application that processes the document. Use the appPassword field to specify the password for this user name.",
-            "businessContext: String Optional. Used by the Integration Server to track business process context and audit context across multiple Integration Servers. Important: The businessContext field is reserved for internal use by the Integration Server. Do not set or overwrite the value of the businessContext field.",
-            "controlLabel: java.lang.Short[ ] Optional. This field is provided for backward compatibility.",
-            "errorsTo: String Optional. The client ID to which the Integration Server sends an error notification document if errors occur during document processing by subscribers. If this parameter is not set, error notifications will be sent to the document publisher. The errors document is an instance of pub.publish.notification:error.",
-            "errorRequestsTo: String Optional. This field is provided for backward compatibility.",
-            "locale: String Optional. Locale of the publishing client expressed as a URN (Uniform Resource Name). Trigger services examine the locale value to determine the locale to use when processing the document. If the locale field is empty, the locale of the current Integration Server is used instead.",
-            "maxResults: java.lang.Integer Optional. This field is provided for backward compatibility.",
-            "priority: java.lang.Integer Optional. Indicates how quickly the document should be published and processed. A value of 0 is the lowest processing priority; a value of 9 indicates expedited processing. Set a message priority in the document envelope when publishing the document. The default priority is 4.",
-            "replyTo: String Optional. The client ID to which the replies to the published document should be sent. If this parameter is not set, replies will be sent to the document publisher as specified in pubId.",
-            "runLevel: java.lang.Integer Optional. This field is provided for backward compatibility.",
-            "signature: byte[ ] Optional. A byte sequence that holds a digital signature. Specify a digital signature if clients receiving this document requires one.",
-            "signatureType: String Optional. The type of digital signature being used.",
-            "startResult: java.lang.Integer Optional. This field is provided for backward compatibility.",
-            "tag: java.lang.Integer Optional. Used with pub.publish:publishAndWait and pub.publish:deliverAndWait to match a request document with its corresponding reply document. Important: The tag field is reserved for internal use by the Integration Server. Do not set or overwrite the value of the tag field in the envelope.",
-            "trackId: String Optional. A unique identifier assigned to a published document by the publishing client application. If no value is specified, Integration Server populates this field with the value of the uuid field.",
-            "transactionId: String Optional. This field is provided for backwards compatibility.",
-            "transformState: String Optional. An indication of a document's current state, set by a publishing client application that transforms data. For example, a client could publish a document with a transformState value of \"USEnglish\" and a receiving client could translate the document into French and publish it with a transformState value of \"French.\"",
-            "uuid: String Optional. Universally unique identifier for the document. Integration Server assigns the UUID when it publishes the document. The receiving Integration Server uses the UUID to detect duplicate documents. If a service uses the pub.publish:publish service to publish a document toUniversal Messaging, you can specify a value for uuid. The uuid value that you assign must meet the following criteria: Must be a minimum of 1 character in length. Must be a maximum of 96 characters in length. Must begin with the sequence \"wm:\" in any case combination. The \"wm:\" prefix is reserved for UUIDs generated by Integration Server. Integration Server accepts a user-defined UUID only for invocations of pub.publish:publish that publish a document to Universal Messaging. That is, the document being published must be an instance of a publishable document type to which a Universal Messaging connection alias is assigned. For any other publishing service in pub.publish or invocations of pub.publish:publish that publish a document locally or to IBM webMethods Broker, Integration Server ignores any assigned uuid value."
-          ]
-        },
-        {
-          "read_only_parameters": [
-            "IBM webMethods Universal Messaging, IBM webMethods Broker, or Integration Server set the following parameters. You cannot set these parameters within your service, but you can retrieve their values from published documents.",
-            "Note: Of the read-only parameters listed below, IBM webMethods Universal Messaging supports the destID, and pubID parameters only.",
-            "age: java.lang.Integer Optional. The cumulative time, in seconds, that the document spends on all IBM webMethods Brokers. The IBM webMethods Broker starts tracking the document age when it receives the document from the publishing client. The IBM webMethods Broker stops tracking the document age when the subscribing client removes the document from the client queue. If the document is routed to successive IBM webMethods Brokers, age also includes the length of time the document spends on the other IBM webMethods Brokers.",
-            "connectionIntegrity: String Optional. An indication of whether the received document passed over a link that is not secure. This field can have one of the following values: < empty > indicates that at some point, the document passed through a connection that was not encrypted. U.S Export indicates that all the connections used to transport the event had an encryption strength of ENCRYPT_LEVEL_US_EXPORT or greater. U.S. Domestic indicates that the event traveled exclusively over connections with an encryption strength of ENCRYPT_LEVEL_US_DOMESTIC.",
-            "destId: String Optional. The ID of the destination to which the document is being delivered. The publisher sets the destID when it publishes the document. For example, the Integration Server uses the destID value specified in the pub.publish:deliver service or the pub.publish:deliverAndWait service to populate the destID value in the document envelope.",
-            "enqueueTime: java.util.Date Optional. The date and time that the IBM webMethods Broker placed the document into the client queue.",
-            "logBroker: String Optional. The name of the IBM webMethods Broker that contains the document in its document log. The IBM webMethods Broker sets this parameter when IBM webMethods Broker-based document logging and the logging utility are enabled.",
-            "logHost: String Optional. The host name and port number of the IBM webMethods Broker that contains the document in its document log. The IBM webMethods Broker sets this parameter when IBM webMethods Broker-based document logging and the logging utility are enabled.",
-            "pubDistinguishedName: String Optional. The distinguished name of the publisher's SSL certificate. The IBM webMethods Broker sets this parameter when the publisher has an SSL connection to the IBM webMethods Broker and clears this parameter when the publisher has a non-SSL connection.",
-            "pubId: String Optional. An identifier for the document publisher assigned by the messaging provider.",
-            "pubNetAddr: byte[ ] Optional. The IP address and port number of the document's publisher.",
-            "pubSeqn: java.lang.Long Optional. This field is provided for backwards compatibility.",
-            "pubLabel: java.lang.Short[ ] Optional. This field is provided for backwards compatibility.",
-            "recvTime: java.util.Date Optional. The date and time the document was received by the messaging provider.",
-            "route: Document List Optional. Information about the IBM webMethods Brokers through which a document passed. When IBM webMethods Broker receives a document, IBM webMethods Broker sets the broker and recvTime keys. When IBM webMethods Broker places the document in the queue for the next IBM webMethods Broker, the first IBM webMethods Broker sets enqueueTime. IBM webMethods Broker only sets these fields when document is forwarded from one IBM webMethods Broker to another. IBM webMethods Broker does not set these fields when the publishing and receiving clients are connected to the same IBM webMethods Broker."
-          ]
-        },
         {
           "usage_notes": [
             "For more information about setting and using a document's envelope parameters, see IBM webMethods Broker Java Client API Reference , IBM webMethods Broker Client C API Programmer’s Guide , and Publish-Subscribe Developer’s Guide ."
@@ -336,6 +468,7 @@
     {
       "name": "pub.publish:getRedeliveryCount",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A97140__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the redelivery count for a document.",
         "The redelivery count indicates the number of times the document has been redelivered to the trigger queue on the Integration Server. A document is redelivered to a trigger queue if the Integration Server shuts down before processing and acknowledging the document."
@@ -366,6 +499,7 @@
     {
       "name": "pub.publish:publish",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_publish__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Publishes a document locally or to the messaging provider.",
         "This service broadcasts the document (that is, distributes the document to all clients that subscribe to it)."
@@ -442,6 +576,7 @@
     {
       "name": "pub.publish:publishAndWait",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_publishAndWait__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Broadcasts a request for a document from any client subscribed to a specific document type. The service waits for the reply or indicates that the pub.publish:waitForReply service should retrieve the reply later."
       ],
@@ -557,6 +692,7 @@
     {
       "name": "pub.publish:reply",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_reply__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Delivers a reply document to the requesting client."
       ],
@@ -623,6 +759,7 @@
     {
       "name": "pub.publish:syncToBroker",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A94936__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.publish:syncToProvider.",
         "Synchronizes one or more publishable document types with the corresponding Broker document types by pushing the publishable document types toIBM webMethods Broker."
@@ -680,6 +817,7 @@
     {
       "name": "pub.publish:syncToProvider",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#CEHHBAEG__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Synchronizes one or more publishable document types with their associated provider definition by pushing the publishable document types to the associated message provider."
       ],
@@ -737,6 +875,7 @@
     {
       "name": "pub.publish:waitForReply",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#A26279__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the reply for an asynchronous request. If a reply is not available, Integration Server continues to wait for the document until the time specified in the waitTime parameter of the pub.publish:deliverAndWait service or pub.publish:publishAndWait service elapses."
       ],
@@ -781,24 +920,15 @@
     {
       "name": "pub.publish.notification:error",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-publish-folder#Apub_publish_notification_error__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Publishable document type that defines the document that Integration Server generates and delivers when a trigger encounters an error or exception condition during processing.",
         "Integration Server generates an error document if the trigger service cannot successfully process a document for one of the following reasons:",
-        "Some other system exception occurred.",
         "Integration Server delivers the error document to the client ID specified in the errorsTo field contained in the received document's envelope. If the errorsTo field is empty, the Integration Server delivers the error document to the original document's publisher (as specified in the pubId envelope field). The error document notifies the publisher or other designated recipient that the subscriber cannot process the document successfully."
       ],
       "input_parameters": [],
       "output_parameters": [],
       "additional_information": [
-        {
-          "parameters": [
-            "adapterType: String Optional. The resource producing the error. Integration Server sets the value of this field to Integration Server .",
-            "errorCategory: String Optional. Type of exception. Integration Server sets the value of this field to Application.",
-            "errorText: String Optional. Exception text message. At Dispatcher debug level 9, a stack trace of the exception will also be returned.",
-            "eventID: java.lang.Long Optional. The event ID of the document that caused this exception. If the trigger service executed because a document satisfied a join condition, then the eventID is the event ID of the last document that satisfied the condition.",
-            "_env: Document Optional. A document reference to the pub.publish:envelope document type."
-          ]
-        },
         {
           "usage_notes": [
             "The client to which Integration Server delivers the error document needs to subscribe to the pub.publish.notification:error document type. If the client does not have a trigger that subscribes to this document type, the client will never receive or process the error document. If the client receiving the error document is an Integration Server, it generates the message [ISS.0098.0024V2] No trigger available for incoming Document pub.publish.notification:error.",

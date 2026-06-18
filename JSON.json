@@ -8,15 +8,50 @@
       "title": "Data Type Mapping",
       "content": [
         "The following table shows how JSON data types and JSON document types map to Integration Server data types during data conversion.",
-        "object: Document",
-        "string: String",
-        "number (integer): Integer or Long Java wrapper. For more information about converting JSON integers, see the decodeIntegerAsLong input parameters in pub.json:jsonStreamToDocument and pub.json:jsonStringToDocument.",
-        "number (real): Float or Double Java wrapper. For more information about converting real numbers, see the decodeRealAsDouble input parameter in pub.json:jsonStreamToDocument and pub.json:jsonStringToDocument. In JSON document type which is created from a JSON schema, if the data type is number, the JSON text will be converted to BigDecimal.",
-        "true/false: Boolean Java wrapper",
-        "Array of JSON type: Array of Integration Server type If the JSON object contains a string array, Integration Server sets the corresponding field in the IS document type to String List. If the JSON object contains a two-dimensional string array, Integration Server sets the corresponding field in the IS document type to String Table. If the JSON object contains a array having different types of objects (for example, integer, string, etc.), Integration Server sets the corresponding field in the IS document type to Object List with Java wrapper type as UNKNOWN. Note: The Flow type system in Integration Server does not support the following multi-dimensional arrays in JSON objects: Two-dimensional arrays of data types other than string Multi-dimensional arrays of three or more dimensions (three-dimensional, four-dimensional, etc.) The JSON coder in Integration Server can create pipelines with arbitrarily deep arrays or various types and you can write Java services to access those arrays. The limitations above apply to Flow services and viewing the document in Designer. For pub.json:jsonStringToDocument and pub.json:sonStreamToDocument, these kinds of arrays become an Object List of UNKOWN type. For IS document types created from a JSON object using Integration Server, these kinds of arrays become an Object with a Java wrapper type of UNKNOWN.",
-        "Array of null: Object List",
-        "null: null",
-        "All others: String Note: If an object has a toString() implementation, Integration Server uses that implementation. If the object does not provide a toString() implementation, Integration Server uses Object.toString(). Object.toString() returns the class name and hexadecimal representation of the hash code of the object, such as \"javax.namining.InitialContext@3ae6f00b\".",
+        {
+          "table": [
+            [
+              "JSON",
+              "Integration Server"
+            ],
+            [
+              "object",
+              "Document"
+            ],
+            [
+              "string",
+              "String"
+            ],
+            [
+              "number (integer)",
+              "Integer or Long Java wrapper. For more information about converting JSON integers, see the decodeIntegerAsLong input parameters in pub.json:jsonStreamToDocument and pub.json:jsonStringToDocument."
+            ],
+            [
+              "number (real)",
+              "Float or Double Java wrapper. For more information about converting real numbers, see the decodeRealAsDouble input parameter in pub.json:jsonStreamToDocument and pub.json:jsonStringToDocument. In JSON document type which is created from a JSON schema, if the data type is number, the JSON text will be converted to BigDecimal."
+            ],
+            [
+              "true/false",
+              "Boolean Java wrapper"
+            ],
+            [
+              "Array of JSON type",
+              "Array of Integration Server type If the JSON object contains a string array, Integration Server sets the corresponding field in the IS document type to String List. If the JSON object contains a two-dimensional string array, Integration Server sets the corresponding field in the IS document type to String Table. If the JSON object contains a array having different types of objects (for example, integer, string, etc.), Integration Server sets the corresponding field in the IS document type to Object List with Java wrapper type as UNKNOWN. Note: The Flow type system in Integration Server does not support the following multi-dimensional arrays in JSON objects: Two-dimensional arrays of data types other than string Multi-dimensional arrays of three or more dimensions (three-dimensional, four-dimensional, etc.) The JSON coder in Integration Server can create pipelines with arbitrarily deep arrays or various types and you can write Java services to access those arrays. The limitations above apply to Flow services and viewing the document in Designer. For pub.json:jsonStringToDocument and pub.json:sonStreamToDocument, these kinds of arrays become an Object List of UNKOWN type. For IS document types created from a JSON object using Integration Server, these kinds of arrays become an Object with a Java wrapper type of UNKNOWN."
+            ],
+            [
+              "Array of null",
+              "Object List"
+            ],
+            [
+              "null",
+              "null"
+            ],
+            [
+              "All others",
+              "String Note: If an object has a toString() implementation, Integration Server uses that implementation. If the object does not provide a toString() implementation, Integration Server uses Object.toString(). Object.toString() returns the class name and hexadecimal representation of the hash code of the object, such as \"javax.namining.InitialContext@3ae6f00b\"."
+            ]
+          ]
+        },
         "Additional notes on data conversion:",
         "- If JSON text begins with an array at the root and the array is unnamed, when parsing the JSON text, Integration Server uses a fixed name of $rootArray for the array value. The $rootArray field appears in the output pipeline of the service converting the JSON text to a Document (IData). When creating a JSON response, if the pipeline contains $rootArray with an array as its value, Integration Server discards the $rootArray name and transforms the array value into a JSON array. The resulting JSON text will contain only an unnamed array.",
         "- If JSON text contains only a primitive type (string, number, boolean, or null) at root level, Integration Server uses a fixed name of $rootValue for the primitive value while converting it to IData. The following table identifies how JSON text with a primitive type is converted to an IData in Integration Server: JSON text Generated IData \"just a simple string\" { $rootValue=\"just a simple string\" } 3.14159 { $rootValue=3.14159 } true {$rootValue=true} null {$rootValue=null} null {} Empty IData (if decodeNullRootAsEmpty input parameter is set to true)",

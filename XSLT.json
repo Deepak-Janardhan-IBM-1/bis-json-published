@@ -119,9 +119,22 @@
         {
           "examples": [
             "You want to transform an XML document named cdCatalog.xml into an HTML document using an XSLT stylesheet named cdCatalog.xsl. You would pass the transformSerialXML service these values:",
-            "stylesheetSystemId: http://localhost:5555/WmXSLT/samples/xdocs/cdCatalog.xsl",
-            "systemId: http://localhost:5555/WmXSLT/samples/xdocs/cdCatalog.xml",
-            "resultType: bytes",
+            {
+              "table": [
+                [
+                  "stylesheetSystemId",
+                  "http://localhost:5555/WmXSLT/samples/xdocs/cdCatalog.xsl"
+                ],
+                [
+                  "systemId",
+                  "http://localhost:5555/WmXSLT/samples/xdocs/cdCatalog.xml"
+                ],
+                [
+                  "resultType",
+                  "bytes"
+                ]
+              ]
+            },
             "The service transforms the XML stream into a byte array containing an HTML document and puts the byte array in the pipeline. You could convert the byte array into a String using the Integration Server built-in service pub.string:bytesToString, then display the String using a dynamic server page (DSP). For information about using DSPs, see Dynamic Server Pages and Output Templates Developer’s Guide ."
           ]
         },

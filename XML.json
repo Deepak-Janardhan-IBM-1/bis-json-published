@@ -1141,9 +1141,54 @@
             "- When watt.server.soap.decodeElementWithPrefix is set to false, the pub.xml:xmlNodeToDocument service considers namespace and/or prefix declarations. The service does not map namespace qualified elements in the XML input to fields in an IS document type if the field names do not include a prefix. The pub.xml:xmlNodeToDocument service does not populate non-prefixed fields. Instead the service adds new fields that use the prefix:name structure and populates those fields with values from the XML instance.",
             "The xsi:nil attribute in an element does not convert properly when generating an IS document from an XML document. If an XML document has an element containing only xsi:nil as an attribute and an IS document is generated from that XML document using the pub.xml.xmlNodeToDocument service, the xsi:nil attribute is generated as an @xsi:nil field for the element in the resulting IS document. This occurs even if the element with the xsi:nil attribute has a simple type string; however, the document type that is created from the XML schema (which is used by the XML document) has a string field for the xsi:nil element instead of the IS document. There is a type difference between the generated document and the document type. To work around this issue, manually edit the generated IS document to remove the @xsi:nil attribute and then convert the IS document to a string field.",
             "Following are examples of XML documents and the documents (IData objects) that xmlNodeToDocument would produce.",
-            "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>: Note: This example assumes that makeArrays is set to true. Note that e1 was created as a document list, which holds both <e1> elements from the XML document.",
-            "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>: Note: This example assumes that makeArrays is set to false and that watt.server.xml.xmlNodeToDocument. keepDuplicates is set to true (the default). Note that both<e1> elements from the source XML are retained.",
-            "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>: Note: This example assumes that makeArrays is set to false and that watt.server.xml.xmlNodeToDocument. keepDuplicates is set to false. Note that only the last <e1> element in the source XML was retained in the resulting document."
+            {
+              "table": [
+                [
+                  "XML Document",
+                  "Output from xmlNodeToDocument"
+                ],
+                [
+                  "<myDoc> <e1>e1Value</e1> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <myDoc> <e1>e1Value</e1> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <myDoc> <e1 e1Attr=\"attrValue\">e1Value</e1> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <myDoc> <e1>e1Value</e1> <e2>e2Value</e2> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <myDoc> <e1>e1Value1</e1> <e2>e2Value</e2> <e1>e1Value2</e1> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>",
+                  "Note: This example assumes that makeArrays is set to true. Note that e1 was created as a document list, which holds both <e1> elements from the XML document."
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>",
+                  "Note: This example assumes that makeArrays is set to false and that watt.server.xml.xmlNodeToDocument. keepDuplicates is set to true (the default). Note that both<e1> elements from the source XML are retained."
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2>e2Value</e2> <e1 e1Attr=\"attrValue2\">e1Value2</e1> </myDoc>",
+                  "Note: This example assumes that makeArrays is set to false and that watt.server.xml.xmlNodeToDocument. keepDuplicates is set to false. Note that only the last <e1> element in the source XML was retained in the resulting document."
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <myDoc> <e1 e1Attr=\"attrValue1\">e1Value1</e1> <e2> <e3>e3Value</e3> <e4 e4Attr=\"attrValue4\" e4Attrb=\"attrValue4b\">e4Value </e4> </e2> </myDoc>",
+                  ""
+                ],
+                [
+                  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <tns:AcctInfo> xmlns:tns=\"http://localhost/Derived Address/schema.xsd\" xmlns:xsi=\"http://www.w3.org/2001/ XMLSchema-instance\" > <myDoc> <e1>e1Value</e1> </myDoc> <myDoc xsi:type=\"tns:DerivedDoc\"> <e1>e1Value</e1> <e2>e1Value</e2> </myDoc> </tns:AcctInfo>",
+                  ""
+                ]
+              ]
+            }
           ]
         }
       ]

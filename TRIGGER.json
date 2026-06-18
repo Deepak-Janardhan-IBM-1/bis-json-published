@@ -4,11 +4,12 @@
     "You can use the services in the trigger folder to create and delete IBM webMethods messaging trigger and JMS triggers. You can also use services to manage document retrieval and document processing for individual IBM webMethods messaging triggers and change the state of one or more JMS triggers.",
     "A IBM webMethods messaging trigger is a trigger that subscribes to and processes documents published to a webMethods messaging provider (IBM webMethods Broker or IBM webMethods Universal Messaging) or published locally within the Integration Server. A JMS trigger is a trigger that receives messages from a Destination (queue or topic) on a JMS provider and then processes those messages."
   ],
-  "total_services": 15,
-  "services": [
+  "total_elements": 15,
+  "elements": [
     {
       "name": "pub.trigger:createJMSTrigger",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_createJMSTrigger__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a JMS trigger."
       ],
@@ -337,6 +338,7 @@
     {
       "name": "pub.trigger:createTrigger",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A58263__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates IBM webMethods messaging trigger."
       ],
@@ -611,6 +613,7 @@
     {
       "name": "pub.trigger:deleteJMSTrigger",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_deleteJMSTrigger__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deletes a JMS trigger."
       ],
@@ -635,6 +638,7 @@
     {
       "name": "pub.trigger:deleteTrigger",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A18151__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deletes IBM webMethods messaging trigger."
       ],
@@ -666,6 +670,7 @@
     {
       "name": "pub.trigger:disableEventTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_adl_2cn_gcc__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Disables one or more event triggers."
       ],
@@ -697,6 +702,7 @@
     {
       "name": "pub.trigger:disableJMSTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_disableJMSTriggers__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Disables one or more JMS triggers."
       ],
@@ -748,6 +754,7 @@
     {
       "name": "pub.trigger:enableEventTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_smr_mtw_gcc__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Enables one or more event triggers."
       ],
@@ -773,6 +780,7 @@
     {
       "name": "pub.trigger:enableJMSTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_enableJMSTriggers__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Enables one or more JMS triggers."
       ],
@@ -819,6 +827,7 @@
     {
       "name": "pub.trigger:resourceMonitoringSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resourceMonitoringSpec__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of a resource monitoring service."
       ],
@@ -844,6 +853,7 @@
     {
       "name": "pub.trigger:resumeProcessing",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resumerProcessing__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Resumes document processing for the specified IBM webMethods messaging trigger."
       ],
@@ -900,6 +910,7 @@
     {
       "name": "pub.trigger:resumeRetrieval",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_resumeRetrieval__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Resumes retrieval of documents from the messaging provider for a specific IBM webMethods messaging trigger."
       ],
@@ -956,6 +967,7 @@
     {
       "name": "pub.trigger:suspendEventTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#reference_jtz_q5w_gcc__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Suspends one or more event triggers."
       ],
@@ -981,6 +993,7 @@
     {
       "name": "pub.trigger:suspendJMSTriggers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#Apub_trigger_suspendJMSTriggers__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Suspends one or more JMS triggers."
       ],
@@ -1029,6 +1042,7 @@
     {
       "name": "pub.trigger:suspendProcessing",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A69499__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Suspends document processing for the specified IBM webMethods messaging trigger."
       ],
@@ -1086,6 +1100,7 @@
     {
       "name": "pub.trigger:suspendRetrieval",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-trigger-folder#A47913__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Suspends retrieval of documents from the messaging provider for a specific IBM webMethods messaging trigger."
       ],

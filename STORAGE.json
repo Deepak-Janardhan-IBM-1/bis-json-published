@@ -115,21 +115,6 @@
             "Error message generated while inserting the new entry into the data store."
           ]
         }
-      ],
-      "additional_information": [
-        {
-          "input_parameters_of_pub_storage_add": [
-            "storeName: String Name of the data store in which to insert the entry.",
-            "key: String Key under which the entry is to be inserted.",
-            "value: Document Value (IData object) to be inserted."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_add": [
-            "result: String Flag indicating whether the entry was successfully added. A value of: true indicates that the new entry was inserted successfully. false indicates that the entry was not inserted (usually because an entry for key already exists).",
-            "error: String Error message generated while inserting the new entry into the data store."
-          ]
-        }
       ]
     },
     {
@@ -150,11 +135,6 @@
       ],
       "output_parameters": [],
       "additional_information": [
-        {
-          "input_parameters_of_pub_storage_closestore": [
-            "storeName: String Name of the data store to close and unregister."
-          ]
-        },
         {
           "output_parameters_of_pub_storage_closestore": [
             "None."
@@ -199,17 +179,6 @@
         }
       ],
       "additional_information": [
-        {
-          "input_parameters_of_pub_storage_deletestore": [
-            "storeName: String Name of the data store to delete.",
-            "waitLength: String Optional. Length of time, in milliseconds, that you want to wait for this data store to become available for deletion if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_deletestore": [
-            "count: String Number of data store entries that were deleted. If the store does not exist, this value is 0."
-          ]
-        },
         {
           "usage_notes": [
             "This service obtains an exclusive lock on the data store, but no locks on the individual entries in the data store.",
@@ -268,19 +237,6 @@
       ],
       "additional_information": [
         {
-          "input_parameters_of_pub_storage_get": [
-            "storeName: String Name of the data store from which you want to retrieve the entry.",
-            "key: String Key of the entry whose value you want to retrieve.",
-            "waitLength: String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator.",
-            "lockMode: String Optional. Type of lock you want to place on the entry. Set to: Exclusive to prevent other threads from reading or updating the entry while you are using it. The service also obtains a shared lock on the data store. An exclusive lock on an entry allows you to modify the entry. Read is obsolete. If this value is specified, the service obtains a shared lock. Share to prevent other threads from obtaining an exclusive lock on the entry. The service also obtains a shared lock on the data store. A shared lock on an entry allows you to read, but not modify, the entry. This is the default."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_get": [
-            "value: Document Retrieved entry (IData object). If the requested entry does not exist, the value of this parameter is null."
-          ]
-        },
-        {
           "usage_notes": [
             "If you request an exclusive lock and the service finds a shared lock from the same thread on the entry, the service will automatically promote the shared lock on the entry to an exclusive lock.",
             "When this service locks an entry, it also acquires a shared lock on the associated data store to prevent another thread from deleting the data store, and the entries it contains, while your thread has the entry locked.",
@@ -310,18 +266,6 @@
           "type": "String List",
           "description": [
             "Keys for the data store specified in storeName."
-          ]
-        }
-      ],
-      "additional_information": [
-        {
-          "input_parameters_of_pub_storage_keys": [
-            "storeName: String Name of the data store from which you want to obtain a list of keys."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_keys": [
-            "keys: String List Keys for the data store specified in storeName."
           ]
         }
       ]
@@ -401,19 +345,6 @@
             "The list of pub.storage locks. This output variable can be null."
           ]
         }
-      ],
-      "additional_information": [
-        {
-          "input_parameters_of_pub_storage_listlocks": [
-            "holder: String Optional. Identifies the holder whose pub.storage locks are to be listed. The format is \"_DataStore_<sessionId:threadId>\", where: sessionId is a unique, internally generated identifier for the client's session in Integration Server. threadId is a unique, internally generated identifier for the client’s thread in Integration Server.",
-            "target: String Optional. Identifies the target whose pub.storage locks are to be listed."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_listlocks": [
-            "locks: Document List The list of pub.storage locks. This output variable can be null."
-          ]
-        }
       ]
     },
     {
@@ -461,14 +392,6 @@
       ],
       "output_parameters": [],
       "additional_information": [
-        {
-          "input_parameters_of_pub_storage_lock": [
-            "storeName: String Name of the data store containing the entry.",
-            "key: String Optional. Key of the entry that you want to lock. If key is not supplied and you request: A shared lock, the service obtains a shared lock on the data store, allowing other threads to read and modify entries, but not to delete them. An exclusive lock, the service obtains an exclusive lock on the data store, preventing other threads from locking the data store and the entries, thereby preventing those threads from reading, modifying, or deleting the entries or the data store. If both storeName and key are specified and you request: A shared lock, the service obtains a shared lock on the data store and the entry. An exclusive lock, the service obtains a shared lock on the data store and an exclusive lock on the entry.",
-            "waitLength: String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator .",
-            "lockMode: String Optional. Type of lock you want to place on the entry or data store. Set to: Exclusive to prevent other threads from obtaining a lock on the data store or entry. An exclusive lock on an entry allows you to modify the entry, and prevents other threads from reading or modifying the entry. An exclusive lock on a data store also locks the entries in the data store. In addition, an exclusive lock on a data store allows you to delete the data store. Read is obsolete. If this value is specified, the service obtains a shared lock. Share to prevent other threads from obtaining an exclusive lock on an entry or a data store. A shared lock on an entry allows you to read, but not modify, the entry. A shared lock on a data store prevents another thread from deleting the data store. This is the default."
-          ]
-        },
         {
           "output_parameters_of_pub_storage_lock": [
             "None."
@@ -536,19 +459,6 @@
       ],
       "additional_information": [
         {
-          "input_parameters_of_pub_storage_put": [
-            "storeName: String Name of the data store into which you want to insert or update the entry.",
-            "value: Document Value (IData object) to be inserted or updated.",
-            "waitLength: String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available if it is already locked by another thread. If the wait length expires before a lock is obtained, the service fails and throws an exception. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator. This parameter is used only when your service did not explicitly lock the entry beforehand.",
-            "key: String Key where you want to insert or update the entry."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_put": [
-            "error: String Error message generated while inserting the new entry into the data store."
-          ]
-        },
-        {
           "usage_notes": [
             "When storing and retrieving the flow state in the short-term store for checkpoint restart purposes, be sure the value of key is unique to the transaction."
           ]
@@ -573,11 +483,6 @@
       ],
       "output_parameters": [],
       "additional_information": [
-        {
-          "input_parameters_of_pub_storage_registerstore": [
-            "storeName: String Name of the data store to register."
-          ]
-        },
         {
           "output_parameters_of_pub_storage_registerstore": [
             "None."
@@ -614,19 +519,6 @@
           "type": "String List",
           "description": [
             "Number of locks that were released."
-          ]
-        }
-      ],
-      "additional_information": [
-        {
-          "input_parameters_of_pub_storage_releaselocks": [
-            "holders: String List Optional. Holders whose pub.storage locks are to be released.",
-            "ids: String Optional. Ids whose pub.storage locks are to be released."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_releaselocks": [
-            "count: String List Number of locks that were released."
           ]
         }
       ]
@@ -667,20 +559,6 @@
           "description": [
             "- true indicates that the entry was removed successfully.",
             "- false indicates that the entry was not removed (usually because an entry for key does not exist)."
-          ]
-        }
-      ],
-      "additional_information": [
-        {
-          "input_parameters_of_pub_storage_remove": [
-            "storeName: String Name of the data store from which to remove an entry.",
-            "key: String Key of the entry that you want to remove.",
-            "waitLength: String Optional. Length of time, in milliseconds, that you want to wait for this entry to become available for deletion if it is already locked by another thread. The default is the default Maximum Lock Wait value, which is specified on the watt.server.storage.lock.maxWait property. You can update this property by using the Settings > Extended page on the Integration Server Administrator."
-          ]
-        },
-        {
-          "output_parameters_of_pub_storage_remove": [
-            "result: String Flag indicating whether the entry was successfully removed. A value of: true indicates that the entry was removed successfully. false indicates that the entry was not removed (usually because an entry for key does not exist)."
           ]
         }
       ]
@@ -729,12 +607,6 @@
       ],
       "output_parameters": [],
       "additional_information": [
-        {
-          "input_parameters_of_pub_storage_unlock": [
-            "storeName: String Name of the data store in which to unlock an entry.",
-            "key: String Optional. Key of the entry that you want to unlock. If key is not supplied, the lock will be removed from the data store specified in storeName, but any locks on entries in the data store will remain."
-          ]
-        },
         {
           "output_parameters_of_pub_storage_unlock": [
             "None."

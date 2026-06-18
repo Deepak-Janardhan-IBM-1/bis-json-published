@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the mqtt folder to publish messages to an MQTT server and define the input of MQTT trigger services."
   ],
-  "total_services": 2,
-  "services": [
+  "total_elements": 2,
+  "elements": [
     {
       "name": "pub.mqtt:publish",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mqtt-folder#idb2553113-4b71-4741-b585-d32871defffc__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Publishes an MQTT message to an MQTT server."
       ],
@@ -91,6 +92,7 @@
     {
       "name": "pub.mqtt:triggerSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-mqtt-folder#id68b2db2b-4eab-491d-b07f-2ba4bfc9a344__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of an MQTT trigger service."
       ],

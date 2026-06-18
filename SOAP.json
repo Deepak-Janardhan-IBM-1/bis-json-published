@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the soap folder to compose and send SOAP messages and to receive and retrieve data from within them."
   ],
-  "total_services": 101,
-  "services": [
+  "total_elements": 101,
+  "elements": [
     {
       "name": "pub.soap.handler:addBodyBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A50681__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts a document into a SOAP message as a new body block."
       ],
@@ -116,6 +117,7 @@
     {
       "name": "pub.soap.handler:addFaultBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A97530__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts a document into a SOAP message as a new fault block."
       ],
@@ -256,6 +258,7 @@
     {
       "name": "pub.soap.handler:addHeaderBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A72180__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts a document into a SOAP message as a new header block."
       ],
@@ -336,6 +339,7 @@
     {
       "name": "pub.soap.handler:addHeaderElement",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A20936__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.soap.handler:addHeaderBlock.",
         "Inserts a document into a SOAP message as a new header element (block)."
@@ -411,10 +415,40 @@
         {
           "examples": [
             "Suppose that messageContext contains a SOAP message with an empty SOAP header and you want to add a header element by passing the pub.soap:handler:addHeaderElement service the following input parameters:",
-            "headerDocument: An instance of documentTypes:myNewHeader, which contains a single field of type String named myString. The value of myString is: Value of myString field.",
-            "documentType: Not provided.",
-            "mustUnderstand: true",
-            "actor: soapActor",
+            {
+              "table": [
+                [
+                  "Input Parameter",
+                  "Provided Value"
+                ],
+                [
+                  "QName",
+                  "namespaceName",
+                  "userHandlerNamespaceName"
+                ],
+                [
+                  "",
+                  "localName",
+                  "userHandlerLocalName"
+                ],
+                [
+                  "headerDocument",
+                  "An instance of documentTypes:myNewHeader, which contains a single field of type String named myString. The value of myString is: Value of myString field."
+                ],
+                [
+                  "documentType",
+                  "Not provided."
+                ],
+                [
+                  "mustUnderstand",
+                  "true"
+                ],
+                [
+                  "actor",
+                  "soapActor"
+                ]
+              ]
+            },
             "Execution of the pub.soap.handler:addHeaderElement service results in this SOAP header for SOAP 1.1:",
             "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"> <SOAP-ENV:Header xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"> <HDR:userHandlerLocalName xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:HDR=\"userHandlerNamespaceName\" SOAP-ENV:actor=\"soapActor\" SOAP-ENV:mustUnderstand=\"1\"> <myString>Value of myString field.</myString> </HDR:userHandlerLocalName> </SOAP-ENV:Header> <SOAP-ENV:Body> ... </SOAP-ENV:Body> </SOAP-ENV:Envelope>",
             "Integration Server uses HDR as the namespace prefix for the namespace name of the header."
@@ -431,6 +465,7 @@
     {
       "name": "pub.soap.handler:generateDocumentTypesFromWSDL",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A43862__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Generates IS document types from a WSDL."
       ],
@@ -533,6 +568,7 @@
     {
       "name": "pub.soap.handler:getBodyBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A35473__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves a body block from a SOAP message."
       ],
@@ -626,6 +662,7 @@
     {
       "name": "pub.soap.handler:getBodyBlockQNames",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A49061__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the QName for each body block in a SOAP message."
       ],
@@ -664,6 +701,7 @@
     {
       "name": "pub.soap.handler:getFaultBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A72663__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves a fault block from a SOAP message."
       ],
@@ -796,6 +834,7 @@
     {
       "name": "pub.soap.handler:getHeaderBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A67569__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves a header block from a SOAP message."
       ],
@@ -876,6 +915,7 @@
     {
       "name": "pub.soap.handler:getHeaderBlockQNames",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_handler_getHeaderBlockQNames__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the QName for each header block in a SOAP message."
       ],
@@ -919,6 +959,7 @@
     {
       "name": "pub.soap.handler:getHeaderElement",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A50046__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.soap.handler:getHeaderBlock.",
         "Retrieves a header element from a SOAP message."
@@ -974,7 +1015,48 @@
             "Suppose that messageContext contains a SOAP message with the following header:",
             "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:user=\"userHandlerNamespaceName\" xmlns:pfx=\"pfx1namespace\" xmlns:ns1=\"ns1namespace\" xmlns:ns2=\"ns2namespace\"> <SOAP-ENV:Header> <user:userHandlerLocalName> <pfx:myLocalName> <ns1:myField> <ns2:myFieldValue>someValue</ns2:myFieldValue> </ns1:myField> </pfx:myLocalName> </user:userHandlerLocalName> </SOAP-ENV:Header> <SOAP-ENV:Body> ... </SOAP-ENV:Body> </SOAP-ENV:Envelope>",
             "Additionally, suppose that pub.soap:handler:getHeaderElement uses the following input values, where messageContext has already been obtained:",
-            "documentType: documentTypes:myHeaderStructure The structure of documentTypes:myHeaderStructure looks like this: The prefixes in documentTypes:myHeaderStructure refer to the following namespaces.",
+            {
+              "table": [
+                [
+                  "Input Parameter",
+                  "Provided Value"
+                ],
+                [
+                  "QName",
+                  "namespaceName",
+                  "userHandlerNamespaceName"
+                ],
+                [
+                  "",
+                  "localName",
+                  "userHandlerLocalName"
+                ],
+                [
+                  "documentType",
+                  "documentTypes:myHeaderStructure The structure of documentTypes:myHeaderStructure looks like this: The prefixes in documentTypes:myHeaderStructure refer to the following namespaces."
+                ],
+                [
+                  "",
+                  "Prefix",
+                  "Namespace"
+                ],
+                [
+                  "",
+                  "myPrefix",
+                  "pfx1namespace"
+                ],
+                [
+                  "",
+                  "myNS1",
+                  "ns1namespace"
+                ],
+                [
+                  "",
+                  "myNS2",
+                  "ns2namespace"
+                ]
+              ]
+            },
             "Execution of the pub.soap.handler:getHeaderElement service results in the following value for outputHeaderDocument:",
             "Integration Server uses the following conventions in outputHeaderDocument:",
             "- outputHeaderDocument always contains a document list named HDRDOC1:localName. The document list contains the header retrieved by the pub.soap.handler:getHeaderElement service.",
@@ -994,6 +1076,7 @@
     {
       "name": "pub.soap.handler:getInitialSOAPMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id9d6d59b5-f739-4f81-8f2c-253a485ade35__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Gets the initial SOAP request message from a given message context."
       ],
@@ -1028,6 +1111,7 @@
     {
       "name": "pub.soap.handler:getMessageAddressingProperties",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12AGB90205Z__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Gets the message addressing properties of the SOAP message in the provided message context."
       ],
@@ -1127,6 +1211,7 @@
     {
       "name": "pub.soap.handler:getProperty",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A28413__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Gets the value of a specified property from a message context."
       ],
@@ -1173,6 +1258,7 @@
     {
       "name": "pub.soap.handler:getServicePipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23861__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Gets the service pipeline from a given message context."
       ],
@@ -1211,6 +1297,7 @@
     {
       "name": "pub.soap.handler:getSOAPMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A22512__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Gets the SOAP message from a given message context."
       ],
@@ -1248,6 +1335,7 @@
     {
       "name": "pub.soap.handler:getWebServiceInvocationProperties",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A97784__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Fetches the web service invocation properties."
       ],
@@ -1349,6 +1437,7 @@
     {
       "name": "pub.soap.handler:handlerSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A78040__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification to use as the signature for a service that acts as a header handler."
       ],
@@ -1408,6 +1497,7 @@
     {
       "name": "pub.soap.handler:hasFaultMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A66909__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Determines whether the SOAP message in a given message context contains a SOAP fault message."
       ],
@@ -1434,6 +1524,7 @@
     {
       "name": "pub.soap.handler:listConsumer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A46770__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns a list of the consumer handlers currently registered on Integration Server."
       ],
@@ -1518,6 +1609,7 @@
     {
       "name": "pub.soap.handler:listProvider",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A65039__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns a list of the provider handlers currently registered on Integration Server."
       ],
@@ -1602,6 +1694,7 @@
     {
       "name": "pub.soap.handler:registerConsumer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A78796__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.soap.handler:registerWmConsumer.",
         "Registers a handler based on JAX-RPC with a consumer Web service descriptor."
@@ -1634,6 +1727,7 @@
     {
       "name": "pub.soap.handler:registerProvider",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A37790__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.soap.handler:registerWmProvider.",
         "Registers a handler based on JAX-RPC with a provider Web service descriptor."
@@ -1666,6 +1760,7 @@
     {
       "name": "pub.soap.handler:registerWmConsumer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A74861__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Registers a handler for use with consumer."
       ],
@@ -1724,6 +1819,7 @@
     {
       "name": "pub.soap.handler:registerWmProvider",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A69761__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Registers a header handler for use with provider."
       ],
@@ -1800,6 +1896,7 @@
     {
       "name": "pub.soap.handler:removeBodyBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A38848__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes a body block from a SOAP message, leaving an empty SOAP body, <SOAP-ENV:Body></SOAP-ENV:Body>."
       ],
@@ -1831,6 +1928,7 @@
     {
       "name": "pub.soap.handler:removeHeaderBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_handler_removeHeaderBlock__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes a header block from a SOAP message."
       ],
@@ -1892,6 +1990,7 @@
     {
       "name": "pub.soap.handler:removeHeaderElement",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A75403__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.soap.handler:removeHeaderBlock.",
         "Removes a header element (block) from a SOAP message."
@@ -1940,6 +2039,7 @@
     {
       "name": "pub.soap.handler:removeProperty",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A13019__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes a property from a message context."
       ],
@@ -1964,10 +2064,30 @@
         {
           "usage_notes": [
             "The SOAP message contains properties reserved for use by Integration Server. Do not use pub.soap.handler:setProperty to set any of these properties or use pub.soap.handler:removeProperty to remove any of these properties as it may result in unpredictable behavior. The reserved properties are:",
-            "ContentType: @MESSAGE_USER_FROM_USER_NAME_TOKEN",
-            "originalContext: @MESSAGE_USER_FROM_X509_TOKEN",
-            "servicePipeline: @TRANSPORT_URL",
-            "style: @TRANSPORT_USER"
+            {
+              "table": [
+                [
+                  "ContentType",
+                  "@MESSAGE_USER_FROM_USER_NAME_TOKEN"
+                ],
+                [
+                  "originalContext",
+                  "@MESSAGE_USER_FROM_X509_TOKEN"
+                ],
+                [
+                  "servicePipeline",
+                  "@TRANSPORT_URL"
+                ],
+                [
+                  "style",
+                  "@TRANSPORT_USER"
+                ],
+                [
+                  "use",
+                  ""
+                ]
+              ]
+            }
           ]
         },
         {
@@ -1981,6 +2101,7 @@
     {
       "name": "pub.soap.handler:setProperty",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A67444__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sets the value of a specific property in a message context."
       ],
@@ -2012,10 +2133,30 @@
         {
           "usage_notes": [
             "The SOAP message contains properties reserved for use by Integration Server. Do not use pub.soap.handler:setProperty to set any of these properties or use pub.soap.handler:removeProperty to remove any of these properties as it may result in unpredictable behavior. The reserved properties are:",
-            "ContentType: @MESSAGE_USER_FROM_USER_NAME_TOKEN",
-            "originalContext: @MESSAGE_USER_FROM_X509_TOKEN",
-            "servicePipeline: @TRANSPORT_URL",
-            "style: @TRANSPORT_USER"
+            {
+              "table": [
+                [
+                  "ContentType",
+                  "@MESSAGE_USER_FROM_USER_NAME_TOKEN"
+                ],
+                [
+                  "originalContext",
+                  "@MESSAGE_USER_FROM_X509_TOKEN"
+                ],
+                [
+                  "servicePipeline",
+                  "@TRANSPORT_URL"
+                ],
+                [
+                  "style",
+                  "@TRANSPORT_USER"
+                ],
+                [
+                  "use",
+                  ""
+                ]
+              ]
+            }
           ]
         },
         {
@@ -2029,6 +2170,7 @@
     {
       "name": "pub.soap.handler:setSOAPMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A68108__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sets the SOAP message in a message context."
       ],
@@ -2065,6 +2207,7 @@
     {
       "name": "pub.soap.handler:unregisterConsumer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A31393__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Unregisters a consumer web service descriptor handler."
       ],
@@ -2082,6 +2225,7 @@
     {
       "name": "pub.soap.handler:unregisterProvider",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A27964__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Unregisters a provider web service descriptor handler."
       ],
@@ -2099,6 +2243,7 @@
     {
       "name": "pub.soap.handler:updateFaultBlock",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ida03528f6-b1c2-4921-92d4-681b456fe11a__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Updates the code, subcodes, reasons, node, and role in an existing fault block."
       ],
@@ -2234,6 +2379,7 @@
     {
       "name": "pub.soap.processor:list",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A23400__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Returns a list of the SOAP processors that are currently registered on the Integration Server."
@@ -2297,6 +2443,7 @@
     {
       "name": "pub.soap.processor:processMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_processor_procMsg__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Executes the Integration Server's default SOAP processor.",
@@ -2339,6 +2486,7 @@
     {
       "name": "pub.soap.processor:processRPCMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_processor_procRPCMsg__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Executes the Integration Server's SOAP RPC processor.",
@@ -2381,6 +2529,7 @@
     {
       "name": "pub.soap.processor:registerProcessor",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc530745733__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Registers a service as a SOAP processor on the Integration Server."
@@ -2440,6 +2589,7 @@
     {
       "name": "pub.soap.processor:unregisterProcessor",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc530745734__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Unregisters a SOAP processor by removing it from the registry."
@@ -2478,42 +2628,39 @@
     {
       "name": "pub.soap.schema:encoding",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_encoding__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. Schema that defines the data types SOAP supports."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.schema:encoding_1_2",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_encoding_1_2__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. Schema that defines the data types SOAP 1.2 supports."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.schema:envelope",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_envelope__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. Schema that defines the structure of a SOAP message."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.schema:envelope_1_2",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_schema_envelope_1_2__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. Schema that defines the structure of a SOAP 1.2 message."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.utils:addBodyEntry",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addBodyEntry__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts an entry into the body element of a SOAP message."
       ],
@@ -2576,6 +2723,7 @@
     {
       "name": "pub.soap.utils:addHeaderEntry",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addHeaderEntry__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts an entry into the header element of a SOAP message."
       ],
@@ -2653,6 +2801,7 @@
     {
       "name": "pub.soap.utils:addTrailer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_addTrailer__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts a trailer in a SOAP message.",
         "(A trailer is an arbitrary element that follows the Body element in the SOAP envelope.)"
@@ -2711,6 +2860,7 @@
     {
       "name": "pub.soap.utils:callbackServiceSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idf6b5ff16-d5a2-4037-bdbc-274a137c7636__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Defines the input signature for an outbound callback service."
       ],
@@ -2728,6 +2878,7 @@
     {
       "name": "pub.soap.utils:convertToVersionSpecificSOAPFault",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id3af24a54-6151-4b22-b4e5-74502b42cfce__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts the generic SOAP fault structure to the SOAP version-specific fault structure that is used by web service descriptors created in versions of Integration Server prior to 8.2."
       ],
@@ -2910,6 +3061,7 @@
     {
       "name": "pub.soap.utils:createSoapData",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_createSoapData__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a SOAP object consisting of SOAP envelope, body, and header entries."
       ],
@@ -2965,6 +3117,7 @@
     {
       "name": "pub.soap.utils:createXOPObject",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idad22ae8d-e03c-4334-8bdc-b4f17f53b882__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Generates a com.wm.util.XOPObject instance from a base64Binary string, a byte array, or an input stream."
       ],
@@ -3032,6 +3185,7 @@
     {
       "name": "pub.soap.utils:exitUnableToUnderstand",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_exitUnableToUnderStd__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Terminates processing and returns a mustUnderstand fault to the client.",
         "You execute this service when your SOAP processor detects a mandatory header entry that it cannot process."
@@ -3057,6 +3211,7 @@
     {
       "name": "pub.soap.utils:getActor",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getActor__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the value of the actor attribute (for SOAP 1.1) or the role attribute (for SOAP 1.2) from a given header entry."
       ],
@@ -3107,6 +3262,7 @@
     {
       "name": "pub.soap.utils:getBody",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getBody__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the body from a SOAP message as a single node object."
       ],
@@ -3146,6 +3302,7 @@
     {
       "name": "pub.soap.utils:getBodyEntries",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getBodyEntries__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the body entries from a SOAP message as an array of node objects."
       ],
@@ -3185,6 +3342,7 @@
     {
       "name": "pub.soap.utils:getDocument",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#A_Toc528666370__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves an entire SOAP message as a node object.",
         "This service is useful when you want to use pub.xml:queryXMLNode to query an entire SOAP message. Since queryXMLNode requires a node as input, you cannot use it to query a SOAP object directly. Instead, you must convert the SOAP object to a node and then query the resulting node."
@@ -3222,6 +3380,7 @@
     {
       "name": "pub.soap.utils:getEncoding",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getEncoding__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the encoding from a SOAP message as a single string."
       ],
@@ -3259,6 +3418,7 @@
     {
       "name": "pub.soap.utils:getHeader",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeader__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the header from a SOAP message as a single node object."
       ],
@@ -3300,6 +3460,7 @@
     {
       "name": "pub.soap.utils:getHeaderEntries",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getHeaderEntries__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the header entries from a SOAP message as an array of node objects.",
         "This service is useful when you want to build a process that loops through all the header entries in a message and identify entries with specific QNames (using the pub.soap.utils:getQName service) or actor attributes (using the pub.soap.utils:getActor service)."
@@ -3345,6 +3506,7 @@
     {
       "name": "pub.soap.utils:getMustUnderstand",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getMustUnderstd__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the mustUnderstand status for a given header entry.",
         "The mustUnderstand status specifies whether recipients are required to process a header entry (that is, whether processing of the entry is mandatory or optional). Recipients that cannot process a mandatory header entry must reject the message and return a SOAP fault. (See the pub.soap.utils:exitUnableToUnderstand service.)"
@@ -3408,6 +3570,7 @@
     {
       "name": "pub.soap.utils:getQName",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getQName__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the qualified name for a given node."
       ],
@@ -3462,6 +3625,7 @@
     {
       "name": "pub.soap.utils:getTrailers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_getTrailers__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the trailers from a SOAP message.",
         "(A trailer is an arbitrary element that follows the Body element in the SOAP envelope.)"
@@ -3500,6 +3664,7 @@
     {
       "name": "pub.soap.utils:getXOPObjectContent",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idfd3b091e-87a3-4220-8642-ccad276c4f86__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the contents of a com.wm.util.XOPObject instance as a base64Binary string, a byte array, or an InputStream."
       ],
@@ -3571,16 +3736,23 @@
     {
       "name": "pub.soap.utils:QName",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_QName__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the structure of a qualified name."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "namespaceName: String The namespace portion of a qualified name.",
-            "localName: String The local portion of a qualified name."
+          "name": "namespaceName",
+          "type": "String",
+          "description": [
+            "The namespace portion of a qualified name."
+          ]
+        },
+        {
+          "name": "localName",
+          "type": "String",
+          "description": [
+            "The local portion of a qualified name."
           ]
         }
       ]
@@ -3588,6 +3760,7 @@
     {
       "name": "pub.soap.utils:removeBodyEntry",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeBodyEntry__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deletes a body entry from a SOAP message."
       ],
@@ -3642,6 +3815,7 @@
     {
       "name": "pub.soap.utils:removeHeaderEntry",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeHeaderEntry__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deletes a header entry from a SOAP message."
       ],
@@ -3696,6 +3870,7 @@
     {
       "name": "pub.soap.utils:removeTrailer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_removeTrailer__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deletes a trailer from a SOAP message."
       ],
@@ -3749,6 +3924,7 @@
     {
       "name": "pub.soap.utils:requestResponseSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_reqRespSpec__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Defines the input/output signature for a custom processor and a target service for the default processor."
       ],
@@ -3781,6 +3957,7 @@
     {
       "name": "pub.soap.utils:resetWSDEffectivePolicy",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_resetWSDEffectivePolicy__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Returns the effective policy for a handler in a web service descriptor to the policy set in the Policy name property in IBM webMethods Designer."
@@ -3820,6 +3997,7 @@
     {
       "name": "pub.soap.utils.setWSDEffectivePolicy",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_setWSDEffectivePolicy__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Sets the effective policy for a handler in a web service descriptor."
@@ -3869,6 +4047,7 @@
     {
       "name": "pub.soap.utils:soapDataToBytes",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToBytes__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts a SOAP object to a Byte Array.",
         "This is useful when you want to use the message with a process that requires the message to be in the form of a Byte Array."
@@ -3904,6 +4083,7 @@
     {
       "name": "pub.soap.utils:soapDataToString",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_soapDataToString__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts a SOAP object to a String.",
         "This is useful when you want to use the message with a process that requires the message to be in the form of a String."
@@ -3939,19 +4119,84 @@
     {
       "name": "pub.soap.utils:soapFault",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#ide7ce7d8d-0fff-4d45-b4c9-ab0244f4c7c6__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the generic SOAP fault structure used by web service descriptors created in Integration Server 8.2 and later."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "code: Document Contains the fault code and possible subcodes.",
-            "reasons: Document List Reasons for the SOAP fault. Each Document in the Document List contains a human readable explanation of the cause of the fault.",
-            "node: String Optional. URI to the SOAP node where the fault occurred.",
-            "role: String Optional. Role in which the node was operating at the point the fault occurred.",
-            "detail: Document Optional. Application-specific details about the SOAP fault."
+          "name": "code",
+          "type": "Document",
+          "description": [
+            "Contains the fault code and possible subcodes."
+          ],
+          "children": [
+            {
+              "name": "namespaceName",
+              "type": "String",
+              "description": [
+                "Optional. Namespace name for the SOAP fault code."
+              ]
+            },
+            {
+              "name": "localName",
+              "type": "String",
+              "description": [
+                "Code that identifies the fault."
+              ]
+            },
+            {
+              "name": "subCodes",
+              "type": "Document List",
+              "description": [
+                "- namespaceName for the subcode",
+                "- localName that identifies the subcode"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reasons",
+          "type": "Document List",
+          "description": [
+            "Reasons for the SOAP fault. Each Document in the Document List contains a human readable explanation of the cause of the fault."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Text explaining the cause of the fault."
+              ]
+            },
+            {
+              "name": "@lang",
+              "type": "String",
+              "description": [
+                "Optional. Language for the human readable description."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "node",
+          "type": "String",
+          "description": [
+            "Optional. URI to the SOAP node where the fault occurred."
+          ]
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "description": [
+            "Optional. Role in which the node was operating at the point the fault occurred."
+          ]
+        },
+        {
+          "name": "detail",
+          "type": "Document",
+          "description": [
+            "Optional. Application-specific details about the SOAP fault."
           ]
         }
       ]
@@ -3959,6 +4204,7 @@
     {
       "name": "pub.soap.utils:streamToSoapData",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_streamToSoapData__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts an InputStream containing a SOAP message to a SOAP object.",
         "(A SOAP message must be represented as a SOAP object to be used with the data-retrieval services such as pub.soap.utils:getHeader and pub.soap.utils:getBody)."
@@ -4007,6 +4253,7 @@
     {
       "name": "pub.soap.utils:stringToSoapData",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_stringToSoapData__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts a String containing a SOAP message to a SOAP object.",
         "(A SOAP message must be represented as a SOAP object to be used with the data-retrieval services such as pub.soap.utils:getHeader and pub.soap.utils:getBody)."
@@ -4058,6 +4305,7 @@
     {
       "name": "pub.soap.utils:validateSoapData",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_soap_utils_validateSoapData__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Verifies that a SOAP object represents a valid SOAP message.",
         "You can use this service to validate a SOAP object that was generated directly from an InputStream or String with pub.soap.utils:stringToSoapData or pub.soap.utils:streamToSoapData. If soapData does not contain a valid SOAP message, validateSoapData will throw an exception.",
@@ -4091,17 +4339,29 @@
     {
       "name": "pub.soap.wsa:action",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id5aec5755-0969-4c87-89ee-ae2aef5268a6__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:Action WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:Action: Document Contains the WS-Addressing action."
+          "name": "wsa:Action",
+          "type": "Document",
+          "description": [
+            "Contains the WS-Addressing action."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Value of the WS-Addressing action."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:Action header of a SOAP message, use pub.soap.wsa:action as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4113,17 +4373,68 @@
     {
       "name": "pub.soap.wsa:faultTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6G0130UI__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:FaultTo WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:FaultTo: Document Contains the address of the intended receiver of the fault message."
+          "name": "wsa:FaultTo",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the fault message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the end point URI for the fault message."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "The end point URI for the fault message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:Metadata",
+              "type": "Document",
+              "description": [
+                "Contains the set of metadata elements."
+              ],
+              "children": [
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "The metadata elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:FaultTo header of a SOAP message, use pub.soap.wsa:faultTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4135,17 +4446,68 @@
     {
       "name": "pub.soap.wsa:from",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6H10N0YK__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that contains the details of the source of the message."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:From: Document Contains the details about the source of the message."
+          "name": "wsa:From",
+          "type": "Document",
+          "description": [
+            "Contains the details about the source of the message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the address of the source of the message."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "The address of the source of the message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:Metadata",
+              "type": "Document",
+              "description": [
+                "Contains the set of metadata elements."
+              ],
+              "children": [
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "The metadata elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:From header of a SOAP message, use pub.soap.wsa:from as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4157,17 +4519,29 @@
     {
       "name": "pub.soap.wsa:messageID",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id879d5059-75ee-4559-8881-be23ba9d2626__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:MessageID WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:MessageID: Document Unique identifier of the SOAP message."
+          "name": "wsa:MessageID",
+          "type": "Document",
+          "description": [
+            "Unique identifier of the SOAP message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "The unique identifier of the SOAP message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove thewsa:MessageID header of a SOAP message, use pub.soap.wsa:messageID as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4179,17 +4553,45 @@
     {
       "name": "pub.soap.wsa:problemAction",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B6J0E60HT__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that captures additional information about faults."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:ProblemAction: Document Contains additional information about faults."
+          "name": "wsa:ProblemAction",
+          "type": "Document",
+          "description": [
+            "Contains additional information about faults."
+          ],
+          "children": [
+            {
+              "name": "wsa:Action",
+              "type": "Document",
+              "description": [
+                "Optional. Element that provides the details about the [action] that caused the problem."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The [action] that caused the problem."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:SoapAction",
+              "type": "String",
+              "description": [
+                "Optional. Element that contains the SOAPAction IRI that caused the problem."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:ProblemAction header of a SOAP message, use pub.soap.wsa:problemAction as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4201,17 +4603,20 @@
     {
       "name": "pub.soap.wsa:problemHeaderQName",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B790EE05Z__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that captures additional information about faults."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:ProblemHeader QName: Document Contains additional information about faults."
+          "name": "*body",
+          "type": "String",
+          "description": [
+            "Optional. The QName representing the name of the root element of the problem header block."
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:ProblemHeaderQName header of a SOAP message, use pub.soap.wsa:problemHeaderQName as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4223,17 +4628,29 @@
     {
       "name": "pub.soap.wsa:problemIRI",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7A0FF0Y4__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that captures the IRI that caused the problem."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:ProblemIRI: Document Contains the IRI that caused the problem."
+          "name": "wsa:ProblemIRI",
+          "type": "Document",
+          "description": [
+            "Contains the IRI that caused the problem."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Optional. The string representing the IRI that caused the problem."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:ProblemIRI header of a SOAP message, use pub.soap.wsa:problemIRI as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4245,17 +4662,29 @@
     {
       "name": "pub.soap.wsa:relatesTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idd1627012-582c-4993-8b32-e9702fe3f7b5__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:RelatesTo WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:RelatesTo: Document Contains the relationship information."
+          "name": "wsa:RelatesTo",
+          "type": "Document",
+          "description": [
+            "Contains the relationship information."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "<wsa:MessageID> of the related SOAP message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:RelatesTo header of a SOAP message, use pub.soap.wsa:relatesTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4267,17 +4696,68 @@
     {
       "name": "pub.soap.wsa:replyTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7A0P0DHS__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:ReplyTo WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:ReplyTo: Document Contains the address of the intended receiver of the response message."
+          "name": "wsa:ReplyTo",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the response message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the end point URI for the response message."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The end point URI for the response message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:Metadata",
+              "type": "Document",
+              "description": [
+                "Optional. Contains the set of metadata elements."
+              ],
+              "children": [
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The metadata elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Optional. Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:ReplyTo header of a SOAP message, use pub.soap.wsa:replyTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4289,17 +4769,29 @@
     {
       "name": "pub.soap.wsa:retryAfter",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12CCD0A0C5Z__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that you can use to retrieve the wsa:RetryAfter header of a SOAP message."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:RetryAfter: Document Contains the wsa:RetryAfter header of a SOAP message."
+          "name": "wsa:RetryAfter",
+          "type": "Document",
+          "description": [
+            "Contains the wsa:RetryAfter header of a SOAP message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Optional. The retry after duration retrieved from the wsa:RetryAfter SOAP header."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:RetryAfter header of a SOAP message, use pub.soap.wsa:retryAfter as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4311,17 +4803,29 @@
     {
       "name": "pub.soap.wsa:to",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#idb151496c-524c-4902-99ee-2bb2964fe07f__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:To WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:To: Document Contains the address of the intended receiver of the message."
+          "name": "wsa:To",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "The address of the intended receiver of the message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:To header of a SOAP message, use pub.soap.wsa:to as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4333,26 +4837,37 @@
     {
       "name": "pub.soap.wsa:schema_wsa",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#Apub_schema_w3c_datatypes__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the elements from http://www.w3.org/2005/08/addressing namespace."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.wsa.submission:action",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0EM0PF__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:Action WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:Action: Document Contains the WS-Addressing action."
+          "name": "wsa:Action",
+          "type": "Document",
+          "description": [
+            "Contains the WS-Addressing action."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Value of the WS-Addressing action."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:Action header of a SOAP message, use pub.soap.wsa.submission:action as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4365,17 +4880,89 @@
     {
       "name": "pub.soap.wsa.submission:faultTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0EC0HT__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:FaultTo WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:FaultTo: Document Contains the address of the intended receiver of the fault message."
+          "name": "wsa:FaultTo",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the fault message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the end point URI for the fault message."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The end point URI for the fault message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The property elements."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:PortType",
+              "type": "Document",
+              "description": [
+                "Optional. Contains the QName of the primary portType of the endpoint being conveyed."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The QName of the primary portType of the endpoint being conveyed."
+                  ]
+                },
+                {
+                  "name": "@PortName",
+                  "type": "String",
+                  "description": [
+                    "Optional. The name of the <wsdl:port> definition that corresponds to the endpoint being referenced."
+                  ]
+                },
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The <wsdl:service> definition that contains a WSDL description of the endpoint being referenced."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Optional. Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:FaultTo header of a SOAP message, use pub.soap.wsa.submission:faultTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4388,17 +4975,89 @@
     {
       "name": "pub.soap.wsa.submission:from",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B0X0YPN__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that contains the details about the source of the message."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:From: Document Contains the details about the source of the message."
+          "name": "wsa:From",
+          "type": "Document",
+          "description": [
+            "Contains the details about the source of the message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the details about the source of the message."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The address of the source of the message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The property elements."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:PortType",
+              "type": "Document",
+              "description": [
+                "Optional. Contains the QName of the primary portType of the endpoint being conveyed."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The QName of the primary portType of the endpoint being conveyed."
+                  ]
+                },
+                {
+                  "name": "@PortName",
+                  "type": "String",
+                  "description": [
+                    "Optional. The name of the <wsdl:port> definition that corresponds to the endpoint being referenced."
+                  ]
+                },
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The <wsdl:service> definition that contains a WSDL description of the endpoint being referenced."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Optional. Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:From header of a SOAP message, use pub.soap.wsa.submission:from as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4411,17 +5070,29 @@
     {
       "name": "pub.soap.wsa.submission:messageID",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7B800A7Q__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:MessageID WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:MessageID: Document Unique identifier of the SOAP message."
+          "name": "wsa:MessageID",
+          "type": "Document",
+          "description": [
+            "Unique identifier of the SOAP message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "The unique identifier of the SOAP message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:MessageID header of a SOAP message, use pub.soap.wsa.submission:messageID as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4434,17 +5105,36 @@
     {
       "name": "pub.soap.wsa.submission:relatesTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BA00O30__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:RelatesTo WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:RelatesTo: Document Contains the relationship information."
+          "name": "wsa:RelatesTo",
+          "type": "Document",
+          "description": [
+            "Contains the relationship information."
+          ],
+          "children": [
+            {
+              "name": "@RelationshipType",
+              "type": "String",
+              "description": [
+                "Optional. The relationship type."
+              ]
+            },
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "<wsa:MessageID> of the related SOAP message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:RelatesTo header of a SOAP message, use pub.soap.wsa.submission:relatesTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4457,17 +5147,89 @@
     {
       "name": "pub.soap.wsa.submission:replyTo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BD0F0RO__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that specifies the destination to which the response message is to be sent."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:FaultTo: Document Contains the address of the intended receiver of the response message."
+          "name": "wsa:FaultTo",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the response message."
+          ],
+          "children": [
+            {
+              "name": "wsa:Address",
+              "type": "Document",
+              "description": [
+                "Contains the end point URI for the response."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The end point URI for the fault message."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The property elements."
+                  ]
+                },
+                {
+                  "name": "*any",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The reference parameter elements."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "wsa:PortType",
+              "type": "Document",
+              "description": [
+                "Optional. Contains the QName of the primary portType of the endpoint being conveyed."
+              ],
+              "children": [
+                {
+                  "name": "*body",
+                  "type": "Object List",
+                  "description": [
+                    "Optional. The QName of the primary portType of the endpoint being conveyed."
+                  ]
+                },
+                {
+                  "name": "@PortName",
+                  "type": "String",
+                  "description": [
+                    "Optional. The name of the <wsdl:port> definition that corresponds to the endpoint being referenced."
+                  ]
+                },
+                {
+                  "name": "*body",
+                  "type": "String",
+                  "description": [
+                    "Optional. The <wsdl:service> definition that contains a WSDL description of the endpoint being referenced."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "*any",
+              "type": "Object List",
+              "description": [
+                "Optional. Contains other extensible elements, if any."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:ReplyTo header of a SOAP message, use pub.soap.wsa.submission:replyTo as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4480,17 +5242,29 @@
     {
       "name": "pub.soap.wsa.submission:retryAfter",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12CCD90D0Y4__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that you can use to retrieve the wsa:RetryAfter header of a SOAP message."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:RetryAfter: Document Contains you can use to retrieve the wsa:RetryAfter header of a SOAP message."
+          "name": "wsa:RetryAfter",
+          "type": "Document",
+          "description": [
+            "Contains you can use to retrieve the wsa:RetryAfter header of a SOAP message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "Optional. The retry after duration retrieved from the wsa:RetryAfter SOAP header."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:RetryAfter header of a SOAP message, use pub.soap.wsa.submission:retryAfter as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4503,17 +5277,29 @@
     {
       "name": "pub.soap.wsa.submission:to",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7BI0014Y__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that defines the contents of the wsa:To WS-Addressing header."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "wsa:To: Document Contains the address of the intended receiver of the message."
+          "name": "wsa:To",
+          "type": "Document",
+          "description": [
+            "Contains the address of the intended receiver of the message."
+          ],
+          "children": [
+            {
+              "name": "*body",
+              "type": "String",
+              "description": [
+                "The address of the intended receiver of the message."
+              ]
+            }
           ]
-        },
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "To add, retrieve, or remove the wsa:To header of a SOAP message, use pub.soap.wsa.submission:to as the value for the documentType input parameter of the pub.soap.handler:addHeaderBlock, pub.soap.handler:getHeaderBlock, and pub.soap.handler:removeBodyBlock services.",
@@ -4526,15 +5312,15 @@
     {
       "name": "pub.soap.wsa.submission:schema_wsa_submission",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id12B7C0D0QXW__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the elements from http://schemas.xmlsoap.org/ws/2004/08/addressing namespace."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.soap.wsrm:closeSequence",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133DB0P0A5Z__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Closes a reliable messaging sequence."
       ],
@@ -4612,6 +5398,7 @@
     {
       "name": "pub.soap.wsrm:createSequence",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133DD100GY4__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a request to a reliable messaging destination to create a new reliable messaging sequence."
       ],
@@ -4811,6 +5598,7 @@
     {
       "name": "pub.soap.wsrm:sendAcknowledgementRequest",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133F909M05Z__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Requests an acknowledgment for a message sequence."
       ],
@@ -4888,6 +5676,7 @@
     {
       "name": "pub.soap.wsrm:terminateSequence",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133F9H00VY4__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Terminates a reliable messaging sequence."
       ],
@@ -4965,6 +5754,7 @@
     {
       "name": "pub.soap.wsrm:waitUntilSequenceCompleted",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-soap-folder#id133FA0U0YHS__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Instructs Integration Server to wait for a reliable messaging sequence to complete before terminating it."
       ],

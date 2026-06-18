@@ -194,19 +194,165 @@
         {
           "usage_notes": [
             "The following tables list how Parquet data types are converted to Integration Server data types.",
-            "BOOLEAN: java.lang.Boolean",
-            "INT32: java.lang.Integer",
-            "INT64: java.lang.Long",
-            "INT96: byte[]",
-            "FLOAT: java.lang.Float",
-            "DOUBLE: java.lang.Double",
-            "BYTE_ARRAY or BINARY: byte[]",
-            "Group: Document",
-            "Repeated Group: Document List",
-            "INT64(INT): java.lang.Long",
-            "INT64(DECIMAL): java.lang.Long",
-            "fixed_len_byte_array (DECIMAL): byte[]",
-            "INT64(TIME): java.lang.Long",
+            {
+              "table": [
+                [
+                  "Parquet Basic Type",
+                  "Integration Server Type"
+                ],
+                [
+                  "BOOLEAN",
+                  "java.lang.Boolean"
+                ],
+                [
+                  "INT32",
+                  "java.lang.Integer"
+                ],
+                [
+                  "INT64",
+                  "java.lang.Long"
+                ],
+                [
+                  "INT96",
+                  "byte[]"
+                ],
+                [
+                  "FLOAT",
+                  "java.lang.Float"
+                ],
+                [
+                  "DOUBLE",
+                  "java.lang.Double"
+                ],
+                [
+                  "BYTE_ARRAY or BINARY",
+                  "byte[]"
+                ],
+                [
+                  "Group",
+                  "Document"
+                ],
+                [
+                  "Repeated Group",
+                  "Document List"
+                ]
+              ]
+            },
+            {
+              "table": [
+                [
+                  "Parquet Logical Type",
+                  "Parquet Basic Type",
+                  "Integration Server Type",
+                  "Remarks"
+                ],
+                [
+                  "Signed Integers",
+                  "INT32(INT)",
+                  "java.lang.Integer",
+                  ""
+                ],
+                [
+                  "INT64(INT)",
+                  "java.lang.Long",
+                  ""
+                ],
+                [
+                  "Unsigned Integers",
+                  "INT32(INT)",
+                  "java.lang.Integer",
+                  "IS types are signed values, therefore conversion of input Parquet values that exceed the maximum or minimum values of the IS types may not be accurate and require further processing and/or reconversion to larger type to get the correct values."
+                ],
+                [
+                  "INT64(INT)",
+                  "java.lang.Long"
+                ],
+                [
+                  "TIMESTAMP",
+                  "INT64(TIMESTAMP)",
+                  "java.lang.Long",
+                  "The conversion of TIMESTAMP values captures only the integer value but not the isAdjustedToUTC and precision parameters."
+                ],
+                [
+                  "INTERVAL",
+                  "fixed_len_byte_array (INTERVAL)",
+                  "byte[]",
+                  "The converted byte array has the same structure as the Parquet INTERVAL byte array."
+                ],
+                [
+                  "STRING",
+                  "Binary (UTF8) or Binary (STRING)",
+                  "String",
+                  ""
+                ],
+                [
+                  "ENUM",
+                  "Binary(ENUM)",
+                  "String",
+                  ""
+                ],
+                [
+                  "JSON",
+                  "Binary(JSON)",
+                  "String",
+                  ""
+                ],
+                [
+                  "BSON",
+                  "Binary(BSON)",
+                  "byte[]",
+                  "The conversion of the BSON Parquet type is not supported currently. The generated IS document may not have the expected data."
+                ],
+                [
+                  "UUID",
+                  "Binary",
+                  "byte[]",
+                  "The converted byte array has the same structure as the Parquet UUID byte array."
+                ],
+                [
+                  "DECIMAL",
+                  "INT32(DECIMAL)",
+                  "java.lang.Integer",
+                  "The conversion of Decimal values captures only the numerical value but not the precision and scale parameters."
+                ],
+                [
+                  "INT64(DECIMAL)",
+                  "java.lang.Long"
+                ],
+                [
+                  "fixed_len_byte_array (DECIMAL)",
+                  "byte[]"
+                ],
+                [
+                  "DATE",
+                  "INT32(DATE)",
+                  "java.lang.Integer",
+                  "DATE is converted to an integer value that represents the number of days from the base date, 1 January 1970, which corresponds to 0."
+                ],
+                [
+                  "TIME",
+                  "INT32(TIME)",
+                  "java.lang.Integer",
+                  "The conversion of TIME values captures only the integer value but not the UTC adjustment and precision parameters."
+                ],
+                [
+                  "INT64(TIME)",
+                  "java.lang.Long"
+                ],
+                [
+                  "LIST",
+                  "GROUP(LIST)",
+                  "Document (IData)",
+                  "LIST is converted to a Document List that has Documents that contain the list values."
+                ],
+                [
+                  "MAP",
+                  "GROUP(MAP)",
+                  "Document (IData)",
+                  "MAP is converted to a Document List that has Documents that contain the key-values."
+                ]
+              ]
+            },
             "Note: The read operation may run into a memory limitation when reading a Parquet file that has a large number of records: Consider using the pub.parquet:getBatchIterator and pub.parquet:getNextBatch services instead.",
             "Note: The pub.parquet:read service does not support network paths that use a universal naming convention (UNC) path, such as \\\\Server\\Volume\\File or /<internet resource name>[\\Directory name]."
           ]
@@ -284,25 +430,106 @@
         {
           "usage_notes": [
             "The following tables list how Integration Server data types map to Parquet types.",
-            "String: STRING",
-            "String List: Repeated STRING",
-            "String Table: BINARY",
-            "Document: Group",
-            "Document List: Repeated Group",
-            "Document Reference: Group (flatten)",
-            "Document Reference List: Repeated Group (flatten)",
-            "java.lang.Boolean: BOOLEAN",
-            "java.lang.Integer: INT32",
-            "java.lang.Long: INT64",
-            "java.lang.Float: FLOAT",
-            "java.lang.Double: DOUBLE",
-            "java.util.Date: BINARY",
-            "java.lang.Byte: BINARY",
-            "java.lang.Short: BINARY",
-            "byte[]: BINARY",
-            "Object (unidentified): BINARY",
-            "Object List (unidentified): Repeated BINARY",
+            {
+              "table": [
+                [
+                  "Integration Server Type",
+                  "Parquet Basic Type"
+                ],
+                [
+                  "String",
+                  "STRING"
+                ],
+                [
+                  "String List",
+                  "Repeated STRING"
+                ],
+                [
+                  "String Table",
+                  "BINARY"
+                ],
+                [
+                  "Document",
+                  "Group"
+                ],
+                [
+                  "Document List",
+                  "Repeated Group"
+                ],
+                [
+                  "Document Reference",
+                  "Group (flatten)"
+                ],
+                [
+                  "Document Reference List",
+                  "Repeated Group (flatten)"
+                ],
+                [
+                  "java.lang.Boolean",
+                  "BOOLEAN"
+                ],
+                [
+                  "java.lang.Integer",
+                  "INT32"
+                ],
+                [
+                  "java.lang.Long",
+                  "INT64"
+                ],
+                [
+                  "java.lang.Float",
+                  "FLOAT"
+                ],
+                [
+                  "java.lang.Double",
+                  "DOUBLE"
+                ],
+                [
+                  "java.util.Date",
+                  "BINARY"
+                ],
+                [
+                  "java.lang.Byte",
+                  "BINARY"
+                ],
+                [
+                  "java.lang.Short",
+                  "BINARY"
+                ],
+                [
+                  "byte[]",
+                  "BINARY"
+                ],
+                [
+                  "Object (unidentified)",
+                  "BINARY"
+                ],
+                [
+                  "Object List (unidentified)",
+                  "Repeated BINARY"
+                ]
+              ]
+            },
             "Note: Arrays of objects, such as java.lang.Boolean and java.lang.Long, are converted to arrays of the corresponding basic types.",
+            {
+              "table": [
+                [
+                  "Integration Server Type",
+                  "Parquet Logical Type",
+                  "Parquet Basic Type"
+                ],
+                [
+                  "String",
+                  "ENUM",
+                  "Binary(ENUM)"
+                ],
+                [
+                  "String",
+                  "JSON",
+                  "Binary(JSON)"
+                ]
+              ]
+            },
             "Note: The pub.parquet:write service silently overwrites the file if it already exists: No exception is thrown. Currently, there is no option to append to an existing file.",
             "Important: Null values are not written to a Parquet file.",
             "Note: Ensure that the schema does not have field names with characters such as '{', '}', '(', ',', ')' ';', '=', or ' ' (empty space) that are not supported by the Parquet specification.",

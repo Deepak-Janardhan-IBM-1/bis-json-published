@@ -3,11 +3,12 @@
   "description": [
     "You can use the services in the WebSocket folder to allow clients to send messages, close, and disconnect the WebSocket session."
   ],
-  "total_services": 19,
-  "services": [
+  "total_elements": 19,
+  "elements": [
     {
       "name": "pub.websocket:close",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_36CD2117630540A8BFBBFA0A328640CA__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Closes the WebSocket connection."
       ],
@@ -34,6 +35,7 @@
     {
       "name": "pub.websocket:disconnect",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_4A349F5225D94B14B9FAC121075B59B3__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Closes the WebSocket connection abruptly."
       ],
@@ -60,6 +62,7 @@
     {
       "name": "pub.websocket:getCookies",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B3EDCB9F12F34AEAB7C786BDCCA756D5__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the cookies that are part of the HTTP request to establish a WebSocket connection."
       ],
@@ -165,6 +168,7 @@
     {
       "name": "pub.websocket:getExtensions",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_8AD007A130674A3C93D55F25168099FD__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the extensions used in the request URL to establish a WebSocket connection."
       ],
@@ -220,6 +224,7 @@
     {
       "name": "pub.websocket:getHeaders",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B5E2E7570C0B47AB9C03AACAFAFC31B4__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the headers used in the request URL to establish a WebSocket connection."
       ],
@@ -261,6 +266,7 @@
     {
       "name": "pub.websocket:getPathParameters",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_2665D52B0AAD4E4F8F98A7DF0CFB499C__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the path parameters used in the request URL to establish a WebSocket connection."
       ],
@@ -302,6 +308,7 @@
     {
       "name": "pub.websocket:getPathParameter",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_3C5BE0DCC1C74A33B20495A41FBDF275__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the path parameter used in the request URL to establish a WebSocket connection."
       ],
@@ -334,6 +341,7 @@
     {
       "name": "pub.websocket:getRequest",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_43A2AFA2946D4A879DD887D1D23C9690__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the HTTP request information used to establish the WebSocket connection."
       ],
@@ -401,6 +409,7 @@
     {
       "name": "pub.websocket:getQueryParameters",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_B7E88B41E4B34331A37F77768AC3B9D6__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the query parameters used in the request URL to establish a WebSocket connection."
       ],
@@ -442,6 +451,7 @@
     {
       "name": "pub.websocket:getQueryParameter",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_5D002A89F2674F8CA6E4892CBE0F8EC4__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Session ID for the WebSocket session for which you want to retrieve the value of a specific query parameter information."
       ],
@@ -474,6 +484,7 @@
     {
       "name": "pub.websocket:getSubProtocols",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_50CE8576C0E946B39555BDC33A5B5909__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Retrieves the subprotocols used in the request URL to establish a WebSocket connection."
       ],
@@ -499,6 +510,7 @@
     {
       "name": "pub.websocket:onBinary",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_7D027047B46D427DAC8252DA62EF17A2__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles binary payload."
       ],
@@ -537,6 +549,7 @@
     {
       "name": "pub.websocket:onClose",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_5D21DC0866734533BAEC67948D7E3E91__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is closed or disconnected."
       ],
@@ -574,6 +587,7 @@
     {
       "name": "pub.websocket:onConnect",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_62153B758E1B4563ABF066A15C4970AC__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when a WebSocket session is successfully established."
       ],
@@ -591,6 +605,7 @@
     {
       "name": "pub.websocket:onError",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_A296EA49E241460A8D5E2CF82592739C__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that gets invoked when an error is encountered resulting in WebSocket session termination."
       ],
@@ -615,6 +630,7 @@
     {
       "name": "pub.websocket:onText",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_78D4458AE4E94D53880B309C44F9DF13__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a callback service related to WebSocket server or client endpoint that handles text payload."
       ],
@@ -639,6 +655,7 @@
     {
       "name": "pub.websocket:ping",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_597A06A0AAB94A4CAF7B85C17AB14CEE__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Sends a ping message containing the given application data to the remote endpoint after establishing the connection."
       ],
@@ -678,6 +695,7 @@
     {
       "name": "pub.websocket:pong",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_21715B0F1AD34CA8888B907616B72CA2__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic: Sends back an unsolicited pong message with the exact application data as the ping for the WebSocket session."
       ],
@@ -717,6 +735,7 @@
     {
       "name": "pub.websocket:send",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-websocket-folder#reference_8BFC4F4C69D84665BF2B9AA66DA71A97__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a message on a connected WebSocket session."
       ],

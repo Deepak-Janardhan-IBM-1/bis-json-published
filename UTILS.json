@@ -99,16 +99,6 @@
           ]
         },
         {
-          "parameter_settings": [
-            "The following table shows the parameter settings for the OSCommands.cnf file:",
-            "allowedOSCommands: List of commands that can be executed using the pub.utils.executeOSCommand service. You can specify commands and command parameters. If you specify a command (example, ps), Integration Server will run any command parameter with that command (such as ps -ef or ps -aux). If you specify a particular command parameter (example, ps -ef) Integration Server will run only that command parameter, not any other parameter associated with the command (such as ps -aux).",
-            "allowedWorkingDirectories: List of directories where the allowed commands can be executed.",
-            "When modifying the parameters in the OSCommands.cnf file, keep the following points in mind:",
-            "- Use semicolon (;) as the delimiter for the allowedOSCommands and allowedWorkingDirectories parameters.",
-            "- If a command name or working directory has a semicolon (;), use backslashes (\\\\) before the semicolon while specifying the allowed paths. For example, if the allowed command is cmd.exe /c c:/temp/ab;c.txt, specify it as cmd.exe /c c:/temp/ab\\\\;c.txt when specifying it as a parameter for the OSCommands.cnf file."
-          ]
-        },
-        {
           "usage_notes": [
             "To execute the dir command on Windows XP using the pub.utils:executeOSCommand, the command parameter is passed as cmd.exe /c dir and the working directory parameter is passed as c:/temp. The outputMessage parameter will contain the files of c:/temp directory."
           ]

@@ -741,13 +741,6 @@
       "output_parameters": [],
       "additional_information": [
         {
-          "parameters": [
-            "username: String The login user name through the FTP Listener.",
-            "filename: String The absolute path name of the file.",
-            "_env: Document Optional. A document reference to pub.publish:envelope which defines the structure and contents of the envelope of a published document."
-          ]
-        },
-        {
           "usage_notes": [
             "Integration Server publishes an instance document of pub.client.ftp:getCompletedNotification when an FTP client has completed an FTP get command on Integration Server through an FTP/S port. Because the retrieved file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:getCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:getCompletedNotification, only subscribers located on the same Integration Server receive the document. IBM does not recommend changing the assigned messaging connection alias."
           ]
@@ -1413,13 +1406,6 @@
       "input_parameters": [],
       "output_parameters": [],
       "additional_information": [
-        {
-          "parameters": [
-            "username: String The login user name through the FTP Listener.",
-            "filename: String The absolute path name of the file.",
-            "_env: Document Optional. A document reference to pub.publish:envelope which defines the structure and contents of the envelope of a published document."
-          ]
-        },
         {
           "usage_notes": [
             "Integration Server publishes an instance document of pub.client.ftp:putCompletedNotification when an FTP client has completed an FTP put command on Integration Server through an FTP/S port. Because the put file is located on the Integration Server file system, only subscribers located on the same Integration Server would have access to the file. Consequently the pub.client.ftp:putCompletedNotification publishable document type is set to publish locally only and uses the IS_LOCAL_CONNECTION messaging connection alias. When Integration Server publishes an instance document for pub.client.ftp:putCompletedNotification, only subscribers located on the same Integration Server receive the document. IBM does not recommend changing the assigned messaging connection alias."
@@ -2748,10 +2734,30 @@
         {
           "usage_notes": [
             "When the pub.client.ldap:registerNotification service creates a notification, Integration Server listens for four different types of events: objectAdded, objectRemoved, objectRenamed, and objectChanged. If any one of these events is triggered, pub.client.ldap: registerNotification calls the specified target service and passes these inputs to it:",
-            "type: One of the following depending on which event was triggered - \"objectAdded\", \"objectRemoved\", \"objectRenamed\", \"objectChanged\".",
-            "dn: Distinguished name of the entry that triggered the event.",
-            "attributes: Any additional LDAP attributes from the event.",
-            "oldDn: Applicable only for objectRenamed event. Distinguished name of the entry before it was renamed.",
+            {
+              "table": [
+                [
+                  "Pipeline Input",
+                  "Description"
+                ],
+                [
+                  "type",
+                  "One of the following depending on which event was triggered - \"objectAdded\", \"objectRemoved\", \"objectRenamed\", \"objectChanged\"."
+                ],
+                [
+                  "dn",
+                  "Distinguished name of the entry that triggered the event."
+                ],
+                [
+                  "attributes",
+                  "Any additional LDAP attributes from the event."
+                ],
+                [
+                  "oldDn",
+                  "Applicable only for objectRenamed event. Distinguished name of the entry before it was renamed."
+                ]
+              ]
+            },
             "If an error occurs, pub.client.ldap:registerNotification places an input called \"exception\" in the pipeline. This input includes details on the exception that occurred.",
             "Some LDAP servers do not support persistent searches and therefore do not support notifications.",
             "When close is set to yes, Integration Server removes the connectionHandle from the pipeline, but does not close the LDAP connection. To close the LDAP connection, set the watt.server.ldap.cleanContext server configuration parameter to true. For information about the watt.server.ldap.cleanContext server configuration parameter, see IBM webMethods Integration Server Administrator’s Guide ."

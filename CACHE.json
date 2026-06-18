@@ -651,20 +651,70 @@
             "for (int i = 0; i < objectList.length; i++) { Person value = (Person) ((SearchResult) objectList[i]).getValue(); System.out.println(value.getGender()); System.out.println( value.getAge()); }",
             "When using the between operator for the criteria\\OPR parameter, you must specify start and end values. That is, you must specify a two-element Object List with the 0 element as the start value and the first element as the end value. For example:",
             "//Condition 1 < age <10 IData input1 = IDataFactory.create() ; IDataCursor cursor1 = input1.getCursor() ; IDataUtil.put(cursor1, \"OP1\", \"age\") ; IDataUtil.put(cursor1, \"OPR\", \"between\") ; IDataUtil.put(cursor1, \"OP2\", {1,10}) ;",
-            "and: AND logical operator",
-            "between: Comparison between two values.",
-            "eq: Equals",
-            "gt: Greater than",
-            "ge: Greater than or equal to",
-            "ilike: Regular expression matcher using '?' and \"*\".",
-            "in: Comparison operator meaning in the collection given as an argument.",
-            "isNull: Checks whether the value of an attribute is null.",
-            "lt: Less than.",
-            "le: Less than or equal to",
-            "not: NOT logical operator",
-            "ne: Not equal to",
-            "notNull: Checks whether the value of an attribute with given name is NOT null.",
-            "or: OR logical operator",
+            {
+              "table": [
+                [
+                  "Operators",
+                  "Description"
+                ],
+                [
+                  "and",
+                  "AND logical operator"
+                ],
+                [
+                  "between",
+                  "Comparison between two values."
+                ],
+                [
+                  "eq",
+                  "Equals"
+                ],
+                [
+                  "gt",
+                  "Greater than"
+                ],
+                [
+                  "ge",
+                  "Greater than or equal to"
+                ],
+                [
+                  "ilike",
+                  "Regular expression matcher using '?' and \"*\"."
+                ],
+                [
+                  "in",
+                  "Comparison operator meaning in the collection given as an argument."
+                ],
+                [
+                  "isNull",
+                  "Checks whether the value of an attribute is null."
+                ],
+                [
+                  "lt",
+                  "Less than."
+                ],
+                [
+                  "le",
+                  "Less than or equal to"
+                ],
+                [
+                  "not",
+                  "NOT logical operator"
+                ],
+                [
+                  "ne",
+                  "Not equal to"
+                ],
+                [
+                  "notNull",
+                  "Checks whether the value of an attribute with given name is NOT null."
+                ],
+                [
+                  "or",
+                  "OR logical operator"
+                ]
+              ]
+            },
             "Because the state of the cache can change between search executions, include all of the aggregators to the search query at the same time, so that the returned aggregators are of the same iteration of the cache.",
             "By default a search will return an unlimited number of results. If too many results are returned, Integration Server might issue an OutOfMemoryError and become unresponsive. Limit the size of the results using the maxResults parameter.",
             "1. Copy the ehcache-ee.jar from IBMwebMethods_directory/common/lib/ to the IBMwebMethods_directory/Designer/eclipse/plugins/com.webmethods.sdev.runtimejars folder.",

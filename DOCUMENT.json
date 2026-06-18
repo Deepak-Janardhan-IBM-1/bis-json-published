@@ -129,16 +129,75 @@
           "usage_notes": [
             "The following example illustrates how the documentListToDocument service would convert a document list that contains three documents to a single document containing three key/value pairs. When you use the documentListToDocument service, you specify which two elements from the source list are to be transformed into the keys and values in the output document. In the following example, the values from the pName elements in the source list are transformed into key names, and the values from the pValue elements are transformed into the values for these keys.",
             "A documentList containing these three documents:",
-            "pName: cx_timeout",
-            "pValue: 1000",
-            "pName: cx_max",
-            "pValue: 2500",
-            "pName: cx_min",
-            "pValue: 10",
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_timeout"
+                ],
+                [
+                  "pValue",
+                  "1000"
+                ]
+              ]
+            },
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_max"
+                ],
+                [
+                  "pValue",
+                  "2500"
+                ]
+              ]
+            },
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_min"
+                ],
+                [
+                  "pValue",
+                  "10"
+                ]
+              ]
+            },
             "Would be converted to a document containing these three key:",
-            "cx_timeout: 1000",
-            "cx_max: 2500",
-            "cx_min: 10"
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "cx_timeout",
+                  "1000"
+                ],
+                [
+                  "cx_max",
+                  "2500"
+                ],
+                [
+                  "cx_min",
+                  "10"
+                ]
+              ]
+            }
           ]
         }
       ]
@@ -222,16 +281,75 @@
           "usage_notes": [
             "The following example shows how a document containing three keys would be converted to a document list containing three documents. In this example, the names pName and pValue are specified as names for the two new keys in the document list.",
             "A document containing these three keys:",
-            "cx_timeout: 1000",
-            "cx_max: 2500",
-            "cx_min: 10",
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "cx_timeout",
+                  "1000"
+                ],
+                [
+                  "cx_max",
+                  "2500"
+                ],
+                [
+                  "cx_min",
+                  "10"
+                ]
+              ]
+            },
             "Would be converted to a document list containing these three documents:",
-            "pName: cx_timeout",
-            "pValue: 1000",
-            "pName: cx_max",
-            "pValue: 2500",
-            "pName: cx_min",
-            "pValue: 10"
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_timeout"
+                ],
+                [
+                  "pValue",
+                  "1000"
+                ]
+              ]
+            },
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_max"
+                ],
+                [
+                  "pValue",
+                  "2500"
+                ]
+              ]
+            },
+            {
+              "table": [
+                [
+                  "Key",
+                  "Value"
+                ],
+                [
+                  "pName",
+                  "cx_min"
+                ],
+                [
+                  "pValue",
+                  "10"
+                ]
+              ]
+            }
           ]
         }
       ]
@@ -312,6 +430,30 @@
         {
           "usage_notes": [
             "The following example illustrates how to specify the values for the groupCriteria parameter:",
+            {
+              "table": [
+                [
+                  "key",
+                  "compareStringsAs",
+                  "pattern"
+                ],
+                [
+                  "name",
+                  "string",
+                  ""
+                ],
+                [
+                  "age",
+                  "numeric",
+                  ""
+                ],
+                [
+                  "birthdate",
+                  "datetime",
+                  "yyyy-MM-dd"
+                ]
+              ]
+            },
             "The input documents will be grouped based on name, age, and birth date."
           ]
         }
@@ -421,7 +563,23 @@
       "additional_information": [
         {
           "usage_note": [
-            "For example, if you want to search a set of documents for documents where BirthDate is 10th January 2008, the values for the searchCriteria parameter would be:"
+            "For example, if you want to search a set of documents for documents where BirthDate is 10th January 2008, the values for the searchCriteria parameter would be:",
+            {
+              "table": [
+                [
+                  "key",
+                  "value",
+                  "compareStringsAs",
+                  "pattern"
+                ],
+                [
+                  "Birthdate",
+                  "2008-01-10",
+                  "datetime",
+                  "yyyy-MM-dd"
+                ]
+              ]
+            }
           ]
         }
       ]
@@ -470,7 +628,35 @@
       "additional_information": [
         {
           "usage_notes": [
-            "For example, if you want to sort a set of documents based on name, age, and then on birth date, the values for sortCriteria parameter would be:"
+            "For example, if you want to sort a set of documents based on name, age, and then on birth date, the values for sortCriteria parameter would be:",
+            {
+              "table": [
+                [
+                  "key",
+                  "order",
+                  "compareStringsAs",
+                  "pattern"
+                ],
+                [
+                  "Name",
+                  "ascending",
+                  "string",
+                  ""
+                ],
+                [
+                  "Age",
+                  "descending",
+                  "numeric",
+                  ""
+                ],
+                [
+                  "Birthdate",
+                  "ascending",
+                  "datetime",
+                  "yyyy-MM-dd"
+                ]
+              ]
+            }
           ]
         }
       ]

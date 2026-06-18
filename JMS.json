@@ -3,11 +3,12 @@
   "description": [
     "You can use the services in the JMS folder to send and receive JMS messages."
   ],
-  "total_services": 14,
-  "services": [
+  "total_elements": 14,
+  "elements": [
     {
       "name": "pub.jms:acknowledge",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_acknowledge__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends an acknowledgment for a message to the JMS provider."
       ],
@@ -42,6 +43,7 @@
     {
       "name": "pub.jms:batchTriggerSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_batchTriggerSpec__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of a JMS trigger that processes a batch of messages at one time."
       ],
@@ -79,6 +81,7 @@
     {
       "name": "pub.jms:createConsumer",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_createConsumer__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a message consumer to receive messages from destinations on the JMS provider."
       ],
@@ -184,6 +187,7 @@
     {
       "name": "pub.jms:documentResolverSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#A96064__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of a document resolver service that determines whether a JMS message has a status of New, Duplicate, or In Doubt."
       ],
@@ -252,19 +256,182 @@
     {
       "name": "pub.jms:JMSMessage",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_JMSMessage__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that represents the structure and content of a JMS message received by a JMS trigger, received by the service pub.jms:receive, or as the output of pub.jms:send or pub.jms:sendAndWait."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "header: Document. Optional. Document (IData object) containing the header of the JMS message.",
-            "properties: Document.. Optional. A document containing optional fields added to the message header. Integration Server may add the following properties to JMS messages it sends or receives.",
-            "body: Document. Optional A Document (IData) contenting the JMS message body. Integration Server supports the following formats for the JMS message body:"
+          "name": "header",
+          "type": "Document",
+          "description": [
+            "Optional. Document (IData object) containing the header of the JMS message."
+          ],
+          "children": [
+            {
+              "name": "JMSCorrelationID",
+              "type": "String",
+              "description": [
+                "Optional. A unique identifier used to link multiple messages together. Often, a JMSCorrelationID is used to link a reply message with its requesting message."
+              ]
+            },
+            {
+              "name": "JMSDeliveryMode",
+              "type": "java.lang.Integer",
+              "description": [
+                "- PERSISTENT to indicate that the JMS provider places the message in a persistent message store, allowing the message to be recovered in the event of a resource failure. This is the default.",
+                "- NON-PERSISTENT to indicate that the JMS provider does not place the message in a persistent store. The message has no guarantee of being delivered if the JMS provider fails. Note: When sending a message, this value is obtained from the JMSMessage/header/deliveryMode input parameter."
+              ]
+            },
+            {
+              "name": "JMSDestination",
+              "type": "Object",
+              "description": [
+                "Optional. Destination (queue or topic) to which the message was sent."
+              ]
+            },
+            {
+              "name": "JMSExpiration",
+              "type": "java.lang.Long",
+              "description": [
+                "Note: When sending a message, this value is obtained from the JMSMessage/header/timeToLive input parameter."
+              ]
+            },
+            {
+              "name": "JMSMessageID",
+              "type": "String",
+              "description": [
+                "Optional. Unique identifier assigned to this message by the JMS provider."
+              ]
+            },
+            {
+              "name": "JMSPriority",
+              "type": "java.lang.Integer",
+              "description": [
+                "Note: When sending a message, this value is obtained from the JMSMessage/header/priority input parameter."
+              ]
+            },
+            {
+              "name": "JMSRedelivered",
+              "type": "java.lang.Boolean",
+              "description": [
+                "- True indicates that the message may have been delivered in the past.",
+                "- False indicates that the JMS provider has not delivered this message previously."
+              ]
+            },
+            {
+              "name": "JMSReplyTo",
+              "type": "Object",
+              "description": [
+                "Optional. Destination to which a reply to this message should be sent."
+              ]
+            },
+            {
+              "name": "JMSTimestamp",
+              "type": "java.lang.Long",
+              "description": [
+                "Optional. Time at which the message was given to the JMS provider."
+              ]
+            },
+            {
+              "name": "JMSType",
+              "type": "String",
+              "description": [
+                "Optional. Message type identifier specified by the client when sending the message."
+              ]
+            }
           ]
         },
+        {
+          "name": "properties",
+          "type": "Document",
+          "description": [
+            "Optional. A document containing optional fields added to the message header. Integration Server may add the following properties to JMS messages it sends or receives."
+          ],
+          "children": [
+            {
+              "name": "JMSXDeliveryCount",
+              "type": "java.lang.Integer",
+              "description": [
+                "Optional. Specifies the number of times the JMS provider delivered the message. Most JMS providers set this value."
+              ]
+            },
+            {
+              "name": "JMS_WMClusterNodes",
+              "type": "String",
+              "description": [
+                "Optional. Contains the name of the Broker in a Broker cluster that will receive the message or the name of the Broker or Brokers in the Broker cluster that received the JMS message."
+              ]
+            },
+            {
+              "name": "activation",
+              "type": "String",
+              "description": [
+                "Optional. A unique identifier assigned by the sender. An activation is used to group together messages that will be received by a JMS trigger with a join. A JMS trigger can join together messages with the same activation."
+              ]
+            },
+            {
+              "name": "uuid",
+              "type": "String",
+              "description": [
+                "Optional. A universally unique identifier for the message assigned by the sender. Integration Server can use the uuid for exactly-once processing or for request/reply."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "body",
+          "type": "Document",
+          "description": [
+            "Optional A Document (IData) contenting the JMS message body. Integration Server supports the following formats for the JMS message body:"
+          ],
+          "children": [
+            {
+              "name": "string",
+              "type": "String",
+              "description": [
+                "Optional. Message body in the form of a String."
+              ]
+            },
+            {
+              "name": "bytes",
+              "type": "primitive type",
+              "description": [
+                "Optional Message body in the form of a one-dimensional byte array."
+              ]
+            },
+            {
+              "name": "object",
+              "type": "Object",
+              "description": [
+                "Optional. Message body in the form of a Serializable Java object."
+              ]
+            },
+            {
+              "name": "data",
+              "type": "Document",
+              "description": [
+                "Note: This message format can only be used when sending a JMS message from one Integration Server to another. When the JMS message is sent, the sending Integration Server encodes the IData into a byte array. When the receiving Integration Server receives the message, it decodes the byte array into IData."
+              ]
+            },
+            {
+              "name": "message",
+              "type": "Object",
+              "description": [
+                "Note: When a JMS message is received using the pub.jms:receive service this field will always be populated because javax.jms.Message is required for acknowledging the message.",
+                "Note: When receiving a javax.jms:MapMessage or javax.jms:StreamMessage this field will be populated. The data can then be processed using a Java service. A flow service cannot process the message in its current state."
+              ],
+              "references": [
+                {
+                  "title": "pub.jms:receive",
+                  "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "see_also": [
             "- pub.jms:receive",
@@ -277,6 +444,7 @@
     {
       "name": "pub.jms:receive",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_receive__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Receives a message from a queue or topic on the JMS provider."
       ],
@@ -503,6 +671,7 @@
     {
       "name": "pub.jms:reply",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_reply__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a reply message to a requesting client."
       ],
@@ -838,6 +1007,7 @@
     {
       "name": "pub.jms:send",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_send__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a JMS message to the JMS provider."
       ],
@@ -1189,6 +1359,7 @@
     {
       "name": "pub.jms:sendAndWait",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_sendAndWait__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a request in the form of a JMS message to the JMS provider and optionally, waits for a reply."
       ],
@@ -1788,6 +1959,7 @@
     {
       "name": "pub.jms:sendBatch",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#idff622fdb-4b11-4e93-b5a7-142af276ab16__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sends a group of JMS messages to the same destination on the IBM webMethods Broker."
       ],
@@ -2127,6 +2299,7 @@
     {
       "name": "pub.jms:triggerSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_triggerSpec__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the input signature of a JMS trigger that processes one message at a time."
       ],
@@ -2163,6 +2336,7 @@
     {
       "name": "pub.jms:waitForReply",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_waitForReply__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the reply message for an asynchronous request."
       ],
@@ -2381,6 +2555,7 @@
     {
       "name": "pub.jms.wmjms:receiveStream",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_wmjms_receiveStream__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Receives a large message stream from a queue or topic on the IBM webMethods Broker."
@@ -2439,6 +2614,7 @@
     {
       "name": "pub.jms.wmjms:sendStream",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-jms-folder#Apub_jms_wmjms_sendStream__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - There is no replacement service.",
         "Sends a large message stream to the IBM webMethods Broker."

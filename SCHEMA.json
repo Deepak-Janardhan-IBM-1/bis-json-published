@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the schema folder to validate objects and to validate the pipeline."
   ],
-  "total_services": 8,
-  "services": [
+  "total_elements": 8,
+  "elements": [
     {
       "name": "pub.schema:createXSD",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_createXSD__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates an XML Schema definition from a document type, from the input and output parameters of a service, or from a specification."
       ],
@@ -116,6 +117,7 @@
     {
       "name": "pub.schema:validate",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_validate__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Validates an object using an IS document type, XML document type, or an IS schema."
       ],
@@ -229,6 +231,7 @@
     {
       "name": "pub.schema:validatePipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_validatePipeline__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Validates the pipeline against a document type."
       ],
@@ -308,6 +311,7 @@
     {
       "name": "pub.schema.w3c",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_w3c__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. This folder contains definitions for XML Schemas as defined in the W3C specification XML Schema Part 2: Datatypes .",
         "For more information about schemas and datatypes, see IBM webMethods Service Development Help ."
@@ -318,38 +322,34 @@
     {
       "name": "pub.schema.w3c:datatypes",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_w3c_datatypes__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the simple type names for built-in schemas."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.schema.w3c:structures",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_w3c_structures__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the structural components for XML schema definitions."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.schema.w3c:xml",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#Apub_schema_w3c_xml__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the XML namespace components, such as xml:lang and xml:space, as defined in the W3C specifications Namespaces in XML and Extensible Markup Language (XML) 1.0 ."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     },
     {
       "name": "pub.schema.w3c:xsi",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-schema-folder#A90476__title__1",
+      "element_type": "schema",
       "description": [
         "WmPublic. A schema containing the XML Schema instance components, such as xsi:nil, xsi:noNamespaceSchemaLocation, xsi:schemaLocation, and xsi:type, as defined in the W3C XML Schema recommendation Part 1: Structures."
-      ],
-      "input_parameters": [],
-      "output_parameters": []
+      ]
     }
   ]
 }

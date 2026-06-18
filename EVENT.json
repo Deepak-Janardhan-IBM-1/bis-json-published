@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the event folder to subscribe to events and write event handlers."
   ],
-  "total_services": 44,
-  "services": [
+  "total_elements": 44,
+  "elements": [
     {
       "name": "pub.event:addSubscriber",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_addSubscriber__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a subscription for a specified event."
       ],
@@ -98,6 +99,7 @@
     {
       "name": "pub.event:alarm",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_alarm__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for alarm event handlers."
       ],
@@ -144,18 +146,37 @@
     {
       "name": "pub.event:alarmInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_alarmInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for alarm event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "service: String Fully qualified name of the service that generated the event.",
-            "sessionID: String Session ID of the service firing the alarm.",
-            "msg: String Text describing the alarm."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
+          ]
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the service that generated the event."
+          ]
+        },
+        {
+          "name": "sessionID",
+          "type": "String",
+          "description": [
+            "Session ID of the service firing the alarm."
+          ]
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "description": [
+            "Text describing the alarm."
           ]
         }
       ]
@@ -163,6 +184,7 @@
     {
       "name": "pub.event:audit",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_audit__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for audit event handlers."
       ],
@@ -235,6 +257,7 @@
     {
       "name": "pub.event:auditError",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditError__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for audit error event handlers."
       ],
@@ -249,10 +272,30 @@
             "- When Integration Server initializes and cannot connect to the audit logging database.",
             "- When the Service logger is configured to retry failed auditing attempts, the audit error event is fired for the initial failure and each subsequent failure.",
             "When you subscribe to an audit error event, you can supply a filter to limit the events that your event handler receives. The filter applies to the concatenated values of the destination and errorCode fields. You can use the asterisk (*) as a wildcard character in the filter. The following table shows how you can use filters to limit the events that your event handler will receive:",
-            "YourSearchTerm: Events that contain only YourSearchTerm.",
-            "*YourSearchTerm: Events that contain YourSearchTerm at the end of the audit error event value.",
-            "YourSearchTerm*: Events that contain YourSearchTerm at the beginning of the audit error event value.",
-            "*YourSearchTerm*: Events that contain YourSearchTerm anywhere within the audit error event value.",
+            {
+              "table": [
+                [
+                  "This filter...",
+                  "Limits the events that the event handler receives to..."
+                ],
+                [
+                  "YourSearchTerm",
+                  "Events that contain only YourSearchTerm."
+                ],
+                [
+                  "*YourSearchTerm",
+                  "Events that contain YourSearchTerm at the end of the audit error event value."
+                ],
+                [
+                  "YourSearchTerm*",
+                  "Events that contain YourSearchTerm at the beginning of the audit error event value."
+                ],
+                [
+                  "*YourSearchTerm*",
+                  "Events that contain YourSearchTerm anywhere within the audit error event value."
+                ]
+              ]
+            },
             "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit error events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit error events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit error events synchronously. The default is true (asynchronous)."
           ]
         }
@@ -261,11 +304,11 @@
     {
       "name": "pub.event:auditErrorInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditErrorInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for audit error event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
+      "fields": [],
       "additional_information": [
         {
           "usage_notes": [
@@ -277,23 +320,65 @@
     {
       "name": "pub.event:auditInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_auditInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for audit event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy-MM-dd HH:mm:ss z (for example, \"2004-10-28 14:46:39 EDT\"). Note: You can set the format for the time parameter in the watt.server.dateStampFmt property.",
-            "TID: String Server thread that generated the audit event in hashed format. The TID is generated by calling the Java Thread.currentThread().hashCode() method.",
-            "service: String Fully qualified name of the service that generated the event.",
-            "sessionID: String Session ID of the service that generated the event.",
-            "result: String Description of the audit point. Started indicates that this event marks the beginning of a service. Ended indicates that this event marks the end of a service that executed successfully. Failed indicates that this event marks the end of a service that executed unsuccessfully (that is, threw an exception) and is not configured to retry. A failed event also marks the end of a service that executed unsuccessfully after exhausting all of its retries. Retried indicates that this event is created each time a service is retried.",
-            "pipeline: Document Optional. The pipeline that was passed to the service. This parameter is required only if the service is configured to include the pipeline when auditing.",
-            "userName: String User ID that invoked the service that generated the event."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Note: You can set the format for the time parameter in the watt.server.dateStampFmt property."
           ]
         },
+        {
+          "name": "TID",
+          "type": "String",
+          "description": [
+            "Server thread that generated the audit event in hashed format. The TID is generated by calling the Java Thread.currentThread().hashCode() method."
+          ]
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the service that generated the event."
+          ]
+        },
+        {
+          "name": "sessionID",
+          "type": "String",
+          "description": [
+            "Session ID of the service that generated the event."
+          ]
+        },
+        {
+          "name": "result",
+          "type": "String",
+          "description": [
+            "- Started indicates that this event marks the beginning of a service.",
+            "- Ended indicates that this event marks the end of a service that executed successfully.",
+            "- Failed indicates that this event marks the end of a service that executed unsuccessfully (that is, threw an exception) and is not configured to retry. A failed event also marks the end of a service that executed unsuccessfully after exhausting all of its retries.",
+            "- Retried indicates that this event is created each time a service is retried."
+          ]
+        },
+        {
+          "name": "pipeline",
+          "type": "Document",
+          "description": [
+            "Optional. The pipeline that was passed to the service. This parameter is required only if the service is configured to include the pipeline when auditing."
+          ]
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "description": [
+            "User ID that invoked the service that generated the event."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.audit.async server parameter to indicate whether event handlers for audit events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to audit events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to audit events synchronously. The default is true (asynchronous)."
@@ -304,16 +389,31 @@
     {
       "name": "pub.event:callstackItem",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_callStackItem__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for the name of the service in the invocation path when an exception occurred and the index that indicates the step at which the exception occurred."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "service: String Fully qualified name of the last service (that is, most recently called) on the call stack.",
-            "flowStep: String Path representing the last executed flow step in the service where the exception occurred. The path takes the form /n/n/n..., where n represents a sequential index of flow steps and / indicates a level of nesting. The following illustrates an example of flow steps and the flowStep value that would be assigned to them if the exception occurred at that step:"
+          "name": "service",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the last service (that is, most recently called) on the call stack."
+          ]
+        },
+        {
+          "name": "flowStep",
+          "type": "String",
+          "description": [
+            "Path representing the last executed flow step in the service where the exception occurred. The path takes the form /n/n/n..., where n represents a sequential index of flow steps and / indicates a level of nesting. The following illustrates an example of flow steps and the flowStep value that would be assigned to them if the exception occurred at that step:"
+          ],
+          "children": [
+            {
+              "name": "flowStep",
+              "description": [
+                "If the stack contains a Java service, the flowStep value for that service will be empty."
+              ]
+            }
           ]
         }
       ]
@@ -321,6 +421,7 @@
     {
       "name": "pub.event:deleteSubscriber",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_deleteSubscriber__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes an event handler from the subscription list for a specified event."
       ],
@@ -392,6 +493,7 @@
     {
       "name": "pub.event:error",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#id58938465-1dcf-4b62-a88f-0c1e1d5c96ef__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for error event handlers."
       ],
@@ -432,19 +534,34 @@
     {
       "name": "pub.event:errorInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#idc8776a94-d1bf-430f-becf-e7e8c7ac37a5__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for error event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "stackTrace: String Stack trace for the error.",
-            "errorMessage: String The error message, if any, generated by the error that causes the error event.",
-            "serviceName: String Fully qualified name of the service in which the error occurred."
+          "name": "stackTrace",
+          "type": "String",
+          "description": [
+            "Stack trace for the error."
           ]
         },
+        {
+          "name": "errorMessage",
+          "type": "String",
+          "description": [
+            "The error message, if any, generated by the error that causes the error event."
+          ]
+        },
+        {
+          "name": "serviceName",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the service in which the error occurred."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_note": [
             "The watt.server.event.exception.async server parameter indicates whether event handlers for error events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to error events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the error events synchronously. The default is true (asynchronous).",
@@ -456,6 +573,7 @@
     {
       "name": "pub.event:exception",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#A_Toc489417438__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for exception event handlers."
       ],
@@ -586,30 +704,123 @@
     {
       "name": "pub.event:exceptionInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_exceptionInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for exception information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "error: String Optional. Error message of the exception.",
-            "localizedError: String Optional. Error message in the language that corresponds to the locale of your webMethods installation.",
-            "errorType: String Exception type that was thrown.",
-            "errorDump: String More detailed information about the exception.",
-            "service: String Optional. Fully qualified name of the service that generated the event.",
-            "user: String User that requested the service that generated the event.",
-            "callStack: Document List Optional. The call stack information describing where the exception occurred, including the fully qualified name of a service on the stack and an index that identifies the last executed flow step in that service. Each document represents a service on the call stack. The first document in the list represents the service that threw the exception and the last document in the list represents the top-level service. The structure of this document is defined by pub.event:callstackItem.",
-            "pipeline: Document Optional. State of the pipeline at the time the exception occurred.",
-            "threadID: String Thread ID identifying the thread that invoked the service.",
-            "ssnid: String Session ID during which the exception occurred.",
-            "errorMsgID: String Optional. The identification number for the error message.",
-            "errorDetails: Document Optional. Additional exception information provided by the author of the Java service. For more information about constructing exceptions to return additional information, see the IBM webMethods Integration Server Java API Reference for the com.wm.util.LocalizedException class.",
-            "nestedErrorInfo: Document Optional. Nested errors and exceptions, if any. The structure of this document is defined by pub.event:exceptionInfo."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "error",
+          "type": "String",
+          "description": [
+            "Optional. Error message of the exception."
+          ]
+        },
+        {
+          "name": "localizedError",
+          "type": "String",
+          "description": [
+            "Optional. Error message in the language that corresponds to the locale of your webMethods installation."
+          ]
+        },
+        {
+          "name": "errorType",
+          "type": "String",
+          "description": [
+            "Exception type that was thrown."
+          ]
+        },
+        {
+          "name": "errorDump",
+          "type": "String",
+          "description": [
+            "More detailed information about the exception."
+          ]
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "description": [
+            "Optional. Fully qualified name of the service that generated the event."
+          ]
+        },
+        {
+          "name": "user",
+          "type": "String",
+          "description": [
+            "User that requested the service that generated the event."
+          ]
+        },
+        {
+          "name": "callStack",
+          "type": "Document List",
+          "description": [
+            "Optional. The call stack information describing where the exception occurred, including the fully qualified name of a service on the stack and an index that identifies the last executed flow step in that service. Each document represents a service on the call stack. The first document in the list represents the service that threw the exception and the last document in the list represents the top-level service. The structure of this document is defined by pub.event:callstackItem."
+          ],
+          "references": [
+            {
+              "title": "pub.event:callstackItem",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_callStackItem"
+            }
+          ]
+        },
+        {
+          "name": "pipeline",
+          "type": "Document",
+          "description": [
+            "Optional. State of the pipeline at the time the exception occurred."
+          ]
+        },
+        {
+          "name": "threadID",
+          "type": "String",
+          "description": [
+            "Thread ID identifying the thread that invoked the service."
+          ]
+        },
+        {
+          "name": "ssnid",
+          "type": "String",
+          "description": [
+            "Session ID during which the exception occurred."
+          ]
+        },
+        {
+          "name": "errorMsgID",
+          "type": "String",
+          "description": [
+            "Optional. The identification number for the error message."
+          ]
+        },
+        {
+          "name": "errorDetails",
+          "type": "Document",
+          "description": [
+            "Optional. Additional exception information provided by the author of the Java service. For more information about constructing exceptions to return additional information, see the IBM webMethods Integration Server Java API Reference for the com.wm.util.LocalizedException class."
+          ]
+        },
+        {
+          "name": "nestedErrorInfo",
+          "type": "Document",
+          "description": [
+            "Optional. Nested errors and exceptions, if any. The structure of this document is defined by pub.event:exceptionInfo."
+          ],
+          "references": [
+            {
+              "title": "pub.event:exceptionInfo",
+              "url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_exceptionInfo"
+            }
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.exception.async server parameter to indicate whether event handlers for exception events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to exception events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the exception events synchronously. The default is true (asynchronous)."
@@ -620,6 +831,7 @@
     {
       "name": "pub.event:gdEnd",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdEnd__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for gdEnd event handlers."
       ],
@@ -659,19 +871,34 @@
     {
       "name": "pub.event:gdEndInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdEndInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for gdEnd event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "TID: String Transaction ID of the service that generated the event.",
-            "result: String Status of the transaction."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "TID",
+          "type": "String",
+          "description": [
+            "Transaction ID of the service that generated the event."
+          ]
+        },
+        {
+          "name": "result",
+          "type": "String",
+          "description": [
+            "Status of the transaction."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous)."
@@ -682,6 +909,7 @@
     {
       "name": "pub.event:gdStart",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdStart__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for gdStart event handlers."
       ],
@@ -729,20 +957,41 @@
     {
       "name": "pub.event:gdStartInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_gdStartInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for gdStart event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "TID: String Transaction ID of the service that generated the event.",
-            "svcname: String Fully qualified name of the service that generated the event.",
-            "result: String Status of the transaction."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "TID",
+          "type": "String",
+          "description": [
+            "Transaction ID of the service that generated the event."
+          ]
+        },
+        {
+          "name": "svcname",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the service that generated the event."
+          ]
+        },
+        {
+          "name": "result",
+          "type": "String",
+          "description": [
+            "Status of the transaction."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.gd.async server parameter to indicate whether event handlers for all guaranteed delivery events (gdStart and gdEnd) are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events asynchronously. When this parameter is set to false, Integration Server invokes the event handlers that subscribe to the gdStart and/or gdEnd events synchronously. The default is true (asynchronous)."
@@ -753,6 +1002,7 @@
     {
       "name": "pub.event:getEventTypes",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getEventTypes__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the list of supported event types on Integration Server."
       ],
@@ -793,6 +1043,7 @@
     {
       "name": "pub.event:getSubscribers",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_getSubscribers__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the list of subscribers for a specified event type."
       ],
@@ -897,6 +1148,7 @@
     {
       "name": "pub.event:jmsReceiveErrorEvent",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_jmsReceiveErrorEvent__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a JMS retrieval failure event handler."
       ],
@@ -990,6 +1242,7 @@
     {
       "name": "pub.event:jmsSendErrorEvent",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_jmsSendErrorEvent__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the JMS delivery failure event handler."
       ],
@@ -1031,6 +1284,7 @@
     {
       "name": "pub.event:journal",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_journal__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for journal event handlers."
       ],
@@ -1097,22 +1351,60 @@
     {
       "name": "pub.event:journalInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#idfbd4d45d-0c00-4d2f-86a1-cd36c930597e__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for journal event information"
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/mm/dd hh:mm:ss.ss.",
-            "productID: String Name of the product that generated the journal log message and the event.",
-            "majorCode: String Major code of the message.",
-            "minorCode: String Minor code of the message.",
-            "severity: String Number indicating the severity of the message. 1 Fatal 2 Error 3 Warning 4 Info 5, 6 Debut 7 - 10 Trace",
-            "defaultMessage: String Default message associated with the major code and minor code. The actual message may differ from the default message. For example the default message might be “Package WmART is stopping due to {0}”, where {0} is a placeholder for a run-time parameter. The actual message generated at run time might be “Package WmART is stopping due to ServiceException”."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/mm/dd hh:mm:ss.ss."
           ]
         },
+        {
+          "name": "productID",
+          "type": "String",
+          "description": [
+            "Name of the product that generated the journal log message and the event."
+          ]
+        },
+        {
+          "name": "majorCode",
+          "type": "String",
+          "description": [
+            "Major code of the message."
+          ]
+        },
+        {
+          "name": "minorCode",
+          "type": "String",
+          "description": [
+            "Minor code of the message."
+          ]
+        },
+        {
+          "name": "severity",
+          "type": "String",
+          "description": [
+            "- 1 Fatal",
+            "- 2 Error",
+            "- 3 Warning",
+            "- 4 Info",
+            "- 5, 6 Debut",
+            "- 7 - 10 Trace"
+          ]
+        },
+        {
+          "name": "defaultMessage",
+          "type": "String",
+          "description": [
+            "Default message associated with the major code and minor code. The actual message may differ from the default message. For example the default message might be “Package WmART is stopping due to {0}”, where {0} is a placeholder for a run-time parameter. The actual message generated at run time might be “Package WmART is stopping due to ServiceException”."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "The watt.server.event.exception.async server parameter indicates whether event handlers for journal events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to journal events asynchronously. When this parameter is set to false, Integration Server invokes the services that subscribe to the journal events synchronously. The default is true (asynchronous)."
@@ -1123,6 +1415,7 @@
     {
       "name": "pub.event:modifySubscriber",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#A32687__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Modifies the information about a subscription."
       ],
@@ -1225,6 +1518,7 @@
     {
       "name": "pub.event:portStatus",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_listenerStatus__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a port status event."
       ],
@@ -1287,20 +1581,52 @@
     {
       "name": "pub.event:portStatusInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_portStatusInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for port event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "port: String Number for the port.",
-            "status: String Status of the port.",
-            "protocol: String Type of port (for example, http, https, ftp, or email).",
-            "primary: String The primary port. By default, the IBM webMethods Integration Server designates an HTTP port at port 5555 as the primary port.",
-            "enabled: String A flag indicating whether or not the port is enabled. A value of: true indicates that the port is enabled. false indicates that the port is disabled."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
+          ]
+        },
+        {
+          "name": "port",
+          "type": "String",
+          "description": [
+            "Number for the port."
+          ]
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "description": [
+            "Status of the port."
+          ]
+        },
+        {
+          "name": "protocol",
+          "type": "String",
+          "description": [
+            "Type of port (for example, http, https, ftp, or email)."
+          ]
+        },
+        {
+          "name": "primary",
+          "type": "String",
+          "description": [
+            "The primary port. By default, the IBM webMethods Integration Server designates an HTTP port at port 5555 as the primary port."
+          ]
+        },
+        {
+          "name": "enabled",
+          "type": "String",
+          "description": [
+            "- true indicates that the port is enabled.",
+            "- false indicates that the port is disabled."
           ]
         }
       ]
@@ -1308,6 +1634,7 @@
     {
       "name": "pub.event:reloadEventManagerSettings",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_reloadEventManagerSettings__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Reloads the settings from the event manager's configuration file (eventcfg.bin) on the server."
       ],
@@ -1324,6 +1651,7 @@
     {
       "name": "pub.event:replication",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_replication__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for replication event handlers."
       ],
@@ -1370,20 +1698,41 @@
     {
       "name": "pub.event:replicationInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_replicationInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for replication event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "action: String Description of the event (such as create or push). The value of action can be used to maintain separate logs for each action type.",
-            "package: String Name of package being replicated.",
-            "service: String Fully qualified name of the service that generated the event."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred, in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "action",
+          "type": "String",
+          "description": [
+            "Description of the event (such as create or push). The value of action can be used to maintain separate logs for each action type."
+          ]
+        },
+        {
+          "name": "package",
+          "type": "String",
+          "description": [
+            "Name of package being replicated."
+          ]
+        },
+        {
+          "name": "service",
+          "type": "String",
+          "description": [
+            "Fully qualified name of the service that generated the event."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.replication.async server parameter to indicate whether event handlers for replication events are invoked synchronously or asynchronously. When this parameter is set to true, Integration Server invokes the event handlers that subscribe to replication events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to replication events synchronously. The default is true (asynchronous)."
@@ -1394,6 +1743,7 @@
     {
       "name": "pub.event:saveEventManagerSettings",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_saveEventManagerSettings__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Saves the current subscriber information to the event manager's configuration file (eventcfg.bin) on the server."
       ],
@@ -1413,6 +1763,7 @@
     {
       "name": "pub.event:security",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_security__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for security event handlers."
       ],
@@ -1497,10 +1848,11 @@
     {
       "name": "pub.event:securityInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_securityInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for security event information."
       ],
-      "input_parameters": [
+      "fields": [
         {
           "name": "time",
           "type": "String",
@@ -1569,7 +1921,6 @@
           ]
         }
       ],
-      "output_parameters": [],
       "additional_information": [
         {
           "usage_notes": [
@@ -1581,6 +1932,7 @@
     {
       "name": "pub.event:sessionEnd",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionEnd__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for sessionEnd event handlers."
       ],
@@ -1627,20 +1979,41 @@
     {
       "name": "pub.event:sessionEndInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionEndInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for sessionEnd event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "sessionID: String Session ID of the service firing the alarm.",
-            "rpcs: String Number of service calls the session has performed.",
-            "age: String Number of milliseconds the session existed before it ended."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "sessionID",
+          "type": "String",
+          "description": [
+            "Session ID of the service firing the alarm."
+          ]
+        },
+        {
+          "name": "rpcs",
+          "type": "String",
+          "description": [
+            "Number of service calls the session has performed."
+          ]
+        },
+        {
+          "name": "age",
+          "type": "String",
+          "description": [
+            "Number of milliseconds the session existed before it ended."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
@@ -1651,6 +2024,7 @@
     {
       "name": "pub.event:sessionExpire",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionExpire__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for sessionExpire event handlers."
       ],
@@ -1697,20 +2071,41 @@
     {
       "name": "pub.event:sessionExpireInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionExpireInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for sessionExpire event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "sessionID: String Session ID of the service firing the alarm.",
-            "rpcs: String Number of service calls the session has performed.",
-            "age: String Number of milliseconds the session existed before it expired."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "sessionID",
+          "type": "String",
+          "description": [
+            "Session ID of the service firing the alarm."
+          ]
+        },
+        {
+          "name": "rpcs",
+          "type": "String",
+          "description": [
+            "Number of service calls the session has performed."
+          ]
+        },
+        {
+          "name": "age",
+          "type": "String",
+          "description": [
+            "Number of milliseconds the session existed before it expired."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
@@ -1721,6 +2116,7 @@
     {
       "name": "pub.event:sessionStart",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_sessionStart__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for sessionStart event handlers."
       ],
@@ -1767,20 +2163,41 @@
     {
       "name": "pub.event:sessionStartInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_SessionStartInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for sessionStart event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "sessionID: String ID of the new session.",
-            "userid: String User ID that the IS client or developer used to log on to the IBM webMethods Integration Server.",
-            "sessionName: String Name of the new session."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "sessionID",
+          "type": "String",
+          "description": [
+            "ID of the new session."
+          ]
+        },
+        {
+          "name": "userid",
+          "type": "String",
+          "description": [
+            "User ID that the IS client or developer used to log on to the IBM webMethods Integration Server."
+          ]
+        },
+        {
+          "name": "sessionName",
+          "type": "String",
+          "description": [
+            "Name of the new session."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.session.async server parameter to indicate whether Integration Server invokes event handlers for session events (sessionStart, sessionEnd, and sessionExpire) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the session events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the session events synchronously. The default is true (asynchronous)."
@@ -1791,6 +2208,7 @@
     {
       "name": "pub.event:stat",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_stat__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for stat event handlers."
       ],
@@ -1970,39 +2388,174 @@
     {
       "name": "pub.event:statInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_statInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for stat event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "startTime: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "uptime: String Amount of time the server has been up. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "totalMem: String Total amount of used and unused storage available to the JVM, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage.",
-            "freeMem: String Amount of unused storage available to the Integration Server, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage.",
-            "usedMem: String Amount of storage used by the Integration Server, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage.",
-            "freeMemPer: String Percent of total memory unused.",
-            "usedMemPer: String Percent of total memory used.",
-            "svrT: String Number of services currently running.",
-            "svrTMax: String Peak number of servers ever running concurrently.",
-            "sysT: String Number of JVM threads running.",
-            "sysTMax: String Peak number of threads ever running.",
-            "conn: String Number of current sessions.",
-            "connMax: String Peak number of concurrent sessions.",
-            "reqTotal: String Cumulative total number of services processed.",
-            "reqAvg: String Average duration of service.",
-            "newReqPM: String New requests per minute.",
-            "endReqPM: String End requests per minute.",
-            "errSvc: String Number of services completed in error state.",
-            "svcRate: String Number of end/start(s) per second.",
-            "ssnUsed: String Number of licensed sessions currently active.",
-            "ssnPeak: String Number of licensed sessions that have ever run concurrently on the server.",
-            "ssnMax: String Maximum number of sessions for which the server is licensed.",
-            "errSys: String Number of unknown errors."
+          "name": "startTime",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "uptime",
+          "type": "String",
+          "description": [
+            "Amount of time the server has been up. Given in the format yyyy/MM/dd HH:mm:ss.SS."
+          ]
+        },
+        {
+          "name": "totalMem",
+          "type": "String",
+          "description": [
+            "Total amount of used and unused storage available to the JVM, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage."
+          ]
+        },
+        {
+          "name": "freeMem",
+          "type": "String",
+          "description": [
+            "Amount of unused storage available to the Integration Server, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage."
+          ]
+        },
+        {
+          "name": "usedMem",
+          "type": "String",
+          "description": [
+            "Amount of storage used by the Integration Server, in kilobytes. For example, a value of 65535 represents 64 megabytes of storage."
+          ]
+        },
+        {
+          "name": "freeMemPer",
+          "type": "String",
+          "description": [
+            "Percent of total memory unused."
+          ]
+        },
+        {
+          "name": "usedMemPer",
+          "type": "String",
+          "description": [
+            "Percent of total memory used."
+          ]
+        },
+        {
+          "name": "svrT",
+          "type": "String",
+          "description": [
+            "Number of services currently running."
+          ]
+        },
+        {
+          "name": "svrTMax",
+          "type": "String",
+          "description": [
+            "Peak number of servers ever running concurrently."
+          ]
+        },
+        {
+          "name": "sysT",
+          "type": "String",
+          "description": [
+            "Number of JVM threads running."
+          ]
+        },
+        {
+          "name": "sysTMax",
+          "type": "String",
+          "description": [
+            "Peak number of threads ever running."
+          ]
+        },
+        {
+          "name": "conn",
+          "type": "String",
+          "description": [
+            "Number of current sessions."
+          ]
+        },
+        {
+          "name": "connMax",
+          "type": "String",
+          "description": [
+            "Peak number of concurrent sessions."
+          ]
+        },
+        {
+          "name": "reqTotal",
+          "type": "String",
+          "description": [
+            "Cumulative total number of services processed."
+          ]
+        },
+        {
+          "name": "reqAvg",
+          "type": "String",
+          "description": [
+            "Average duration of service."
+          ]
+        },
+        {
+          "name": "newReqPM",
+          "type": "String",
+          "description": [
+            "New requests per minute."
+          ]
+        },
+        {
+          "name": "endReqPM",
+          "type": "String",
+          "description": [
+            "End requests per minute."
+          ]
+        },
+        {
+          "name": "errSvc",
+          "type": "String",
+          "description": [
+            "Number of services completed in error state."
+          ]
+        },
+        {
+          "name": "svcRate",
+          "type": "String",
+          "description": [
+            "Number of end/start(s) per second."
+          ]
+        },
+        {
+          "name": "ssnUsed",
+          "type": "String",
+          "description": [
+            "Number of licensed sessions currently active."
+          ]
+        },
+        {
+          "name": "ssnPeak",
+          "type": "String",
+          "description": [
+            "Number of licensed sessions that have ever run concurrently on the server."
+          ]
+        },
+        {
+          "name": "ssnMax",
+          "type": "String",
+          "description": [
+            "Maximum number of sessions for which the server is licensed."
+          ]
+        },
+        {
+          "name": "errSys",
+          "type": "String",
+          "description": [
+            "Number of unknown errors."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.stat.async server parameter to indicate whether Integration Server invokes event handlers for statistics events synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the stat event asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to stat events synchronously. The default is true (asynchronous)."
@@ -2013,6 +2566,7 @@
     {
       "name": "pub.event:txEnd",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txEnd__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for txEnd event handlers."
       ],
@@ -2052,19 +2606,34 @@
     {
       "name": "pub.event:txEndInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txEndInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for txEnd event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "TID: String Transaction ID of the service that generated the event.",
-            "result: String Status of the transaction."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "TID",
+          "type": "String",
+          "description": [
+            "Transaction ID of the service that generated the event."
+          ]
+        },
+        {
+          "name": "result",
+          "type": "String",
+          "description": [
+            "Status of the transaction."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."
@@ -2075,6 +2644,7 @@
     {
       "name": "pub.event:txStart",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_txStart__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for txStart event handlers."
       ],
@@ -2114,19 +2684,34 @@
     {
       "name": "pub.event:txStartInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-event-folder#Apub_event_rxStartInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type for txStart event information."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "time: String Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS.",
-            "TID: String Transaction ID of the service that generated the event.",
-            "result: String Status of the transaction."
+          "name": "time",
+          "type": "String",
+          "description": [
+            "Date and time that the event occurred. Given in the format yyyy/MM/dd HH:mm:ss.SS."
           ]
         },
+        {
+          "name": "TID",
+          "type": "String",
+          "description": [
+            "Transaction ID of the service that generated the event."
+          ]
+        },
+        {
+          "name": "result",
+          "type": "String",
+          "description": [
+            "Status of the transaction."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Use the watt.server.event.tx.async server parameter to indicate whether Integration Server invokes event handlers for transaction events (txStart and txEnd) synchronously or asynchronously. When this parameter is set to true, Integration Server invokes event handlers that subscribe to the txStart or txEnd events asynchronously. When this parameter is set to false, Integration Server invokes event handlers that subscribe to the txStart or txEnd events synchronously. The default is true (asynchronous)."

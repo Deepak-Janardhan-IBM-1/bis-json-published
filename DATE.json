@@ -7,7 +7,143 @@
     {
       "title": "Pattern String Symbols",
       "content": [
-        "Many of the date services require you to specify pattern strings describing the data's current format and/or the format to which you want it converted. For services that require a pattern string, use the symbols in the following table to describe the format of your data. For example, to describe a date in the January 15, 1999 format, you would use the pattern string MMMM dd, yyyy. To describe the format 01/15/99, you would use the pattern string MM/dd/yy. For more information about these pattern string symbols, see the Oracle Java API documentation for the SimpleDateFormat class."
+        "Many of the date services require you to specify pattern strings describing the data's current format and/or the format to which you want it converted. For services that require a pattern string, use the symbols in the following table to describe the format of your data. For example, to describe a date in the January 15, 1999 format, you would use the pattern string MMMM dd, yyyy. To describe the format 01/15/99, you would use the pattern string MM/dd/yy. For more information about these pattern string symbols, see the Oracle Java API documentation for the SimpleDateFormat class.",
+        {
+          "table": [
+            [
+              "Symbol",
+              "Meaning",
+              "Presentation",
+              "Example"
+            ],
+            [
+              "G",
+              "era designator",
+              "Text",
+              "AD"
+            ],
+            [
+              "y",
+              "year",
+              "Number",
+              "1996 or 96"
+            ],
+            [
+              "M",
+              "month in year",
+              "Text or Number",
+              "July or Jul or 07"
+            ],
+            [
+              "d",
+              "day in month",
+              "Number",
+              "10"
+            ],
+            [
+              "h",
+              "hour in am/pm (1-12)",
+              "Number",
+              "12"
+            ],
+            [
+              "H",
+              "hour in day (0-23)",
+              "Number",
+              "0"
+            ],
+            [
+              "m",
+              "minute in hour",
+              "Number",
+              "30"
+            ],
+            [
+              "s",
+              "second in minute",
+              "Number",
+              "55"
+            ],
+            [
+              "S",
+              "millisecond",
+              "Number",
+              "978"
+            ],
+            [
+              "E",
+              "day in week",
+              "Text",
+              "Tuesday or Tue"
+            ],
+            [
+              "D",
+              "day in year",
+              "Number",
+              "189"
+            ],
+            [
+              "F",
+              "day of week in month",
+              "Number",
+              "2 (2nd Wed in July)"
+            ],
+            [
+              "w",
+              "week in year",
+              "Number",
+              "27"
+            ],
+            [
+              "W",
+              "week in month",
+              "Number",
+              "2"
+            ],
+            [
+              "a",
+              "am/pm marker",
+              "Text",
+              "PM"
+            ],
+            [
+              "k",
+              "hour in day (1-24)",
+              "Number",
+              "24"
+            ],
+            [
+              "K",
+              "hour in am/pm (0-11)",
+              "Number",
+              "0"
+            ],
+            [
+              "z",
+              "time zone",
+              "Text",
+              "Pacific Standard Time or PST or GMT-08:00"
+            ],
+            [
+              "Z",
+              "RFC 822 time zone (JVM 1.4 or later)",
+              "Number",
+              "-0800 (offset from GMT/UT)"
+            ],
+            [
+              "'",
+              "escape for text",
+              "Delimiter",
+              ""
+            ],
+            [
+              "' '",
+              "single quote",
+              "Literal",
+              "'"
+            ]
+          ]
+        }
       ]
     },
     {
@@ -15,7 +151,171 @@
       "content": [
         "When working with date services, you can specify time zones. The Earth is divided into 24 standard time zones, one for every 15 degrees of longitude. Using the time zone including Greenwich, England (known as Greenwich Mean Time, or GMT) as the starting point, the time is increased by an hour for each time zone east of Greenwich and decreases by an hour for each time zone west of Greenwich. The time difference between a time zone and the time zone including Greenwich, England (GMT) is referred to as the raw offset.",
         "The following table identifies the different time zones for the Earth and the raw offset for each zone from Greenwich, England. The effects of daylight savings time are ignored in this table.",
-        "Note: Greenwich Mean Time (GMT) is also known as Universal Time (UT)."
+        "Note: Greenwich Mean Time (GMT) is also known as Universal Time (UT).",
+        {
+          "table": [
+            [
+              "ID",
+              "Raw Offset",
+              "Name"
+            ],
+            [
+              "MIT",
+              "-11",
+              "Midway Islands Time"
+            ],
+            [
+              "HST",
+              "-10",
+              "Hawaii Standard Time"
+            ],
+            [
+              "AST",
+              "-9",
+              "Alaska Standard Time"
+            ],
+            [
+              "PST",
+              "-8",
+              "Pacific Standard Time"
+            ],
+            [
+              "PNT",
+              "-7",
+              "Phoenix Standard Time"
+            ],
+            [
+              "MST",
+              "-7",
+              "Mountain Standard Time"
+            ],
+            [
+              "CST",
+              "-6",
+              "Central Standard Time"
+            ],
+            [
+              "EST",
+              "-5",
+              "Eastern Standard Time"
+            ],
+            [
+              "IET",
+              "-5",
+              "Indiana Eastern Standard Time"
+            ],
+            [
+              "PRT",
+              "-4",
+              "Puerto Rico and U.S. Virgin Islands Time"
+            ],
+            [
+              "CNT",
+              "-3.5",
+              "Canada Newfoundland Time"
+            ],
+            [
+              "AGT",
+              "-3",
+              "Argentina Standard Time"
+            ],
+            [
+              "BET",
+              "-3",
+              "Brazil Eastern Time"
+            ],
+            [
+              "GMT",
+              "0",
+              "Greenwich Mean Time"
+            ],
+            [
+              "ECT",
+              "+1",
+              "European Central Time"
+            ],
+            [
+              "CAT",
+              "+2",
+              "Central Africa Time"
+            ],
+            [
+              "EET",
+              "+2",
+              "Eastern European Time"
+            ],
+            [
+              "ART",
+              "+2",
+              "(Arabic) Egypt Standard Time"
+            ],
+            [
+              "EAT",
+              "+3",
+              "Eastern African Time"
+            ],
+            [
+              "MET",
+              "+3.5",
+              "Middle East Time"
+            ],
+            [
+              "NET",
+              "+4",
+              "Near East Time"
+            ],
+            [
+              "PLT",
+              "+5",
+              "Pakistan Lahore Time"
+            ],
+            [
+              "IST",
+              "+5.5",
+              "India Standard Time"
+            ],
+            [
+              "BST",
+              "+6",
+              "Bangladesh Standard Time"
+            ],
+            [
+              "VST",
+              "+7",
+              "Vietnam Standard Time"
+            ],
+            [
+              "CTT",
+              "+8",
+              "China Taiwan Time"
+            ],
+            [
+              "JST",
+              "+9",
+              "Japan Standard Time"
+            ],
+            [
+              "ACT",
+              "+9.5",
+              "Australian Central Time"
+            ],
+            [
+              "AET",
+              "+10",
+              "Australian Eastern Time"
+            ],
+            [
+              "SST",
+              "+11",
+              "Solomon Standard Time"
+            ],
+            [
+              "NST",
+              "+12",
+              "New Zealand Standard Time"
+            ]
+          ]
+        }
       ]
     },
     {
@@ -23,14 +323,41 @@
       "content": [
         "You can specify timezone input parameters in the following formats:",
         "- As a full name. For example:",
-        "Asia/Tokyo: America/Los_Angeles",
+        {
+          "table": [
+            [
+              "Asia/Tokyo",
+              "America/Los_Angeles"
+            ]
+          ]
+        },
         "You can use the java.util.TimeZone.getAvailableIDs() method to obtain a list of the valid full name time zone IDs that your JVM version supports.",
         "- As a custom time zone ID, in the format GMT[+ | -]hh[ [:]mm]. For example:",
-        "GMT+2:00: All time zones 2 hours east of Greenwich (that is, Central Africa Time, Eastern European Time, and Egypt Standard Time)",
-        "GMT-3:00: All time zones 3 hours west of Greenwich (that is, Argentina Standard Time and Brazil Eastern Time)",
-        "GMT+9:30: All time zones 9.5 hours east of Greenwich (that is, Australian Central Time)",
+        {
+          "table": [
+            [
+              "GMT+2:00",
+              "All time zones 2 hours east of Greenwich (that is, Central Africa Time, Eastern European Time, and Egypt Standard Time)"
+            ],
+            [
+              "GMT-3:00",
+              "All time zones 3 hours west of Greenwich (that is, Argentina Standard Time and Brazil Eastern Time)"
+            ],
+            [
+              "GMT+9:30",
+              "All time zones 9.5 hours east of Greenwich (that is, Australian Central Time)"
+            ]
+          ]
+        },
         "- As a three-letter abbreviation from the table above. For example:",
-        "PST: Pacific Standard Time",
+        {
+          "table": [
+            [
+              "PST",
+              "Pacific Standard Time"
+            ]
+          ]
+        },
         "Note: Because some three-letter abbreviations can represent multiple time zones (for example, \"CST\" could represent both U.S. \"Central Standard Time\" and \"China Standard Time\"), all abbreviations are deprecated. Use the full name or custom time zone ID formats instead."
       ]
     },
@@ -723,15 +1050,6 @@
           "usage_notes": [
             "The pub.date:getWorkingDays service requires you to configure holidays and weekend days in the holidays.cnf configuration file in Integration Server_directory \\instances\\instance_name\\packages\\WmPublic\\config directory. The pub.date:getWorkingDays service uses this configuration file to find the number of working days between two dates.",
             "Note: If you make any changes to the holidays.cnf, you must reload the WmPublic package or restart Integration Server for the changes to take effect."
-          ]
-        },
-        {
-          "parameter_settings": [
-            "The following table gives the parameter settings for the holidays.cnf file:",
-            "holiday.format: The date format in which holidays are to be specified. The default format is MM/dd/yyyy.",
-            "holiday.<number>: Holidays in a year. No default values are set for the holiday parameter in the holidays.cnf file. For example, if July 4, 2009 and December 25, 2009 are holidays, then it can be specified as: holiday.1=07/04/2009 holiday.2=12/25/2009",
-            "weekend.<number>: Weekends days. Valid values are sunday, monday, tuesday, wednesday, thursday, friday, and saturday. No default values are set for the weekend parameter in the holidays.cnf file. If Sunday and Saturday are weekends, then it can be specified as: weekend.1 weekend.2=saturday",
-            "Note: If invalid date or weekend is specified in the configuration file, the pub.date:getWorkingDays service will throw errors on execution."
           ]
         }
       ]

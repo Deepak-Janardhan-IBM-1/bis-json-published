@@ -47,14 +47,7 @@
           ]
         }
       ],
-      "output_parameters": [],
-      "additional_information": [
-        {
-          "output_parameters": [
-            "document: Document. Document (IData object) resulting from the conversion of avroData."
-          ]
-        }
-      ]
+      "output_parameters": []
     },
     {
       "name": "pub.avro:documentToAvro",

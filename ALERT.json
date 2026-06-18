@@ -842,14 +842,150 @@
       "additional_information": [
         {
           "usage_notes": [
-            "A user password is about to expire.: Warning",
-            "Integration Server license is about to expire.: Warning",
-            "A locked account is unlocked.: Information",
-            "JDBC or LDAP configuration is changed, which requires a server restart.: Warning",
-            "Enterprise Gateway allow rule violation.: Warning",
-            "Tenant connection restored: Information",
-            "Account disconnected: Error",
-            "Account restored: Information"
+            {
+              "table": [
+                [
+                  "Channel ID",
+                  "Channel Name",
+                  "Events",
+                  "Severity"
+                ],
+                [
+                  "1",
+                  "Service Error",
+                  "Service execution errors. Note: By default, service error notifications are disabled.",
+                  "Error"
+                ],
+                [
+                  "2",
+                  "Server Error",
+                  "Server errors such as HTTP 404. Note: By default, server error notifications are disabled.",
+                  "Error"
+                ],
+                [
+                  "3",
+                  "Password Management",
+                  "A user password expires.",
+                  "Critical"
+                ],
+                [
+                  "A user password is about to expire.",
+                  "Warning"
+                ],
+                [
+                  "Default administrator password is not changed."
+                ],
+                [
+                  "4",
+                  "License Management",
+                  "Integration Server license expires.",
+                  "Critical"
+                ],
+                [
+                  "Integration Server license is about to expire.",
+                  "Warning"
+                ],
+                [
+                  "5",
+                  "Certificate Management",
+                  "A security certificate is about to expire.",
+                  "Warning"
+                ],
+                [
+                  "6",
+                  "Account Locking",
+                  "Multiple login attempt failures that result in a locked account.",
+                  "Critical"
+                ],
+                [
+                  "A locked account is unlocked.",
+                  "Information"
+                ],
+                [
+                  "7",
+                  "Server Configuration",
+                  "Server configuration properties (watt properties) are updated, which requires a server restart.",
+                  "Warning"
+                ],
+                [
+                  "JDBC or LDAP configuration is changed, which requires a server restart.",
+                  "Warning"
+                ],
+                [
+                  "8",
+                  "Authentication",
+                  "Login failure limit is reached.",
+                  "Error"
+                ],
+                [
+                  "9",
+                  "Package Management",
+                  "Package subscription (Delivery) Package subscription (Release) Note: By default, package management notifications are disabled.",
+                  "Information"
+                ],
+                [
+                  "10",
+                  "Threat Protection",
+                  "Enterprise Gateway deny rule violation.",
+                  "Critical"
+                ],
+                [
+                  "Enterprise Gateway allow rule violation.",
+                  "Warning"
+                ],
+                [
+                  "11",
+                  "Metering Log",
+                  "Errors connecting to the Metering agent server.",
+                  "Error"
+                ],
+                [
+                  "12",
+                  "User Management",
+                  "User management related alerts",
+                  "Warning"
+                ],
+                [
+                  "13",
+                  "Master Password",
+                  "A master password expires.",
+                  "Warning"
+                ],
+                [
+                  "Default master password is not changed."
+                ],
+                [
+                  "14",
+                  "Hybrid Connections",
+                  "Tenant connection disconnected",
+                  "Error"
+                ],
+                [
+                  "Tenant connection restored",
+                  "Information"
+                ],
+                [
+                  "Account disconnected",
+                  "Error"
+                ],
+                [
+                  "Account restored",
+                  "Information"
+                ],
+                [
+                  "15",
+                  "Metering Configuration",
+                  "IBM webMethods Metering Agent is not configured for on-premises use.",
+                  "Critical"
+                ],
+                [
+                  "16",
+                  "Hybrid Connectivity",
+                  "The on-premises Integration Server's fixes are older than fixes on webMethods Integration.",
+                  "Warning"
+                ]
+              ]
+            }
           ]
         }
       ]
@@ -1014,7 +1150,95 @@
             "- When notifierName is specified along with the severities and channelIds parameters under filter: If none of the channelIds under filter match with the notifier's channelIds, the notifier's channelIds are considered to get the count of unread alerts. The channelIds under filter are ignored. If none of the severities under filter are within the notifier's severityCutoff, the notifier's severityCutoff is considered to get the count of unread alerts. The severities under filter are ignored. Otherwise, the channelIds and severities under filter are considered to get the count of unread alerts.",
             "Consider a notifier with the following settings and the notifierName is passed to the pub.alert:countUnread service.",
             "- channelIds: 1001, 1002",
-            "- severityCutoff: Error"
+            "- severityCutoff: Error",
+            {
+              "table": [
+                [
+                  "#",
+                  "Scenario",
+                  "Evaluation"
+                ],
+                [
+                  "1",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1001",
+                  "Is one of the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Critical",
+                  "Is within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts for channelId: 1001 with severity: Critical are considered."
+                ],
+                [
+                  "2",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1004",
+                  "Is not among the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Critical",
+                  "Is within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts for channelIds: 1001 and 1002 with severity: Critical are considered. channelId[0]: 1004 is ignored."
+                ],
+                [
+                  "3",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1001",
+                  "Is one of the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Warning/Information",
+                  "Is not within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts for channelId: 1001 with severity: Error or Critical are considered. severities[0]: Warning/Information is ignored."
+                ],
+                [
+                  "4",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "",
+                  "channelId[0]: 1005",
+                  "Is not among the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "",
+                  "severities[0]: Warning/Information",
+                  "Is not within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "",
+                  "Result: Unread alerts for channelIds: 1001 and 1002 with severity: Error or Critical are considered. channelId[0]: 1005 and severities[0]: Warning/Information are ignored."
+                ]
+              ]
+            }
           ]
         }
       ]
@@ -1498,6 +1722,91 @@
             "Consider a notifier with the following settings and the notifierName is passed to the pub.alert:fetchUnread service.",
             "- channelIds: 1001, 1002",
             "- severityCutoff: Error",
+            {
+              "table": [
+                [
+                  "#",
+                  "Scenario",
+                  "Evaluation"
+                ],
+                [
+                  "1",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1001",
+                  "Is one of the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Critical",
+                  "Is within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts are fetched for channelId: 1001 with severity: Critical."
+                ],
+                [
+                  "2",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1004",
+                  "Is not among the notifier's channelIds"
+                ],
+                [
+                  "",
+                  "severities[0]: Critical",
+                  "Is within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts are fetched for channelIds: 1001 and 1002 with severity: Critical. channelId[0]: 1004 is ignored."
+                ],
+                [
+                  "3",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1001",
+                  "Is one of the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Warning/Information",
+                  "Is not within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts are fetched for channelId: 1001 with severity: Error or Critical. severities[0]: Warning/Information is ignored."
+                ],
+                [
+                  "4",
+                  "filter",
+                  ""
+                ],
+                [
+                  "",
+                  "channelId[0]: 1005",
+                  "Is not among the notifier's channelIds."
+                ],
+                [
+                  "",
+                  "severities[0]: Warning/Information",
+                  "Is not within the notifier's severityCutoff."
+                ],
+                [
+                  "",
+                  "Result: Unread alerts are fetched for channelIds: 1001 and 1002 with severity: Error or Critical. channelId[0]: 1005 and severities[0]: Warning/Information are ignored."
+                ]
+              ]
+            },
             "The number of notifications on a page is identified by pageSize and the current page is identified by pageNumber. If pageSize is 10 and pageNumber is 0, with sortBy and sortOrder having default values, the latest 10 notifications are listed on the first page."
           ]
         }

@@ -26,11 +26,12 @@
       ]
     }
   ],
-  "total_services": 38,
-  "services": [
+  "total_elements": 38,
+  "elements": [
     {
       "name": "pub.security:clearAuthenticationCache",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#clearAuthenticationCache__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Clears the authentication cache in Integration Server."
       ],
@@ -47,6 +48,7 @@
     {
       "name": "pub.security:clearKeyAndChain",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_clearKeyAndChain__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Clears the set key and certificate chain and reverts back to the default key and certificate chain for the subsequent set of invoked services."
       ],
@@ -77,6 +79,7 @@
     {
       "name": "pub.security:decrypt",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_8E99023F3A9D42A0BADCBF986D4B1C76__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Decrypts the encrypted data and returns plain data as a stream object or byte array or string."
       ],
@@ -259,6 +262,7 @@
     {
       "name": "pub.security:decryptAndVerify",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_706D030B7C1E49D58D088A49CD1C5BE3__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Decrypts the encrypted data and verifies the associated digital signature."
       ],
@@ -522,6 +526,7 @@
     {
       "name": "pub.security:encrypt",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_AD27FE791FB347589BD352EBD822DBF6__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts plain data to encrypted data."
       ],
@@ -703,6 +708,7 @@
     {
       "name": "pub.security:generateHashValue",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_nw1_zkj_qpb__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the hashed value for a string input."
       ],
@@ -760,6 +766,7 @@
     {
       "name": "pub.security:generateSalt",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_f1b_s3j_qpb__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a salt value."
       ],
@@ -791,6 +798,7 @@
     {
       "name": "pub.security.ports:hostNamesSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_818645C92DD24F6E9F75635450460DAD__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for a service that returns a list of IP addresses or hostnames in the CSV format."
       ],
@@ -815,6 +823,7 @@
     {
       "name": "pub.security:setKeyAndChain",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_setKeyAndChain__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.security.keystore:setKeyAndChain.",
         "Associates a key and certificate chain with the subsequent set of invoked services. Use this service to associate a key and certificate chain that is different from the default settings, and if your key and certificate information is located in files (rather than byte arrays)."
@@ -840,6 +849,7 @@
     {
       "name": "pub.security:setKeyAndChainFromBytes",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_setKeyAndChainFromBytes__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Associates a key and certificate chain with the subsequent set of invoked services. Use this service to associate a key and certificate chain that is different from the default settings, and if your key and certificate information is located in byte arrays (rather than files)."
       ],
@@ -872,6 +882,7 @@
     {
       "name": "pub.security:sign",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_C6832926AD6C4B0ABBE7BF977195C06F__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Adds a digital signature to data."
       ],
@@ -1053,6 +1064,7 @@
     {
       "name": "pub.security:signAndEncrypt",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_86B3E60E23E743FFA2919E7F6B30311A__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Adds a digital signature to data and then encrypts the data."
       ],
@@ -1313,6 +1325,7 @@
     {
       "name": "pub.security:userInfoSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#id8328ad36-5275-4f81-8cc8-99fc918038b3__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for the signature of a UserInfo service that performs custom processing based on the personally identifiable information in the OpenID Connect UserInfo token returned from the OpenID Provider."
       ],
@@ -1436,6 +1449,7 @@
     {
       "name": "pub.security:verify",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#reference_0F15FB6F07D643DAAD5AD97160B08DFD__title__1",
+      "element_type": "service",
       "description": [],
       "input_parameters": [
         {
@@ -1653,6 +1667,7 @@
     {
       "name": "pub.security.enterpriseGateway:alertSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#id127U908045Z__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for flow services used to send alerts about violations of IBM webMethods Enterprise Gateway rules.",
         "Use this specification as the signature of the flow service that Integration Server invokes when a request violates an Enterprise Gateway rule. For more information about IBM webMethods Enterprise Gateway, see IBM webMethods Integration Server Administrator’s Guide ."
@@ -1758,6 +1773,7 @@
     {
       "name": "pub.security.enterpriseGateway:customFilterSpec",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#idc91e3d2f-93c5-4e01-82d0-41affd7ee040__title__1",
+      "element_type": "specification",
       "description": [
         "WmPublic. Specification for services that can be invoked by the custom filter in Enterprise Gateway rules.",
         "Using the service that has the pub.security.enterpriseGateway:customFilterSpec specification as its signature, you can extract the HTTP headers and payload from a request and act on it as per your business requirements. Upon processing the headers, you can choose to forward the request to the Internal Server or deny the request and return an error message to the user. For more information about IBM webMethods Enterprise Gateway, see IBM webMethods Integration Server Administrator’s Guide ."
@@ -1792,6 +1808,7 @@
     {
       "name": "pub.security.keystore.pkcs7:sign",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A91878__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a PKCS7 signed Data object."
       ],
@@ -1879,6 +1896,7 @@
     {
       "name": "pub.security.keystore:getCertificate",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A80613__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the trusted certificate, stored in a truststore, that corresponds to the certificate's alias."
       ],
@@ -1918,6 +1936,7 @@
     {
       "name": "pub.security.keystore:getKeyAndChain",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A89774__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns a private key and its associated certificate chain from a designated keystore."
       ],
@@ -1964,6 +1983,7 @@
     {
       "name": "pub.security.keystore:getTrustedCertificates",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A95392__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns the trusted certificates located in a specified truststore."
       ],
@@ -1996,6 +2016,7 @@
     {
       "name": "pub.security.keystore:setKeyAndChain",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A49209__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Associates a key and certificate chain with the subsequent set of invoked services. Use this service to associate a key and certificate chain that is different from the default settings, and if your key and certificate information is stored in a keystore file."
       ],
@@ -2033,6 +2054,7 @@
     {
       "name": "pub.security.outboundPasswords:getPassword",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A38934__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves a password from the password store for a given key."
       ],
@@ -2095,6 +2117,7 @@
     {
       "name": "pub.security.outboundPasswords:listKeys",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A70711__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Lists the keys in the password store."
       ],
@@ -2133,6 +2156,7 @@
     {
       "name": "pub.security.outboundPasswords:setPassword",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A17500__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Stores a key and password in the password store."
       ],
@@ -2201,6 +2225,7 @@
     {
       "name": "pub.security.outboundPasswords:removePassword",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A59441__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes a password from the password store for a given key."
       ],
@@ -2246,6 +2271,7 @@
     {
       "name": "pub.security.outboundPasswords:updatePassword",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A54267__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Changes the password value for a key already in the password store."
       ],
@@ -2298,6 +2324,7 @@
     {
       "name": "pub.security.pkcs7:sign",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_pkcs7_sign__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.security.keystore.pkcs7:sign.",
         "Creates a PKCS7 SignedData object.",
@@ -2377,6 +2404,7 @@
     {
       "name": "pub.security.pkcs7:verify",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_pkcs7_verify__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Processes a digital signature to guarantee that the data associated with the signature has not been modified."
       ],
@@ -2482,6 +2510,7 @@
     {
       "name": "pub.security.util:convertSecureString",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A70559__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns a WmSecureString in Java String, byte array, or character array format."
       ],
@@ -2528,6 +2557,7 @@
     {
       "name": "pub.security.util:createMessageDigest",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_createmsgDigest__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Generates a message digest for a given message."
       ],
@@ -2572,6 +2602,7 @@
     {
       "name": "pub.security.util:createSecureString",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A54051__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Creates a WmSecureString object from either a Java String, byte array, or character array.",
         "WmSecureString is a mutable alternative to Java String. It allows the characters in the string to be explicitly removed from memory. Any password you wish to store in the Integration Server's outbound password store must be converted to a WmSecureString."
@@ -2626,6 +2657,7 @@
     {
       "name": "pub.security.util:destroySecureString",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A45883__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Destroys a WmSecureString such that it no longer resides in memory and is removed from the pipeline."
       ],
@@ -2643,6 +2675,7 @@
     {
       "name": "pub.security.util:getCertificateInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_getCertInfo__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves information such as serial number, issuer, and expiration date from a digital certificate."
       ],
@@ -2742,6 +2775,7 @@
     {
       "name": "pub.security.util:loadPKCS7CertChain",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#Apub_security_util_loadCertChain__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Converts a certificate chain that is in PKCS #7 format to a list of byte arrays."
       ],
@@ -2767,6 +2801,7 @@
     {
       "name": "pub.security.xml:decryptXML",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A34643__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Decrypts the encrypted XML, and returns the XML as either a string or stream object."
       ],
@@ -2846,6 +2881,7 @@
     {
       "name": "pub.security.xml:encryptXML",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A53501__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Encrypt an XML document or node in an XML document."
       ],
@@ -2966,6 +3002,7 @@
     {
       "name": "pub.security.xml:signXML",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A96837__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Digitally sign an outgoing XML node or document."
       ],
@@ -3218,6 +3255,7 @@
     {
       "name": "pub.security.xml:verifyXML",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-security-folder#A25218__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Verifies a signed XML document, or node in an XML document, and returns information about the success or failure of the verification."
       ],

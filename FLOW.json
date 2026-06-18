@@ -3,11 +3,12 @@
   "description": [
     "You use the elements in the flow folder to perform debugging and utility-type tasks in a flow service."
   ],
-  "total_services": 32,
-  "services": [
+  "total_elements": 32,
+  "elements": [
     {
       "name": "pub.flow:clearPipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_clearPipeline__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Removes all fields from the pipeline. You may optionally specify fields that should not be cleared by this service."
       ],
@@ -25,6 +26,7 @@
     {
       "name": "pub.flow:debugLog",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_debugLog__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Writes a message to the server log.",
         "Each log message contains a timestamp, a message ID, the function name field, and message field. See the following example."
@@ -66,6 +68,7 @@
     {
       "name": "pub.flow:getCallerIdentity",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_h1n_mnz_13c__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the user identity and authentication context information for the current session."
       ],
@@ -111,6 +114,7 @@
     {
       "name": "pub.flow:getCallingService",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id883aa36e-8e61-417b-b5b4-a00d270094b9__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the service name and package name of the parent of the calling child service."
       ],
@@ -142,6 +146,7 @@
     {
       "name": "pub.flow:getLastError",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getLastError__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Obtains detailed information about the last exception that was trapped within a flow.",
         "An exception is trapped in a flow when a service failure occurs inside a SEQUENCE step that executes until DONE, or when a service failure occurs inside a REPEAT step that repeats on FAILURE."
@@ -179,6 +184,7 @@
     {
       "name": "pub.flow:getLastFailureCaught",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#iddbfe4aad-7bc7-4b79-afd9-0e6988f30a9a__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns information about the last failure that was caught by a CATCH step."
       ],
@@ -219,6 +225,7 @@
     {
       "name": "pub.flow:getRetryCount",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A32754__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves the retry count and the maximum retry count for a service.",
         "The retry count indicates the number of times the Integration Server has re-executed a service. For example, a retry count of 1 indicates that the Integration Server tried to execute the service twice (the initial attempt and then one retry). The maximum retry count indicates the maximum number of times the Integration Server can re-execute the service if it continues to fail because of an ISRuntimeException."
@@ -258,6 +265,7 @@
     {
       "name": "pub.flow:getSession",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getSession__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Inserts the Session object into the pipeline as a document named $session.",
         "Session is useful for associating values with particular clients or users. Once $session is added to the pipeline, it can be used like any other document in a flow. This permits more powerful flows that perform work spanning several user requests."
@@ -276,6 +284,7 @@
     {
       "name": "pub.flow:getTransportInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_getTransportInfo__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Retrieves information about the protocol from which the current service was invoked."
       ],
@@ -308,19 +317,34 @@
     {
       "name": "pub.flow:HTTPRequest",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_EAA26ACDF44A46CD99F8399D3946D6F9__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type used to represent information about the HTTP request received by the Integration Server."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "headers: Document Contains the header fields from the HTTP request.",
-            "requestURL: String URL used by the client to invoke the service.",
-            "method: String HTTP method used by the client to request the top-level service. Possible values are GET, PUT, POST, PATCH, and DELETE."
+          "name": "headers",
+          "type": "Document",
+          "description": [
+            "Contains the header fields from the HTTP request."
           ]
         },
+        {
+          "name": "requestURL",
+          "type": "String",
+          "description": [
+            "URL used by the client to invoke the service."
+          ]
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "description": [
+            "HTTP method used by the client to request the top-level service. Possible values are GET, PUT, POST, PATCH, and DELETE."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "Note: The variable name $httpRequest is case sensitive. To achieve the described behavior, you must use the exact combination of letters and symbols, including upper and lower case."
@@ -331,22 +355,61 @@
     {
       "name": "pub.flow:HTTPResponse",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_D829A14C508E4CF5BD4B6A4D25F38DFA__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type that specifies the HTTP response information to be returned by Integration Server to the client."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "headers: Document. Optional. Contains the header fields to be returned in the HTTP response.",
-            "responseCode: String. Optional. HTTP status code to be returned to the client. The response codes and phrases are defined in https://tools.ietf.org/html/rfc7231#section-6. If you provide a value for responseCode that is not listed in RFC 7321, Section 6, you must also provide a value for reasonPhrase.",
-            "responsePhrase: String. Optional. HTTP reason phrase to be returned to the client. If no reason is provided, the default reason phrase associated with responseCode will be used. You must provide a reasonPhrase for any responseCode that is not listed in RFC 7321, Section 6.",
-            "responseString: String. Optional. Response to be returned to the client, specified as a string.",
-            "responseBytes: byte[ ]. Optional. Response to be returned to the client, specified as a byte array.",
-            "responseStream: java.io.InputStream. Optional. Response to be returned to the client, specified as an InputStream."
+          "name": "headers",
+          "type": "Document",
+          "description": [
+            "Optional. Contains the header fields to be returned in the HTTP response."
           ]
         },
+        {
+          "name": "responseCode",
+          "type": "String",
+          "description": [
+            "The response codes and phrases are defined in https://tools.ietf.org/html/rfc7231#section-6. If you provide a value for responseCode that is not listed in RFC 7321, Section 6, you must also provide a value for reasonPhrase."
+          ],
+          "references": [
+            {
+              "title": "https://tools.ietf.org/html/rfc7231#section-6",
+              "url": "https://tools.ietf.org/html/rfc7231#section-6"
+            }
+          ]
+        },
+        {
+          "name": "responsePhrase",
+          "type": "String",
+          "description": [
+            "Optional. HTTP reason phrase to be returned to the client. If no reason is provided, the default reason phrase associated with responseCode will be used. You must provide a reasonPhrase for any responseCode that is not listed in RFC 7321, Section 6."
+          ]
+        },
+        {
+          "name": "responseString",
+          "type": "String",
+          "description": [
+            "Optional. Response to be returned to the client, specified as a string."
+          ]
+        },
+        {
+          "name": "responseBytes",
+          "type": "byte[ ]",
+          "description": [
+            "Optional. Response to be returned to the client, specified as a byte array."
+          ]
+        },
+        {
+          "name": "responseStream",
+          "type": "java.io.InputStream",
+          "description": [
+            "Optional. Response to be returned to the client, specified as an InputStream."
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "You can set an HTTP response by adding a document reference to the pub.flow:HTTPResponsedocument type in the pipeline of the service and naming the variable as $httpResponse. Using the values set in the $httpResponse, Integration Server sends the response back to the client.",
@@ -361,6 +424,7 @@
     {
       "name": "pub.flow:invokeService",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#ided8c927b-c207-4beb-b41e-c59cc50be728__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Dynamically invokes any Integration Server public service and optionally returns the output from the invoked service in the pipeline for pub.flow:invokeService."
       ],
@@ -401,6 +465,7 @@
     {
       "name": "pub.flow:iterator",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#idb05ee3f5-e081-4260-aebb-607ecdd0cbf5__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Returns IData arrays as batches with a specified batch size."
       ],
@@ -494,6 +559,7 @@
     {
       "name": "pub.flow:restorePipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_restorePipeline__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Restores a pipeline previously saved by pub.flow:savePipeline."
       ],
@@ -542,6 +608,7 @@
     {
       "name": "pub.flow:restorePipelineFromFile",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_restorePipelineFromFile__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Restores a pipeline that was previously saved to a file."
       ],
@@ -592,6 +659,7 @@
     {
       "name": "pub.flow:savePipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_savePipeline__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Saves a pipeline into memory, for later retrieval with pub.flow:restorePipeline."
       ],
@@ -624,6 +692,7 @@
     {
       "name": "pub.flow:savePipelineToFile",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_savePipelineToFile__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Saves the current pipeline to a file on the machine running Integration Server."
       ],
@@ -647,10 +716,30 @@
             "If fileName specifies a filename with an invalid character the pub.flow:savePipelineToFile service appears to work but, in fact, does not persist the file to disk. If a subsequent call to pub.flow:restorePipelineFromFile that specifies the same invalid filename is made within the same server session, the service restores the pipeline successfully. However, if pub.flow:restorePipelineFromFile specifies the invalid filename after Integration Server restarted, the service fails with a FileNotFoundException. To avoid this situation, make sure the fileName value does not include any invalid characters.",
             "When using MTOM streaming for SOAP attachments, messageContext variables and/or XOPObject fields will not be available in the saved pipeline. A messageContext variable is used by many pub.soap services to hold the SOAP message on which the service acts. XOPObject fields are Objects that use the com.wm.util.XOPObject Java wrapper type. For more information about MTOM Streaming, see the Web Services Developer’s Guide .",
             "The following table shows the data types and classes that this service can write to the output file if they are included in the pipeline:",
-            "Java data types: byte[] Date GregorianCalendar IData IData[] (IData list) String String[] (String list) String[][] (String table) Vector",
-            "Java wrapper classes: Boolean Byte Character Double Float Integer Long Short Single dimension arrays of any of the above",
-            "webMethods classes: MBoolean MByte MDouble MFloat MInteger MLong MShort Single dimension arrays of any of the above",
-            "Object arrays: Any non-array item listed in this table."
+            {
+              "table": [
+                [
+                  "For",
+                  "pub.flow:savePipelineToFile supports"
+                ],
+                [
+                  "Java data types",
+                  "byte[] Date GregorianCalendar IData IData[] (IData list) String String[] (String list) String[][] (String table) Vector"
+                ],
+                [
+                  "Java wrapper classes",
+                  "Boolean Byte Character Double Float Integer Long Short Single dimension arrays of any of the above"
+                ],
+                [
+                  "webMethods classes",
+                  "MBoolean MByte MDouble MFloat MInteger MLong MShort Single dimension arrays of any of the above"
+                ],
+                [
+                  "Object arrays",
+                  "Any non-array item listed in this table."
+                ]
+              ]
+            }
           ]
         },
         {
@@ -664,6 +753,7 @@
     {
       "name": "pub.flow:setActivityLog",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_49992FC40DF64D6EB6DE4EF509F6185E__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Logs user-defined messages to the WMSERVICEACTIVITYLOG table or the WMSERVICEACTIVITYLOG_ yyyymmdd_hhmmss.log file."
       ],
@@ -706,6 +796,7 @@
     {
       "name": "pub.flow:setAuditLogFields",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_9E45562098E042DE873708617A9DD53A__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sets the service auditing properties for one or more custom services."
       ],
@@ -795,6 +886,7 @@
     {
       "name": "pub.flow:setCustomContextID",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id29be98cc-8293-426b-ac3f-028855f1df8a__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Associates a custom value with an auditing context. This custom value can be used to search for service audit records in the IBM webMethods Monitor."
       ],
@@ -812,6 +904,7 @@
     {
       "name": "pub.flow:setCustomLoggedFields",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_72997662E9BC460E9EEDAFC87A1CE278__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Selects the fields of one or more custom services for logging."
       ],
@@ -951,6 +1044,7 @@
     {
       "name": "pub.flow:setCustomTransactionId",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_pmm_q4x_j3c__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Specifies a custom transaction ID to use when tracing transactions in End-to-End Monitoring."
       ],
@@ -968,6 +1062,7 @@
     {
       "name": "pub.flow:setCustomTransactionIds",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#reference_lgv_bqx_j3c__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Specifies a list of custom transaction IDs to use when tracing transactions in End-to-End Monitoring. When defining the search filter in End-to-End Monitoring, you can search by any of the values specified in the list."
       ],
@@ -985,6 +1080,7 @@
     {
       "name": "pub.flow:setHTTPResponse",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#setHTTPResponse__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Sets the HTTP response information to be returned by Integration Server to a client."
       ],
@@ -1012,6 +1108,7 @@
     {
       "name": "pub.flow:setResponse",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_setResponse__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.flow:setHTTPResponse.",
         "Forces a specified response to be returned by the IBM webMethods Integration Server to a calling process (such as a browser or application server).",
@@ -1091,6 +1188,7 @@
     {
       "name": "pub.flow:setResponse2",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id20bd0329-51bc-43d0-8fef-f99dcfd0c37a__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.flow:setHTTPResponse.",
         "Forces a specified response to be returned by the IBM webMethods Integration Server to a calling process (such as a browser or application server).",
@@ -1161,6 +1259,7 @@
     {
       "name": "pub.flow:setResponseCode",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A36823__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.flow:setHTTPResponse.",
         "Specifies the HTTP response code to be returned by Integration Server to a calling process (such as a browser or application server)."
@@ -1199,6 +1298,7 @@
     {
       "name": "pub.flow:setResponseHeader",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#idd8709f2d-9e45-41ee-90e0-5d88424284ba__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.flow:setHTTPResponse.",
         "Sets a header field in the HTTP response to a calling process (such as a browser or application server) or in the JMS message that contains the SOAP response from a web service invocation."
@@ -1248,6 +1348,7 @@
     {
       "name": "pub.flow:setResponseHeaders",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#id12AGC08M05Z__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Deprecated - Replaced by pub.flow:setHTTPResponse.",
         "Sets one or more header fields in the HTTP response to a calling process (such as a browser or application server) or in the JMS message that contains the SOAP response from a web service invocation."
@@ -1290,6 +1391,7 @@
     {
       "name": "pub.flow:throwExceptionForRetry",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#A74127__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Throws an ISRuntimeException and instructs the Integration Server to re-execute a service using the original service input."
       ],
@@ -1331,6 +1433,7 @@
     {
       "name": "pub.flow:tracePipeline",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_tracePipeline__title__1",
+      "element_type": "service",
       "description": [
         "WmPublic. Writes the names and values of all fields in the pipeline to the server log."
       ],
@@ -1355,25 +1458,432 @@
     {
       "name": "pub.flow:transportInfo",
       "source_url": "https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server/12.1.0?topic=guide-flow-folder#Apub_flow_transportInfo__title__1",
+      "element_type": "document_type",
       "description": [
         "WmPublic. Document type used to return information about the protocol through which a service was invoked."
       ],
-      "input_parameters": [],
-      "output_parameters": [],
-      "additional_information": [
+      "fields": [
         {
-          "parameters": [
-            "protocol: String Name of protocol about which transportInfo contains information. Will be one of the following values",
-            "subprotocol: String. Conditional. Subprotocol used to invoke the service.",
-            "email: Document. Conditional. Information about the SMTP transport. This parameter is returned only if the service was invoked via SMTP.",
-            "http: Document. Conditional. Information about the http transport. This parameter is returned only if the service was invoked via http.",
-            "ftp: Document. Conditional. Information about the ftp transport. This parameter is returned only if the ftp transport invoked the service.",
-            "filePolling: Document. Conditional. Information about the file polling transport. Returned only if the file polling transport invoked the service.",
-            "jms: Document. Conditional. Information about the JMS transport. This parameter is returned only if the JMS transport invoked the service.",
-            "messaging: Document Conditional. Information about the messaging transport. This parameter is returned only if the messaging transport invoked the service.",
-            "streaming: Document Conditional. Information about the streaming transport. This parameter is returned only if an event trigger invoked the service."
+          "name": "protocol",
+          "type": "String",
+          "description": [
+            "Name of protocol about which transportInfo contains information. Will be one of the following values",
+            "A value of email indicates that SMTP was used to invoke the service. Detailed information is contained in the email parameter.",
+            "A value of filePolling indicates that File polling protocol was used to invoke this service. Detailed information is contained in the filePolling parameter.",
+            "A value of ftp indicates that FTP was used to invoke the service. Detailed information is contained in the ftp parameter.",
+            "A value of http indicates that HTTP was used to invoke the service. Detailed information is contained in the http parameter.",
+            "A value of jms indicates that JMS was used to invoke the service. When a standard JMS trigger or a SOAP-JMS trigger invokes a service, the protocol is JMS. Detailed information is contained in the jms parameter.",
+            "A value of messaging indicates that webMethods messaging was used to invoke the service. Specifically, IBM webMethods messaging trigger invoked the service. Detailed information is contained in the messaging parameter."
           ]
         },
+        {
+          "name": "subprotocol",
+          "type": "String",
+          "description": [
+            "Conditional. Subprotocol used to invoke the service.",
+            "A value of broker indicates that The service was invoked by IBM webMethods messaging trigger that received a document from the Broker or a locally published document. This subprotocol can only occur if protocol is messaging.",
+            "A value of HTTP indicates that The service was invoked through HTTP. This subprotocol can only occur if protocol is http.",
+            "A value of HTTPS indicates that The service was invoked through HTTPS. This subprotocol can only occur if protocol is http.",
+            "A value of jndi indicates that Integration Server uses JNDI to connect to the JMS provider. The JMS connection alias assigned to the JMS trigger specifies how Integration Server connects to the JMS provider. A value of jndi also indicates that the jms/destinationName value is a lookup name. This subprotocol can only occur if protocol is jms.",
+            "A value of native indicates that Integration Server uses the native webMethods API to connect to the IBM webMethods Broker being used as the JMS provider directly. The JMS connection alias assigned to the JMS trigger specifies how Integration Server connects to the JMS provider. A value of native also indicates that the jms/destinationName value is the name of the actual destination. This subprotocol can only occur if protocol is jms.",
+            "A value of um indicates that The service was invoked by IBM webMethods messaging trigger that received a document from the Universal Messaging. This subprotocol can only occur if protocol is messaging."
+          ],
+          "children": [
+            {
+              "name": "subprotocol",
+              "description": [
+                "The subprotocol parameter is returned only when the returned protocol is http, jms, or messaging."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "email",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the SMTP transport. This parameter is returned only if the service was invoked via SMTP."
+          ],
+          "children": [
+            {
+              "name": "to",
+              "type": "String List",
+              "description": [
+                "E-mail addresses for the recipients of the e-mail."
+              ]
+            },
+            {
+              "name": "from",
+              "type": "String List",
+              "description": [
+                "E-mail addresses for the senders of the e-mail."
+              ]
+            },
+            {
+              "name": "cc",
+              "type": "String List",
+              "description": [
+                "Conditional. E-mail addresses receiving a copy of the e-mail."
+              ]
+            },
+            {
+              "name": "bcc",
+              "type": "String List",
+              "description": [
+                "Conditional. E-mail addresses receiving a blind copy of the e-mail."
+              ]
+            },
+            {
+              "name": "replyto",
+              "type": "String List",
+              "description": [
+                "Conditional. E-mail address to which replies of this e-mail should be sent"
+              ]
+            },
+            {
+              "name": "subject",
+              "type": "String",
+              "description": [
+                "Subject of the e-mail."
+              ]
+            },
+            {
+              "name": "filename",
+              "type": "String",
+              "description": [
+                "Conditional. Name of the attached file."
+              ]
+            },
+            {
+              "name": "contenttype",
+              "type": "String",
+              "description": [
+                "Conditional. Content-Type of the attached file."
+              ]
+            },
+            {
+              "name": "content",
+              "type": "java.io.InputStream",
+              "description": [
+                "Conditional. Contents of the attached file."
+              ]
+            },
+            {
+              "name": "recvdate",
+              "type": "String",
+              "description": [
+                "Conditional. Date the e-mail was received in String format. recvdate may be passed as parameter for the java.util.Date constructor."
+              ]
+            },
+            {
+              "name": "sentdate",
+              "type": "String",
+              "description": [
+                "Conditional. Date the e-mail was sent in String format. sentdate may be passed as parameter for the java.util.Date constructor."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "http",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the http transport. This parameter is returned only if the service was invoked via http."
+          ],
+          "children": [
+            {
+              "name": "requestUrl",
+              "type": "String",
+              "description": [
+                "URL used by the client to invoke the service."
+              ]
+            },
+            {
+              "name": "query",
+              "type": "String",
+              "description": [
+                "Conditional. Query portion of request URL."
+              ]
+            },
+            {
+              "name": "method",
+              "type": "String",
+              "description": [
+                "HTTP method used by the client to request the top-level service. Possible values are GET, PUT, POST, PATCH, and DELETE."
+              ]
+            },
+            {
+              "name": "requestHdrs",
+              "type": "Document",
+              "description": [
+                "Fields in the request header, where key names represent header field names and values represent the header field values."
+              ]
+            },
+            {
+              "name": "ipInfo",
+              "type": "Document",
+              "description": [
+                "Information about the http socket connection. Contains the following information:"
+              ],
+              "children": [
+                {
+                  "name": "clientIp",
+                  "type": "String",
+                  "description": [
+                    "Optional. IP address of the client connecting to this socket. If null, clientIP is not included in the output."
+                  ]
+                },
+                {
+                  "name": "clientPort",
+                  "type": "String",
+                  "description": [
+                    "Optional. Port number used by the client connecting to this socket. If null, clientPort is not included in the output."
+                  ]
+                },
+                {
+                  "name": "localIp",
+                  "type": "String",
+                  "description": [
+                    "Local IP address for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "localPort",
+                  "type": "String",
+                  "description": [
+                    "Local port number for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "remoteIp",
+                  "type": "String",
+                  "description": [
+                    "Remote IP address for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "remotePort",
+                  "type": "String",
+                  "description": [
+                    "Remote port number for this socket connection to client."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ftp",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the ftp transport. This parameter is returned only if the ftp transport invoked the service."
+          ],
+          "children": [
+            {
+              "name": "filename",
+              "type": "String",
+              "description": [
+                "Name of file that was put into the service directory."
+              ]
+            },
+            {
+              "name": "mimetype",
+              "type": "String",
+              "description": [
+                "Conditional. Content type of the file (for example, text/xml, text/plain, or image/jpeg). The server determines content type based on the extension of the file and the extension's corresponding content type defined in Integration Server_directory \\instances\\instance_name\\lib\\mime.types."
+              ]
+            },
+            {
+              "name": "ipInfo",
+              "type": "Document",
+              "description": [
+                "Information about the FTP socket connection. Contains the following information:"
+              ],
+              "children": [
+                {
+                  "name": "localIp",
+                  "type": "String",
+                  "description": [
+                    "Local IP address for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "localPort",
+                  "type": "String",
+                  "description": [
+                    "Local port number for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "remoteIp",
+                  "type": "String",
+                  "description": [
+                    "Remote IP address for this socket connection to client."
+                  ]
+                },
+                {
+                  "name": "remotePort",
+                  "type": "String",
+                  "description": [
+                    "Remote port number for this socket connection to client."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "filePolling",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the file polling transport. Returned only if the file polling transport invoked the service."
+          ],
+          "children": [
+            {
+              "name": "filename",
+              "type": "String",
+              "description": [
+                "Fully qualified name of the file submitted to the file polling listener."
+              ]
+            },
+            {
+              "name": "originalFilename",
+              "type": "String",
+              "description": [
+                "Name of the file when it was submitted to the file polling listener."
+              ]
+            },
+            {
+              "name": "contenttype",
+              "type": "String",
+              "description": [
+                "Conditional. Content type of the file (for example, text/xml, text/plain, or image/jpeg). The server determines content type based on the extension of the file and the extension's corresponding content type defined in Integration Server_directory \\instances\\instance_name\\lib\\mime.types."
+              ]
+            },
+            {
+              "name": "length",
+              "type": "String",
+              "description": [
+                "The original file length in bytes."
+              ]
+            },
+            {
+              "name": "lastModified",
+              "type": "java.util.Date",
+              "description": [
+                "Java date object indicating when the original file was last modified."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jms",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the JMS transport. This parameter is returned only if the JMS transport invoked the service."
+          ],
+          "children": [
+            {
+              "name": "connectionAliasName",
+              "type": "String",
+              "description": [
+                "Name of the JMS connection alias used by the JMS trigger to retrieve the message."
+              ]
+            },
+            {
+              "name": "triggerName",
+              "type": "String",
+              "description": [
+                "Fully qualified name of the JMS trigger that retrieved the JMS message that resulted in invocation of the service."
+              ]
+            },
+            {
+              "name": "destinationName",
+              "type": "String",
+              "description": [
+                "When the subprotocol is jndi, the destinationName value is the lookup name of the destination on the JNDI provider. When the subprotocol is native, the destinationName value is the name of the destination at the IBM webMethods Broker."
+              ]
+            },
+            {
+              "name": "destinationType",
+              "type": "String",
+              "description": [
+                "destinationType will be one of the following:",
+                "QUEUE indicates the destination is a queue.",
+                "TOPIC indicates the destination is a topic."
+              ]
+            },
+            {
+              "name": "requestHdrs",
+              "type": "Document",
+              "description": [
+                "When a SOAP-JMS trigger receives a message, Integration Server passes the body of the message to the web services stack for processing. The body of the JMS message is the SOAP message. Integration Server does not pass the JMS headers on to the web services stack. If you want to review the contents of the JMS request header, you must use pub.flow:getTransportInfo to obtain the headers.",
+                "For a standard JMS trigger, Integration Server passes the entire JMS message, including request headers, on to the trigger service for processing."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "messaging",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the messaging transport. This parameter is returned only if the messaging transport invoked the service."
+          ],
+          "children": [
+            {
+              "name": "connectionAliasName",
+              "type": "String",
+              "description": [
+                "Name of the webMethodsmessaging connection alias used by the IBM webMethods messaging trigger to retrieve the document. If the IBM webMethods messaging trigger received a locally published document and the publishable document type is not associated with a messaging connection alias, the connectionAliasName field is blank."
+              ]
+            },
+            {
+              "name": "triggerName",
+              "type": "String",
+              "description": [
+                "Fully qualified name of the IBM webMethods messaging triggerthat retrieved the document that resulted in invocation of the service."
+              ]
+            },
+            {
+              "name": "documentTypeName",
+              "type": "String",
+              "description": [
+                "If the trigger services executes because an AND join condition in the IBM webMethods messaging trigger was satisfied, the documentTypeName contains the name of the publishable document type that completed the AND join. For example, suppose that an AND join condition specifies folder.subfolder:documentA and folder.subfolder:documentB. If the trigger receives an instance of documentB first and then an instance of documentA, the documentTypeName parameter contains folder.subfolder:documentA."
+              ]
+            },
+            {
+              "name": "redeliveryCount",
+              "type": "String",
+              "description": [
+                "Number of times the messaging provider has redelivered the document to the trigger."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "streaming",
+          "type": "Document",
+          "description": [
+            "Conditional. Information about the streaming transport. This parameter is returned only if an event trigger invoked the service."
+          ],
+          "children": [
+            {
+              "name": "topic",
+              "type": "String",
+              "description": [
+                "Topic that received the events processed by the event trigger."
+              ]
+            },
+            {
+              "name": "partition",
+              "type": "String",
+              "description": [
+                "Partition that received the events processed by the event trigger."
+              ]
+            }
+          ]
+        }
+      ],
+      "additional_information": [
         {
           "usage_notes": [
             "A document with this structure is produced by the pub.flow:getTransportInfo service."

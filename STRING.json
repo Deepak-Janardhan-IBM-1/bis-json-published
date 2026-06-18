@@ -767,9 +767,26 @@
         {
           "usage_notes": [
             "If padString is longer than one character and does not fit exactly into the resulting string, the beginning of padString is aligned with the beginning of the resulting string. For example, suppose inString equals shipped and padString equals x9y.",
-            "7: shipped",
-            "10: x9yshipped",
-            "12: x9x9yshipped",
+            {
+              "table": [
+                [
+                  "If length equals...",
+                  "Then value will contain..."
+                ],
+                [
+                  "7",
+                  "shipped"
+                ],
+                [
+                  "10",
+                  "x9yshipped"
+                ],
+                [
+                  "12",
+                  "x9x9yshipped"
+                ]
+              ]
+            },
             "If inString is longer than length characters, only the last length characters from inString are returned. For example, if inString equals acct1234 and length equals 4, value will contain 1234."
           ]
         }
@@ -817,9 +834,26 @@
         {
           "usage_notes": [
             "If padString is longer than one character and does not fit exactly into the resulting string, the end of padString is aligned with the end of the resulting string. For example, suppose inString equals shipped and padString equals x9y.",
-            "7: shipped",
-            "10: shippedx9y",
-            "12: shippedx9y9y",
+            {
+              "table": [
+                [
+                  "If length equals...",
+                  "Then value will contain..."
+                ],
+                [
+                  "7",
+                  "shipped"
+                ],
+                [
+                  "10",
+                  "shippedx9y"
+                ],
+                [
+                  "12",
+                  "shippedx9y9y"
+                ]
+              ]
+            },
             "If inString is longer than length characters, only the first length characters from inString are returned. For example, if inString equals 1234acct and length equals 4, value will contain 1234."
           ]
         }
@@ -935,7 +969,18 @@
             "The service returns an error if inString is not specified.",
             "If inString does not contain a pipeline variable (a variable or an array element) between the % symbols, the service does not perform any variable substitution from the pipeline.",
             "If you want to include the % symbol in the output, you can specify it as \\% in inString. To specify the value of the pipeline variable as a percentage in the output, append \\% after the variable name in inString. For example, suppose a pipeline variable revenueIncreasePercent has a value of 100.",
-            "%revenueIncreasePercent%\\%: 100%",
+            {
+              "table": [
+                [
+                  "If inString equals...",
+                  "Then value will contain..."
+                ],
+                [
+                  "%revenueIncreasePercent%\\%",
+                  "100%"
+                ]
+              ]
+            },
             "The service cannot be used for substitution of global variables."
           ]
         }
